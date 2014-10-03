@@ -69,7 +69,7 @@ The serial downloader can be found at the GitHub
 [imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader) and can be
 used to directly download and execute code on the SoC.
 
-[Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Booting]
+[Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
 
 ## Developer Notes
 
