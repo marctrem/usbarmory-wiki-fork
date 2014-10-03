@@ -6,12 +6,12 @@ Toolchain: Linaro 4.9
 
 - download:
 
-  http://releases.linaro.org/latest/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.9-2014.08_linux.tar.xz
+  http://releases.linaro.org/latest/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz
 
 - install:
 
 ```
-$ tar xvf gcc-linaro-arm-none-eabi-4.9-2014.08_linux.tar.xz -C /usr/local
+$ tar xvf gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz -C /usr/local
 ```
 
 Bootloader: U-Boot 2014.07
@@ -26,7 +26,7 @@ $ git clone https://github.com/inversepath/u-boot-usbarmory.git
 - build:
 
 ```
-$ export ARCH=arm CROSS_COMPILE=/usr/local/gcc-linaro-arm-none-eabi-4.9-2014.08_linux/bin/arm-none-eabi-
+$ export ARCH=arm CROSS_COMPILE=/usr/local/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi-
 $ make distclean
 $ make armory_config
 $ make
@@ -46,7 +46,7 @@ Kernel: Linux 3.16.2
 - build:
 
 ```
-$ export ARCH=arm CROSS_COMPILE=/usr/local/gcc-linaro-arm-none-eabi-4.9-2014.08_linux/bin/arm-none-eabi-
+$ export ARCH=arm CROSS_COMPILE=/usr/local/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi-
 $ cp linux-3.16.2.config .config
 $ make uImage LOADADDR=0x70008000
 $ make modules
