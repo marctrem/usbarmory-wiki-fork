@@ -12,11 +12,12 @@ The first hardware revision of the USB armory is currently being finalized, for
 information and updates see the [project
 page](http://inversepath.com/usbarmory).
 
-## Getting Started
+## Software
 
 * [Available images](https://github.com/inversepath/usbarmory/wiki/Available-images)
-* [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
 * [USB armory <> host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
+* [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
+* [Using external GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [Development](https://github.com/inversepath/usbarmory/wiki/Development)
 * [External documentation](https://github.com/inversepath/usbarmory/wiki/External-documentation)
 
