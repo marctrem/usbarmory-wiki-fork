@@ -12,99 +12,20 @@ The first hardware revision of the USB armory is currently being finalized, for
 information and updates see the [project
 page](http://inversepath.com/usbarmory).
 
-## Available images
+## Getting Started
 
-None at this time, this section will be soon updated with links to the
-available disk images that, when copied on a microSD, allows to boot the USB
-armory board.
+* [Available images](https://github.com/inversepath/usbarmory/wiki/Available-images)
+* [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
+* [USB armory <> host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
+* [Development](https://github.com/inversepath/usbarmory/wiki/Development)
+* [External documentation](https://github.com/inversepath/usbarmory/wiki/External-documentation)
 
-The alpha board has been successfully tested with a vanilla Debian
-installation, Linux kernel with published Freescale patches for the i.MX53 and
-a patched version of U-Boot.
-
-## Applications
-
-The following example security application ideas illustrate the flexibility of the USB armory concept:
-
-* mass storage device with advanced features such as automatic encryption, virus scanning, host authentication and data self-destruct
-* OpenSSH client and agent for untrusted hosts (kiosk)
-* router for end-to-end VPN tunnelling
-* password manager with integrated web server
-* electronic wallet (e.g. pocket Bitcoin wallet)
-* authentication token
-* portable penetration testing platform
-* low level USB security testing
-
-This section is meant to track available software PoC, projects and/or procedures oriented towards implementing such application ideas and any other interesting USB armory usage. If you have tested an interesting use case for the USB armory please submit it to us (info@inversepath.com) for inclusion.
-
-### Bitcoin wallet
-
-The Electrum (https://electrum.org/) Bitcoin wallet works out of the box on the USB armory, it has been tested with X11 forwarding from Linux as well as Windows hosts.
-
-## Host configuration
-
-### Mass Storage emulation
-
-No particular host configuration is required.
-
-### CDC Ethernet
-
-When configured for Ethernet operation the USB armory board triggers the host
-relevant driver.
-
-The network configuration can then proceed with conventional means against the
-virtual network interface, depending on the specific USB armory image typically
-static addressing or a DHCP server are required.
-
-Once the network is configured the host can decide to route the USB armory.
-
-Linux example (host: 10.0.0.1, USB armory: 10.0.0.2):
-```
-# bring the USB virtual Ethernet interface up
-/sbin/ip link set usb0 up
-
-# set the host IP address
-/sbin/ip addr add 10.1.7.1/24 dev usb0
-
-# enable masquerading for outgoing connections towards wireless interface
-/sbin/iptables -t nat -A POSTROUTING -s 10.0.0.1/32 -o wlan0 -j MASQUERADE
-
-# enable IP forwarding
-echo 1 > /proc/sys/net/ipv4/ip_forward
-
-```
-
-The Ethernet emulation has been successfully tested on Linux, Mac OS X and Windows.
-
-## Development
-
-### Boot procedure
-
-The USB armory board boots by default from the micro SD card if present,
-otherwise the board gets enumerated as a vendor specific Freescale USB device
-to support the serial downloader.
-
-The serial downloader can be found at the GitHub
-[imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader) and can be
-used to directly download and execute code on the SoC.
-
-[Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
-
-## Developer Notes
-
-None at this time, this section will be soon updated.
-
-## Useful documentation
-
-[i.MX53 System Development  Guide](http://cache.freescale.com/files/32bit/doc/user_guide/MX53UG.pdf)
-
-[i.MX53 Secure Boot Application Note](http://cache.freescale.com/files/32bit/doc/app_note/AN4581.pdf)
-
-## How to Help
+## How to Contribute
 
 Obtain a USB armory board and start developing! Please see ordering information
 at the [USB armory project page](http://inversepath.com/usbarmory).
 
-A list of project ideas is also available on the [project page](http://inversepath.com/usbarmory).
+A list of project ideas is available at the [project page](http://inversepath.com/usbarmory) or
+in the [Applications](https://github.com/inversepath/usbarmory/wiki/Applications) section.
 
 A discussion group is available on [Google Groups](https://groups.google.com/d/forum/usbarmory).
