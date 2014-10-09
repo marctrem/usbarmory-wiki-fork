@@ -11,16 +11,16 @@
 |  7  | GPIO4[4]        |   GPIO14    |
 
 
-### GPIO Sysfs Interface
+### GPIO Sysfs Interface on Linux
 
-The 5 GPIOs present on the breakout header (pins 2-7) are configurable
-using Linux GPIO Sysfs interface.
+When using Linux the 5 GPIOs, exposed on the breakout header (pins 2-7), are
+easily configurable using the GPIO Sysfs interface.
 
-The following example shows how to set bit 4 of the i.MX53 GPIO4 interface
-(pin 7) in output mode and write 1 and 0 from linux shell.
+The following example shows how to set bit 4 of the i.MX53 GPIO4 interface,
+corresponding to pin 7, in output mode and write 1 and 0 from a Linux shell.
 
 ```
-# echo 100 > /sys/class/gpio/export
+# echo 100 > /sys/class/gpio/export             # 96 (GPIO4[0]) + 4 == GPIO[4]
 # echo out > /sys/class/gpio/gpio100/direction
 # echo 1 > /sys/class/gpio/gpio100/value
 # echo 0 > /sys/class/gpio/gpio100/value
