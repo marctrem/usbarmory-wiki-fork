@@ -15,8 +15,8 @@ procedures oriented towards implementing such application ideas and any other
 interesting USB armory usage. If you have tested an interesting use case for
 the USB armory please submit it at info@inversepath.com for inclusion.
 
-See also [Host configuration](https://github.com/inversepath/usbarmory/wiki/Host-configuration)
-for communication/routing options.
+See also [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
+for interfacing options.
 
 ### Bitcoin wallet
 
