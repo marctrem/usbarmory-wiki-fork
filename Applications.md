@@ -1,5 +1,3 @@
-## USB armory - Applications
-
 The following example security application ideas illustrate the flexibility of
 the USB armory concept:
 

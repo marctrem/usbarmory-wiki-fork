@@ -1,5 +1,3 @@
-## USB armory - Available images
-
 None at this time, this section will be soon updated with links to the
 available disk images that, when copied on a microSD, allows to boot the USB
 armory board.

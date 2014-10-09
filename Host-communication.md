@@ -1,5 +1,3 @@
-## Host communication
-
 ### Mass Storage emulation
 
 No particular host configuration is required, when configured for mass storage

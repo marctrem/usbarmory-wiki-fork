@@ -1,5 +1,3 @@
-## Development
-
 ### Boot procedure
 
 The USB armory board boots by default from the micro SD card if present,
