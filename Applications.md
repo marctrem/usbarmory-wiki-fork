@@ -35,7 +35,7 @@ Assumptions:
 
 Launch Tor with the following configuration (/etc/tor/torrc):
 
-'''
+```
 VirtualAddrNetworkIPv4 10.192.0.0/10
 AutomapHostsOnResolve 1
 
@@ -48,13 +48,13 @@ TransListenAddress 10.0.0.1
 DNSPort 53
 DNSListenAddress 127.0.0.1
 DNSListenAddress 10.0.0.1
-'''
+```
 
 
 Launch the following script (based on
 [Transparent Proxy Tor wiki page](https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy)):
 
-'''
+```
 #!/bin/sh
 
 ### set variables
@@ -101,19 +101,15 @@ done
 #allow only Tor output
 iptables -A OUTPUT -m owner --uid-owner $_tor_uid -j ACCEPT
 iptables -A OUTPUT -j REJECT
+```
 
-'''
 
-
-'''
-#
-'''
 
 #### Host setup
 
 Define the "rt_usbarmory" routing table identifier in /etc/iproute2/rt_tables:
 
-'''
+```
 #
 # reserved values
 #
@@ -126,21 +122,20 @@ Define the "rt_usbarmory" routing table identifier in /etc/iproute2/rt_tables:
 #
 #1      inr.ruhep
 1 rt_usbarmory
-'''
+```
 
 Launch the following commands:
 
-'''
+```
 # ip rule add from 10.0.0.1/32 table rt_usbarmory
 # ip route add default via 192.168.1.1 table rt_usbarmory
 # ip route del default
 # ip route add default via 10.0.0.1
-
-'''
+```
 
 Test configuration:
 
-'''
+```
 $ curl https://check.torproject.org
 ...
   <h1 class="not">
@@ -149,5 +144,4 @@ $ curl https://check.torproject.org
 
   </h1>
 ...
-
-'''
+```
