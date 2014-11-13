@@ -36,8 +36,11 @@ Preparing a microSD with Debian 7 (Wheezy)
 # qemu-debootstrap --arch=armhf --include=ssh wheezy /mnt ftp://ftp.debian.org/debian/
 # echo "usbarmory" > /mnt/etc/hostname
 # :> etc/resolv.conf
-# mkdir /mnt/root/.ssh
-# cp id_dsa.pub /mnt/root/.ssh/authorized_keys
+# wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/inittab -O /mnt/etc/inittab
+# echo -e '#!/bin/sh -e\nmodprobe g_ether\n/sbin/ifconfig usb0 10.0.0.1\nroute add -net default gw 10.0.0.2\nexit 0' > /mnt/etc/rc.local
+# chroot /mnt
+# passwd
+# exit
 ```
 
 Kernel: Linux 3.16.2
@@ -52,7 +55,7 @@ Kernel: Linux 3.16.2
 # make uImage LOADADDR=0x70008000
 # cp arch/arm/boot/uImage /mnt/boot/
 # make dtbs
-# cp arch/arm/boot/dts/imx53-qsb.dtb /mnt/boot/im53-usbarmory.dtb
+# cp arch/arm/boot/dts/imx53-qsb.dtb /mnt/boot/imx53-usbarmory.dtb
 # make modules
 # make INSTALL_MOD_PATH=/mnt modules_install
 # umount /mnt
