@@ -24,8 +24,8 @@ Preparing a microSD with Debian 7 (Wheezy)
 
 - host dependencies:
 
-  kernel support: binfmt_misc  
-  debian packages: parted, debootstrap, binfmt-support, qemu-user-static
+  Kernel support: binfmt_misc  
+  debian packages: parted, debootstrap, binfmt-support, qemu-user-static, uboot-mkimage
 
 
 ```
@@ -35,7 +35,7 @@ Preparing a microSD with Debian 7 (Wheezy)
 # mount /dev/sdb1 /mnt
 # qemu-debootstrap --arch=armhf --include=ssh wheezy /mnt ftp://ftp.debian.org/debian/
 # echo "usbarmory" > /mnt/etc/hostname
-# :> etc/resolv.conf
+# :> /mnt/etc/resolv.conf
 # wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/inittab -O /mnt/etc/inittab
 # echo -e '#!/bin/sh -e\nmodprobe g_ether\n/sbin/ifconfig usb0 10.0.0.1\nroute add -net default gw 10.0.0.2\nexit 0' > /mnt/etc/rc.local
 # chroot /mnt
@@ -67,7 +67,7 @@ Bootloader: U-Boot 2014.07
 ```
 # git clone https://github.com/inversepath/u-boot-usbarmory.git
 # cd u-boot-usbarmory
-# export ARCH=arm CROSS_COMPILE=/usr/local/gcc-linaro-arm-none-eabi-2.9-2014.09_linux/bin/arm-none-eabi-
+# export ARCH=arm CROSS_COMPILE=/usr/local/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi-
 # make distclean
 # make usbarmory_config
 # make
