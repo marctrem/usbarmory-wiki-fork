@@ -6,7 +6,7 @@ Toolchain: Linaro 4.9
 
 - download:
 
-  http://releases.linaro.org/latest/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz
+  http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz
 
 - install:
 
