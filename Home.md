@@ -12,6 +12,8 @@ The first hardware revision of the USB armory is currently being finalized, for
 information and updates see the [project
 page](http://inversepath.com/usbarmory).
 
+* [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
+
 ## Software
 
 * [Available images](https://github.com/inversepath/usbarmory/wiki/Available-images)
