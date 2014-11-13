@@ -18,13 +18,13 @@ static addressing or a DHCP server are required.
 
 Once the network is configured the host can decide to route the USB armory.
 
-Linux example (host: 10.0.0.1, USB armory: 10.0.0.2):
+Linux example (host: 10.0.0.2, USB armory: 10.0.0.1):
 ```
 # bring the USB virtual Ethernet interface up
 /sbin/ip link set usb0 up
 
 # set the host IP address
-/sbin/ip addr add 10.1.7.1/24 dev usb0
+/sbin/ip addr add 10.0.0.2/24 dev usb0
 
 # enable masquerading for outgoing connections towards wireless interface
 /sbin/iptables -t nat -A POSTROUTING -s 10.0.0.1/32 -o wlan0 -j MASQUERADE
