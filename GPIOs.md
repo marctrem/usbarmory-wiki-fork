@@ -1,14 +1,14 @@
 ### Breakout header
 
-| PIN | Description     |  i.MX53 pad |
-|:---:|-----------------|:-----------:|
-|  1  | Ground          |   N/A       |
-|  2  | USB 5V          |   N/A       |
-|  3  | GPIO4[0]        |   GPIO10    |
-|  4  | GPIO4[1]        |   GPIO11    |
-|  5  | GPIO4[2]        |   GPIO12    |
-|  6  | GPIO4[3]        |   GPIO13    |
-|  7  | GPIO4[4]        |   GPIO14    |
+| PIN | Alpha             | Beta                              |
+|:---:|-------------------|-----------------------------------|
+|  1  | Ground            | Ground                            |
+|  2  | USB 5V            | USB 5V                            |
+|  3  | GPIO4[0] (GPIO10) | GPIO5[27]            (CSI0_DAT9)  |
+|  4  | GPIO4[1] (GPIO11) | UART1_TX / GPIO5[28] (CSI0_DAT10) |
+|  5  | GPIO4[2] (GPIO12) | UART1_RX / GPIO5[29] (CSI0_DAT11) |
+|  6  | GPIO4[3] (GPIO13) | GPIO5[30]            (CSI0_DAT12) |
+|  7  | GPIO4[4] (GPIO14) | GPIO5[31]            (CSI0_DAT13) |
 
 
 ### GPIO Sysfs Interface on Linux
