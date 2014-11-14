@@ -21,10 +21,10 @@ $ tar xvf gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz -C /usr/local
 Preparing a microSD with Debian 7 (Wheezy)
 ------------------------------------------
 
-- host dependencies:
+- Host dependencies:
 
   Kernel support: binfmt_misc  
-  debian packages: parted, debootstrap, binfmt-support, qemu-user-static, uboot-mkimage
+  Debian packages: parted, debootstrap, binfmt-support, qemu-user-static, uboot-mkimage
 
 
 ```
