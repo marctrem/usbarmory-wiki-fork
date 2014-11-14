@@ -7,7 +7,6 @@ Assumptions
 - Debian or Ubuntu host
 - microSD block device: /dev/sdb
 - microSD file system mounting point: /mnt
-- ssh public key: id_dsa.pub
 
 
 Toolchain: Linaro 4.9
