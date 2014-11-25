@@ -18,7 +18,12 @@ static addressing or a DHCP server are required.
 
 Once the network is configured the host can decide to route the USB armory.
 
-Linux example (host: 10.0.0.2, USB armory: 10.0.0.1):
+The Ethernet emulation has been successfully tested on Linux, Mac OS X and
+Windows.
+
+#### Linux
+
+Routing example (host: 10.0.0.2, USB armory: 10.0.0.1):
 ```
 # bring the USB virtual Ethernet interface up
 /sbin/ip link set usb0 up
@@ -34,5 +39,18 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 ```
 
-The Ethernet emulation has been successfully tested on Linux, Mac OS X and
-Windows.
+#### Mac OS X (tested on Yosemite)
+
+1. For connection sharing ensure that the USB armory image assigns an IP
+address between the range 192.168.2.2-192.168.2.254 to usb0 interface, using
+192.168.2.1 as default gateway.
+
+2. On the Mac choose Apple menu > System Preferences and click Sharing.
+
+3. Select Internet Sharing.
+
+4. Choose the Internet connection you want to share in 'Share your connection
+from'
+
+5. Depending on the chosen USB armory Ethernet emulation tick the RNDIS or
+CDC Ethernet checkboxes in 'To computers using'.
