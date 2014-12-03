@@ -54,3 +54,11 @@ from'
 
 5. Depending on the chosen USB armory Ethernet emulation tick the RNDIS or
 CDC Ethernet checkboxes in 'To computers using'.
+
+#### Connecting
+
+When using CDC Ethernet emulation any standard TCP/IP server can be used to communicate with the USB armory board.
+
+On Linux installations the typical interaction would be via OpenSSH server, using an SSH client on the USB host, or web server, using a standard browser as a client.
+
+The installation of the [shellinabox](https://code.google.com/p/shellinabox/) software (available on Debian with apt) provides an easily accessible web terminal emulator (default port: 4200), however using a proper SSH client/server is highly recommended over this method.
