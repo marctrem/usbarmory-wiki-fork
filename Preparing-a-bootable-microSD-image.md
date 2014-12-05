@@ -39,9 +39,9 @@ For Debian 7 (Wheezy):
 ```
 sudo qemu-debootstrap --arch=armhf --include=ssh wheezy $TARGET_MNT http://ftp.debian.org/debian/
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/inittab -O ${TARGET_MNT}/etc/inittab
-echo "deb http://ftp.debian.org/debian wheezy main" | sudo tee ${TARGET_MNT}/etc/apt/source.list
-echo "deb http://ftp.debian.org/debian wheezy-updates main" | sudo tee -a ${TARGET_MNT}/etc/apt/source.list
-echo "deb http://security.debian.org wheezy/updates main" | sudo tee -a ${TARGET_MNT}/etc/apt/source.list
+echo "deb http://ftp.debian.org/debian wheezy main" | sudo tee ${TARGET_MNT}/etc/apt/sources.list
+echo "deb http://ftp.debian.org/debian wheezy-updates main" | sudo tee -a ${TARGET_MNT}/etc/apt/sources.list
+echo "deb http://security.debian.org wheezy/updates main" | sudo tee -a ${TARGET_MNT}/etc/apt/sources.list
 ```
 
 For Ubuntu 14.10 (Utopic Unicorn):
