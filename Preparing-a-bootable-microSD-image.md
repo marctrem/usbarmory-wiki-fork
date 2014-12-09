@@ -89,3 +89,8 @@ make usbarmory_config
 make ARCH=arm CROSS_COMPILE=~/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi-
 sudo dd if=u-boot.imx of=$TARGET_DEV bs=512 seek=2
 ```
+
+Connecting
+----------
+
+After successful image preparation the CDC Ethernet section of [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication) can be followed for pointers on establishing SSH communication with the OpenSSH server started by default by the installation.
