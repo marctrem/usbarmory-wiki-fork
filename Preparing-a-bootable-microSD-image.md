@@ -1,19 +1,21 @@
-U-Boot + Linux + Debian
-=======================
+Prerequisites
+-------------
 
-Assumptions
------------
-
-- Debian 7 (Wheezy) host
-
-- Host dependencies:
-
-  Kernel support: binfmt_misc  
-  Debian packages: parted, debootstrap, binfmt-support, qemu-user-static, uboot-mkimage, wget
-
+Recent Debian and Ubuntu (x86 or x86-64):
 ```
-export TARGET_DEV=/dev/sdX     # pick the appropriate device name for your microSD card (e.g. /dev/sdb)
-export TARGET_MNT=/mnt         # set the microSD root file system mounting path
+sudo apt-get install parted debootstrap binfmt-support qemu-user-static uboot-mkimage wget git
+```
+
+Only on x86-64 Debian add:
+```
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install zlib1g-dev:i386 libstdc++6:i386
+```
+
+Only on x86-64 Ubuntu add:
+```
+sudo apt-get install ia32-libs
 ```
 
 Toolchain: Linaro 4.9
@@ -29,6 +31,8 @@ Root file system
 
 Prepare the microSD:
 ```
+export TARGET_DEV=/dev/sdX     # pick the appropriate device name for your microSD card (e.g. /dev/sdb)
+export TARGET_MNT=/mnt         # set the microSD root file system mounting path
 sudo parted $TARGET_DEV --script mklabel msdos
 sudo parted $TARGET_DEV --script mkpart primary ext4 5M 100%
 sudo mkfs.ext4 ${TARGET_DEV}1
@@ -87,7 +91,7 @@ cd u-boot-usbarmory
 make distclean
 make usbarmory_config
 make ARCH=arm CROSS_COMPILE=~/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi-
-sudo dd if=u-boot.imx of=$TARGET_DEV bs=512 seek=2
+sudo dd if=u-boot.imx of=$TARGET_DEV bs=512 seek=2 conv=fsync
 ```
 
 Connecting
