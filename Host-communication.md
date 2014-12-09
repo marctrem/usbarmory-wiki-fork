@@ -39,6 +39,8 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 ```
 
+This is a command line example that assumes no interference from running Network Managers, in general favor following the predefined configuration files and/or UIs for your specific Linux distribution.
+
 #### Mac OS X (tested on Yosemite)
 
 1. For connection sharing ensure that the USB armory image assigns an IP
