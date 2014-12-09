@@ -23,7 +23,7 @@ Windows.
 
 #### Linux
 
-Routing example (host: 10.0.0.2, USB armory: 10.0.0.1):
+Routing example (host: 10.0.0.2 with wlan0 as Internet interface, USB armory: 10.0.0.1):
 ```
 # bring the USB virtual Ethernet interface up
 /sbin/ip link set usb0 up
