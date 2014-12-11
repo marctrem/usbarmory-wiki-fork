@@ -134,7 +134,7 @@ Launch the following commands:
 # ip route add default via 10.0.0.1
 ```
 
-Test configuration:
+A successful setup can be tested as follows:
 
 ```
 $ curl https://check.torproject.org | grep -E "Sorry|Congratulations"
