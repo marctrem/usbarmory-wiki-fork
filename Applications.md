@@ -139,5 +139,4 @@ Test configuration:
 ```
 $ curl https://check.torproject.org | grep -E "Sorry|Congratulations"
       Congratulations. This browser is configured to use Tor.
-...
 ```
