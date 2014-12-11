@@ -8,8 +8,7 @@ please see information at the [USB armory project page](http://inversepath.com/u
 
 ## Hardware
 
-The first hardware revision of the USB armory is currently being finalized, for
-information and updates see the [project
+The first hardware revision of the USB armory is currently available for [pre-order](https://www.crowdsupply.com/inverse-path/usb-armory), for further information and updates see the [project
 page](http://inversepath.com/usbarmory).
 
 * [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
