@@ -30,6 +30,7 @@ Windows hosts.
 Assumptions:
 * host main interface on network 192.168.1.0/24 with default gateway 192.168.1.1
 * USB armory on network 10.0.0.0/24 with IP address 10.0.0.1
+* USB armory masqueraded and routed as described in [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
 
 #### USB armory setup
 
@@ -52,7 +53,7 @@ DNSListenAddress 10.0.0.1
 
 
 Launch the following script (based on
-[Transparent Proxy Tor wiki page](https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy)):
+[Transparent Proxy Tor wiki page](https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy), *IMPORTANT*: change the _tor_uid variable accordingly):
 
 ```
 #!/bin/sh
@@ -136,12 +137,7 @@ Launch the following commands:
 Test configuration:
 
 ```
-$ curl https://check.torproject.org
-...
-  <h1 class="not">
-
+$ curl https://check.torproject.org | grep -E "Sorry|Congratulations"
       Congratulations. This browser is configured to use Tor.
-
-  </h1>
 ...
 ```
