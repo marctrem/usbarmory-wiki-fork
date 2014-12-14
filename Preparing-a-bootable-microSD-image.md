@@ -26,6 +26,8 @@ wget http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-a
 tar xvf gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz -C ~
 ```
 
+The Linaro toolchain is, of course, far from being the only possible option and it is just presented as a convenient example, Debian/Ubuntu gcc-arm-linux-gnueabihf package is also known to work.
+
 Root file system
 ----------------
 
