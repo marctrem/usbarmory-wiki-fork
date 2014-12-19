@@ -1,4 +1,4 @@
-### Host adapter
+### Enabling host mode
 
 The USB armory is primarily meant to be attached to a USB host, such as a
 laptop or desktop computer. However, it can be also used as a standalone
@@ -9,7 +9,28 @@ kernel device tree configuration, to invert the role of the USB On-The-Go port
 currently used as main plug for the board. This allows USB Armory to be used
 independently as a host.
 
-The host adapter needs to perform the following functions:
+The role change can be enabled in the Linux kernel source file arch/arm/boot/dts/imx53-qsb-common.dtsi
+by modifying the following section accordingly:
+
+```
+&usbotg {
+        dr_mode = "peripheral";
+        status = "okay";
+};
+```
+
+The device tree binary file can then be recompiled, within the compiled kernel tree, as follows:
+
+```
+export CROSS_COMPILE=arm-linux-gnueabi-
+make ARCH=arm dtbs
+```
+
+The resulting dtb can be copied to /boot/imx53-usbarmory.dtb on the USB armory when host mode functionality is desired (it is recommended to keep the standard device dtb file around to switch it over when desired).
+
+### Hardware adapter
+
+In order to use host mode an adapter is needed to perform the following functions:
 
  * Bridging the USB Armory male plug to a USB Type A receptacle (gender changer).
  * Accepting power from a micro-USB input.
