@@ -12,11 +12,13 @@ The first hardware revision of the USB armory is currently available for [pre-or
 page](http://inversepath.com/usbarmory).
 
 * [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
+* [host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 
 ## Software
 
 * [Available images](https://github.com/inversepath/usbarmory/wiki/Available-images)
 * [USB armory <> host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
+* [USB armory <> device communication (standalone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
 * [Using external GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [Development](https://github.com/inversepath/usbarmory/wiki/Development)

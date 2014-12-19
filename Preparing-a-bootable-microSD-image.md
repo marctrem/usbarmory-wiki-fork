@@ -3,7 +3,7 @@ Prerequisites
 
 Recent Debian and Ubuntu (x86 or x86-64):
 ```
-sudo apt-get install parted debootstrap binfmt-support qemu-user-static uboot-mkimage wget git
+sudo apt-get install parted debootstrap binfmt-support qemu-user-static uboot-mkimage wget git gcc-arm-linux-gnueabihf
 ```
 
 Only on x86-64 Debian add:
@@ -18,15 +18,16 @@ Only on x86-64 Ubuntu add:
 sudo apt-get install ia32-libs
 ```
 
-Toolchain: Linaro 4.9
+Alternate toolchain (Linaro 4.9)
 ---------------------
+
+The Linaro toolchain has also been positively tested.
 
 ```
 wget http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz
 tar xvf gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz -C ~
+export CROSS_COMPILE=~/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi-
 ```
-
-The Linaro toolchain is, of course, far from being the only possible option and it is just presented as a convenient example, Debian/Ubuntu gcc-arm-linux-gnueabihf package is also known to work.
 
 Root file system
 ----------------
@@ -71,13 +72,14 @@ Kernel: Linux 3.16.2
 --------------------
 
 ```
+export CROSS_COMPILE=arm-linux-gnueabi-
 wget http://ftp.kernel.org/pub/linux/kernel/v3.x/linux-3.16.2.tar.gz
 tar xvf linux-3.16.2.tar.gz
 cd linux-3.16.2
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-3.16.2.config -O .config
-make ARCH=arm CROSS_COMPILE=~/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi- uImage LOADADDR=0x70008000
-make ARCH=arm CROSS_COMPILE=~/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi- dtbs
-make ARCH=arm CROSS_COMPILE=~/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi- modules
+make ARCH=arm uImage LOADADDR=0x70008000
+make ARCH=arm dtbs
+make ARCH=arm modules
 sudo cp arch/arm/boot/uImage ${TARGET_MNT}/boot/
 sudo cp arch/arm/boot/dts/imx53-qsb.dtb ${TARGET_MNT}/boot/imx53-usbarmory.dtb
 sudo make ARCH=arm INSTALL_MOD_PATH=$TARGET_MNT modules_install
@@ -88,11 +90,12 @@ Bootloader: U-Boot 2014.07
 --------------------------
 
 ```
+export CROSS_COMPILE=arm-linux-gnueabi-
 git clone https://github.com/inversepath/u-boot-usbarmory.git
 cd u-boot-usbarmory
 make distclean
 make usbarmory_config
-make ARCH=arm CROSS_COMPILE=~/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi-
+make ARCH=arm
 sudo dd if=u-boot.imx of=$TARGET_DEV bs=512 seek=2 conv=fsync
 ```
 
