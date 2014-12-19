@@ -21,7 +21,7 @@ sudo apt-get install ia32-libs
 Alternate toolchain (Linaro 4.9)
 ---------------------
 
-The Linaro toolchain has also been positively tested.
+The Linaro toolchain can be alternatively used if a packaged one, such as gcc-arm-linux-gnueabihf, is not available.
 
 ```
 wget http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz
