@@ -4,7 +4,7 @@ The USB armory from [Inverse Path](http://inversepath.com) is an open source
 hardware design, implementing a flash drive sized computer.
 
 For a project introduction and information about purchasing an USB armory board
-please see information at the [USB armory project page](http://inversepath.com/usbarmory).
+please see information at the [USB armory project page](http://inversepath.com/usbarmory). The following page provides useful information on how to [get started](https://github.com/inversepath/usbarmory/wiki/Starting).
 
 ## Hardware
 
@@ -33,3 +33,5 @@ A list of project ideas is available at the [project page](http://inversepath.co
 in the [Applications](https://github.com/inversepath/usbarmory/wiki/Applications) section.
 
 A discussion group is available on [Google Groups](https://groups.google.com/d/forum/usbarmory).
+
+If you think anything is missing on this wiki, or require further support, please email us at support@inversepath.com.
