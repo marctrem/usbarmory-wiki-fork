@@ -1,4 +1,4 @@
-## Important information
+## Handling information
 
 The USB armory board is intended for use as a development platform for hardware
 or software. The board is an open system design, which does not include a
@@ -18,7 +18,7 @@ loads, mind its temperature while handling it.
 ## Getting started
 
 The USB armory requires a microSD card with a valid operating system to boot.
-If you do not have one the following instructions provide information on
+If you do not have one, the following instructions provide information on
 preparing one.
 
 While every modern microSD card should be supported, the following
@@ -39,8 +39,4 @@ Linux distribution on the microSD from a Linux computer:
 
 * [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
 
-For additional information check the available pages on the rest of the
-[wiki](https://github.com/inversepath/usbarmory/wiki).
-
-If you think anything is missing or require further support please email us at
-support@inversepath.com.
+For additional information check the available pages on the rest of the [wiki](https://github.com/inversepath/usbarmory/wiki) or information available on the [main project page](http://inversepath.com/usbarmory). If you think anything is missing or require further support please email us at support@inversepath.com.
