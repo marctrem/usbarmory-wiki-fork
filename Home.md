@@ -17,6 +17,7 @@ page](http://inversepath.com/usbarmory).
 ## Software
 
 * [Available images](https://github.com/inversepath/usbarmory/wiki/Available-images)
+* [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
 * [USB armory <> host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
 * [USB armory <> device communication (standalone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
