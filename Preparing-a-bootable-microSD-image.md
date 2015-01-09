@@ -3,7 +3,7 @@ Prerequisites
 
 Recent Debian and Ubuntu (x86 or x86-64):
 ```
-sudo apt-get install parted debootstrap binfmt-support qemu-user-static uboot-mkimage wget git gcc-arm-linux-gnueabihf
+sudo apt-get install parted debootstrap binfmt-support qemu-user-static uboot-mkimage wget git xz-utils tar
 ```
 
 Only on x86-64 Debian add:
@@ -18,15 +18,21 @@ Only on x86-64 Ubuntu add:
 sudo apt-get install ia32-libs
 ```
 
-Alternate toolchain (Linaro 4.9)
----------------------
+Toolchain (Linaro 4.9)
+--------------------------------
 
-The Linaro toolchain can be alternatively used if a packaged one, such as gcc-arm-linux-gnueabihf, is not available.
-
+On Debian 8 and Ubuntu (12.04 LTS, 14.04 LTS, 14.10) use the packaged one:
 ```
+sudo apt-get install gcc-arm-linux-gnueabihf
+export CROSS_COMPILE=arm-linux-gnueabi-
+```
+
+On Debian 7 the pckaged one is not available so install the Linaro 4.9:
+```
+export TOOLCHAIN_DIR=~          # set the directory where to install the toolchain
 wget http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz
-tar xvf gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz -C ~
-export CROSS_COMPILE=~/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi-
+tar xvf gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz -C $TOOLCHAIN_DIR
+export CROSS_COMPILE=${TOOLCHAIN_DIR}/gcc-linaro-arm-none-eabi-4.9-2014.09_linux/bin/arm-none-eabi-
 ```
 
 Root file system
@@ -44,11 +50,12 @@ sudo mount ${TARGET_DEV}1 $TARGET_MNT
 
 For Debian 7 (Wheezy):
 ```
-sudo qemu-debootstrap --arch=armhf --include=ssh wheezy $TARGET_MNT http://ftp.debian.org/debian/
+sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,openssl,shellinabox wheezy $TARGET_MNT http://ftp.debian.org/debian/
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/inittab -O ${TARGET_MNT}/etc/inittab
 echo "deb http://ftp.debian.org/debian wheezy main" | sudo tee ${TARGET_MNT}/etc/apt/sources.list
 echo "deb http://ftp.debian.org/debian wheezy-updates main" | sudo tee -a ${TARGET_MNT}/etc/apt/sources.list
 echo "deb http://security.debian.org wheezy/updates main" | sudo tee -a ${TARGET_MNT}/etc/apt/sources.list
+echo -e 'allow-hotplug usb0\niface usb0 inet static\n  address 10.0.0.1\n  netmask 255.255.255.0\n  gateway 10.0.0.2'| sudo tee -a ${TARGET_MNT}/etc/network/interfaces
 ```
 
 For Ubuntu 14.10 (Utopic Unicorn):
@@ -57,32 +64,35 @@ wget http://cdimage.ubuntu.com/ubuntu-core/releases/14.10/release/ubuntu-core-14
 sudo tar xvf ubuntu-core-14.10-core-armhf.tar.gz -C $TARGET_MNT
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/ubuntu_conf/ttymxc0.conf -O ${TARGET_MNT}/etc/init/ttymxc0.conf
 sudo cp /usr/bin/qemu-arm-static ${TARGET_MNT}/usr/bin/qemu-arm-static
+echo -e '#!/bin/sh -e\n/sbin/ifconfig usb0 10.0.0.1\nroute add -net default gw 10.0.0.2\nexit 0' | sudo tee ${TARGET_MNT}/etc/rc.local
 ```
 
 Finalize and set the password:
 ```
-echo -e '#!/bin/sh -e\nmodprobe g_ether\n/sbin/ifconfig usb0 10.0.0.1\nroute add -net default gw 10.0.0.2\nexit 0' | sudo tee ${TARGET_MNT}/etc/rc.local
+echo "ledtrig_heartbeat" | sudo tee -a ${TARGET_MNT}/etc/modules
+echo "g_ether dev_addr=1a:55:89:a2:69:41" | sudo tee -a ${TARGET_MNT}/etc/modules
 echo "usbarmory" | sudo tee ${TARGET_MNT}/etc/hostname
 echo "nameserver 8.8.8.8" | sudo tee ${TARGET_MNT}/etc/resolv.conf
-sudo chroot $TARGET_MNT /usr/bin/passwd
+echo "usbarmory  ALL=(ALL) NOPASSWD: ALL" | sudo tee -a ${TARGET_MNT}/etc/sudoers
+echo -e "127.0.1.1\tusbarmory" | sudo tee -a ${TARGET_MNT}/etc/hosts
+sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `mkpasswd -m sha-512 usbarmory` -m usbarmory
 sudo rm ${TARGET_MNT}/usr/bin/qemu-arm-static
 ```
 
-Kernel: Linux 3.16.2
+Kernel: Linux 3.18.2
 --------------------
 
 ```
-export CROSS_COMPILE=arm-linux-gnueabi-
-wget http://ftp.kernel.org/pub/linux/kernel/v3.x/linux-3.16.2.tar.gz
-tar xvf linux-3.16.2.tar.gz
-cd linux-3.16.2
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-3.16.2.config -O .config
-make ARCH=arm uImage LOADADDR=0x70008000
-make ARCH=arm dtbs
-make ARCH=arm modules
+export KERNEL_VER=3.18.2 ARCH=arm
+wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-${KERNEL_VER}.tar.xz
+tar xvf linux-${KERNEL_VER}.tar.xz
+cd linux-${KERNEL_VER}
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-3.18.2.config -O .config
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dts -O arch/arm/boot/dts/imx53-usbarmory.dts
+make uImage LOADADDR=0x70008000 modules imx53-usbarmory.dtb
 sudo cp arch/arm/boot/uImage ${TARGET_MNT}/boot/
-sudo cp arch/arm/boot/dts/imx53-qsb.dtb ${TARGET_MNT}/boot/imx53-usbarmory.dtb
-sudo make ARCH=arm INSTALL_MOD_PATH=$TARGET_MNT modules_install
+sudo cp arch/arm/boot/dts/imx53-usbarmory.dtb ${TARGET_MNT}/boot/imx53-usbarmory.dtb
+sudo make INSTALL_MOD_PATH=$TARGET_MNT ARCH=arm modules_install
 sudo umount $TARGET_MNT
 ```
 
@@ -90,7 +100,6 @@ Bootloader: U-Boot 2014.07
 --------------------------
 
 ```
-export CROSS_COMPILE=arm-linux-gnueabi-
 git clone https://github.com/inversepath/u-boot-usbarmory.git
 cd u-boot-usbarmory
 make distclean
