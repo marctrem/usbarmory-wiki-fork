@@ -23,6 +23,7 @@ page](http://inversepath.com/usbarmory).
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
 * [Using external GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [Development](https://github.com/inversepath/usbarmory/wiki/Development)
+* [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Faq)
 * [External documentation](https://github.com/inversepath/usbarmory/wiki/External-documentation)
 
 ## How to Contribute
