@@ -39,6 +39,6 @@ Linux distribution on the microSD from a Linux computer:
 
 * [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
 
-For additional information check the available pages on the rest of the [wiki](https://github.com/inversepath/usbarmory/wiki), especially the [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Faq), or information available on the [main project page](http://inversepath.com/usbarmory).
+For additional information check the available pages on the rest of the [wiki](https://github.com/inversepath/usbarmory/wiki), especially the [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)), or information available on the [main project page](http://inversepath.com/usbarmory).
 
 If you think anything is missing or require further support please email us at support@inversepath.com.
