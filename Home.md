@@ -18,8 +18,9 @@ page](http://inversepath.com/usbarmory).
 
 * [Available images](https://github.com/inversepath/usbarmory/wiki/Available-images)
 * [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
-* [USB armory <> host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
-* [USB armory <> device communication (standalone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
+* [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
+* [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
+* [Drivers](https://github.com/inversepath/usbarmory/wiki/Drivers)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
 * [Using external GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [Development](https://github.com/inversepath/usbarmory/wiki/Development)
