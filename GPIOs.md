@@ -10,6 +10,9 @@
 |  6  | GPIO5\[30\]            (CSI0_DAT12)   | UART1_RX / GPIO5\[29\] (CSI0_DAT11) |
 |  7  | GPIO5\[31\]            (CSI0_DAT13)   | GPIO5\[30\]            (CSI0_DAT12) |
 
+The breakout header can be accessed, among other options, with a [solderless header](https://www.sparkfun.com/products/10527).
+
+The serial port can be connected to via a [USB to TTL cable](https://www.sparkfun.com/products/12977).
 
 ### GPIO Sysfs Interface on Linux
 
