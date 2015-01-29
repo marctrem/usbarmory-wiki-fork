@@ -27,7 +27,7 @@ sudo apt-get install gcc-arm-linux-gnueabihf
 export CROSS_COMPILE=arm-linux-gnueabi-
 ```
 
-On Debian 7 the pckaged one is not available so install the Linaro 4.9:
+On Debian 7 the packaged one is not available so install the Linaro 4.9:
 ```
 export TOOLCHAIN_DIR=~          # set the directory where to install the toolchain
 wget http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz
