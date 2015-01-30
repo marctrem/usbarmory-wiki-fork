@@ -70,6 +70,7 @@ echo -e '#!/bin/sh -e\n/sbin/ifconfig usb0 10.0.0.1\nroute add -net default gw 1
 Finalize and set the password:
 ```
 echo "ledtrig_heartbeat" | sudo tee -a ${TARGET_MNT}/etc/modules
+echo "ci_hdrc_imx" | sudo tee -a ${TARGET_MNT}/etc/modules
 echo "g_ether use_eem=0 dev_addr=1a:55:89:a2:69:41" | sudo tee -a ${TARGET_MNT}/etc/modules
 echo "usbarmory" | sudo tee ${TARGET_MNT}/etc/hostname
 echo "nameserver 8.8.8.8" | sudo tee ${TARGET_MNT}/etc/resolv.conf
