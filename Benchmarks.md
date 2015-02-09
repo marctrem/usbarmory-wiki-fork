@@ -6,7 +6,7 @@ The USB armory i.MX53 CPU clocks by default at 800 MHz, models mounting the cons
 
 #### nbench
 
-The [nbench](http://www.tux.org/~mayer/linux/bmark.html) utility is for the USB armory benchmark is compiled with the following gcc (Debian 4.7.2-5) flags:
+The [nbench](http://www.tux.org/~mayer/linux/bmark.html) utility is for the USB armory benchmark is compiled with the following gcc (Debian 4.6.3-14) flags:
 ```
 -s -static -Wall -O3 -mfpu=neon -mfloat-abi=hard -mcpu=cortex-a8 -mtune=cortex-a8 -fomit-frame-pointer -marm -funroll-loops -ffast-math
 ```
