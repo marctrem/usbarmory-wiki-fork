@@ -2,11 +2,11 @@ The following benchmarks aim to provide an approximate reference for USB armory 
 
 Please keep in mind that all benchmarks are affected by a multitude of factors including, and not limited to, compilation options, kernel options and configuration, running processes, etc. These results provide only an approximate reference and should be taken with a grain of salt.
 
-Also note that depending on the specific i.MX53 SoC model the USB armory clock can go from 800 Mhz to 1.2 Ghz, at this point only the lowest frequency is used for the following results.
+Also note that depending on the specific i.MX53 SoC model the USB armory clock can go from 800 Mhz to 1.2 Ghz, only the lowest frequency has been tested.
 
 #### nbench
 
-The [nbench](http://www.tux.org/~mayer/linux/bmark.html) utility is used for the following benchmarks, compiled with the following gcc (Debian 4.6.3-14) flags:
+The [nbench](http://www.tux.org/~mayer/linux/bmark.html) utility is for the USB armory benchmark is compiled with the following gcc (Debian 4.6.3-14) flags:
 ```
 -s -static -Wall -O3 -mfpu=neon -mfloat-abi=hard -mcpu=cortex-a8 -mtune=cortex-a8 -fomit-frame-pointer -marm -funroll-loops -ffast-math
 ```
@@ -17,11 +17,19 @@ The [nbench](http://www.tux.org/~mayer/linux/bmark.html) utility is used for the
 | Raspberry Pi 2 Model B @ 900 Mhz |         4.228 |         5.607 |                4.769 | 
 | Raspberry Pi Model B+ @ 700 Mhz  |         2.409 |         3.042 |                1.957 |
 
-The USB armory ARM Cortex-A8 CPU includes the VFP-Lite floating point unit which is not as fast as other ARM FPUs. 
+The USB armory ARM Cortex-A8 CPU includes the VFPLite floating point unit which is not as fast as other ARM FPUs. 
+
+#### sysbench
+
+| Device                           |Total Time | Events | Min req. | Avg req. | Max req. |
+|---------------------------------:|----------:|-------:|---------:|---------:|---------:|
+| USB armory @ 800 Mhz             | 315.2876s |  10000 |  31.48ms |  31.53ms |  32.67ms |
+| Raspberry Pi 2 Model B @ 900 Mhz | 298.6816s |  10000 |  29.64ms |  29.87ms |  44.60ms |
+| Raspberry Pi Model B+ @ 700 Mhz  | 523.7819s |  10000 |  51.99ms |  52.37ms |  54.81ms |
 
 #### OpenSSL
 
-The standard openssl speed test (-evp <algorithm> -elapsed) is used for the following benchmarks, openssl version and compilation information:
+The standard openssl speed test (-evp <algorithm> -elapsed) for the USB armory tests is compiled with the following gcc (Debian 4.6.3-14) flags:
 ```
 OpenSSL 1.0.1e 11 Feb 2013
 built on: Thu Jan  8 22:02:29 UTC 2015
