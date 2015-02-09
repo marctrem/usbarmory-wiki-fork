@@ -13,6 +13,7 @@ page](http://inversepath.com/usbarmory).
 
 * [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
 * [host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
+* [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
 
 ## Software
 
