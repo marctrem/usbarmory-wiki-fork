@@ -55,7 +55,7 @@ sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/softwar
 echo "deb http://ftp.debian.org/debian wheezy main" | sudo tee ${TARGET_MNT}/etc/apt/sources.list
 echo "deb http://ftp.debian.org/debian wheezy-updates main" | sudo tee -a ${TARGET_MNT}/etc/apt/sources.list
 echo "deb http://security.debian.org wheezy/updates main" | sudo tee -a ${TARGET_MNT}/etc/apt/sources.list
-echo -e 'allow-hotplug usb0\niface usb0 inet static\n  address 10.0.0.1\n  netmask 255.255.255.0\n  gateway 10.0.0.2'| sudo tee -a ${TARGET_MNT}/etc/network/interfaces
+echo "nameserver 8.8.8.8" | sudo tee ${TARGET_MNT}/etc/resolv.conf
 ```
 
 For Ubuntu 14.10 (Utopic Unicorn):
@@ -64,7 +64,8 @@ wget http://cdimage.ubuntu.com/ubuntu-core/releases/14.10/release/ubuntu-core-14
 sudo tar xvf ubuntu-core-14.10-core-armhf.tar.gz -C $TARGET_MNT
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/ubuntu_conf/ttymxc0.conf -O ${TARGET_MNT}/etc/init/ttymxc0.conf
 sudo cp /usr/bin/qemu-arm-static ${TARGET_MNT}/usr/bin/qemu-arm-static
-echo -e '#!/bin/sh -e\n/sbin/ifconfig usb0 10.0.0.1\nroute add -net default gw 10.0.0.2\nexit 0' | sudo tee ${TARGET_MNT}/etc/rc.local
+echo "nameserver 8.8.8.8" | sudo tee ${TARGET_MNT}/etc/resolv.conf
+sudo chroot $TARGET_MNT apt-get install -y openssh-server whois
 ```
 
 Finalize and set the password:
@@ -72,8 +73,8 @@ Finalize and set the password:
 echo "ledtrig_heartbeat" | sudo tee -a ${TARGET_MNT}/etc/modules
 echo "ci_hdrc_imx" | sudo tee -a ${TARGET_MNT}/etc/modules
 echo "g_ether use_eem=0 dev_addr=1a:55:89:a2:69:41" | sudo tee -a ${TARGET_MNT}/etc/modules
+echo -e 'allow-hotplug usb0\niface usb0 inet static\n  address 10.0.0.1\n  netmask 255.255.255.0\n  gateway 10.0.0.2'| sudo tee -a ${TARGET_MNT}/etc/network/interfaces
 echo "usbarmory" | sudo tee ${TARGET_MNT}/etc/hostname
-echo "nameserver 8.8.8.8" | sudo tee ${TARGET_MNT}/etc/resolv.conf
 echo "usbarmory  ALL=(ALL) NOPASSWD: ALL" | sudo tee -a ${TARGET_MNT}/etc/sudoers
 echo -e "127.0.1.1\tusbarmory" | sudo tee -a ${TARGET_MNT}/etc/hosts
 sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `mkpasswd -m sha-512 usbarmory` -m usbarmory
