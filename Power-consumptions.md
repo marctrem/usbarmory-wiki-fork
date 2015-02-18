@@ -1,4 +1,4 @@
-The following measures aim to provide an approximate USB armory power consumption.
+The following measures aim to provide an approximate USB armory power consumptions.
 
 The measures were performed using an Agilent U1242B multimeter. The values are in mA.
 
