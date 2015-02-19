@@ -12,7 +12,7 @@ The first hardware revision of the USB armory is currently available for [pre-or
 page](http://inversepath.com/usbarmory).
 
 * [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
-* [host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
+* [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
 * [Power consumption](https://github.com/inversepath/usbarmory/wiki/Power-consumption)
 
