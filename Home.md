@@ -48,7 +48,7 @@ USB armory | http://inversepath.com/usbarmory
 Copyright (c) 2015 Inverse Path S.r.l.
 
 This is an open hardware design licensed under the terms of the CERN Open
-Hardware License (OHL) v1.2.
+Hardware Licence (OHL) v1.2.
 
 You may redistribute and modify this documentation under the terms of the CERN
 OHL v.1.2 (http://ohwr.org/cernohl). This documentation is distributed WITHOUT
