@@ -40,3 +40,17 @@ in the [Applications](https://github.com/inversepath/usbarmory/wiki/Applications
 A discussion group is available on [Google Groups](https://groups.google.com/d/forum/usbarmory).
 
 If you think anything is missing on this wiki, or require further support, please email us at support@inversepath.com.
+
+## License
+
+USB armory | http://inversepath.com/usbarmory  
+Copyright (c) 2015 Inverse Path S.r.l.
+
+This is an open hardware design licensed under the terms of the CERN Open
+Hardware License (OHL) v1.2.
+
+You may redistribute and modify this documentation under the terms of the CERN
+OHL v.1.2 (http://ohwr.org/cernohl). This documentation is distributed WITHOUT
+ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY
+QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the CERN OHL v.1.2 for
+applicable conditions.
