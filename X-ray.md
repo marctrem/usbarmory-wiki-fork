@@ -5,3 +5,7 @@ USB armory Mk I
 USB armory i.MX53 SoC
 
 ![USB armory SoC](http://dev.inversepath.com/download/usbarmory/xray_soc.jpg)
+
+USB armory LTC3589 PMIC
+
+![USB armory PMIC](http://dev.inversepath.com/download/usbarmory/xray_pmic.jpg)
