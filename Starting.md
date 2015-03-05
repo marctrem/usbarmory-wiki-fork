@@ -18,8 +18,10 @@ loads, mind its temperature while handling it.
 ## Getting started
 
 The USB armory requires a microSD card with a valid operating system to boot.
-If you do not have one, the following instructions provide information on
-preparing one.
+
+If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](http://inversepath.com) default image, please see notes and default credentials [here](http://dev.inversepath.com/usbarmory).
+
+The following instructions provide information on preparing a bootable microSD.
 
 While every modern microSD card should be supported, the following
 compatibility reference keeps track of successfully tested cards:
