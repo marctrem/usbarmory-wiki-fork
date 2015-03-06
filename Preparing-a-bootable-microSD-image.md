@@ -72,7 +72,7 @@ Finalize and set the password:
 ```
 echo "ledtrig_heartbeat" | sudo tee -a ${TARGET_MNT}/etc/modules
 echo "ci_hdrc_imx" | sudo tee -a ${TARGET_MNT}/etc/modules
-echo "g_ether use_eem=0 dev_addr=1a:55:89:a2:69:41" | sudo tee -a ${TARGET_MNT}/etc/modules
+echo "g_ether use_eem=0 dev_addr=1a:55:89:a2:69:41 host_addr=1a:55:89:a2:69:42" | sudo tee -a ${TARGET_MNT}/etc/modules
 echo -e 'allow-hotplug usb0\niface usb0 inet static\n  address 10.0.0.1\n  netmask 255.255.255.0\n  gateway 10.0.0.2'| sudo tee -a ${TARGET_MNT}/etc/network/interfaces
 echo "usbarmory" | sudo tee ${TARGET_MNT}/etc/hostname
 echo "usbarmory  ALL=(ALL) NOPASSWD: ALL" | sudo tee -a ${TARGET_MNT}/etc/sudoers
