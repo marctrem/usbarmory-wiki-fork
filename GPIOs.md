@@ -28,3 +28,19 @@ corresponding to pin 7, in output mode and write 1 and 0 from a Linux shell.
 # echo 1 > /sys/class/gpio/gpio100/value
 # echo 0 > /sys/class/gpio/gpio100/value
 ```
+
+### LED Control
+
+The Mk I LED can be controlled as follows:
+
+```
+# echo 123 > /sys/class/gpio/export             # 96 (GPIO4[27]) + 27 == GPIO4[27]
+
+## full brightness
+# echo out > /sys/class/gpio/gpio123/direction
+# echo 0 > /sys/class/gpio/gpio123/value        # On
+# echo 1 > /sys/class/gpio/gpio123/value        # Off
+
+## mid-brightness trick
+# echo in > /sys/class/gpio/gpio123/direction
+```
