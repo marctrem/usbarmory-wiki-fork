@@ -81,15 +81,15 @@ sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `mkpasswd -m sha-512 u
 sudo rm ${TARGET_MNT}/usr/bin/qemu-arm-static
 ```
 
-Kernel: Linux 3.19.0
+Kernel: Linux 3.18.2
 --------------------
 
 ```
-export KERNEL_VER=3.19 ARCH=arm
+export KERNEL_VER=3.18.2 ARCH=arm
 wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-${KERNEL_VER}.tar.xz
 tar xvf linux-${KERNEL_VER}.tar.xz
 cd linux-${KERNEL_VER}
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-3.19.0.config -O .config
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-3.18.2.config -O .config
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dts -O arch/arm/boot/dts/imx53-usbarmory.dts
 make uImage LOADADDR=0x70008000 modules imx53-usbarmory.dtb
 sudo cp arch/arm/boot/uImage ${TARGET_MNT}/boot/
