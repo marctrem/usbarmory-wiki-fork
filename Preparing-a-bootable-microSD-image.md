@@ -52,6 +52,7 @@ For Debian 7 (Wheezy):
 ```
 sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,openssl,shellinabox wheezy $TARGET_MNT http://ftp.debian.org/debian/
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/inittab -O ${TARGET_MNT}/etc/inittab
+sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/rc.local -O ${TARGET_MNT}/etc/rc.local
 echo "deb http://ftp.debian.org/debian wheezy main" | sudo tee ${TARGET_MNT}/etc/apt/sources.list
 echo "deb http://ftp.debian.org/debian wheezy-updates main" | sudo tee -a ${TARGET_MNT}/etc/apt/sources.list
 echo "deb http://security.debian.org wheezy/updates main" | sudo tee -a ${TARGET_MNT}/etc/apt/sources.list
