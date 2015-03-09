@@ -6,6 +6,6 @@ The following table summarizes the list of available pre-compiled images:
 
 | Author        | OS            | Kernel version | Boot loader     | Date     | Link |
 |:--------------|--------------:|---------------:|----------------:|---------:|-----:|
-| Inverse Path  | Debian Wheezy | Linux 3.18.2   | U-Boot v2014.07 | 20150302 | [USB armory base images](http://dev.inversepath.com/download/usbarmory) |
+| Inverse Path  | Debian Wheezy | Linux 3.18.2   | U-Boot v2014.07 | 20150308 | [USB armory base images](http://dev.inversepath.com/download/usbarmory) |
 
 
