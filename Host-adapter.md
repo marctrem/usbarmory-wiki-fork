@@ -9,22 +9,18 @@ kernel device tree configuration, to invert the role of the USB On-The-Go port
 currently used as main plug for the board. This allows USB Armory to be used
 independently as a host.
 
-The role change can be enabled in the Linux kernel source file arch/arm/boot/dts/imx53-qsb-common.dtsi
-by modifying the following section accordingly:
+The role change can be enabled by using a device tree source file (dts) with the following configuration:
 
 ```
 &usbotg {
-        dr_mode = "peripheral";
+        dr_mode = "host";
         status = "okay";
 };
 ```
 
-The device tree binary file can then be recompiled, within the compiled kernel tree, as follows:
+The official USB armory repository provides an example [here](https://github.com/inversepath/usbarmory/blob/master/software/kernel_conf/imx53-usbarmory-host_mode.dts).
 
-```
-export CROSS_COMPILE=arm-linux-gnueabi-
-make ARCH=arm dtbs
-```
+The device tree binary file can then be compiled as shown in the [microSD image preparation instructions](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image), taking in account the different dts file.
 
 The resulting dtb can be copied to /boot/imx53-usbarmory.dtb on the USB armory when host mode functionality is desired (it is recommended to keep the standard device dtb file around to switch it over when desired).
 
