@@ -24,7 +24,7 @@ Toolchain (Linaro 4.9)
 On Debian 8 and Ubuntu (12.04 LTS, 14.04 LTS, 14.10) use the packaged one:
 ```
 sudo apt-get install gcc-arm-linux-gnueabihf
-export CROSS_COMPILE=arm-linux-gnueabi-
+export CROSS_COMPILE=arm-linux-gnueabihf-
 ```
 
 On Debian 7 the packaged one is not available so install the Linaro 4.9:
