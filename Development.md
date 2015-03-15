@@ -9,4 +9,5 @@ The serial downloader can be found at the GitHub
 used to directly download and execute code on the SoC.
 
 * [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
+* [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
 * [External documentation](https://github.com/inversepath/usbarmory/wiki/External-documentation)
