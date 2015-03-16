@@ -1,3 +1,7 @@
+**IMPORTANT**: please note that the microSD slot is with "hinge" type insertion and **not** a pull-push
+slot. In order to open it gently lift the closed metal hinge towards the opposite direction of the little
+arrow engraved on it, a small "click" indicates successful opening. Lift the hinge upwards and place the microSD card from the top, once inserted close it by putting the hinge back in position and by lifting it towards the arrow direction.
+
 The following microSD cards have been successfully tested with the i.MX53 SD
 host controller and card slot used on USB armory boards:
 
