@@ -10,7 +10,7 @@ The image must be compiled with the following load address:
 make ARCH=arm zImage LOADADDR=0x80008000 modules
 ```
 
-The Genode OS image, embedding a sample Linux kernel with initrd image, can be compiled as follows:
+The Genode OS image, embedding a sample Linux kernel with initrd image, can be compiled as follows (requires the [Genode Toolchain](http://genode.org/download/tool-chain) to be installed:
 
 ```
 git clone https://github.com/genodelabs/genode
