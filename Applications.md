@@ -18,6 +18,10 @@ the USB armory please submit it at info@inversepath.com for inclusion.
 See also [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
 for interfacing options.
 
+### File encryption
+
+The [INTERLOCK](https://github.com/inversepath/interlock) application is a file encryption front-end developed, but not limited to, usage with the USB armory.
+
 ### Bitcoin wallet
 
 The Electrum (https://electrum.org/) Bitcoin wallet works out of the box on the
