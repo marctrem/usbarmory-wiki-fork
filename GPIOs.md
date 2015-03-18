@@ -34,6 +34,9 @@ corresponding to pin 7, in output mode and write 1 and 0 from a Linux shell.
 The Mk I LED can be controlled as follows:
 
 ```
+## unload the default LED modules
+# modprobe -r leds_gpio led_class ledtrig_heartbeat
+
 # echo 123 > /sys/class/gpio/export             # 96 (GPIO4[27]) + 27 == GPIO4[27]
 
 ## full brightness
@@ -43,4 +46,13 @@ The Mk I LED can be controlled as follows:
 
 ## mid-brightness trick
 # echo in > /sys/class/gpio/gpio123/direction
+```
+
+To permanently disable the default LED usage
+comment the ledtrig_heartbeat line from /etc/modules
+and blacklist leds_gpio and led_class:
+
+```
+sed -i /etc/modules -e 's/ledtrig_heartbeat/#ledtrig_heartbeat/'
+echo -e "blacklist leds_gpio\nblacklist led_class" > /etc/modprobe.d/led-blacklist.conf
 ```
