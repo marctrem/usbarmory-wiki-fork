@@ -3,6 +3,11 @@
 No particular host configuration is required, when configured for mass storage
 operation the USB armory is detected as a standard USB flash drive.
 
+Entry in /etc/modules:
+```
+g_mass_storage file=disk.img
+```
+
 ### CDC Ethernet
 
 This mode allows to interact with the USB armory just like a standard TCP/IP
@@ -20,6 +25,11 @@ Once the network is configured the host can decide to route the USB armory.
 
 The Ethernet emulation has been successfully tested on Linux, Mac OS X and
 Windows.
+
+Entry in /etc/modules:
+```
+g_ether use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2
+```
 
 #### Linux
 
@@ -64,3 +74,10 @@ When using CDC Ethernet emulation any standard TCP/IP server can be used to comm
 On Linux installations the typical interaction would be via OpenSSH server, using an SSH client on the USB host, or web server, using a standard browser as a client.
 
 The installation of the [shellinabox](https://code.google.com/p/shellinabox/) software (available on Debian with apt) provides an easily accessible web terminal emulator (default port: 4200), however using a proper SSH client/server is highly recommended over this method.
+
+### Composite Mass Storage and Ethernet emulation
+
+Entry in /etc/modules:
+```
+g_multi use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2 file=disk.img
+```
