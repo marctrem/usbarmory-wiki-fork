@@ -44,7 +44,7 @@ This is a command line example that assumes no interference from running Network
 #### Mac OS X (tested on Yosemite)
 
 1. For connection sharing ensure that the USB armory image assigns an IP
-address between the range 192.168.2.2-192.168.2.254 to usb0 interface, using
+address between the range 192.168.2.2-192.168.2.254 to CDC/RNDIS interface, using
 192.168.2.1 as default gateway.
 
 2. On the Mac choose Apple menu > System Preferences and click Sharing.
