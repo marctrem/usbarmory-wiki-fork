@@ -13,3 +13,7 @@ See next question.
 Like the Raspberry Pi, the USB armory has no battery to hold RTC state. In order to address this a valid time must be set at boot, this can either be done manually using 'date' command or by properly routing the USB armory to the Internet and letting a network time client (such as 'ntpclient' or 'tlsdate') to do its job.
 
 For USB armory-specific application development the recommendation is to implement automatic time/date provisioning from the application client in scenarios where Internet routing is not desired/implemented.
+
+#### How do I address locale related errors when installing packages on Debian images ?
+
+Install package 'locales' and then run 'dpkg-reconfigure locales'.
