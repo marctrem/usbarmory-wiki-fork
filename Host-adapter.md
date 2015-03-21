@@ -51,4 +51,6 @@ recommended for people with experience in DIY hardware and electronics):
 The adapter is available for purchase along with the USB armory
 board, please see information at the [USB armory project page](http://inversepath.com/usbarmory).
 
+**Fun fact**: the host adapter can also be used to prevent accidental data exchange enabling secure charging.
+
 ![USB armory host adapter](http://inversepath.com/images/usbarmory_host_adapter.jpg)
