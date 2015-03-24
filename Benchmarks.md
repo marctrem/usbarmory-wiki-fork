@@ -2,7 +2,7 @@ The following benchmarks aim to provide an approximate reference for USB armory 
 
 Please keep in mind that all benchmarks are affected by a multitude of factors including, and not limited to, compilation options, kernel options and configuration, running processes, etc. These results provide only an approximate reference and should be taken with a grain of salt.
 
-The USB armory i.MX53 CPU clocks by default at 800 MHz, models mounting the consumer version (i.MX535 with P/N MCIMX535DVV1 used for the entire first production batch) can be clocked at 1 GHz.
+The USB armory i.MX53 CPU clocks by default at 800 MHz, models mounting the consumer version (i.MX535) can be clocked at 1 GHz (MCIMX535DVV1) and 1.2 GHz (MCIMX535DVV2). The first production batch mounts the automotive version (i.MX534, P/N MCIMX534AVV8C), while officially advertised as 800 MHz clock this model has been positively tested running with a 1 GHz clock without any issues.
 
 #### nbench
 
