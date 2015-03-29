@@ -19,12 +19,11 @@ page](http://inversepath.com/usbarmory).
 * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
 * [Power consumption](https://github.com/inversepath/usbarmory/wiki/Power-consumption)
-* [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
 * [X-ray](https://github.com/inversepath/usbarmory/wiki/X-ray)
+* [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
 
 ## Software
 
-* [Available images](https://github.com/inversepath/usbarmory/wiki/Available-images)
 * [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
 * [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
 * [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
@@ -32,9 +31,16 @@ page](http://inversepath.com/usbarmory).
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
 * [Using external GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [Development](https://github.com/inversepath/usbarmory/wiki/Development)
-* [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * [External documentation](https://github.com/inversepath/usbarmory/wiki/External-documentation)
+
+## Supported Operating Systems
+
+* [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
+* Debian, Ubuntu: image preparation described [here](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
+* [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
+* [ArchAssault](https://archassault.org/news/usb-armory-fully-supported)
+* [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
 
 ## How to Contribute
 
