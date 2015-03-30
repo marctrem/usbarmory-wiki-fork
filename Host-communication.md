@@ -57,7 +57,7 @@ This is a command line example that assumes no interference from running Network
 address between the range 192.168.2.2-192.168.2.254 to CDC/RNDIS interface, using
 192.168.2.1 as default gateway.
 
-2. On the Mac choose Apple menu > System Preferences and click Sharing.
+2. On the Mac choose Apple menu > 'System Preferences' and click Sharing.
 
 3. Select Internet Sharing.
 
@@ -66,6 +66,20 @@ from'
 
 5. Depending on the chosen USB armory Ethernet emulation tick the RNDIS or
 CDC Ethernet checkboxes in 'To computers using'.
+
+#### Windows 7
+
+1. For connection sharing ensure that the USB armory image assigns an IP
+address between the range 192.168.137.2-192.168.137.254 to CDC/RNDIS interface, using
+192.168.137.1 as default gateway.
+
+2. On the Control Panel choose 'Network and Sharing Center' and click 'View network connections'.
+
+3. Select the Internet connection to be shared, right click to Properties.
+
+4. Choose the Sharing tab and select 'Allow other network users to connect through this computer’s Internet connection'.
+
+5. Depending on the interface assigned to the USB armory Ethernet emulation check its relevant entry in the "Home networking connection" selector.
 
 #### Connecting
 
