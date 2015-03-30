@@ -31,7 +31,7 @@ Entry in /etc/modules:
 g_ether use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2
 ```
 
-#### Linux
+#### Connection Sharing: Linux
 
 Routing example (host: 10.0.0.2 with wlan0 as Internet interface, USB armory: 10.0.0.1):
 ```
@@ -51,7 +51,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 This is a command line example that assumes no interference from running Network Managers, in general favor following the predefined configuration files and/or UIs for your specific Linux distribution.
 
-#### Mac OS X (tested on Yosemite)
+#### Connection Sharing: Mac OS X (Yosemite)
 
 1. For connection sharing ensure that the USB armory image assigns an IP
 address between the range 192.168.2.2-192.168.2.254 to CDC/RNDIS interface, using
@@ -67,7 +67,7 @@ from'
 5. Depending on the chosen USB armory Ethernet emulation tick the RNDIS or
 CDC Ethernet checkboxes in 'To computers using'.
 
-#### Windows 7
+#### Connection Sharing: Windows 7
 
 1. For connection sharing ensure that the USB armory image assigns an IP
 address between the range 192.168.137.2-192.168.137.254 to CDC/RNDIS interface, using
