@@ -23,7 +23,7 @@ The USB armory requires a microSD card with a valid operating system to boot.
 slot. In order to open it gently slide the closed metal hinge towards the opposite direction of the little
 arrow engraved on it, a small "click" indicates successful opening. Lift the hinge upwards and place the microSD card from the top, once inserted close it by putting the hinge back in position and by sliding it towards the arrow direction.
 
-If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](http://inversepath.com) default image, please see notes and default credentials [here](http://dev.inversepath.com/usbarmory).
+If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](http://inversepath.com) default image, please see notes and default credentials [here](http://dev.inversepath.com/usbarmory) (specifically the **CONNECTING** section).
 
 The following instructions provide information on preparing a bootable microSD.
 
