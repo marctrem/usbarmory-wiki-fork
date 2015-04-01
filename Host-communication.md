@@ -55,7 +55,8 @@ This is a command line example that assumes no interference from running Network
 
 1. For connection sharing ensure that the USB armory image assigns an IP
 address between the range 192.168.2.2-192.168.2.254 to CDC/RNDIS interface, using
-192.168.2.1 as default gateway.
+192.168.2.1 as default gateway. (**NOTE**: the official pre-imaged microSD card for
+the USB armory does not assign an address on this subnet, please follow its [instructions](http://dev.inversepath.com/download/usbarmory/) for the first connection)
 
 2. On the Mac choose Apple menu > 'System Preferences' and click Sharing.
 
@@ -71,7 +72,8 @@ CDC Ethernet checkboxes in 'To computers using'.
 
 1. For connection sharing ensure that the USB armory image assigns an IP
 address between the range 192.168.137.2-192.168.137.254 to CDC/RNDIS interface, using
-192.168.137.1 as default gateway.
+192.168.137.1 as default gateway. (**NOTE**: the official pre-imaged microSD card for
+the USB armory does not assign an address on this subnet, please follow its [instructions](http://dev.inversepath.com/download/usbarmory/) for the first connection)
 
 2. On the Control Panel choose 'Network and Sharing Center' and click 'View network connections'.
 
