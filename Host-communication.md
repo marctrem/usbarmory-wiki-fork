@@ -90,10 +90,3 @@ When using CDC Ethernet emulation any standard TCP/IP server can be used to comm
 On Linux installations the typical interaction would be via OpenSSH server, using an SSH client on the USB host, or web server, using a standard browser as a client.
 
 The installation of the [shellinabox](https://code.google.com/p/shellinabox/) software (available on Debian with apt) provides an easily accessible web terminal emulator (default port: 4200), however using a proper SSH client/server is highly recommended over this method.
-
-### Composite Mass Storage and Ethernet emulation
-
-Entry in /etc/modules:
-```
-g_multi use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2 file=disk.img
-```
