@@ -50,7 +50,7 @@ sudo mount ${TARGET_DEV}1 $TARGET_MNT
 
 For Debian 7 (Wheezy):
 ```
-sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,openssl,shellinabox,vim,nano,cryptsetup,lvm2,locales wheezy $TARGET_MNT http://ftp.debian.org/debian/
+sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,fake-hwclock,openssl,shellinabox,vim,nano,cryptsetup,lvm2,locales wheezy $TARGET_MNT http://ftp.debian.org/debian/
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/inittab -O ${TARGET_MNT}/etc/inittab
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/rc.local -O ${TARGET_MNT}/etc/rc.local
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/sources.list -O ${TARGET_MNT}/etc/apt/sources.list
@@ -66,7 +66,7 @@ sudo tar xvf ubuntu-core-14.10-core-armhf.tar.gz -C $TARGET_MNT
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/ubuntu_conf/ttymxc0.conf -O ${TARGET_MNT}/etc/init/ttymxc0.conf
 sudo cp /usr/bin/qemu-arm-static ${TARGET_MNT}/usr/bin/qemu-arm-static
 echo "nameserver 8.8.8.8" | sudo tee ${TARGET_MNT}/etc/resolv.conf
-sudo chroot $TARGET_MNT apt-get install -y openssh-server whois
+sudo chroot $TARGET_MNT apt-get install -y openssh-server whois fake-hwclock
 ```
 
 Finalize and set the password:
