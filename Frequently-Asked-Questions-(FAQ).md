@@ -1,3 +1,11 @@
+#### Help, I can't connect to my USB armory.
+
+If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](http://inversepath.com) default image, please see notes and default credentials [here](http://dev.inversepath.com/usbarmory) (specifically the **CONNECTING** section). If you have issues connecting always make sure that:
+
+1. the LED is blinking (indicates Linux kernel heartbeat)
+
+2. the network interface on your USB host, associated to the USB armory (Linux: usbX, OSX, Windows: RNDIS), is correctly set up with the required host address (typically 10.0.0.2 with netmask 255.255.255.0)
+
 #### How do I resize the microSD partition on available images smaller than the total available space ?
 
 An excellent tutorial on how to do this can be found [here](http://elinux.org/Beagleboard:Expanding_File_System_Partition_On_A_microSD).
