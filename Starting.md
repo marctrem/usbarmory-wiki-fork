@@ -25,7 +25,11 @@ arrow engraved on it, a small "click" indicates successful opening. Lift the hin
 
 ### Pre-imaged microSD card
 
-If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](http://inversepath.com) default image, please see notes and default credentials [here](http://dev.inversepath.com/usbarmory) (specifically the **CONNECTING** section).
+If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](http://inversepath.com) default image, please see notes and default credentials [here](http://dev.inversepath.com/usbarmory) (specifically the **CONNECTING** section). If you have issues connecting always make sure that:
+
+1. the LED is blinking (indicates Linux kernel heartbeat)
+
+2. the network interface on your USB host, associated to the USB armory (Linux: usbX, OSX, Windows: RNDIS), is correctly set up with the required host address (typically 10.0.0.2 with netmask 255.255.255.0)
 
 ### Preparing your own microSD card
 
