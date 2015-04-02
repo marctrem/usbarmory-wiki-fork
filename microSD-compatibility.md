@@ -18,5 +18,6 @@ host controller and card slot used on USB armory boards:
 | SanDisk Ultra | SDHC   | 4           | 1               |  4 GB |
 | SanDisk Ultra | SDHC   | 4           | 1               |  8 GB |
 | SanDisk Ultra | SDHC   | 10          | 1               |  8 GB |
+| SanDisk Ultra | SDHC   | 10          | 1               | 32 GB |
 | SanDisk Ultra | SDXC   | 10          | 1               | 64 GB |
 | Sony SR-64UY  | SDXC   | 10          | 1               | 64 GB |
