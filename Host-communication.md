@@ -30,10 +30,12 @@ Entry in /etc/modules:
 ```
 g_ether use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2
 ```
+#### Setup & Connection Sharing: Linux
 
-#### Connection Sharing: Linux
+The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the instructions in this section reflect these settings.
 
-Routing example (host: 10.0.0.2 with wlan0 as Internet interface, USB armory: 10.0.0.1):
+**NOTE**: This is a command line example that assumes no interference from running Network Managers, in general favor following the predefined configuration files and/or UIs for your specific Linux distribution.
+
 ```
 # bring the USB virtual Ethernet interface up
 /sbin/ip link set usb0 up
@@ -49,39 +51,50 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 ```
 
-This is a command line example that assumes no interference from running Network Managers, in general favor following the predefined configuration files and/or UIs for your specific Linux distribution.
+#### Setup & Connection Sharing: Mac OS X (Yosemite)
 
-#### Connection Sharing: Mac OS X (Yosemite)
+**NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings.
 
-1. For connection sharing ensure that the USB armory image assigns an IP
-address between the range 192.168.2.2-192.168.2.254 to CDC/RNDIS interface, using
-192.168.2.1 as default gateway. (**NOTE**: the official pre-imaged microSD card for
-the USB armory does not assign an address on this subnet, please follow its [instructions](http://dev.inversepath.com/download/usbarmory/) for the first connection)
+1. Open 'System Preferences' -> 'Network'.
 
-2. On the Mac choose Apple menu > 'System Preferences' and click Sharing.
+2. Select the 'RNDIS/Ethernet Gadget' interface.
 
-3. Select Internet Sharing.
+3. Set IPv4 configuration to Manual with IP Address 10.0.0.2, Netmask 255.255.255.0.
 
-4. Choose the Internet connection you want to share in 'Share your connection
+The Internet Connection Sharing on Mac OS X requires an IP range on a **different** subnet, this requires re-configuring the USB armory with an IP address between the range 192.168.2.2-192.168.2.254 on its usb0 interface, using 192.168.2.1 as default gateway (which must be set as static IP address on the 'RNDIS/Ethernet Gadget' interface). Once this is performed Internet Connection Sharing can be enabled as follows:
+
+1. On the Mac choose Apple menu > 'System Preferences' and click Sharing.
+
+2. Select Internet Sharing.
+
+3. Choose the Internet connection you want to share in 'Share your connection
 from'
 
-5. Depending on the chosen USB armory Ethernet emulation tick the RNDIS or
+4. Depending on the chosen USB armory Ethernet emulation tick the RNDIS or
 CDC Ethernet checkboxes in 'To computers using'.
 
-#### Connection Sharing: Windows 7
+#### Setup & Connection Sharing: Windows 7/8
 
-1. For connection sharing ensure that the USB armory image assigns an IP
-address between the range 192.168.137.2-192.168.137.254 to CDC/RNDIS interface, using
-192.168.137.1 as default gateway. (**NOTE**: the official pre-imaged microSD card for
-the USB armory does not assign an address on this subnet, please follow its [instructions](http://dev.inversepath.com/download/usbarmory/) for the first connection)
+**NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings.
 
-2. On the Control Panel choose 'Network and Sharing Center' and click 'View network connections'.
+1. Plug in the USB armory and let Windows install the network adapter.
 
-3. Select the Internet connection to be shared, right click to Properties.
+2. Once installation is complete go on the Control Panel, choose 'Network and Internet' -> 'Network and Sharing Center' ->  'Change adapter settings'.
 
-4. Choose the Sharing tab and select 'Allow other network users to connect through this computer’s Internet connection'.
+3. You should see a 'USB Ethernet/RNDIS Gadget' adapter, select it, right click to select 'Properties'.
 
-5. Depending on the interface assigned to the USB armory Ethernet emulation check its relevant entry in the "Home networking connection" selector.
+4. Select 'Internet Protocol Version 4' (ensure that its check-box remains ticked) and then click on 'Properties'.
+
+5. Select 'Use the following IP Address', set IP address to 10.0.0.2, netmask to 255.255.255.0.
+
+The Internet Connection Sharing on Windows requires by default an IP range on a **different** subnet than the one shown in the previous section. This requires re-configuring the USB armory with an IP address between the range 192.168.137.2-192.168.137.254 on its usb0 interface, using 192.168.137.1 as default gateway (which must be set as static IP address on the 'RNDIS/Ethernet Gadget' interface). Once this is performed Internet Connection Sharing can be enabled as follows:
+
+1. Go on the Control Panel, choose 'Network and Internet' -> 'Network and Sharing Center' ->  'Change adapter settings'.
+2. Select the Internet connection to be shared, right click to Properties.
+
+3. Choose the 'Sharing' tab and select 'Allow other network users to connect through this computer’s Internet connection'.
+
+4. Depending on the interface assigned to the USB armory Ethernet emulation check its relevant entry in the "Home networking connection" selector.
 
 #### Connecting
 
@@ -89,4 +102,4 @@ When using CDC Ethernet emulation any standard TCP/IP server can be used to comm
 
 On Linux installations the typical interaction would be via OpenSSH server, using an SSH client on the USB host, or web server, using a standard browser as a client.
 
-The installation of the [shellinabox](https://code.google.com/p/shellinabox/) software (available on Debian with apt) provides an easily accessible web terminal emulator (default port: 4200), however using a proper SSH client/server is highly recommended over this method.
+The installation of the [shellinabox](https://code.google.com/p/shellinabox) software (available on Debian with apt) provides an easily accessible web terminal emulator (default port: 4200), however using a proper SSH client/server is highly recommended over this method.
