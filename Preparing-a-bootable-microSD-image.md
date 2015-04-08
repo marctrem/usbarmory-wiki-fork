@@ -50,7 +50,7 @@ sudo mount ${TARGET_DEV}1 $TARGET_MNT
 
 For Debian 7 (Wheezy):
 ```
-sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,fake-hwclock,openssl,shellinabox,vim,nano,cryptsetup,lvm2,locales wheezy $TARGET_MNT http://ftp.debian.org/debian/
+sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,fake-hwclock,openssl,shellinabox,vim,nano,cryptsetup,lvm2,locales,less,cpufrequtils wheezy $TARGET_MNT http://ftp.debian.org/debian/
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/inittab -O ${TARGET_MNT}/etc/inittab
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/rc.local -O ${TARGET_MNT}/etc/rc.local
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/sources.list -O ${TARGET_MNT}/etc/apt/sources.list
@@ -82,15 +82,15 @@ sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `mkpasswd -m sha-512 u
 sudo rm ${TARGET_MNT}/usr/bin/qemu-arm-static
 ```
 
-Kernel: Linux 3.18.9
+Kernel: Linux 3.19.3
 --------------------
 
 ```
-export KERNEL_VER=3.18.9 ARCH=arm
+export KERNEL_VER=3.19.3 ARCH=arm
 wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-${KERNEL_VER}.tar.xz
 tar xvf linux-${KERNEL_VER}.tar.xz
 cd linux-${KERNEL_VER}
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-${KERNEL_VER}.config -O .config
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-${KERNEL_VER:0:4}.config -O .config
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dtsi -O arch/arm/boot/dts/imx53-usbarmory.dtsi
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dts -O arch/arm/boot/dts/imx53-usbarmory.dts
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-host_mode.dts -O arch/arm/boot/dts/imx53-usbarmory-host_mode.dts
