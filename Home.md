@@ -20,6 +20,7 @@ page](http://inversepath.com/usbarmory).
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
 * [Power consumption](https://github.com/inversepath/usbarmory/wiki/Power-consumption)
 * [X-ray](https://github.com/inversepath/usbarmory/wiki/X-ray)
+* [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM)
 * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
 
 ## Software
