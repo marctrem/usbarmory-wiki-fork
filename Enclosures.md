@@ -6,7 +6,7 @@ The enclosure can be easily assembled by snapping in three separate body parts, 
 
 Just like the USB armory, the enclosure is entirely manufactured in Italy.
 
-The enclosure is estimated to be available in May 2015 and can be pre-ordered at [Inverse Path](http://inversepath.com/usbarmory).
+The enclosure can be pre-ordered at [Inverse Path](http://inversepath.com/usbarmory).
 
 Preliminary specifications:
 
