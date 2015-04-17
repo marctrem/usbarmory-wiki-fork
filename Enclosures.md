@@ -4,16 +4,16 @@ The [USB armory](http://inversepath.com/usbarmory) enclosure from [Inverse Path]
 
 The enclosure can be easily assembled by snapping in three separate body parts, one of which acts as a sliding cover for the microSD card. Two removable caps respectively protect the USB plug and the 5-pin breakout header.
 
-Just like the USB armory, the enclosure is entirely manufactured in Italy.
+Just like the USB armory, the enclosure manufacturing, including its material, are entirely made in Italy.
 
 The enclosure can be pre-ordered at [Inverse Path](http://inversepath.com/usbarmory).
 
 Preliminary specifications:
 
 * Dimensions:
-  * body: 60 x 24 x 9 mm
-  * plug cap: 12 x 17 x 7 mm
-* Material: ASYBLEND T65
+  * body: 61 x 24 x 9 mm
+  * plug cap: 12 x 23 x 7 mm
+* Material: NEVIESTER EG83 (PETG)
 * Color: transparent
 
 ![Enclosure Rendering](http://inversepath.com/images/usbarmory_enclosure.jpg)
