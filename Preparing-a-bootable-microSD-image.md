@@ -101,12 +101,12 @@ sudo make INSTALL_MOD_PATH=$TARGET_MNT ARCH=arm modules_install
 sudo umount $TARGET_MNT
 ```
 
-Bootloader: U-Boot 2014.07
+Bootloader: U-Boot 2015.04
 --------------------------
 
 ```
-git clone https://github.com/inversepath/u-boot-usbarmory.git
-cd u-boot-usbarmory
+wget http://ftp.denx.de/pub/u-boot/u-boot-2015.04.tar.bz2
+tar -xvf u-boot-2015.04.tar.bz2 && cd u-boot-2015.04
 make distclean
 make usbarmory_config
 make ARCH=arm
