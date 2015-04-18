@@ -73,6 +73,15 @@ from'
 4. Depending on the chosen USB armory Ethernet emulation tick the RNDIS or
 CDC Ethernet checkboxes in 'To computers using'.
 
+Alternatively Internet Connection Sharing can also be enabled without having to modify the default USB armory usb0 address using the following pfctl rule:
+
+```
+# $ext_if -> Internet interface
+# $int_if -> USB armory interface on the host machine 
+
+nat on $ext_if from $int_if:network to any -> ($ext_if)
+```
+
 #### Setup & Connection Sharing: Windows 7/8
 
 **NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings.
