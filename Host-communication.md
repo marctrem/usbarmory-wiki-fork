@@ -73,13 +73,20 @@ from'
 4. Depending on the chosen USB armory Ethernet emulation tick the RNDIS or
 CDC Ethernet checkboxes in 'To computers using'.
 
-Alternatively Internet Connection Sharing can also be enabled without having to modify the default USB armory usb0 address using the following pfctl rule:
+Alternatively Internet Connection Sharing can also be manually enabled without having to modify the default USB armory usb0 address, the following example assumes en0 as the Internet interface and en5 as the RNDIS/CDC USB armory interface on the host machine (your assignment might vary):
 
 ```
-# $ext_if -> Internet interface
-# $int_if -> USB armory interface on the host machine 
+# enable IP forwarding
+$ sudo sysctl -w net.inet.ip.forwarding=1
 
-nat on $ext_if from $int_if:network to any -> ($ext_if)
+# enable PF firewall
+$ sudo pfctl -e
+
+# Option 1: add NAT rule after en5 is up (USB armory already plugged and started)
+$ echo "nat on en0 from en5:network to any" -> (en0) | sudo pfctl -f -
+
+# Option 2: add NAT rule before USB armory is plugged, requires specifying its network
+$ echo "nat on en0 from 10.0.0.0/8 to any" -> (en0) | sudo pfctl -f -
 ```
 
 #### Setup & Connection Sharing: Windows 7/8
