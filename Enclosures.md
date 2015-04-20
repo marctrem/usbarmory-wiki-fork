@@ -4,7 +4,7 @@ The [USB armory](http://inversepath.com/usbarmory) enclosure from [Inverse Path]
 
 The enclosure can be easily assembled by snapping in three separate body parts, one of which acts as a sliding cover for the microSD card. Two removable caps respectively protect the USB plug and the 5-pin breakout header.
 
-Just like the USB armory, the enclosure manufacturing, including its material, are entirely made in Italy.
+Just like the USB armory, the enclosure manufacturing, including its material, is entirely made in Italy.
 
 The enclosure can be pre-ordered at [Inverse Path](http://inversepath.com/usbarmory).
 
