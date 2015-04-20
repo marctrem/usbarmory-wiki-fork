@@ -17,7 +17,7 @@ Preliminary specifications:
 * Color: transparent
 
 ![Enclosure Rendering](http://inversepath.com/images/usbarmory_enclosure.jpg)
-![Explided Enclosure Renderings](http://inversepath.com/images/usbarmory_enclosure_exploded.jpg)
+![Exploded Enclosure Renderings](http://inversepath.com/images/usbarmory_enclosure_exploded.jpg)
 
 ## Contributed
 
