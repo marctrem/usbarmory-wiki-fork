@@ -2,8 +2,9 @@
 slot. In order to open it gently lift the closed metal hinge towards the opposite direction of the little
 arrow engraved on it, a small "click" indicates successful opening. Lift the hinge upwards and place the microSD card from the top, once inserted close it by putting the hinge back in position and by lifting it towards the arrow direction.
 
-The following microSD cards have been successfully tested with the i.MX53 SD
-host controller and card slot used on USB armory boards:
+The following table summarizes microSD cards that have been reportedly successfully tested with
+the i.MX53 SD host controller and card slot used on USB armory boards. So far no incompatible
+microSD cards have been identified.
 
 | Vendor/Model  | Format | Speed class | UHS Speed class | Size  |
 |:--------------|-------:|------------:|----------------:|------:|
