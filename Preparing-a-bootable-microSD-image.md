@@ -91,9 +91,8 @@ wget https://www.kernel.org/pub/linux/kernel/v3.x/linux-${KERNEL_VER}.tar.xz
 tar xvf linux-${KERNEL_VER}.tar.xz
 cd linux-${KERNEL_VER}
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-${KERNEL_VER:0:4}.config -O .config
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dtsi -O arch/arm/boot/dts/imx53-usbarmory.dtsi
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi -O arch/arm/boot/dts/imx53-usbarmory-common.dtsi
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dts -O arch/arm/boot/dts/imx53-usbarmory.dts
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-host_mode.dts -O arch/arm/boot/dts/imx53-usbarmory-host_mode.dts
 make uImage LOADADDR=0x70008000 modules imx53-usbarmory.dtb
 sudo cp arch/arm/boot/uImage ${TARGET_MNT}/boot/
 sudo cp arch/arm/boot/dts/imx53-usbarmory.dtb ${TARGET_MNT}/boot/imx53-usbarmory.dtb
