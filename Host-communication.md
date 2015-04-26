@@ -83,10 +83,10 @@ $ sudo sysctl -w net.inet.ip.forwarding=1
 $ sudo pfctl -e
 
 # Option 1: add NAT rule after en5 is up (USB armory already plugged and started)
-$ echo "nat on en0 from en5:network to any" -> (en0) | sudo pfctl -f -
+$ echo "nat on en0 from en5:network to any -> (en0)" | sudo pfctl -f -
 
 # Option 2: add NAT rule before USB armory is plugged, requires specifying its network
-$ echo "nat on en0 from 10.0.0.0/8 to any" -> (en0) | sudo pfctl -f -
+$ echo "nat on en0 from 10.0.0.0/8 to any -> (en0)" | sudo pfctl -f -
 ```
 
 #### Setup & Connection Sharing: Windows 7/8
