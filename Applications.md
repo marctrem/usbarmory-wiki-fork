@@ -1,9 +1,10 @@
 The following example security application ideas illustrate the flexibility of
 the USB armory concept:
 
-* mass storage device with advanced features such as automatic encryption, virus scanning, host authentication and data self-destruct
+* Hardware Security Module (HSM)
+* file storage with advanced features such as automatic encryption, virus scanning, host authentication and data self-destruct
 * OpenSSH client and agent for untrusted hosts (kiosk)
-* router for end-to-end VPN tunnelling
+* router for end-to-end VPN tunnelling, Tor
 * password manager with integrated web server
 * electronic wallet (e.g. pocket Bitcoin wallet)
 * authentication token
