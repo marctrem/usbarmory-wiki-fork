@@ -41,6 +41,7 @@ page](http://inversepath.com/usbarmory).
 * Debian, Ubuntu: image preparation described [here](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
 * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
 * [ArchAssault](https://archassault.org/news/usb-armory-fully-supported)
+* [VoidLinux](http://www.voidlinux.eu/news/2015/04/USB-armory.html)
 * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
 
 ## How to Contribute
