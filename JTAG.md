@@ -7,7 +7,7 @@ Refer to the following picture to locate the relevant pads.
 The following schematic shows how to connect the pads to a
 standard ARM JTAG 20 pin connector.
 The schematic is also available in [pdf format]
-(https://github.com/inversepath/usbarmory/blob/master/hardware/jtag-breakout/jtag-breakout.pdf)
+(https://github.com/inversepath/usbarmory/blob/master/hardware/jtag-breakout/jtag-breakout.pdf).
 
 ![MkI JTAG schematic](images/mkI-jtag-sch.png)
 
