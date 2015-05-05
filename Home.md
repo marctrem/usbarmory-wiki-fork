@@ -12,8 +12,8 @@ The following page provides useful information on how to get started:
 
 ## Hardware
 
-The first hardware revision of the USB armory is currently available for [pre-order](https://www.crowdsupply.com/inverse-path/usb-armory), for further information and updates see the [project
-page](http://inversepath.com/usbarmory).
+The first hardware revision of the USB armory (Mk I) is currently available, for further information
+and updates see the [project page](http://inversepath.com/usbarmory).
 
 * [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
 * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
