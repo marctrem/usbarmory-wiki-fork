@@ -1,4 +1,4 @@
-The USB armory has been successfully tested with Debian and Ubuntu installations, using a standard Linux kernel and a minimally patched version of [U-Boot](https://github.com/inversepath/u-boot-usbarmory).
+The USB armory has been successfully tested with Debian and Ubuntu installations, using a standard Linux kernel and stock [U-Boot](http://www.denx.de/wiki/U-Boot) (>= v2015.04).
 
 In order to boot the USB armory it is possible to either use a pre-compiled disk image or [manually prepare your own](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image).
 
