@@ -22,6 +22,7 @@ and updates see the [project page](http://inversepath.com/usbarmory).
 * [X-ray](https://github.com/inversepath/usbarmory/wiki/X-ray)
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM)
 * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
+* [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
 
 ## Software
 
