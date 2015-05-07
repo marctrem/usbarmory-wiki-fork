@@ -18,16 +18,22 @@ Only on x86-64 Ubuntu add:
 sudo apt-get install ia32-libs
 ```
 
-Toolchain (Linaro 4.9)
---------------------------------
+Toolchain
+---------
 
-On Debian 8 and Ubuntu (12.04 LTS, 14.04 LTS, 14.10) use the packaged one:
+On Debian 8 use the packaged one:
+```
+sudo apt-get install gcc-arm-none-eabi
+export CROSS_COMPILE=arm-none-eabi-
+```
+
+On Ubuntu (12.04 LTS, 14.04 LTS, 14.10) use the packaged one:
 ```
 sudo apt-get install gcc-arm-linux-gnueabihf
 export CROSS_COMPILE=arm-linux-gnueabihf-
 ```
 
-On Debian 7 the packaged one is not available so install the Linaro 4.9:
+On Debian 7 install the Linaro 4.9:
 ```
 export TOOLCHAIN_DIR=~          # set the directory where to install the toolchain
 wget http://releases.linaro.org/14.09/components/toolchain/binaries/gcc-linaro-arm-none-eabi-4.9-2014.09_linux.tar.xz
@@ -48,15 +54,15 @@ sudo mkfs.ext4 ${TARGET_DEV}1
 sudo mount ${TARGET_DEV}1 $TARGET_MNT
 ```
 
-For Debian 7 (Wheezy):
+For Debian 8 (Jessie):
 ```
-sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,fake-hwclock,openssl,shellinabox,vim,nano,cryptsetup,lvm2,locales,less,cpufrequtils wheezy $TARGET_MNT http://ftp.debian.org/debian/
-sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/inittab -O ${TARGET_MNT}/etc/inittab
+sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,fake-hwclock,openssl,shellinabox,vim,nano,cryptsetup,lvm2,locales,less,cpufrequtils jessie $TARGET_MNT http://ftp.debian.org/debian/
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/rc.local -O ${TARGET_MNT}/etc/rc.local
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/sources.list -O ${TARGET_MNT}/etc/apt/sources.list
 echo "tmpfs /tmp tmpfs defaults 0 0" | sudo tee ${TARGET_MNT}/etc/fstab
 echo -e "\nUseDNS no" | sudo tee -a ${TARGET_MNT}/etc/ssh/sshd_config
 echo "nameserver 8.8.8.8" | sudo tee ${TARGET_MNT}/etc/resolv.conf
+sudo chroot $TARGET_MNT systemctl mask getty-static.service
 ```
 
 For Ubuntu 14.10 (Utopic Unicorn):
@@ -73,7 +79,8 @@ Finalize and set the password:
 ```
 echo "ledtrig_heartbeat" | sudo tee -a ${TARGET_MNT}/etc/modules
 echo "ci_hdrc_imx" | sudo tee -a ${TARGET_MNT}/etc/modules
-echo "g_ether use_eem=0 dev_addr=1a:55:89:a2:69:41 host_addr=1a:55:89:a2:69:42" | sudo tee -a ${TARGET_MNT}/etc/modules
+echo "g_ether" | sudo tee -a ${TARGET_MNT}/etc/modules
+echo "options g_ether use_eem=0 dev_addr=1a:55:89:a2:69:41 host_addr=1a:55:89:a2:69:42" | sudo tee -a ${TARGET_MNT}/etc/modprobe.d/usbarmory.conf
 echo -e 'allow-hotplug usb0\niface usb0 inet static\n  address 10.0.0.1\n  netmask 255.255.255.0\n  gateway 10.0.0.2'| sudo tee -a ${TARGET_MNT}/etc/network/interfaces
 echo "usbarmory" | sudo tee ${TARGET_MNT}/etc/hostname
 echo "usbarmory  ALL=(ALL) NOPASSWD: ALL" | sudo tee -a ${TARGET_MNT}/etc/sudoers
@@ -82,15 +89,14 @@ sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `mkpasswd -m sha-512 u
 sudo rm ${TARGET_MNT}/usr/bin/qemu-arm-static
 ```
 
-Kernel: Linux 4.0
------------------
+Kernel: Linux 4.0.1
+-------------------
 
 ```
 export ARCH=arm
-wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.0.tar.xz
-tar xvf linux-4.0.tar.xz
-cd linux-4.0
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.0.config -O .config
+wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.0.1.tar.xz
+tar xvf linux-4.0.1.tar.xz && cd linux-4.0.1
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.0.1.config -O .config
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi -O arch/arm/boot/dts/imx53-usbarmory-common.dtsi
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dts -O arch/arm/boot/dts/imx53-usbarmory.dts
 make uImage LOADADDR=0x70008000 modules imx53-usbarmory.dtb
@@ -105,7 +111,7 @@ Bootloader: U-Boot 2015.04
 
 ```
 wget http://ftp.denx.de/pub/u-boot/u-boot-2015.04.tar.bz2
-tar -xvf u-boot-2015.04.tar.bz2 && cd u-boot-2015.04
+tar xvf u-boot-2015.04.tar.bz2 && cd u-boot-2015.04
 make distclean
 make usbarmory_config
 make ARCH=arm
