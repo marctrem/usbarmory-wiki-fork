@@ -6,7 +6,7 @@ The following table summarizes the list of available pre-compiled images:
 
 | Author         | OS            | Kernel version    | Boot loader     | Date     | Link |
 |:---------------|--------------:|------------------:|----------------:|---------:|-----:|
-| Inverse Path   | Debian Wheezy | Linux 3.18.9      | U-Boot v2014.07 | 20150323 | [USB armory base images](http://dev.inversepath.com/download/usbarmory) |
+| Inverse Path   | Debian Jessie | Linux 4.0.2       | U-Boot v2015.04 | 20150508 | [USB armory base images](http://dev.inversepath.com/download/usbarmory) |
 | Arch Linux ARM | Arch Linux    | Linux >= 3.9.13   | U-Boot v2014.07 | N/A      | [Arch Linux ARM Installation](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory) |
 | Juan RP et al. | Void Linux    | Linux >= 4.0.1    | U-Boot v2015.04 | N/A      | [Void Linux USB armory Installation](https://github.com/voidlinux/documentation/wiki/USB-Armory) |
 
