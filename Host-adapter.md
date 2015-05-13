@@ -18,7 +18,7 @@ The role change can be enabled by using a device tree source file (dts) with the
 };
 ```
 
-The official USB armory repository provides an example [here](https://github.com/inversepath/usbarmory/blob/master/software/kernel_conf/imx53-usbarmory-host_mode.dts).
+The official USB armory repository provides an example [here](https://github.com/inversepath/usbarmory/blob/master/software/kernel_conf/imx53-usbarmory-host.dts).
 
 The device tree binary file can then be compiled as shown in the [microSD image preparation instructions](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image), taking in account the different dts file.
 
