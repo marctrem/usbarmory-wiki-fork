@@ -8,7 +8,7 @@ If you received a pre-imaged microSD card with your USB armory it almost certain
 
 #### How do I resize the microSD partition on available images smaller than the total available space ?
 
-An excellent tutorial on how to do this can be found [here](http://elinux.org/Beagleboard:Expanding_File_System_Partition_On_A_microSD).
+Some tutorials on how to do this can be found [here](http://base16.io/?p=61) and [here](http://elinux.org/Beagleboard:Expanding_File_System_Partition_On_A_microSD).
 
 #### Why does 'ps' return no processes and error 'missing btime in /proc/stat' ?
 
