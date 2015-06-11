@@ -8,13 +8,14 @@ Just like the USB armory, the enclosure manufacturing, including its material, i
 
 The enclosure can be pre-ordered at [Inverse Path](http://inversepath.com/usbarmory).
 
-Preliminary specifications:
+* [Technical Diagram](https://github.com/inversepath/usbarmory/blob/master/hardware/enclosure/technical_diagram-20150610.pdf)
 
-* Dimensions:
-  * body: 61 x 24 x 9 mm
-  * plug cap: 12 x 23 x 7 mm
-* Material: NEVIESTER EG83 (PETG)
-* Color: transparent
+* Specifications:
+  * Dimensions:
+    * body: 61 x 24 x 9 mm
+    * plug cap: 13 x 23 x 7 mm
+  * Material: NEVIESTER EG83 (PETG)
+  * Color: transparent
 
 ![Enclosure Rendering](http://inversepath.com/images/usbarmory_enclosure.jpg)
 ![Exploded Enclosure Renderings](http://inversepath.com/images/usbarmory_enclosure_exploded.jpg)
