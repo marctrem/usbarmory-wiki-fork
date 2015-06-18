@@ -27,3 +27,7 @@ For USB armory-specific application development the recommendation is to impleme
 #### How do I address locale related errors when installing packages on Debian images ?
 
 Install package 'locales' and then run 'dpkg-reconfigure locales'.
+
+#### I get the following Linux kernel errors on the host: "Dual-Role OTG device on non-HNP port", "can't set HNP mode"
+
+Remove the CONFIG_USB_OTG kernel option on your host.
