@@ -22,3 +22,4 @@ microSD cards have been identified.
 | SanDisk Ultra | SDHC   | 10          | 1               | 32 GB |
 | SanDisk Ultra | SDXC   | 10          | 1               | 64 GB |
 | Sony SR-64UY  | SDXC   | 10          | 1               | 64 GB |
+| QILIVE Q.8503 | SDHC   | 10          | 1               | 32 GB |
