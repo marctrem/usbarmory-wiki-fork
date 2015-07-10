@@ -6,6 +6,8 @@ If you received a pre-imaged microSD card with your USB armory it almost certain
 
 2. the network interface on your USB host, associated to the USB armory (Linux: usbX, OSX, Windows: RNDIS), is correctly set up with the required host address (typically 10.0.0.2 with netmask 255.255.255.0)
 
+At this time all available images, with the exception of Kali Linux, configure the USB armory with IP address 10.0.0.1 (gateway/host address 10.0.0.2). The Kali Linux image configures the USB armory with IP address 10.42.0.3 (gateway/host address 10.42.0.1).
+
 #### How do I resize the microSD partition on available images smaller than the total available space ?
 
 Some tutorials on how to do this can be found [here](http://base16.io/?p=61) and [here](http://elinux.org/Beagleboard:Expanding_File_System_Partition_On_A_microSD).
