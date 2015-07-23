@@ -20,9 +20,17 @@ The enclosure can be ordered at [Inverse Path](http://inversepath.com/usbarmory)
 ![Enclosure Rendering](http://inversepath.com/images/usbarmory_enclosure.jpg)
 ![Exploded Enclosure Renderings](http://inversepath.com/images/usbarmory_enclosure_exploded.jpg)
 
+## 3rd party
+
+**NOTE**: The 3rd party enclosures in this section have not been designed, manufactured or tested by Inverse Path.
+
+* [Crowd Supply](https://www.crowdsupply.com/): [Premium USB Armory Enclosure](https://www.crowdsupply.com/crowd-supply/armory-mk1-enclosure)
+
+![CS enclosure](https://www.crowdsupply.com/img/90b0/aaaenclosure-6_jpg_project-body.jpg)
+
 ## Contributed
 
-**NOTE**: The 3D printed enclosures in this section have not been tested by Inverse Path for usage with the USB armory, therefore **use them your own risk**. The Polylactic acid (PLA) materials used by desktop 3D printers have different melting temperatures depending on the specific kind, not all PLAs are compatible with the temperature profile of the USB armory on high CPU loads. The use of ABS or Polyamide should lead to more compatible enclosures.
+**NOTE**: The 3D printed enclosures in this section have not been tested by Inverse Path for usage with the USB armory, therefore **use them at your own risk**. The Polylactic acid (PLA) materials used by desktop 3D printers have different melting temperatures depending on the specific kind, not all PLAs are compatible with the temperature profile of the USB armory on high CPU loads. The use of ABS or Polyamide should lead to more compatible enclosures.
 
 * [Al Jigong Billings](http://makehacklearn.org/): [https://github.com/albill/USB-armory-case](https://github.com/albill/USB-armory-case)
 
