@@ -63,13 +63,13 @@ Arch Linux examples:
 
 ```
 ## trigger on USB activity
-# echo usb-gadget > /sys/devices/platform/leds/leds/LED
+# echo usb-gadget > /sys/devices/platform/leds/leds/LED/trigger
 
 ## trigger on microSD activity
-# echo mmc0 > /sys/devices/platform/leds/leds/LED
+# echo mmc0 > /sys/devices/platform/leds/leds/LED/trigger
 
 ## disable trigger
-# echo none > /sys/devices/platform/leds/leds/LED
+# echo none > /sys/devices/platform/leds/leds/LED/trigger
 
 # Off
 # echo 1 > /sys/devices/platform/leds/leds/LED/brigthness
