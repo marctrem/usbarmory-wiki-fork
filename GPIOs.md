@@ -31,7 +31,9 @@ corresponding to pin 7, in output mode and write 1 and 0 from a Linux shell.
 
 ### LED Control
 
-The Mk I LED can be controlled as follows:
+The Mk I LED can be controlled as follows
+
+Debian examples:
 
 ```
 ## unload the default LED modules
@@ -56,3 +58,21 @@ and blacklist leds_gpio and led_class:
 sed -i /etc/modules -e 's/ledtrig_heartbeat/#ledtrig_heartbeat/'
 echo -e "blacklist leds_gpio\nblacklist led_class" > /etc/modprobe.d/led-blacklist.conf
 ```
+
+Arch Linux examples:
+
+```
+## trigger on USB activity
+# echo usb-gadget > /sys/devices/platform/leds/leds/LED
+
+## trigger on microSD activity
+# echo mmc0 > /sys/devices/platform/leds/leds/LED
+
+## disable trigger
+# echo none > /sys/devices/platform/leds/leds/LED
+
+# Off
+# echo 1 > /sys/devices/platform/leds/leds/LED/brigthness
+
+# On
+# echo 0 > /sys/devices/platform/leds/leds/LED/brigthness
