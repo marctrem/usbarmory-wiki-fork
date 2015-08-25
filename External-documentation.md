@@ -8,3 +8,7 @@
 ### External contributions
 
 * [ckuethe](https://github.com/ckuethe) is contributing [scripts, configurations and much more](https://github.com/ckuethe/usbarmory) as well as additional [documentation](https://github.com/ckuethe/usbarmory/wiki)
+
+### Papers
+
+* Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
