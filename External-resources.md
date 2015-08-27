@@ -9,6 +9,8 @@
 
 * [ckuethe](https://github.com/ckuethe) is contributing [scripts, configurations and much more](https://github.com/ckuethe/usbarmory) as well as additional [documentation](https://github.com/ckuethe/usbarmory/wiki)
 
+* [Collin Mulliner](https://github.com/crmulliner) repository [hidemulation](https://github.com/crmulliner/hidemulation) provides HID emulation helpers to support composite CDC Ethernet and HID gadget.
+
 ### Papers
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
