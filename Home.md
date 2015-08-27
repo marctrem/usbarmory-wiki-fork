@@ -34,7 +34,7 @@ and updates see the [project page](http://inversepath.com/usbarmory).
 * [Using external GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [Development](https://github.com/inversepath/usbarmory/wiki/Development)
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
-* [External documentation](https://github.com/inversepath/usbarmory/wiki/External-documentation)
+* [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
 
 ## Supported Operating Systems
 
