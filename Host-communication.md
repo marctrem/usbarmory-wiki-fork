@@ -122,6 +122,6 @@ The installation of the [shellinabox](https://code.google.com/p/shellinabox) sof
 
 ### Mouse/Keyboard emulation via USB Human Interface Device (HID) Gadget
 
-The following contributed script switches the USB armory to composite CDC Ethernet and HID gadget.
+The following respository, contributed by [Collin Mulliner](https://github.com/crmulliner) provides HID emulation helpers to support composite CDC Ethernet and HID gadget.
 
-[https://groups.google.com/d/msg/usbarmory/GDNw5ofKCZs/I9WIZu3QEgAJ](https://groups.google.com/d/msg/usbarmory/GDNw5ofKCZs/I9WIZu3QEgAJ)
+[https://github.com/crmulliner/hidemulation](https://github.com/crmulliner/hidemulation)
