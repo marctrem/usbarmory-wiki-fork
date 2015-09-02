@@ -23,6 +23,10 @@ for interfacing options.
 
 The [INTERLOCK](https://github.com/inversepath/interlock) application is a file encryption front-end developed, but not limited to, usage with the USB armory.
 
+### Password manager
+
+A PoC from [Michael Weissbacher](http://mweissbacher.com) is available at [https://github.com/mweissbacher/armory-pass](https://github.com/mweissbacher/armory-pass).
+
 ### Bitcoin wallet
 
 The Electrum (https://electrum.org/) Bitcoin wallet works out of the box on the
