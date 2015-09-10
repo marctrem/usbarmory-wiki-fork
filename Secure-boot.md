@@ -95,14 +95,12 @@ make ARCH=arm V=1
 
 ### Prepare the CSF file
 
-Download the example CSF file:
+Download the example Command Sequence File:
 
-```
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/hab4.csf
-```
+* [hab4.csf](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/hab4.csf)
 
-Modify the CSF file with the correct hex triple for the compiled u-boot.imx
-file, along with its path.
+The file must be modified with the correct hex triple for the u-boot.imx file
+compiled in the previous step, along with its path.
 
 ### Sign the U-boot image
 
