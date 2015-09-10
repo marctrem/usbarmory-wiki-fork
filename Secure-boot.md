@@ -17,15 +17,16 @@ Tool from Freescale (IMX_CST_TOOL), available for [download](http://www.freescal
 (requires registration).
 
 **NOTE**: The last published IMX_CST_TOOL version 2.3.1 does not generate
-correct signed images for the i.MX53 SoC. However previous version 2.2
-correctly supports the i.MX53. We are working with Freescale to have this
-addressed and/or clear instructions for downloading the older version. In the
-meantime we encourage users to write directlt to Freescale support to request
+correct signed images for the i.MX53 SoC, however version 2.2 correctly
+supports the i.MX53. We are working with Freescale to have this addressed
+and/or receive clear instructions for downloading the older version. In the
+meantime we encourage users to write directly to Freescale support to request
 IMX_CST_TOOL version 2.2.
 
 ### Setting up the PKI infrastructure
 
-Install and create the key material as follows:
+Setup and create the key material as follows (changing the passphrase with your
+own):
 
 ```
 tar xvf cst-2.2.tar.gz
@@ -64,6 +65,7 @@ The SHA256 hash is created and can be inspected as follows (**warning**: this
 is just an example, your hash will differ and should be used in the following
 instructions instead):
 
+```
 hexdump -C SRK_1_2_3_4_fuse.bin
 00000000  aa bb cc dd ee ff aa bb  cc dd ee ff aa bb cc dd  |................|
 00000010  ee ff aa bb cc dd ee ff  aa bb cc dd ee ff aa bb  |................|
