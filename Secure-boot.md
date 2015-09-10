@@ -53,7 +53,7 @@ Sequence File (CSF) key and an image signing key (IMG) are also generated.  The
 CSF keys are used for signing the CSFs, while the IMG keys are used for signing
 application data (e.g. U-Boot image).
 
-The four SRKs must be now merged in a table for SHA256 hash calculation:
+The four SRKs must be merged in a table for SHA256 hash calculation:
 
 ```
 cd ../crts # cst-2.2/crts
@@ -156,9 +156,9 @@ In order to fuse anything, the VDD_FUSE power supply must be enabled:
 **IMPORTANT**: the following commands permanently fuse values in the SoC and are
 **irreversible**, take extra care in ensuring that the right data is written.
 
-Now the SHA256 hash generated earlier can be fused (**WARNING**: this is just
-an example, your hash will differ and should be used in the following commands
-instead):
+The SHA256 hash generated earlier can be fused as follows (**WARNING**: this is
+just an example, your hash will differ and should be used in the following
+commands instead):
 
 ```
 # syntax: fuse prog [-y] <bank> <word> <hexval> [<hexval>...] - program 1 or
@@ -169,7 +169,7 @@ instead):
 => fuse prog -y 3 0x17 0xff 0xaa 0xbb 0xcc 0xdd 0xee 0xff 0xaa 0xbb
 ```
 
-The fused key can now be read and verified:
+The fused key can be read and verified:
 ```
 # syntax: fuse read <bank> <word> [<cnt>] - read 1 or 'cnt' fuse words,
 #         starting at 'word'
@@ -177,7 +177,7 @@ The fused key can now be read and verified:
 => fuse read 3 0x1 31
 ```
 
-The fused hash must now be locked to prevent bits set to 0 to be fused to 1
+The fused hash must be locked to prevent bits set to 0 to be fused to 1
 later on:
 
 ```
@@ -187,20 +187,20 @@ later on:
 
 ### Verifying HAB
 
-After rebooting the USB armory it can now be verified, from the U-Boot shell,
+After rebooting the USB armory it can be verified, from the U-Boot shell,
 that no HAB events are generated. If no errors are present then the bootloader
 image was correctly authenticated:
 
 ```
 => hab_status
 
-Secure boot disabled
+Secure boot enabled
 
 HAB Configuration: 0xf0, HAB State: 0x66
 No HAB Events Found!
 ```
 
-### Activating HAB by enabling the SoC Close Security Configuration
+### Secure boot activation
 
 Only if you are confident that you can correctly generate signed U-Boot images,
 the SoC can be placed in Closed Security Configuration.
@@ -220,6 +220,9 @@ enables Secure Boot:
 => fuse prog -y 0 0x4 0x2
 => fuse prog -y 0 0x5 0x1
 ```
+
+The USB armory will now refuse to run bootloader images not correctly signed
+with keys corresponding to the fused hashes.
 
 ### Freescale documentation
 
