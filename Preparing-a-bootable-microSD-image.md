@@ -110,7 +110,7 @@ Bootloader: U-Boot 2015.07
 --------------------------
 
 ```
-wget http://ftp.denx.de/pub/u-boot/u-boot-2015.07.tar.bz2
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2015.07.tar.bz2
 tar xvf u-boot-2015.07.tar.bz2 && cd u-boot-2015.07
 make distclean
 make usbarmory_config
