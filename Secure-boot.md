@@ -2,9 +2,9 @@
 
 **IMPORTANT**: enabling Secure Boot functionality on the USB armory SoC, unlike
 similar features on modern PCs, is an **irreversible** action that
-**permanenty** fuses verification keys hashes on the device. This means that
+**permanently** fuses verification keys hashes on the device. This means that
 any errors in the process or loss of the signing PKI will result in a
-**bricked** device uncapable of executing unsigned code. This is a security
+**bricked** device incapable of executing unsigned code. This is a security
 feature, not a bug.
 
 The activation and use of the Secure Boot functionality is therefore **at your
@@ -207,9 +207,9 @@ the SoC can be placed in Closed Security Configuration.
 
 **WARNING**: enabling Secure Boot functionality on the USB armory SoC, unlike
 similar features on modern PCs, is an **irreversible** action that
-**permanenty** fuses verification keys hashes on the device. This means that
+**permanently** fuses verification keys hashes on the device. This means that
 any errors in the process or loss of the signing PKI will result in a
-**bricked** device uncapable of executing unsigned code. This is a security
+**bricked** device incapable of executing unsigned code. This is a security
 feature, not a bug.
 
 The activation and use of the Secure Boot functionality is therefore **at your
