@@ -214,7 +214,7 @@ feature, not a bug.
 
 The activation and use of the Secure Boot functionality is therefore **at your
 own risk**, the following command permanently locks the fused configuration and
-enables Secure Boot:
+enables Secure Boot (remember to enable VDD_FUSE power supply as shown earlier):
 
 ```
 => fuse prog -y 0 0x4 0x2
