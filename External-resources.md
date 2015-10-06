@@ -11,6 +11,8 @@
 
 * [Collin Mulliner](https://github.com/crmulliner) repository [hidemulation](https://github.com/crmulliner/hidemulation) provides HID emulation helpers to support composite CDC Ethernet and HID gadget.
 
+* [Rudd-O](https://github.com/Rudd-O) repository [usbarmory-debian-imagebuilder](https://github.com/Rudd-O/usbarmory-debian-imagebuilder) provides an alternative creation script for Debian images
+
 ### Papers
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
