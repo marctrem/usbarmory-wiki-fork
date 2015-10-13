@@ -92,13 +92,13 @@ sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `mkpasswd -m sha-512 u
 sudo rm ${TARGET_MNT}/usr/bin/qemu-arm-static
 ```
 
-Kernel: Linux 4.2.1
+Kernel: Linux 4.2.3
 -------------------
 
 ```
 export ARCH=arm
-wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.2.1.tar.xz
-tar xvf linux-4.2.1.tar.xz && cd linux-4.2.1
+wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.2.3.tar.xz
+tar xvf linux-4.2.3.tar.xz && cd linux-4.2.3
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.2.config -O .config
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi -O arch/arm/boot/dts/imx53-usbarmory-common.dtsi
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dts -O arch/arm/boot/dts/imx53-usbarmory.dts
