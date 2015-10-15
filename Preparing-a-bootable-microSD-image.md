@@ -1,3 +1,5 @@
+The following instructions illustrate how to manually prepare Debian or Ubuntu images for the USB armory. Alternatively a Buildroot environment is also [available](https://github.com/inversepath/usbarmory/tree/master/software/buildroot) for customization.
+
 Prerequisites
 -------------
 
