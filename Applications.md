@@ -21,7 +21,7 @@ for interfacing options.
 
 ### File encryption
 
-The [INTERLOCK](https://github.com/inversepath/interlock) application is a file encryption front-end developed, but not limited to, usage with the USB armory.
+The [INTERLOCK](https://github.com/inversepath/interlock) application is a file encryption front-end developed, but not limited to, usage with the USB armory. A Buildroot environment is also [available](https://github.com/inversepath/usbarmory/tree/master/software/buildroot).
 
 ### Password manager
 
