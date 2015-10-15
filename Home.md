@@ -31,6 +31,7 @@ and updates see the [project page](http://inversepath.com/usbarmory).
 * [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Drivers](https://github.com/inversepath/usbarmory/wiki/Drivers)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
+* [Embedded INTERLOCK distribution for the USB armory](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot)
 * [Using external GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [Development](https://github.com/inversepath/usbarmory/wiki/Development)
