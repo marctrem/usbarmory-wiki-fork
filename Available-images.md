@@ -4,9 +4,9 @@ In order to boot the USB armory it is possible to either use a pre-compiled disk
 
 The following table summarizes the list of available pre-compiled images:
 
-| OS            | Author             | Kernel version    | Version  | Link |
-|:--------------|:-------------------|------------------:|----------------:|---------:|-----:|
-| Debian Jessie | Inverse Path       | Linux 4.2.1       | 20150923 | [USB armory base images](http://dev.inversepath.com/download/usbarmory) |
-| Arch Linux    | Arch Linux ARM     | Linux >= 4.2.1    | N/A      | [Arch Linux ARM Installation](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory) |
-| Void Linux    | Juan RP et al.     | Linux >= 4.0.1    | N/A      | [Void Linux USB armory Installation](https://github.com/voidlinux/documentation/wiki/USB-Armory) |
-| Kali Linux    | Offensive Security | Linux >= 4.1.1    | 2.0.1    | [Kali Linux Downloads](https://www.offensive-security.com/kali-linux-vmware-arm-image-download/)
+| OS            | Author             | Link |
+|:--------------|:-------------------|-----:|
+| Debian Jessie | Inverse Path       | [USB armory base images](http://dev.inversepath.com/download/usbarmory) |
+| Arch Linux    | Arch Linux ARM     | [Arch Linux ARM Installation](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory) |
+| Void Linux    | Juan RP et al.     | [Void Linux USB armory Installation](https://github.com/voidlinux/documentation/wiki/USB-Armory) |
+| Kali Linux    | Offensive Security | [Kali Linux Downloads](https://www.offensive-security.com/kali-linux-vmware-arm-image-download/)
