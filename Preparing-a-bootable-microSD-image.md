@@ -111,12 +111,12 @@ sudo make INSTALL_MOD_PATH=$TARGET_MNT ARCH=arm modules_install
 sudo umount $TARGET_MNT
 ```
 
-Bootloader: U-Boot 2015.07
+Bootloader: U-Boot 2015.10
 --------------------------
 
 ```
-wget ftp://ftp.denx.de/pub/u-boot/u-boot-2015.07.tar.bz2
-tar xvf u-boot-2015.07.tar.bz2 && cd u-boot-2015.07
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2015.10.tar.bz2
+tar xvf u-boot-2015.10.tar.bz2 && cd u-boot-2015.10
 make distclean
 make usbarmory_config
 make ARCH=arm
