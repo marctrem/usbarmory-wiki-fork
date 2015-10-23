@@ -93,6 +93,7 @@ The image must be compiled in verbose mode to take note of the three hexadecimal
 numbers present on the 'HAB Blocks:' line:
 
 ```
+export CROSS_COMPILE=arm-none-eabi-    # set to your arm toolchain prefix
 make distclean
 make usbarmory_config
 make ARCH=arm V=1
@@ -114,7 +115,7 @@ cd cst-2.2
 ./linux/cst -o csf.bin < hab4.csf
 ```
 
-### Prepare and Flash the signed U-Boot
+### Prepare and flash the signed U-Boot
 
 **IMPORTANT**: /dev/sdX must be replaced with your microSD device (not eventual
 microSD partitions), ensure that you are specifying the correct one. Errors in
