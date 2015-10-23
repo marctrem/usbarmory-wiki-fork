@@ -1,18 +1,18 @@
 ### Disclaimer
 
-**IMPORTANT**: enabling Secure Boot functionality on the USB armory SoC, unlike
+**IMPORTANT**: enabling secure boot functionality on the USB armory SoC, unlike
 similar features on modern PCs, is an **irreversible** action that
 **permanently** fuses verification keys hashes on the device. This means that
 any errors in the process or loss of the signing PKI will result in a
 **bricked** device incapable of executing unsigned code. This is a security
 feature, not a bug.
 
-The activation and use of the Secure Boot functionality is therefore **at your
+The activation and use of the secure boot functionality is therefore **at your
 own risk** and must be approached with care.
 
 ### Prerequisites
 
-At this time the Secure Boot functionality requires usage of the Code Signing
+At this time the secure boot functionality requires usage of the Code Signing
 Tool from Freescale (IMX_CST_TOOL), available for [download](http://www.freescale.com/products/arm-processors/i.mx-applications-processors-based-on-arm-cores/i.mx-software-and-tools/i.mx-design-tools:IMX_DESIGN)
 (requires registration).
 
@@ -210,16 +210,16 @@ No HAB Events Found!
 Only if you are confident that you can correctly generate signed U-Boot images,
 the SoC can be placed in Closed Security Configuration.
 
-**WARNING**: enabling Secure Boot functionality on the USB armory SoC, unlike
+**WARNING**: enabling secure boot functionality on the USB armory SoC, unlike
 similar features on modern PCs, is an **irreversible** action that
 **permanently** fuses verification keys hashes on the device. This means that
 any errors in the process or loss of the signing PKI will result in a
 **bricked** device incapable of executing unsigned code. This is a security
 feature, not a bug.
 
-The activation and use of the Secure Boot functionality is therefore **at your
+The activation and use of the secure boot functionality is therefore **at your
 own risk**, the following command permanently locks the fused configuration and
-enables Secure Boot (remember to enable VDD_FUSE power supply as shown earlier):
+enables secure boot (remember to enable VDD_FUSE power supply as shown earlier):
 
 ```
 => fuse prog -y 0 0x4 0x2
