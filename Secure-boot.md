@@ -84,10 +84,10 @@ Apply the following patches which enable i.MX53 High Assurance Boot (HAB) suppor
 in U-Boot by adding the 'hab_status' command, which
 helps verification of secure boot state.
 
-* [0001-imx-move-HAB-code-to-imx-general-directories.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/uboot-2015.10_patches/0001-imx-move-HAB-code-to-imx-general-directories.patch)
-* [0002-ARM-mx53-add-support-for-HAB-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/uboot-2015.10_patches/0002-ARM-mx53-add-support-for-HAB-commands.patch)
-* [0003-usbarmory-add-secure-boot-configuration-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/uboot-2015.10_patches/0003-usbarmory-add-secure-boot-configuration-commands.patch)
-* [0004-ARM-mx53-disables-hab_auth_img-command.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/uboot-2015.10_patches/0004-ARM-mx53-disables-hab_auth_img-command.patch)
+* [0001-imx-move-HAB-code-to-imx-general-directories.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0001-imx-move-HAB-code-to-imx-general-directories.patch)
+* [0002-ARM-mx53-add-support-for-HAB-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0002-ARM-mx53-add-support-for-HAB-commands.patch)
+* [0003-usbarmory-add-secure-boot-configuration-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0003-usbarmory-add-secure-boot-configuration-commands.patch)
+* [0004-ARM-mx53-disables-hab_auth_img-command.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0004-ARM-mx53-disables-hab_auth_img-command.patch)
 
 The image must be compiled in verbose mode to take note of the three hexadecimal
 numbers present on the 'HAB Blocks:' line:
@@ -107,7 +107,7 @@ Download the example Command Sequence File:
 The file must be modified with the correct hex triple for the u-boot.imx file
 compiled in the previous step, along with its path.
 
-### Sign the U-boot image
+### Sign the U-Boot image
 
 ```
 cd cst-2.2
