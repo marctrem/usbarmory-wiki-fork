@@ -71,25 +71,30 @@ hexdump -C SRK_1_2_3_4_fuse.bin
 00000010  ee ff aa bb cc dd ee ff  aa bb cc dd ee ff aa bb  |................|
 ```
 
-### Prepare U-Boot with HAB support
+### Prepare U-Boot with HAB support (2015.10)
 
-The following step shows how to enable i.MX53 High Assurance Boot (HAB) support
-in U-Boot. The patches implement support for the 'hab_status' command, which
-helps in verifying the secure boot status.
+Download and extract U-Boot sources:
 
-You can follow the [U-Boot compilation
-instructions](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image#bootloader-u-boot-201507)
-but with application of the following patches before compilation:
+```
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2015.10.tar.bz2
+tar xvf u-boot-2015.10.tar.bz2 && cd u-boot-2015.10
+```
+
+Apply the following patches which enable i.MX53 High Assurance Boot (HAB) support
+in U-Boot by adding the 'hab_status' command, which
+helps verification of secure boot state.
 
 * [0001-imx-move-HAB-code-to-imx-general-directories.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/uboot-2015.10_patches/0001-imx-move-HAB-code-to-imx-general-directories.patch)
 * [0002-ARM-mx53-add-support-for-HAB-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/uboot-2015.10_patches/0002-ARM-mx53-add-support-for-HAB-commands.patch)
 * [0003-usbarmory-add-secure-boot-configuration-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/uboot-2015.10_patches/0003-usbarmory-add-secure-boot-configuration-commands.patch)
 * [0004-ARM-mx53-disables-hab_auth_img-command.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/uboot-2015.10_patches/0004-ARM-mx53-disables-hab_auth_img-command.patch)
 
-The image must be compiled in verbose mode to take note of the three hex
+The image must be compiled in verbose mode to take note of the three hexadecimal
 numbers present on the 'HAB Blocks:' line:
 
 ```
+make distclean
+make usbarmory_config
 make ARCH=arm V=1
 ```
 
