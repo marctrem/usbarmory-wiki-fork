@@ -21,9 +21,9 @@ The following instructions jointly illustrate the following:
 * U-Boot Verified Boot configuration, which embeds a public key in the
   bootloader so that only a signed kernel can ever be executed.
 
-The combination of i.MX53 secure boot and U-Boot verified boot features allow a
-fully verified chain of trust in authenticating the executed Linux kernel. When
-signing a kernel that embeds a root file system, such as the
+The combination of i.MX53 secure boot and U-Boot verified boot features allows
+a fully verified chain of trust, authenticating the executed Linux kernel.
+When signing a kernel that embeds a root file system, such as the
 [Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot),
 the authentication has full coverage, otherwise Linux kernel verification of
 executed code is not covered in this guide and left out to implementors.
@@ -31,18 +31,22 @@ executed code is not covered in this guide and left out to implementors.
 ### Prerequisites
 
 At this time the secure boot functionality requires usage of the Code Signing
-Tool from Freescale (IMX_CST_TOOL), available for [download](http://www.freescale.com/products/arm-processors/i.mx-applications-processors-based-on-arm-cores/i.mx-software-and-tools/i.mx-design-tools:IMX_DESIGN)
-(requires registration). A custom [tool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_sbtool) is being developed, it can be now used for certain steps as shown in the following documentation.
+Tool from Freescale (IMX_CST_TOOL), available for
+[download](http://www.freescale.com/products/arm-processors/i.mx-applications-processors-based-on-arm-cores/i.mx-software-and-tools/i.mx-design-tools:IMX_DESIGN)
+(requires registration). A custom
+[tool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_sbtool)
+is being developed, it can be now used only for certain steps as shown in the
+following documentation.
 
-**NOTE**: The last published IMX_CST_TOOL version 2.3.1 does not generate
-correct signed images for the i.MX53 SoC, however version 2.2 correctly
-supports the i.MX53. We are working with Freescale to have this addressed
-and/or receive clear instructions for downloading the older version. In the
-meantime we encourage users to write directly to Freescale support to request
+**NOTE**: The last published IMX_CST_TOOL version 2.3.1 unfortunately does not
+generate correct signed images for the i.MX53 SoC, however version 2.2
+correctly does. We are working with Freescale to have this addressed and/or
+receive clear instructions for downloading the older version. In the meantime
+we encourage users to write directly to Freescale support to request
 IMX_CST_TOOL version 2.2.
 
 A working device tree compiler must be installed, on a recent Debian and Ubuntu
-it can be installed as follows:
+this can be done as follows:
 
 ```
 sudo apt-get install device-tree-compiler
@@ -102,10 +106,10 @@ usbarmory_sbtool app available
 
 ### Setting up the verified boot keys
 
-A pair of RSA keys must be created for U-Boot verified boot, adjust the
-RSA_KEYS_PATH variable accordingly to your environment.
+A pair of RSA keys must be created for U-Boot verified boot:
 
 ```
+# adjust the RSA_KEYS_PATH variable accordingly to your environment
 openssl genrsa -F4 -out ${RSA_KEYS_PATH}/usbarmory.key 2048
 openssl req -batch -new -x509 -key ${RSA_KEYS_PATH}/usbarmory.key -out ${RSA_KEYS_PATH}/usbarmory.crt
 ```
@@ -141,7 +145,8 @@ The following commands are meant to be issued within the U-Boot source
 directory:
 
 ```
-export KERNEL_SRC=$KERNEL_PATH      # adjust the KERNEL_SRC variable according to your environment
+# adjust the KERNEL_SRC variable according to your environment
+export KERNEL_SRC=$KERNEL_PATH
 export CROSS_COMPILE=arm-none-eabi- # set to your arm toolchain prefix
 make distclean
 make usbarmory_config
