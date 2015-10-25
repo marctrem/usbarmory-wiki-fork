@@ -218,7 +218,7 @@ cat u-boot-dtb.imx csf_pad.bin > u-boot-signed.imx
 sudo dd if=u-boot-signed.imx of=/dev/sdX bs=512 seek=2 conv=fsync
 ```
 
-It is now a good idea to verify if the resulting boot loader and kernel image
+**HINT**: It is now a good idea to verify if the resulting boot loader and kernel image
 are working correctly. Only after you have done so proceed with the next steps
 for secure boot activation.
 
