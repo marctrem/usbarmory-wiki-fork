@@ -14,7 +14,7 @@ own risk** and must be approached with care.
 
 At this time the secure boot functionality requires usage of the Code Signing
 Tool from Freescale (IMX_CST_TOOL), available for [download](http://www.freescale.com/products/arm-processors/i.mx-applications-processors-based-on-arm-cores/i.mx-software-and-tools/i.mx-design-tools:IMX_DESIGN)
-(requires registration).
+(requires registration). A custom [tool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_sbtool) is being developed, it can be now used for certain steps as shown in the following documentation.
 
 **NOTE**: The last published IMX_CST_TOOL version 2.3.1 does not generate
 correct signed images for the i.MX53 SoC, however version 2.2 correctly
@@ -61,7 +61,7 @@ cd ../crts # cst-2.2/crts
   -c SRK1_sha256_2048_65537_v3_ca_crt.pem,SRK2_sha256_2048_65537_v3_ca_crt.pem,SRK3_sha256_2048_65537_v3_ca_crt.pem,SRK4_sha256_2048_65537_v3_ca_crt.pem
 ```
 
-The SHA256 hash is created and can be inspected as follows (**warning**: this
+The SHA256 hash is created and can be inspected as follows (**WARNING**: this
 is just an example, your hash will differ and should be used in the following
 instructions instead):
 
@@ -70,6 +70,8 @@ hexdump -C SRK_1_2_3_4_fuse.bin
 00000000  aa bb cc dd ee ff aa bb  cc dd ee ff aa bb cc dd  |................|
 00000010  ee ff aa bb cc dd ee ff  aa bb cc dd ee ff aa bb  |................|
 ```
+
+**EXPERIMENTAL**: this table can also be generated with our custom usbarmory_sbtool app available [here](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_sbtool)
 
 ### Prepare U-Boot with HAB support (2015.10)
 
