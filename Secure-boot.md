@@ -10,6 +10,22 @@ feature, not a bug.
 The activation and use of the secure boot functionality is therefore **at your
 own risk** and must be approached with care.
 
+The following instructions jointly illustrate the following:
+
+* i.MX53 secure boot configuration, which permanently fuses public key hashes
+  in the USB armory SoC fuse box so that only a signed bootloader can ever be
+  executed.
+
+* U-Boot Verified Boot configuration, which embeds a public key in the
+  bootloader so that only a signed kernel can ever be executed.
+
+The combination of i.MX53 secure boot and U-Boot verified boot features allow a
+fully verified chain of trust in authenticating the executed Linux kernel. When
+signing a kernel that embeds a root file system, such as the
+[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot),
+the authentication has full coverage, otherwise Linux kernel verification of
+executed code is not covered in this guide and left out to implementors.
+
 ### Prerequisites
 
 At this time the secure boot functionality requires usage of the Code Signing
@@ -23,10 +39,17 @@ and/or receive clear instructions for downloading the older version. In the
 meantime we encourage users to write directly to Freescale support to request
 IMX_CST_TOOL version 2.2.
 
-### Setting up the PKI infrastructure
+A working device tree compiler must be installed, on a recent Debian and Ubuntu
+it can be installed as follows:
 
-Setup and create the key material as follows (changing the passphrase with your
-own):
+```
+sudo apt-get install device-tree-compiler
+```
+
+### Setting up the secure boot PKI infrastructure
+
+Setup and create the secure boot key material as follows (changing the
+passphrase with your own):
 
 ```
 tar xvf cst-2.2.tar.gz
@@ -71,9 +94,21 @@ hexdump -C SRK_1_2_3_4_fuse.bin
 00000010  ee ff aa bb cc dd ee ff  aa bb cc dd ee ff aa bb  |................|
 ```
 
-**EXPERIMENTAL**: this table can also be generated with our custom usbarmory_sbtool app available [here](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_sbtool)
+**EXPERIMENTAL**: this table can also be generated with our custom
+usbarmory_sbtool app available
+[here](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_sbtool)
 
-### Prepare U-Boot with HAB support (2015.10)
+### Setting up the verified boot keys
+
+A pair of RSA keys must be created for U-Boot verified boot, adjust the
+RSA_KEYS_PATH variable accordingly to your environment.
+
+```
+openssl genrsa -F4 -out ${RSA_KEYS_PATH}/usbarmory.key 2048
+openssl req -batch -new -x509 -key ${RSA_KEYS_PATH}/usbarmory.key -out ${RSA_KEYS_PATH}/usbarmory.crt
+```
+
+### Prepare U-Boot (2015.10) with Verified Boot and HAB support
 
 Download and extract U-Boot sources:
 
@@ -82,24 +117,71 @@ wget ftp://ftp.denx.de/pub/u-boot/u-boot-2015.10.tar.bz2
 tar xvf u-boot-2015.10.tar.bz2 && cd u-boot-2015.10
 ```
 
-Apply the following patches which enable i.MX53 High Assurance Boot (HAB) support
-in U-Boot by adding the 'hab_status' command, which
-helps verification of secure boot state.
+Apply the following patch which enables Verified Boot support.
+
+* [0000-Add-verified-boot-support.patch](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/u-boot-2015.10_patches/0000-Add-verified-boot-support.patch)
+
+Apply the following patches which enable i.MX53 High Assurance Boot (HAB)
+support in U-Boot by adding the 'hab_status' command, which helps verification
+of secure boot state (optional but highly recommended).
 
 * [0001-imx-move-HAB-code-to-imx-general-directories.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0001-imx-move-HAB-code-to-imx-general-directories.patch)
 * [0002-ARM-mx53-add-support-for-HAB-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0002-ARM-mx53-add-support-for-HAB-commands.patch)
 * [0003-usbarmory-add-secure-boot-configuration-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0003-usbarmory-add-secure-boot-configuration-commands.patch)
 * [0004-ARM-mx53-disables-hab_auth_img-command.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0004-ARM-mx53-disables-hab_auth_img-command.patch)
 
-The image must be compiled in verbose mode to take note of the three hexadecimal
-numbers present on the 'HAB Blocks:' line:
+The U-Boot compilation requires a precompiled zImage Linux kernel image source
+tree path, if using the
+[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
+the path is under buildroot 'output/build/linux-<version>' directory.
+
+The following commands are meant to be issued within the U-Boot source
+directory:
 
 ```
-export CROSS_COMPILE=arm-none-eabi-    # set to your arm toolchain prefix
+export KERNEL_SRC=$KERNEL_PATH      # adjust the KERNEL_SRC variable according to your environment
+export CROSS_COMPILE=arm-none-eabi- # set to your arm toolchain prefix
 make distclean
 make usbarmory_config
-make ARCH=arm V=1
+make tools
 ```
+
+Compile the Flattened Device Tree file by leaving room for later public key
+insertion:
+
+```
+# adjust the USBARMORY_GIT variable accordingly to your environment
+dtc -p 0x1000 ${USBARMORY_GIT}/software/secure_boot/pubkey.dts -O dtb -o pubkey.dtb
+```
+
+Prepare image tree blob (itb) file according to the image tree source (its)
+template in the repository:
+
+```
+tools/mkimage -D "-I dts -O dtb -p 2000 -i $KERNEL_SRC" -f ${USBARMORY_GIT}/software/secure_boot/usbarmory.its usbarmory.itb
+```
+
+Sign the itb file:
+
+```
+tools/mkimage -D "-I dts -O dtb -p 2000" -F -k ${RSA_KEYS_PATH} -K pubkey.dtb -r usbarmory.itb
+```
+
+Now the U-Boot image can be compiled, it will include the embedded public key.
+The image must be compiled in verbose mode to take note of the three
+hexadecimal numbers present on the 'HAB Blocks:' line:
+
+```
+make ARCH=arm V=1 EXT_DTB=pubkey.dtb
+```
+
+The compilation results in the two following files:
+
+* u-boot-dtb.imx: bootloader image to be signed and flashed on the target
+  microSD card (instead of u-boot.imx), as shown in the next sections.
+
+* usbarmory.itb: image tree blob file containing the kernel, to be copied under
+  '/boot' on the target microSD card (replaces zImage/uImage).
 
 ### Prepare the CSF file
 
@@ -107,14 +189,14 @@ Download the example Command Sequence File:
 
 * [hab4.csf](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/hab4.csf)
 
-The file must be modified with the correct hex triple for the u-boot.imx file
-compiled in the previous step, along with its path.
+The file must be modified with the correct 'HAB Blocks' hex triple for the
+u-boot.imx file compiled in the previous step, along with its path.
 
 ### Sign the U-Boot image
 
 ```
 cd cst-2.2
-./linux/cst -o csf.bin < hab4.csf
+linux/cst -o csf.bin < hab4.csf
 ```
 
 ### Prepare and flash the signed U-Boot
@@ -125,9 +207,13 @@ target specification will result in disk corruption.
 
 ```
 objcopy -I binary -O binary --pad-to 0x2000 --gap-fill=0x00 csf.bin csf_pad.bin
-cat u-boot.imx csf_pad.bin > u-boot-signed.imx
+cat u-boot-dtb.imx csf_pad.bin > u-boot-signed.imx
 sudo dd if=u-boot-signed.imx of=/dev/sdX bs=512 seek=2 conv=fsync
 ```
+
+It is now a good idea to verify if the resulting boot loader and kernel image
+are working correctly. Only after you have done so proceed with the next steps
+for secure boot activation.
 
 ### Fuse the SRK table hash
 
