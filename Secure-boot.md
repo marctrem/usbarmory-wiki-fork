@@ -10,6 +10,8 @@ feature, not a bug.
 The activation and use of the secure boot functionality is therefore **at your
 own risk** and must be approached with care.
 
+### Introduction
+
 The following instructions jointly illustrate the following:
 
 * i.MX53 secure boot configuration, which permanently fuses public key hashes
