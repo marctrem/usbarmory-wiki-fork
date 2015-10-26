@@ -9,6 +9,7 @@ please see information at the [USB armory project page](http://inversepath.com/u
 The following page provides useful information on how to get started:
 
 * [**Getting started**](https://github.com/inversepath/usbarmory/wiki/Starting).
+* [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 
 ## Hardware
 
