@@ -18,3 +18,7 @@
 ### Papers
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
+
+### Presentations
+
+* [Inverse Path](http://inversepath.com) - [Forging the USB armory](http://dev.inversepath.com/download/usbarmory/forging_the_usb_armory.pdf)
