@@ -15,6 +15,8 @@
 
 * [Yann GUIBET](https://github.com/yann2192) published a helpful [guide](https://gist.github.com/yann2192/f989143c86567237460e) on setting up full disk encryption with Arch Linux
 
+* [Carl Smith](https://twitter.com/base16io) published a [guide](http://base16.io/?p=124) on Linux kernel module compilation
+
 ### Papers
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
