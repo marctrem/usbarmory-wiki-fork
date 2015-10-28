@@ -125,7 +125,7 @@ tar xvf u-boot-2015.10.tar.bz2 && cd u-boot-2015.10
 
 Apply the following patch which enables Verified Boot support.
 
-* [0000-Add-verified-boot-support.patch](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/u-boot-2015.10_patches/0000-Add-verified-boot-support.patch)
+* [0000-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0000-Add-verified-boot-support.patch)
 
 Apply the following patches which enable i.MX53 High Assurance Boot (HAB)
 support in U-Boot by adding the 'hab_status' command, which helps verification
