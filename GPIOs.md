@@ -31,7 +31,7 @@ corresponding to pin 7, in output mode and write 1 and 0 from a Linux shell.
 
 ### LED Control
 
-The Mk I LED can be controlled as follows
+The Mk I LED can be controlled in different ways depending on your Linux kernel configuration. The following examples shows usage on with default Debian and Arch Linux images.
 
 Debian examples:
 
