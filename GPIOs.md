@@ -71,8 +71,8 @@ Arch Linux examples:
 ## disable trigger
 # echo none > /sys/devices/platform/leds/leds/LED/trigger
 
-# Off
+# LED off
 # echo 1 > /sys/devices/platform/leds/leds/LED/brigthness
 
-# On
+# LED on
 # echo 0 > /sys/devices/platform/leds/leds/LED/brigthness
