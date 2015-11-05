@@ -1,7 +1,7 @@
 The following measurements provide reference figures for USB armory power
 consumption.
 
-The measurements have been performes using an Agilent U1242B multimeter.
+The measurements have been performed using an Agilent U1242B multimeter.
 
 | Device             |   Idle under Linux | Linux kernel compilation |   100% CPU load (Memtester) |
 |:-------------------|-------------------:|-------------------------:|----------------------------:|
