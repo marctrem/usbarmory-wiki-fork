@@ -43,7 +43,7 @@ and updates see the [project page](http://inversepath.com/usbarmory).
 ## Supported Operating Systems
 
 * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
-* Debian, Ubuntu: image preparation described [here](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
+* [Debian, Ubuntu image preparation](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
 * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
 * [Kali Linux](https://www.offensive-security.com/kali-linux-vmware-arm-image-download)
 * [VoidLinux](http://www.voidlinux.eu/news/2015/04/USB-armory.html)
