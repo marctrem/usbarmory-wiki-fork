@@ -17,7 +17,7 @@ The enclosure can be ordered at [Inverse Path](http://inversepath.com/usbarmory)
   * Material: NEVIESTER EG83 (PETG)
   * Color: transparent
 
-**NOTE**:  A USB cap was included in earlier enclosures but later removed due to width tolerance issues.
+**NOTE**: A cap for the USB plug was included in earlier enclosures but later removed due to width tolerance issues.
 
 ![Enclosure Rendering](http://inversepath.com/images/usbarmory_enclosure.jpg?nocache1)
 ![Exploded Enclosure Renderings](http://inversepath.com/images/usbarmory_enclosure_exploded.jpg?nocache1)
