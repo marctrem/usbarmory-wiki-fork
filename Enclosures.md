@@ -1,6 +1,6 @@
 ## Official
 
-The [USB armory](http://inversepath.com/usbarmory) enclosure from [Inverse Path](http://inversepath.com) is a custom 5 pieces design (3 body parts + 2 caps) specifically designed to accommodate and protect the board.
+The [USB armory](http://inversepath.com/usbarmory) enclosure from [Inverse Path](http://inversepath.com) is a custom 4 pieces design (3 body parts + 1 cap) specifically designed to accommodate and protect the board.
 
 The enclosure can be easily assembled by snapping in three separate body parts, one of which acts as a sliding cover for the microSD card. Two removable caps respectively protect the USB plug and the 5-pin breakout header.
 
@@ -8,7 +8,7 @@ Just like the USB armory, the enclosure manufacturing, including its material, i
 
 The enclosure can be ordered at [Inverse Path](http://inversepath.com/usbarmory).
 
-* [Technical Diagram](https://github.com/inversepath/usbarmory/blob/master/hardware/enclosure/technical_diagram-20150610.pdf)
+* [Technical Diagram](https://github.com/inversepath/usbarmory/blob/master/hardware/enclosure/technical_diagram-20150611.pdf)
 
 * Specifications:
   * Dimensions:
@@ -17,8 +17,10 @@ The enclosure can be ordered at [Inverse Path](http://inversepath.com/usbarmory)
   * Material: NEVIESTER EG83 (PETG)
   * Color: transparent
 
-![Enclosure Rendering](http://inversepath.com/images/usbarmory_enclosure.jpg)
-![Exploded Enclosure Renderings](http://inversepath.com/images/usbarmory_enclosure_exploded.jpg)
+**NOTE**:  A USB cap was included in earlier enclosures but later removed due to width tolerance issues.
+
+![Enclosure Rendering](http://inversepath.com/images/usbarmory_enclosure.jpg?nocache1)
+![Exploded Enclosure Renderings](http://inversepath.com/images/usbarmory_enclosure_exploded.jpg?nocache1)
 
 ## 3rd party
 
