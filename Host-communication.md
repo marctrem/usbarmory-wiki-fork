@@ -93,7 +93,7 @@ $ echo "nat on en0 from 10.0.0.0/8 to any -> (en0)" | sudo pfctl -f -
 
 **NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings.
 
-1. Plug in the USB armory and let Windows install the network adapter.
+1. Plug in the USB armory and let Windows install the network adapter driver. The driver installation is usually automatic, however on certain Windows installations it has been reported that this is not the case. To manually install a driver, success has been reported with the [Linux USB Ethernet/RNDIS Gadget](https://www.kernel.org/doc/Documentation/usb/linux.inf) or the [Acer USB Ethernet/RNDIS Gadget](http://catalog.update.microsoft.com/v7/site/ScopedViewRedirect.aspx?updateid=37e35bd4-d788-4b83-9416-f78e439f90a2).
 
 2. Once installation is complete go on the Control Panel, choose 'Network and Internet' -> 'Network and Sharing Center' ->  'Change adapter settings'.
 
