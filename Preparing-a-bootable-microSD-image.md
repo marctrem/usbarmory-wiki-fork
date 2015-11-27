@@ -58,7 +58,7 @@ sudo mount ${TARGET_DEV}1 $TARGET_MNT
 
 For Debian 8 (Jessie):
 ```
-sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,fake-hwclock,openssl,shellinabox,vim,nano,cryptsetup,lvm2,locales,less,cpufrequtils,isc-dhcp-server jessie $TARGET_MNT http://ftp.debian.org/debian/
+sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,fake-hwclock,openssl,shellinabox,vim,nano,cryptsetup,lvm2,locales,less,cpufrequtils,isc-dhcp-server,haveged jessie $TARGET_MNT http://ftp.debian.org/debian/
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/rc.local -O ${TARGET_MNT}/etc/rc.local
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/sources.list -O ${TARGET_MNT}/etc/apt/sources.list
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/dhcpd.conf -O ${TARGET_MNT}/etc/dhcp/dhcpd.conf
@@ -94,14 +94,14 @@ sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `mkpasswd -m sha-512 u
 sudo rm ${TARGET_MNT}/usr/bin/qemu-arm-static
 ```
 
-Kernel: Linux 4.2.3
+Kernel: Linux 4.3
 -------------------
 
 ```
 export ARCH=arm
-wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.2.3.tar.xz
-tar xvf linux-4.2.3.tar.xz && cd linux-4.2.3
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.2.config -O .config
+wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.3.tar.xz
+tar xvf linux-4.3.tar.xz && cd linux-4.3
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.3.config -O .config
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi -O arch/arm/boot/dts/imx53-usbarmory-common.dtsi
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dts -O arch/arm/boot/dts/imx53-usbarmory.dts
 make uImage LOADADDR=0x70008000 modules imx53-usbarmory.dtb
