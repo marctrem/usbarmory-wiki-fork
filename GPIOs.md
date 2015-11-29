@@ -72,7 +72,7 @@ Arch Linux examples:
 # echo none > /sys/devices/platform/leds/leds/LED/trigger
 
 # LED off
-# echo 1 > /sys/devices/platform/leds/leds/LED/brigthness
+# echo 1 > /sys/devices/platform/leds/leds/LED/brightness
 
 # LED on
-# echo 0 > /sys/devices/platform/leds/leds/LED/brigthness
+# echo 0 > /sys/devices/platform/leds/leds/LED/brightness
