@@ -20,7 +20,7 @@ This device tree enables the SPI configuration of the pin header:
 ### SPI flash
 
 The example device tree binds a Micron M25P40 SPI flash on SS0 and expose it as
-a MTD device:
+a MTD device. The following kernel logs confirm the correct SPI configuration:
 
 ```
 mx51_ecspi_clkdiv: fin: 54000000, fspi: 20000000, post: 0, pre: 2
