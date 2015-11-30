@@ -1,10 +1,10 @@
 ### Device tree
 
 Download and compile the example SPI device tree file [imx53-usbarmory-spi.dts](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-spi.dts)
-and check to have the latest version of the device tree include file [imx53-usbarmory-common.dtsi](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi)
+and check to have the latest version of the device tree include file [imx53-usbarmory-common.dtsi](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi),
 available in your kernel source directory.
 
-This device tree enables the SPI configuration of the pin header:
+The SPI example device tree enables the SPI configuration of the pin header:
 
 | PIN | Mk I         |
 |:---:|--------------|
@@ -19,8 +19,9 @@ This device tree enables the SPI configuration of the pin header:
 
 ### SPI flash
 
-The example device tree binds a Micron M25P40 SPI flash on SS0 and expose it as
-a MTD device. The following kernel logs confirm the correct SPI configuration:
+The example device tree binds a Micron M25P40 SPI flash on SS0 and exposes it
+with the Memory Technology Device (MTD) interface. The following kernel logs
+confirm a correct SPI configuration:
 
 ```
 mx51_ecspi_clkdiv: fin: 54000000, fspi: 20000000, post: 0, pre: 2
