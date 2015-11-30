@@ -1,10 +1,10 @@
 ### Device tree
 
-Download and compile the example SPI device tree file [imx53-usbarmory-spi.dts](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-spi.dts)
+Download and compile the example Serial Peripheral Interface (SPI) device tree file [imx53-usbarmory-spi.dts](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-spi.dts)
 and check to have the latest version of the device tree include file [imx53-usbarmory-common.dtsi](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi),
 available in your kernel source directory.
 
-The SPI example device tree enables the SPI configuration of the pin header:
+The example device tree enables the SPI configuration of the pin header:
 
 | PIN | Mk I         |
 |:---:|--------------|
