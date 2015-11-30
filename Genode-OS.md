@@ -1,6 +1,6 @@
 The [Genode OS Framework](http://genode.org/index) supports the USB armory since version [15.02](http://genode.org/documentation/release-notes/15.02#Support_for_the_USB-Armory_board) implementing a TrustZone Secure [virtual-machine monitor](http://genode.org/documentation/articles/trustzone) (VMM) supervising Linux running in the Normal world.
 
-Support is in the very early stages, the following notes provides some hint to get started.
+Genode OS version [15.02](http://genode.org/documentation/release-notes/15.02#Support_for_the_USB-Armory_board) includes the first basic implementation, version [15.11](http://genode.org/documentation/release-notes/15.11#Improved_TrustZone_support_on_USB_Armory) features improved support.
 
 The Linux kernel requires minimal patching to be executed in the Normal world, at the moment Martin Stein from Genode Labs provides a [repository](https://github.com/m-stein/linux/tree/usb_armory_genode_tz_vmm) with a patched kernel.
 
