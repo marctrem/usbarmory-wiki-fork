@@ -14,6 +14,8 @@ The breakout header can be accessed, among other options, with a [solderless hea
 
 The serial port can be connected to via a [USB to TTL cable](https://www.sparkfun.com/products/12977).
 
+The header can also be used to route I²C (Inter-Integrated Circuit) and [SPI](https://github.com/inversepath/usbarmory/wiki/SPI) (Serial Peripheral Interface) interfaces.
+
 ### GPIO Sysfs Interface on Linux
 
 When using Linux the 5 GPIOs, exposed on the breakout header (pins 2-7), are

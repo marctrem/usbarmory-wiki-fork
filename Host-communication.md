@@ -116,9 +116,7 @@ The Internet Connection Sharing on Windows requires by default an IP range on a 
 
 When using CDC Ethernet emulation any standard TCP/IP server can be used to communicate with the USB armory board.
 
-On Linux installations the typical interaction would be via OpenSSH server, using an SSH client on the USB host, or web server, using a standard browser as a client.
-
-The installation of the [shellinabox](https://code.google.com/p/shellinabox) software (available on Debian with apt) provides an easily accessible web terminal emulator (default port: 4200), however using a proper SSH client/server is highly recommended over this method.
+The typical, and first, interaction would be via OpenSSH server, using an SSH client on the USB host.
 
 ### Mouse/Keyboard emulation via USB Human Interface Device (HID) Gadget
 
