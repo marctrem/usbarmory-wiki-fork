@@ -58,7 +58,7 @@ sudo mount ${TARGET_DEV}1 $TARGET_MNT
 
 For Debian 8 (Jessie):
 ```
-sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,fake-hwclock,openssl,shellinabox,vim,nano,cryptsetup,lvm2,locales,less,cpufrequtils,isc-dhcp-server,haveged jessie $TARGET_MNT http://ftp.debian.org/debian/
+sudo qemu-debootstrap --arch=armhf --include=ssh,sudo,ntpdate,fake-hwclock,openssl,vim,nano,cryptsetup,lvm2,locales,less,cpufrequtils,isc-dhcp-server,haveged jessie $TARGET_MNT http://ftp.debian.org/debian/
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/rc.local -O ${TARGET_MNT}/etc/rc.local
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/sources.list -O ${TARGET_MNT}/etc/apt/sources.list
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/debian_conf/dhcpd.conf -O ${TARGET_MNT}/etc/dhcp/dhcpd.conf
