@@ -121,7 +121,7 @@ operation the USB armory is detected as a standard USB flash drive.
 
 Entry in /etc/modules:
 ```
-g_mass_storage file=disk.img
+g_mass_storage
 ```
 
 Options in /etc/modprobe.d/usbarmory.conf:
