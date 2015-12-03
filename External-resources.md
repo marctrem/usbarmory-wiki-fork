@@ -17,6 +17,8 @@
 
 * [Carl Smith](https://twitter.com/base16io) published a [guide](http://base16.io/?p=124) on Linux kernel module compilation
 
+* [Christopher](https://yawnbox.com/index.php/about) published a [guide](https://yawnbox.com/index.php/2015/12/02/configuring-a-usb-armory-as-a-reverse-ssh-server-via-tor-hidden-service/) on configuring the USB armory as a reverse SSH server via Tor hidden service.
+
 ### Papers
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
