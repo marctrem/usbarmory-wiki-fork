@@ -1,13 +1,3 @@
-### Mass Storage emulation
-
-No particular host configuration is required, when configured for mass storage
-operation the USB armory is detected as a standard USB flash drive.
-
-Entry in /etc/modules:
-```
-g_mass_storage file=disk.img
-```
-
 ### CDC Ethernet
 
 This mode allows to interact with the USB armory just like a standard TCP/IP
@@ -28,8 +18,14 @@ Windows.
 
 Entry in /etc/modules:
 ```
-g_ether use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2
+g_ether
 ```
+
+Options in /etc/modprobe.d/usbarmory.conf:
+```
+options g_ether use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2
+```
+
 #### Setup & Connection Sharing: Linux
 
 The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the instructions in this section reflect these settings.
@@ -117,6 +113,35 @@ The Internet Connection Sharing on Windows requires by default an IP range on a 
 When using CDC Ethernet emulation any standard TCP/IP server can be used to communicate with the USB armory board.
 
 The typical, and first, interaction would be via OpenSSH server, using an SSH client on the USB host.
+
+### Mass Storage emulation
+
+No particular host configuration is required, when configured for mass storage
+operation the USB armory is detected as a standard USB flash drive.
+
+Entry in /etc/modules:
+```
+g_mass_storage file=disk.img
+```
+
+Options in /etc/modprobe.d/usbarmory.conf:
+```
+options g_mass_storage file=disk.img
+```
+
+### Combined CDC Ethernet and Mass Storage emulation
+
+It is possible to have simultaneous ethernet and mass storage emulation with the Multifunction Composite Gadget (g_multi).
+
+Entry in /etc/modules:
+```
+g_multi
+```
+
+Options in /etc/modprobe.d/usbarmory.conf:
+```
+options g_multi use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2 file=disk.img
+```
 
 ### Mouse/Keyboard emulation via USB Human Interface Device (HID) Gadget
 
