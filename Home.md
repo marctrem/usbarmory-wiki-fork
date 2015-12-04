@@ -35,7 +35,7 @@ and updates see the [project page](http://inversepath.com/usbarmory).
 * [INTERLOCK file encryption front-end, with Signal/TextSecure messaging support](https://github.com/inversepath/interlock) 
 * [Embedded INTERLOCK distribution for the USB armory](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot)
-* Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
+* Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I2C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
 * [Development](https://github.com/inversepath/usbarmory/wiki/Development)
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
