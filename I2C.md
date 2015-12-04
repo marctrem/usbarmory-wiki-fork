@@ -1,6 +1,6 @@
 ### Device tree
 
-Download and compile the example Inter-Integrated Circuit (I2C) device tree file [imx53-usbarmory-i2c.dts](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-i2c.dts)
+Download and compile the example Inter-Integrated Circuit (I²C) device tree file [imx53-usbarmory-i2c.dts](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-i2c.dts)
 making sure that the latest version of the device tree include file [imx53-usbarmory-common.dtsi](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi),
 is included in your kernel source directory.
 
@@ -8,7 +8,7 @@ Also ensure that i2c support is enabled in the kernel configuration, otherwise
 you can recompile the kernel with the latest configuration
 [usbarmory_linux-4.3.config](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.3.config).
 
-The example device tree enables this I2C configuration on the pin header:
+The example device tree enables this I²C configuration on the pin header:
 
 | PIN | Mk I         |
 |:---:|--------------|
@@ -21,9 +21,9 @@ The example device tree enables this I2C configuration on the pin header:
 |  7  | GPIO5[30]    |
 
 
-### I2C EEPROM
+### I²C EEPROM
 
-Once the i2c-dev kernel module is loaded, it is possible to access the I2C
+Once the i2c-dev kernel module is loaded, it is possible to access the I²C
 device via character device /dev/i2c-0 using userland tools such as i2c-tools
 or, in case of an EEPROM device, a modified verision of
 [eeprog](http://darkswarm.org/eeprog-0.7.6-tear5.tar.gz).
