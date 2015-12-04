@@ -1,12 +1,14 @@
 ### Device tree
 
 Download and compile the example Inter-Integrated Circuit (I2C) device tree file [imx53-usbarmory-i2c.dts](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-i2c.dts)
-and check to have the latest version of the device tree include file [imx53-usbarmory-common.dtsi](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi),
-available in your kernel source directory.
-Also check to have the i2c support enabled in the kernel or you can recompile
-your kernel with the latest kernel configuration [usbarmory_linux-4.3.config](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.3.config).
+making sure that the latest version of the device tree include file [imx53-usbarmory-common.dtsi](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi),
+is included in your kernel source directory.
 
-The example device tree enables the I2C configuration of the pin header:
+Also ensure that i2c support is enabled in the kernel configuration, otherwise
+you can recompile the kernel with the latest configuration
+[usbarmory_linux-4.3.config](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.3.config).
+
+The example device tree enables this I2C configuration on the pin header:
 
 | PIN | Mk I         |
 |:---:|--------------|
@@ -21,12 +23,12 @@ The example device tree enables the I2C configuration of the pin header:
 
 ### I2C EEPROM
 
-Once the i2c-dev kernel module is loaded it is possible to access
-the I2C device via character device /dev/i2c-0 using userland tools
-such as i2c-tools or, in case of a EEPROM device, a modified verision of
+Once the i2c-dev kernel module is loaded, it is possible to access the I2C
+device via character device /dev/i2c-0 using userland tools such as i2c-tools
+or, in case of an EEPROM device, a modified verision of
 [eeprog](http://darkswarm.org/eeprog-0.7.6-tear5.tar.gz).
 
-The following example shows detection, read and write on the
+The following example shows detection, read and write operations on the
 Microchip 24LC16B EEPROM.
 
 ```
