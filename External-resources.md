@@ -19,6 +19,8 @@
 
 * [Christopher](https://yawnbox.com/index.php/about) published a [guide](https://yawnbox.com/index.php/2015/12/02/configuring-a-usb-armory-as-a-reverse-ssh-server-via-tor-hidden-service/) on configuring the USB armory as a reverse SSH server via Tor hidden service.
 
+* [Julien Desfossez](https://github.com/jdesfossez) published a [guide](https://github.com/jdesfossez/usbarmory/wiki/Preparing-a-Ubuntu-FDE-microSD-image) on manually preparing an Ubuntu image for the USB armory with a full disk encryption and signed boot image.
+
 ### Papers
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
