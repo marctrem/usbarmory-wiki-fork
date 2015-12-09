@@ -1,4 +1,4 @@
-### Freescale documentation
+### SoC Documentation
 
 * [i.MX53 Reference Manual](http://cache.nxp.com/files/32bit/doc/ref_manual/iMX53RM.pdf)
 * [i.MX53xD Datasheet](http://cache.nxp.com/files/32bit/doc/data_sheet/IMX53CEC.pdf)

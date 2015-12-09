@@ -31,7 +31,7 @@ executed code is not covered in this guide and left out to implementors.
 ### Prerequisites
 
 At this time the secure boot functionality requires usage of the Code Signing
-Tool from Freescale (IMX_CST_TOOL), available for
+Tool from NXP (IMX_CST_TOOL), available for
 [download](http://www.nxp.com/products/microcontrollers-and-processors/arm-processors/i.mx-applications-processors-based-on-arm-cores/i.mx-software-and-tools/i.mx-design-tools:IMX_DESIGN)
 (requires registration). A custom
 [tool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_sbtool)
@@ -40,10 +40,10 @@ following documentation.
 
 **NOTE**: The last published IMX_CST_TOOL version 2.3.1 unfortunately does not
 generate correct signed images for the i.MX53 SoC, however version 2.2
-correctly does. We are working with Freescale to have this addressed and/or
-receive clear instructions for downloading the older version. In the meantime
-we encourage users to write directly to Freescale support to request
-IMX_CST_TOOL version 2.2.
+correctly does. We are working with NXP to have this addressed and/or receive
+clear instructions for downloading the older version. In the meantime we
+encourage users to write directly to NXP support to request IMX_CST_TOOL
+version 2.2.
 
 A working device tree compiler must be installed, on a recent Debian and Ubuntu
 this can be done as follows:
@@ -325,6 +325,6 @@ enables secure boot (remember to enable VDD_FUSE power supply as shown earlier):
 The USB armory will now refuse to run bootloader images not correctly signed
 with keys corresponding to the fused hashes.
 
-### Freescale documentation
+### External documentation
 
 * [i.MX53 Secure Boot Application Note](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
