@@ -23,3 +23,8 @@ cp var/run/tz_vmm/uImage $SD_CARD_MNT
 # boot USB armory with SD card and stop Uboot countdown (requires serial connection)
 uboot> ext2load mmc 0:1 0x70200000 /boot/uImage-genode; bootm 0x70200000
 ```
+
+### External documentation
+
+* [https://github.com/m-stein/genode_binaries/blob/master/tz_vmm/usb_armory/README](https://github.com/m-stein/genode_binaries/blob/master/tz_vmm/usb_armory/README)
+* [Genode Labs](http://www.genode-labs.com) - [The story behind Genode's TrustZone demo on the USB Armory](http://genode.org/documentation/articles/usb_armory)
