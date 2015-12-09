@@ -27,4 +27,4 @@
 
 ### Presentations
 
-* [Inverse Path](http://inversepath.com) - [Forging the USB armory](http://dev.inversepath.com/download/usbarmory/forging_the_usb_armory.pdf)
+* [Inverse Path](https://inversepath.com) - [Forging the USB armory](https://dev.inversepath.com/download/usbarmory/forging_the_usb_armory.pdf)

@@ -25,7 +25,7 @@ arrow engraved on it, a small "click" indicates successful opening. Lift the hin
 
 ### Pre-imaged microSD card
 
-If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](http://inversepath.com) default image, please see notes and default credentials [here](http://dev.inversepath.com/usbarmory) (specifically the **CONNECTING** section). If you have issues connecting always make sure that:
+If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](https://inversepath.com) default image, please see notes and default credentials [here](https://dev.inversepath.com/usbarmory) (specifically the **CONNECTING** section). If you have issues connecting always make sure that:
 
 1. the LED is blinking (indicates Linux kernel heartbeat)
 
@@ -55,7 +55,7 @@ Linux distribution on the microSD from a Linux computer:
 
 ## Documentation
 
-For additional information check the available pages on the rest of the [wiki](https://github.com/inversepath/usbarmory/wiki), especially the [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)), or information available on the [main project page](http://inversepath.com/usbarmory).
+For additional information check the available pages on the rest of the [wiki](https://github.com/inversepath/usbarmory/wiki), especially the [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)), or information available on the [main project page](https://inversepath.com/usbarmory).
 
 ## Support
 

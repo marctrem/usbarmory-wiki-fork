@@ -1,10 +1,10 @@
 Welcome to the USB armory wiki.
 
-The USB armory from [Inverse Path](http://inversepath.com) is an open source
+The USB armory from [Inverse Path](https://inversepath.com) is an open source
 hardware design, implementing a flash drive sized computer.
 
 For a project introduction and information about purchasing an USB armory board
-please see information at the [USB armory project page](http://inversepath.com/usbarmory).
+please see information at the [USB armory project page](https://inversepath.com/usbarmory).
 
 The following page provides useful information on how to get started:
 
@@ -14,7 +14,7 @@ The following page provides useful information on how to get started:
 ## Hardware
 
 The first hardware revision of the USB armory (Mk I) is currently available, for further information
-and updates see the [project page](http://inversepath.com/usbarmory).
+and updates see the [project page](https://inversepath.com/usbarmory).
 
 * [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
 * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
@@ -32,7 +32,7 @@ and updates see the [project page](http://inversepath.com/usbarmory).
 * [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Drivers](https://github.com/inversepath/usbarmory/wiki/Drivers)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
-* [INTERLOCK file encryption front-end, with Signal/TextSecure messaging support](https://github.com/inversepath/interlock) 
+* [INTERLOCK file encryption front-end, with Signal/TextSecure messaging support](https://github.com/inversepath/interlock)
 * [Embedded INTERLOCK distribution for the USB armory](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot)
 * Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I2C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
@@ -52,9 +52,9 @@ and updates see the [project page](http://inversepath.com/usbarmory).
 ## How to Contribute
 
 Obtain a USB armory board and start developing! Please see ordering information
-at the [USB armory project page](http://inversepath.com/usbarmory).
+at the [USB armory project page](https://inversepath.com/usbarmory).
 
-A list of project ideas is available at the [project page](http://inversepath.com/usbarmory) or
+A list of project ideas is available at the [project page](https://inversepath.com/usbarmory) or
 in the [Applications](https://github.com/inversepath/usbarmory/wiki/Applications) section.
 
 A discussion group is available on [Google Groups](https://groups.google.com/d/forum/usbarmory).
@@ -63,7 +63,7 @@ If you think anything is missing on this wiki, or require further support, pleas
 
 ## License
 
-USB armory | http://inversepath.com/usbarmory  
+USB armory | https://inversepath.com/usbarmory
 Copyright (c) 2015 Inverse Path S.r.l.
 
 This is an open hardware design licensed under the terms of the CERN Open
