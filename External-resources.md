@@ -1,9 +1,9 @@
 ### Freescale documentation
 
-* [i.MX53 Reference Manual](http://cache.freescale.com/files/32bit/doc/ref_manual/iMX53RM.pdf)
-* [i.MX53xA Datasheet](http://cache.freescale.com/files/32bit/doc/data_sheet/IMX53AEC.pdf)
-* [i.MX53 System Development Guide](http://cache.freescale.com/files/32bit/doc/user_guide/MX53UG.pdf)
-* [i.MX53 Secure Boot Application Note](http://cache.freescale.com/files/32bit/doc/app_note/AN4581.pdf)
+* [i.MX53 Reference Manual](http://cache.nxp.com/files/32bit/doc/ref_manual/iMX53RM.pdf)
+* [i.MX53xD Datasheet](http://cache.nxp.com/files/32bit/doc/data_sheet/IMX53CEC.pdf)
+* [i.MX53 System Development User's Guide](http://cache.nxp.com/files/32bit/doc/user_guide/MX53UG.pdf)
+* [i.MX53 Secure Boot Application Note](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
 
 ### Contributions
 
