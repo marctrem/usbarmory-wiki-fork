@@ -32,7 +32,7 @@ executed code is not covered in this guide and left out to implementors.
 
 At this time the secure boot functionality requires usage of the Code Signing
 Tool from Freescale (IMX_CST_TOOL), available for
-[download](http://www.freescale.com/products/arm-processors/i.mx-applications-processors-based-on-arm-cores/i.mx-software-and-tools/i.mx-design-tools:IMX_DESIGN)
+[download](http://www.nxp.com/products/microcontrollers-and-processors/arm-processors/i.mx-applications-processors-based-on-arm-cores/i.mx-software-and-tools/i.mx-design-tools:IMX_DESIGN)
 (requires registration). A custom
 [tool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_sbtool)
 is being developed, it can be now used only for certain steps as shown in the
@@ -239,7 +239,7 @@ via the IC Identification Module (IIM):
 | SEC_CONFIG[1:0]   | 0        | 0x0810[1:0]    | Security configuration               |
 | DIR_BT_DIS[1:0]   | 0        | 0x0814[0]      | Direct external memory boot disable  |
 
-See the Addendum to Rev. 2 of the [i.MX53 Reference Manual](http://cache.freescale.com/files/32bit/doc/ref_manual/iMX53RM.pdf)
+See the Addendum to Rev. 2 of the [i.MX53 Reference Manual](http://cache.nxp.com/files/32bit/doc/ref_manual/iMX53RM.pdf)
 for details (Chapter 2 - Fusemap).
 
 The following commands (=> prompt) are meant to be executed on the USB armory,
@@ -327,4 +327,4 @@ with keys corresponding to the fused hashes.
 
 ### Freescale documentation
 
-* [i.MX53 Secure Boot Application Note](http://cache.freescale.com/files/32bit/doc/app_note/AN4581.pdf)
+* [i.MX53 Secure Boot Application Note](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
