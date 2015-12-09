@@ -21,9 +21,11 @@
 
 * [Julien Desfossez](https://github.com/jdesfossez) published a [guide](https://github.com/jdesfossez/usbarmory/wiki/Preparing-a-Ubuntu-FDE-microSD-image) on manually preparing an Ubuntu image for the USB armory with a full disk encryption and signed boot image.
 
-### Papers
+### Papers, Articles
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
+
+* [Genode Labs](http://www.genode-labs.com) - [The story behind Genode's TrustZone demo on the USB Armory](http://genode.org/documentation/articles/usb_armory)
 
 ### Presentations
 
