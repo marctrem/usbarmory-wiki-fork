@@ -1,3 +1,9 @@
+#### How can I remove/insert the microSD card?
+
+1. (official enclosure only, if present) To remove the microSD sliding cover push it outwards with your thumb, on the side of the memory card, and pull it simultaneously with your other hand index fingernail, on the opposite side.
+
+2. Please note that the microSD slot is with "hinge" type insertion and not a pull-push slot. In order to open it gently slide the closed metal hinge towards the opposite direction of the little arrow engraved on it, a small "click" indicates successful opening. Lift the hinge upwards and place the microSD card from the top, once inserted close it by putting the hinge back in position and by sliding it towards the arrow direction.
+
 #### Help, I can't connect to my USB armory.
 
 If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](https://inversepath.com) default image, please see notes and default credentials [here](https://dev.inversepath.com/usbarmory) (specifically the **CONNECTING** section). If you have issues connecting always make sure that:
@@ -28,7 +34,7 @@ For USB armory-specific application development the recommendation is to impleme
 
 #### How do I address locale related errors when installing packages on Debian images ?
 
-Install package 'locales' and then run 'dpkg-reconfigure locales'.
+Install package 'locales' and then run ```dpkg-reconfigure locales```.
 
 #### I get the following Linux kernel errors on the host: "Dual-Role OTG device on non-HNP port", "can't set HNP mode"
 
