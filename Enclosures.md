@@ -17,6 +17,8 @@ The enclosure can be ordered at [Inverse Path](https://inversepath.com/usbarmory
   * Material: NEVIESTER EG83 (PETG)
   * Color: transparent
 
+**HINT**: To remove the microSD sliding cover push it outwards with your thumb, on the side of the memory card, and pull it simultaneously with your other hand index fingernail, on the opposite side.
+
 **NOTE**: A cap for the USB plug was included in earlier enclosures but later removed due to width tolerance issues.
 
 ![Enclosure Rendering](https://inversepath.com/images/usbarmory_enclosure.jpg?nocache1)
