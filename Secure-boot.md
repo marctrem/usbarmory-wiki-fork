@@ -41,9 +41,7 @@ following documentation.
 **NOTE**: The last published IMX_CST_TOOL version 2.3.1 unfortunately does not
 generate correct signed images for the i.MX53 SoC, however version 2.2
 correctly does. We are working with NXP to have this addressed and/or receive
-clear instructions for downloading the older version. In the meantime we
-encourage users to write directly to NXP support to request IMX_CST_TOOL
-version 2.2.
+clear instructions for downloading the older version. In the meantime contact [Inverse Path](https://inversepath.com) directly to request IMX_CST_TOOL version 2.2.
 
 A working device tree compiler must be installed, on a recent Debian and Ubuntu
 this can be done as follows:
