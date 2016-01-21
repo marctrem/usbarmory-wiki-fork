@@ -94,14 +94,14 @@ sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `mkpasswd -m sha-512 u
 sudo rm ${TARGET_MNT}/usr/bin/qemu-arm-static
 ```
 
-Kernel: Linux 4.3
+Kernel: Linux 4.4
 -------------------
 
 ```
 export ARCH=arm
-wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.3.tar.xz
-tar xvf linux-4.3.tar.xz && cd linux-4.3
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.3.config -O .config
+wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.tar.xz
+tar xvf linux-4.4.tar.xz && cd linux-4.4
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.4.config -O .config
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi -O arch/arm/boot/dts/imx53-usbarmory-common.dtsi
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dts -O arch/arm/boot/dts/imx53-usbarmory.dts
 make uImage LOADADDR=0x70008000 modules imx53-usbarmory.dtb
@@ -111,12 +111,12 @@ sudo make INSTALL_MOD_PATH=$TARGET_MNT ARCH=arm modules_install
 sudo umount $TARGET_MNT
 ```
 
-Bootloader: U-Boot 2015.10
+Bootloader: U-Boot 2016.01
 --------------------------
 
 ```
-wget ftp://ftp.denx.de/pub/u-boot/u-boot-2015.10.tar.bz2
-tar xvf u-boot-2015.10.tar.bz2 && cd u-boot-2015.10
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2016.01.tar.bz2
+tar xvf u-boot-2016.01.tar.bz2 && cd u-boot-2016.01
 make distclean
 make usbarmory_config
 make ARCH=arm
