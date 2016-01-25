@@ -34,7 +34,7 @@ At this time the secure boot functionality requires usage of the Code Signing
 Tool from NXP (IMX_CST_TOOL), available for
 [download](http://www.nxp.com/products/microcontrollers-and-processors/arm-processors/i.mx-applications-processors-based-on-arm-cores/i.mx-software-and-tools/i.mx-design-tools:IMX_DESIGN)
 (requires registration). A custom
-[tool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_sbtool)
+[tool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_srktool)
 is being developed, it can be now used only for certain steps as shown in the
 following documentation.
 
@@ -99,8 +99,8 @@ hexdump -C SRK_1_2_3_4_fuse.bin
 ```
 
 **EXPERIMENTAL**: this table can also be generated with our custom
-usbarmory_sbtool app available
-[here](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_sbtool)
+usbarmory_srktool app available
+[here](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_srktool)
 
 ### Setting up the verified boot keys
 
