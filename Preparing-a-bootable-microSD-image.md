@@ -29,7 +29,7 @@ sudo apt-get install gcc-arm-none-eabi
 export CROSS_COMPILE=arm-none-eabi-
 ```
 
-On Ubuntu (12.04 LTS, 14.04 LTS, 14.10) use the packaged one:
+On Ubuntu (12.04 LTS, 14.04 LTS, 15.04, 15.10) use the packaged one:
 ```
 sudo apt-get install gcc-arm-linux-gnueabihf
 export CROSS_COMPILE=arm-linux-gnueabihf-
