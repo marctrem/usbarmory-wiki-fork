@@ -5,7 +5,7 @@ Prerequisites
 
 Recent Debian and Ubuntu (x86 or x86-64):
 ```
-sudo apt-get install parted debootstrap binfmt-support qemu-user-static u-boot-tools wget git xz-utils tar
+sudo apt-get install parted debootstrap binfmt-support qemu-user-static u-boot-tools wget git xz-utils tar build-essential bc
 ```
 
 Only on x86-64 Debian add:
