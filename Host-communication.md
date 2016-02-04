@@ -85,7 +85,7 @@ $ echo "nat on en0 from en5:network to any -> (en0)" | sudo pfctl -f -
 $ echo "nat on en0 from 10.0.0.0/8 to any -> (en0)" | sudo pfctl -f -
 ```
 
-#### Setup & Connection Sharing: Windows 7/8
+#### Setup & Connection Sharing: Windows 7, 8, 10
 
 **NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings.
 
