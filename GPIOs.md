@@ -10,7 +10,7 @@
 |  6  | GPIO5\[30\]            (CSI0_DAT12)   | UART1_RX / GPIO5\[29\] (CSI0_DAT11) |
 |  7  | GPIO5\[31\]            (CSI0_DAT13)   | GPIO5\[30\]            (CSI0_DAT12) |
 
-The breakout header can be accessed, among other options, with a [solderless header](https://www.sparkfun.com/products/10527).
+The breakout header can be accessed, among other options, with a solderless header such as [this one](https://www.sparkfun.com/products/10527) or [this one (346-87-107-41-036101)](http://www.precidip.com/pview/346-PP-1NN-41-036101.html).
 
 The serial port can be connected to via a [USB to TTL cable](https://www.sparkfun.com/products/12977).
 
