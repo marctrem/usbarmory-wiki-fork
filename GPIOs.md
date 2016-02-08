@@ -33,7 +33,7 @@ corresponding to pin 7, in output mode and write 1 and 0 from a Linux shell.
 
 ### LED Control
 
-The Mk I LED can be controlled in different ways depending on your Linux kernel configuration. The following examples shows usage on with default Debian and Arch Linux images.
+The Mk I LED can be controlled in different ways depending on your Linux kernel and Device Tree (dts) configuration. The following examples shows usage on default Debian and Arch Linux images.
 
 Debian examples:
 
@@ -45,8 +45,8 @@ Debian examples:
 
 ## full brightness
 # echo out > /sys/class/gpio/gpio123/direction
-# echo 0 > /sys/class/gpio/gpio123/value        # On
-# echo 1 > /sys/class/gpio/gpio123/value        # Off
+# echo 0 > /sys/class/gpio/gpio123/value        # LED on
+# echo 1 > /sys/class/gpio/gpio123/value        # LED off
 
 ## mid-brightness trick
 # echo in > /sys/class/gpio/gpio123/direction
@@ -73,8 +73,8 @@ Arch Linux examples:
 ## disable trigger
 # echo none > /sys/devices/platform/leds/leds/LED/trigger
 
-# LED off
+# LED on
 # echo 1 > /sys/devices/platform/leds/leds/LED/brightness
 
-# LED on
+# LED off
 # echo 0 > /sys/devices/platform/leds/leds/LED/brightness
