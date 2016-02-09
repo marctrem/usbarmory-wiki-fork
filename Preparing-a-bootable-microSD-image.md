@@ -70,14 +70,14 @@ sudo chroot $TARGET_MNT systemctl mask getty-static.service
 sudo chroot $TARGET_MNT systemctl mask isc-dhcp-server.service
 ```
 
-For Ubuntu 14.10 (Utopic Unicorn):
+For Ubuntu 15.10 (Wily Werewolf):
 ```
-wget http://cdimage.ubuntu.com/ubuntu-core/releases/14.10/release/ubuntu-core-14.10-core-armhf.tar.gz
-sudo tar xvf ubuntu-core-14.10-core-armhf.tar.gz -C $TARGET_MNT
+wget http://cdimage.ubuntu.com/ubuntu-core/releases/15.10/release/ubuntu-core-15.10-core-armhf.tar.gz
+sudo tar xvf ubuntu-core-15.10-core-armhf.tar.gz -C $TARGET_MNT
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/ubuntu_conf/ttymxc0.conf -O ${TARGET_MNT}/etc/init/ttymxc0.conf
 sudo cp /usr/bin/qemu-arm-static ${TARGET_MNT}/usr/bin/qemu-arm-static
 echo "nameserver 8.8.8.8" | sudo tee ${TARGET_MNT}/etc/resolv.conf
-sudo chroot $TARGET_MNT apt-get install -y openssh-server whois fake-hwclock
+sudo chroot $TARGET_MNT apt-get install -y openssh-server whois ntpdate openssl vim nano less
 ```
 
 Finalize and set the password:
@@ -90,17 +90,17 @@ echo -e 'auto usb0\nallow-hotplug usb0\niface usb0 inet static\n  address 10.0.0
 echo "usbarmory" | sudo tee ${TARGET_MNT}/etc/hostname
 echo "usbarmory  ALL=(ALL) NOPASSWD: ALL" | sudo tee -a ${TARGET_MNT}/etc/sudoers
 echo -e "127.0.1.1\tusbarmory" | sudo tee -a ${TARGET_MNT}/etc/hosts
-sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `mkpasswd -m sha-512 usbarmory` -m usbarmory
+sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `sudo chroot $TARGET_MNT mkpasswd -m sha-512 usbarmory` -m usbarmory
 sudo rm ${TARGET_MNT}/usr/bin/qemu-arm-static
 ```
 
-Kernel: Linux 4.4
+Kernel: Linux 4.4.1
 -------------------
 
 ```
 export ARCH=arm
-wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.tar.xz
-tar xvf linux-4.4.tar.xz && cd linux-4.4
+wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.1.tar.xz
+tar xvf linux-4.4.1.tar.xz && cd linux-4.4.1
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.4.config -O .config
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi -O arch/arm/boot/dts/imx53-usbarmory-common.dtsi
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dts -O arch/arm/boot/dts/imx53-usbarmory.dts
