@@ -21,6 +21,8 @@
 
 * [Julien Desfossez](https://github.com/jdesfossez) published a [guide](https://github.com/jdesfossez/usbarmory/wiki/Preparing-a-Ubuntu-FDE-microSD-image) on manually preparing an Ubuntu image for the USB armory with a full disk encryption and signed boot image.
 
+* [Vince Cali](https://twitter.com/0x56) [ported](https://github.com/darwin-on-arm/xnu/commit/410a687039bbbd35b703e1ead996080fae51a887) Darwin on the USB armory, a detailed writeup with build instruction is available [here](http://embeddedideation.com/2016/02/08/darwin-on-armory/).
+
 ### Papers, Articles
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
