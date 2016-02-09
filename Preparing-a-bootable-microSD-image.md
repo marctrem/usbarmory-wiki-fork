@@ -77,7 +77,7 @@ sudo tar xvf ubuntu-core-15.10-core-armhf.tar.gz -C $TARGET_MNT
 sudo wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/ubuntu_conf/ttymxc0.conf -O ${TARGET_MNT}/etc/init/ttymxc0.conf
 sudo cp /usr/bin/qemu-arm-static ${TARGET_MNT}/usr/bin/qemu-arm-static
 echo "nameserver 8.8.8.8" | sudo tee ${TARGET_MNT}/etc/resolv.conf
-sudo chroot $TARGET_MNT apt-get install -y openssh-server whois ntpdate openssl vim nano less
+sudo chroot $TARGET_MNT apt-get install -y sudo openssh-server whois ntpdate openssl vim nano less
 ```
 
 Finalize and set the password:
