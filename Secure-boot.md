@@ -32,7 +32,7 @@ executed code is not covered in this guide and left out to implementors.
 
 This document illustrates the procedure using custom developed open source
 tools, an alternate method, using NXP Code Signing Tool (IMX_CST_TOOL), is
-available [here](https://github.com/inversepath/usbarmory/wiki/Secure-boot-NXP).
+available [here](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(with-NXP-tools)).
 
 A working device tree compiler and make must be installed, on a recent Debian
 and Ubuntu this can be done as follows:
