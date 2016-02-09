@@ -48,6 +48,7 @@ and updates see the [project page](https://inversepath.com/usbarmory).
 * [Kali Linux](https://www.offensive-security.com/kali-linux-vmware-arm-image-download)
 * [VoidLinux](http://www.voidlinux.eu/news/2015/04/USB-armory.html)
 * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
+* [Darwin](http://embeddedideation.com/2016/02/08/darwin-on-armory/) (experimental)
 
 ## How to Contribute
 
