@@ -29,6 +29,8 @@
 
 * [Genode Labs](http://www.genode-labs.com) - [The story behind Genode's TrustZone demo on the USB Armory](http://genode.org/documentation/articles/usb_armory)
 
+* Roland Schilling, Frieder Steinmetz authored a paper titled [USB devices phoning home](https://doi.org/10.15480/882.1279), exploring data leaks through rogue HTTP channels established by malicious USB devices and using the USB armory for attack implementation.
+
 ### Presentations
 
 * [Inverse Path](https://inversepath.com) - [Forging the USB armory](https://dev.inversepath.com/download/usbarmory/forging_the_usb_armory.pdf)
