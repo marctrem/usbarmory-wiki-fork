@@ -17,7 +17,7 @@ sudo apt-get install zlib1g-dev:i386 libstdc++6:i386
 
 Only on x86-64 Ubuntu add:
 ```
-sudo apt-get install ia32-libs
+sudo apt-get install lib32z1 lib32ncurses5 # on Ubuntu 12.04 install ia32-libs instead
 ```
 
 Toolchain
