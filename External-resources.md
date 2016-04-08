@@ -31,7 +31,7 @@
 
 * Roland Schilling, Frieder Steinmetz authored a paper titled [USB devices phoning home](https://doi.org/10.15480/882.1279), exploring data leaks through rogue HTTP channels established by malicious USB devices and using the USB armory for attack implementation. The repository with the PoC is available [here](https://github.com/willnix/usbpoc).
 
-* Matthias Neugschwandtner, Anton Beitler, Anil Kurmus authored [A Transparent Defense Against USB Eavesdropping Attacks](http://static.securegoose.org/papers/uscramble_cr.pdf), a research which explores passive USB sniffing using the USB armory as evaluation platform. 
+* Matthias Neugschwandtner, Anton Beitler, Anil Kurmus authored [A Transparent Defense Against USB Eavesdropping Attacks](http://static.securegoose.org/papers/uscramble_cr.pdf), a research which explores passive USB sniffing and countermeasures using the USB armory as evaluation platform. 
 
 ### Presentations
 
