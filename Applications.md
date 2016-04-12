@@ -21,7 +21,10 @@ for interfacing options.
 
 ### File encryption
 
-The [INTERLOCK](https://github.com/inversepath/interlock) application is a file encryption front-end, with Signal/TextSecure messaging support, developed for, but not limited to, usage with the USB armory. A Buildroot environment is also [available](https://github.com/inversepath/usbarmory/tree/master/software/buildroot).
+The [INTERLOCK](https://github.com/inversepath/interlock) application is a file
+encryption front-end, with Signal messaging support, developed for, but not
+limited to, usage with the USB armory. A Buildroot environment is also
+[available](https://github.com/inversepath/usbarmory/tree/master/software/buildroot).
 
 ### Password manager
 
