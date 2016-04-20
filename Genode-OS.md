@@ -12,7 +12,7 @@ cd genode
 
 The Genode 'tz_vmm' scenario integrates a Secure Genode VMM and a sample Linux guest with initrd image. A tutorial on how to compile it, and bring it to a bootable microSD card, can be found [here](https://github.com/genodelabs/genode/blob/master/repos/os/run/tz_vmm.run).
 
-The Linux kernel requires minimal patching to be executed in the Normal world. The 'tz_vmm' scenario tutorial downloads a pre-built Linux images for that purpose, if you are interested in building a custom Linux guest a separate tutorial is [available](https://github.com/m-stein/genode_binaries/blob/master/tz_vmm/usb_armory/README).
+The Linux kernel requires minimal patching to be executed in the Normal world. The 'tz_vmm' scenario tutorial downloads pre-built Linux images for that purpose, if you are interested in building a custom Linux guest a separate tutorial is [available](https://github.com/m-stein/genode_binaries/blob/master/tz_vmm/usb_armory/README).
 
 ### External documentation
 
