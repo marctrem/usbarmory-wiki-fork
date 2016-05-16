@@ -11,6 +11,8 @@
 
 * [Collin Mulliner](https://github.com/crmulliner) repository [hidemulation](https://github.com/crmulliner/hidemulation) provides HID emulation helpers to support composite CDC Ethernet and HID gadget.
 
+* [Quentin Young](http://qlyoung.net) repository [armory keyboard](https://github.com/qlyoung/armory-keyboard) provides HID keyboard emulation utilities with partial DuckyScript compatibility.
+
 * [Rudd-O](https://github.com/Rudd-O) repository [usbarmory-debian-imagebuilder](https://github.com/Rudd-O/usbarmory-debian-imagebuilder) provides an alternative creation script for Debian images
 
 * [Yann GUIBET](https://github.com/yann2192) published a helpful [guide](https://gist.github.com/yann2192/f989143c86567237460e) on setting up full disk encryption with Arch Linux
