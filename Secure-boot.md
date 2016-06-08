@@ -109,27 +109,26 @@ openssl genrsa -F4 -out ${KEYS_PATH}/usbarmory.key 2048
 openssl req -batch -new -x509 -key ${KEYS_PATH}/usbarmory.key -out ${KEYS_PATH}/usbarmory.crt
 ```
 
-### Prepare U-Boot (2015.10) with Verified Boot and HAB support
+### Prepare U-Boot (2016.05) with Verified Boot and HAB support
 
 Download and extract U-Boot sources:
 
 ```
-wget ftp://ftp.denx.de/pub/u-boot/u-boot-2015.10.tar.bz2
-tar xvf u-boot-2015.10.tar.bz2 && cd u-boot-2015.10
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2016.05.tar.bz2
+tar xvf u-boot-2016.05.tar.bz2 && cd u-boot-2016.05
 ```
 
-Apply the following patch which enables Verified Boot support.
-
-* [0000-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0000-Add-verified-boot-support.patch)
-
-Apply the following patches which enable i.MX53 High Assurance Boot (HAB)
+Apply the following patche which enables i.MX53 High Assurance Boot (HAB)
 support in U-Boot by adding the 'hab_status' command, which helps verification
 of secure boot state (optional but highly recommended).
 
-* [0001-imx-move-HAB-code-to-imx-general-directories.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0001-imx-move-HAB-code-to-imx-general-directories.patch)
-* [0002-ARM-mx53-add-support-for-HAB-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0002-ARM-mx53-add-support-for-HAB-commands.patch)
-* [0003-usbarmory-add-secure-boot-configuration-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0003-usbarmory-add-secure-boot-configuration-commands.patch)
-* [0004-ARM-mx53-disables-hab_auth_img-command.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0004-ARM-mx53-disables-hab_auth_img-command.patch)
+* [0001-ARM-mx53-add-support-for-HAB-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2016.05_patches/0001-ARM-mx53-add-support-for-HAB-commands.patch)
+
+Apply the following patch which enables Verified Boot support, additionally the
+patch disables the U-Boot prompt as well as external environment variables to
+further lock down physical serial console access.
+
+* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2016.05_patches/0002-Add-verified-boot-support.patch)
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
@@ -322,20 +321,6 @@ enables secure boot (remember to enable VDD_FUSE power supply as shown earlier):
 
 The USB armory will now refuse to run bootloader images not correctly signed
 with keys corresponding to the fused hashes.
-
-### Locking down U-Boot
-
-The signed U-Boot can only ever start verified kernel images, however the same
-serial connection used to fuse secure boot keys can be potentially used to
-change the booted kernel command line, or issue arbitrary U-Boot commands.
-Additionally U-Boot still applies external, and unsigned, environment
-variables.
-
-The following patch disables the U-Boot prompt as well as external environment
-variables and it is recommended for later application, using the previously
-shown compilation instructions.
-
-* [0005-Disable-autoboot-and-external-environment.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2015.10_patches/0005-Disable-autoboot-and-external-environment.patch)
 
 ### External documentation
 
