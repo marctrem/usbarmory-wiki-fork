@@ -124,11 +124,12 @@ of secure boot state (optional but highly recommended).
 
 * [0001-ARM-mx53-add-support-for-HAB-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2016.05_patches/0001-ARM-mx53-add-support-for-HAB-commands.patch)
 
-Apply the following patch which enables Verified Boot support, additionally the
-patch disables the U-Boot prompt as well as external environment variables to
-further lock down physical serial console access.
+Apply the following patches to enable Verified Boot support, disable the U-Boot
+command line and external environment variables to further lock down physical
+serial console access.
 
 * [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2016.05_patches/0002-Add-verified-boot-support.patch)
+* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2016.05_patches/0003-Disable-CLI.patch)
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
