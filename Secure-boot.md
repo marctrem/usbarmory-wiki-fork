@@ -118,7 +118,7 @@ wget ftp://ftp.denx.de/pub/u-boot/u-boot-2016.05.tar.bz2
 tar xvf u-boot-2016.05.tar.bz2 && cd u-boot-2016.05
 ```
 
-Apply the following patche which enables i.MX53 High Assurance Boot (HAB)
+Apply the following patch which enables i.MX53 High Assurance Boot (HAB)
 support in U-Boot by adding the 'hab_status' command, which helps verification
 of secure boot state (optional but highly recommended).
 
