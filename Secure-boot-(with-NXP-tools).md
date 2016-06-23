@@ -37,13 +37,6 @@ This document illustrates the procedure using the Code Signing Tool from NXP
 source tools, is described
 [here](https://github.com/inversepath/usbarmory/wiki/Secure-boot).
 
-**NOTE**: The last published IMX_CST_TOOL version 2.3.1 unfortunately does not
-generate correct signed images for the i.MX53 SoC, however version 2.2
-correctly does. We are working with NXP to have this addressed and/or receive
-clear instructions for downloading the older version. In the meantime contact
-[Inverse Path](https://inversepath.com) directly to request IMX_CST_TOOL
-version 2.2.
-
 A working device tree compiler must be installed, on a recent Debian and Ubuntu
 this can be done as follows:
 
@@ -57,8 +50,8 @@ Setup and create the secure boot key material as follows (changing the
 passphrase with your own):
 
 ```
-tar xvf cst-2.2.tar.gz
-cd cst-2.2/keys
+tar xvf cst-2.3.2.tar.gz
+cd cst-2.3.2/keys
 echo "00" > serial
 # the tool requires the passphrase to be placed twice in the following file
 echo "YOUR_CA_PASSPHRASE_CHANGEME" >  key_pass.txt
@@ -70,6 +63,7 @@ The hab4_pki_tree.sh script prompts a few questions, here are typical answers:
 
 ```
 Do you want to use an existing CA key (y/n)?: n
+Do you want to use Elliptic Curve Cryptography (y/n)?: n
 Enter key length in bits for PKI tree: 2048
 Enter PKI tree duration (years): 10
 How many Super Root Keys should be generated? 4
@@ -84,8 +78,8 @@ application data (e.g. U-Boot image).
 The four SRKs must be merged in a table for SHA256 hash calculation:
 
 ```
-cd ../crts # cst-2.2/crts
-../linux/srktool -h 4 -t SRK_1_2_3_4_table.bin -e SRK_1_2_3_4_fuse.bin -d sha256 \
+cd ../crts # cst-2.3.2/crts
+../linux64/srktool -h 4 -t SRK_1_2_3_4_table.bin -e SRK_1_2_3_4_fuse.bin -d sha256 \
   -c SRK1_sha256_2048_65537_v3_ca_crt.pem,SRK2_sha256_2048_65537_v3_ca_crt.pem,SRK3_sha256_2048_65537_v3_ca_crt.pem,SRK4_sha256_2048_65537_v3_ca_crt.pem
 ```
 
@@ -109,7 +103,7 @@ openssl genrsa -F4 -out ${RSA_KEYS_PATH}/usbarmory.key 2048
 openssl req -batch -new -x509 -key ${RSA_KEYS_PATH}/usbarmory.key -out ${RSA_KEYS_PATH}/usbarmory.crt
 ```
 
-### Prepare U-Boot (2015.10) with Verified Boot and HAB support
+### Prepare U-Boot (2016.05) with Verified Boot and HAB support
 
 Download and extract U-Boot sources:
 
@@ -197,8 +191,8 @@ u-boot.imx file compiled in the previous step, along with its path.
 ### Sign the U-Boot image
 
 ```
-cd cst-2.2
-linux/cst -o csf.bin < hab4.csf
+cd cst-2.3.2
+linux64/cst -o csf.bin -i hab4.csf
 ```
 
 ### Prepare and flash the signed U-Boot
