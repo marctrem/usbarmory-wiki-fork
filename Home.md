@@ -24,13 +24,13 @@ and updates see the [project page](https://inversepath.com/usbarmory).
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM)
 * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
 * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
+* [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features)
 
 ## Software
 
 * [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
 * [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
 * [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
-* [Drivers](https://github.com/inversepath/usbarmory/wiki/Drivers)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
 * [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
 * [Embedded INTERLOCK distribution for the USB armory](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
