@@ -4,11 +4,11 @@ The HAB feature enables on-chip [internal Boot ROM](https://github.com/inversepa
 
 #### Security Controller (SCCv2)
 
-The SCCv2 implements secure RAM and a dedicated AES cryptographic engine for encryption/decryption operations. A device specific random 256-bit SCC key is fused in each i.MX53 SoC at manufacturing time, this key is unreadable and can only be used with the SCCv2 for AES encryption/decryption of user data.
+From the i.MX53 datasheet: "The security controller is a security assurance hardware module designed to safely hold sensitive data, such as encryption keys, digital right management (DRM) keys, passwords and biometrics reference data. The SCCv2 monitors the system’s alert signal to determine if the data paths to and from it are secure, that is, it cannot be accessed from outside of the defined security perimeter. If not, it erases all sensitive data on its internal RAM. The SCCv2 also features a key encryption module (KEM) that allows non-volatile (external memory) storage of any sensitive data that is temporarily not in use. The KEM utilizes a device-specific hidden secret key and a symmetric cryptographic algorithm to transform the sensitive data into encrypted data"
 
 #### SAHARAv4 Lite (Cryptographic accelerator)
 
-From the SoC datasheet: "SAHARA (symmetric/asymmetric hashing and random accelerator), version 4, is a security coprocessor. It implements symmetric encryption algorithms, (AES, DES, 3DES, RC4 and C2), public key algorithms (RSA and ECC), hashing algorithms (MD5, SHA-1, SHA-224 and SHA-256), and a hardware true random number generator". 
+From the i.MX53 datasheet: "SAHARA (symmetric/asymmetric hashing and random accelerator), version 4, is a security coprocessor. It implements symmetric encryption algorithms, (AES, DES, 3DES, RC4 and C2), public key algorithms (RSA and ECC), hashing algorithms (MD5, SHA-1, SHA-224 and SHA-256), and a hardware true random number generator". 
 
 The security co-processor driver is included and operational in Linux kernel >= 4.6, once loaded its activation is indicated by the following kernel log message:
 ```
