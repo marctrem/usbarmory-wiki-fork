@@ -4,7 +4,9 @@ The HAB feature enables on-chip [internal Boot ROM](https://github.com/inversepa
 
 #### Security Controller (SCCv2)
 
-From the i.MX53 datasheet: "The security controller is a security assurance hardware module designed to safely hold sensitive data, such as encryption keys, digital right management (DRM) keys, passwords and biometrics reference data. The SCCv2 monitors the system’s alert signal to determine if the data paths to and from it are secure, that is, it cannot be accessed from outside of the defined security perimeter. If not, it erases all sensitive data on its internal RAM. The SCCv2 also features a key encryption module (KEM) that allows non-volatile (external memory) storage of any sensitive data that is temporarily not in use. The KEM utilizes a device-specific hidden secret key and a symmetric cryptographic algorithm to transform the sensitive data into encrypted data"
+From the i.MX53 datasheet: "The security controller is a security assurance hardware module designed to safely hold sensitive data, such as encryption keys, digital right management (DRM) keys, passwords and biometrics reference data. The SCCv2 monitors the system’s alert signal to determine if the data paths to and from it are secure, that is, it cannot be accessed from outside of the defined security perimeter. If not, it erases all sensitive data on its internal RAM. The SCCv2 also features a key encryption module (KEM) that allows non-volatile (external memory) storage of any sensitive data that is temporarily not in use. The KEM utilizes a device-specific hidden secret key and a symmetric cryptographic algorithm to transform the sensitive data into encrypted data".
+
+A Linux kernel driver for the SCCv2 is available at [https://github.com/inversepath/mxc-scc2](https://github.com/inversepath/mxc-scc2).
 
 #### SAHARAv4 Lite (Cryptographic accelerator)
 
