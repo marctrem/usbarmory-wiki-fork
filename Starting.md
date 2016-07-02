@@ -1,7 +1,6 @@
 ## Handling information
 
-The USB armory board is intended for use as a development platform for hardware
-or software. The board is an open system design, which does not include a
+The USB armory board is an open system design, which does not include a
 shielded enclosure. This may cause interference to other electrical or
 electronic devices in close proximity. In a domestic environment, this product
 may cause radio interference in which case the user may be required to take
