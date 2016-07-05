@@ -33,7 +33,6 @@ and updates see the [project page](https://inversepath.com/usbarmory).
 * [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
 * [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
-* [Embedded INTERLOCK distribution for the USB armory](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot)
 * Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I2C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
 * [Development](https://github.com/inversepath/usbarmory/wiki/Development)
@@ -44,6 +43,7 @@ and updates see the [project page](https://inversepath.com/usbarmory).
 
 * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
 * [Debian, Ubuntu image preparation](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
+* [Embedded INTERLOCK distribution for the USB armory](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
 * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
 * [Kali Linux](https://www.offensive-security.com/kali-linux-vmware-arm-image-download)
 * [VoidLinux](http://www.voidlinux.eu/news/2015/04/USB-armory.html)
