@@ -148,3 +148,14 @@ options g_multi use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2
 The following respository, contributed by [Collin Mulliner](https://github.com/crmulliner) provides HID emulation helpers to support composite CDC Ethernet and HID gadget.
 
 [https://github.com/crmulliner/hidemulation](https://github.com/crmulliner/hidemulation)
+
+
+### Serial Download Protocol (SDP)
+
+The serial downloader can be found in the [imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader) and used to directly download and execute code on the SoC.
+
+The ```verify``` and ```debugmode``` flags can also be used as debugging aid to verify correct SoC operation.
+
+```
+./imx_usb -v -d u-boot.imx
+```
