@@ -63,7 +63,7 @@ If you think anything is missing on this wiki, or require further support, pleas
 
 ## License
 
-USB armory | https://inversepath.com/usbarmory
+USB armory | https://inversepath.com/usbarmory  
 Copyright (c) 2015-2016 Inverse Path S.r.l.
 
 This is an open hardware design licensed under the terms of the CERN Open
