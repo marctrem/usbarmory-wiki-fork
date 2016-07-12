@@ -6,7 +6,7 @@ computer by using a custom host adapter.
 
 The host adapter leverages the fact that it is possible, by changing the Linux
 kernel device tree configuration, to invert the role of the USB On-The-Go port
-currently used as main plug for the board. This allows USB Armory to be used
+currently used as main plug for the board. This allows the USB armory to be used
 independently as a host.
 
 The role change can be enabled by using a device tree source file (dts) with the following configuration:
@@ -28,7 +28,7 @@ The resulting dtb can be copied to /boot/imx53-usbarmory.dtb on the USB armory w
 
 In order to use host mode an adapter is needed to perform the following functions:
 
- * Bridging the USB Armory male plug to a USB Type A receptacle (gender changer).
+ * Bridging the USB armory male plug to a USB Type A receptacle (gender changer).
  * Accepting power from a micro-USB input.
 
 This simple conversion enables connection between the USB armory, power supply,
