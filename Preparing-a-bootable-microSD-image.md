@@ -132,4 +132,4 @@ sudo dd if=u-boot.imx of=$TARGET_DEV bs=512 seek=2 conv=fsync
 Connecting
 ----------
 
-After successful image preparation the CDC Ethernet section of [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication) can be followed for pointers on establishing SSH communication with the OpenSSH server started by default by the installation.
+After successful image preparation the CDC Ethernet section of [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication) can be followed for pointers on establishing SSH communication with its OpenSSH server.
