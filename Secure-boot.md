@@ -119,8 +119,8 @@ tar xvf u-boot-2016.05.tar.bz2 && cd u-boot-2016.05
 ```
 
 Apply the following patch which enables i.MX53 High Assurance Boot (HAB)
-support in U-Boot by adding the 'hab_status' command, which helps verification
-of secure boot state (optional but highly recommended).
+support in U-Boot by adding the 'hab_status' command, which allows verification
+of secure boot state.
 
 * [0001-ARM-mx53-add-support-for-HAB-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2016.05_patches/0001-ARM-mx53-add-support-for-HAB-commands.patch)
 
