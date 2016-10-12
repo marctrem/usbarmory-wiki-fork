@@ -25,6 +25,8 @@
 
 * [Vince Cali](https://twitter.com/0x56) [ported](https://github.com/darwin-on-arm/xnu/commit/410a687039bbbd35b703e1ead996080fae51a887) Darwin on the USB armory, a detailed writeup with build instruction is available [here](http://embeddedideation.com/2016/02/08/darwin-on-armory/).
 
+* [ftorn](https://github.com/ftorn) repository [Docker for usbarmory](https://github.com/ftorn/usbarmory) provides Dockerfile configurations for automatic creation of several application images (e.g. Tor Anonymizing Middlebox, Electrum Bitcoin wallet images).
+
 ### Papers, Articles
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
