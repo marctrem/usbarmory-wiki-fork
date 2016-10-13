@@ -28,7 +28,7 @@ If you received a pre-imaged microSD card with your USB armory it almost certain
 
 1. the LED is blinking (indicates Linux kernel heartbeat)
 
-2. the network interface on your USB host, associated to the USB armory (Linux: usbX, OSX, Windows: RNDIS), is correctly set up with the required host address (typically 10.0.0.2 with netmask 255.255.255.0)
+2. the network interface on your USB host, associated to the USB armory (Linux: usbX, macOS/Windows: RNDIS), is correctly set up with the required host address (typically 10.0.0.2 with netmask 255.255.255.0)
 
 ### Preparing your own microSD card
 

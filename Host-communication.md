@@ -13,7 +13,7 @@ static addressing or a DHCP server are required.
 
 Once the network is configured the host can decide to route the USB armory.
 
-The Ethernet emulation has been successfully tested on Linux, Mac OS X and
+The Ethernet emulation has been successfully tested on Linux, macOS and
 Windows.
 
 Entry in /etc/modules:
@@ -47,7 +47,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 ```
 
-#### Setup & Connection Sharing: Mac OS X (Yosemite)
+#### Setup & Connection Sharing: macOS
 
 **NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings.
 
@@ -57,7 +57,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 3. Set IPv4 configuration to Manual with IP Address 10.0.0.2, Netmask 255.255.255.0.
 
-The Internet Connection Sharing on Mac OS X requires an IP range on a **different** subnet, this requires re-configuring the USB armory with an IP address between the range 192.168.2.2-192.168.2.254 on its usb0 interface, using 192.168.2.1 as default gateway (which must be set as static IP address on the 'RNDIS/Ethernet Gadget' interface). Once this is performed Internet Connection Sharing can be enabled as follows:
+The Internet Connection Sharing on macOS requires an IP range on a **different** subnet, this requires re-configuring the USB armory with an IP address between the range 192.168.2.2-192.168.2.254 on its usb0 interface, using 192.168.2.1 as default gateway (which must be set as static IP address on the 'RNDIS/Ethernet Gadget' interface). Once this is performed Internet Connection Sharing can be enabled as follows:
 
 1. On the Mac choose Apple menu > 'System Preferences' and click Sharing.
 
