@@ -96,14 +96,14 @@ sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `sudo chroot $TARGET_M
 sudo rm ${TARGET_MNT}/usr/bin/qemu-arm-static
 ```
 
-Kernel: Linux 4.7.2
+Kernel: Linux 4.8.1
 -------------------
 
 ```
 export ARCH=arm
-wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.7.2.tar.xz
-tar xvf linux-4.7.2.tar.xz && cd linux-4.7.2
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.7.config -O .config
+wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.8.1.tar.xz
+tar xvf linux-4.8.1.tar.xz && cd linux-4.8.1
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.8.config -O .config
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi -O arch/arm/boot/dts/imx53-usbarmory-common.dtsi
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory.dts -O arch/arm/boot/dts/imx53-usbarmory.dts
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-host.dts -O arch/arm/boot/dts/imx53-usbarmory-host.dts
