@@ -27,6 +27,8 @@
 
 * [ftorn](https://github.com/ftorn) repository [Docker for usbarmory](https://github.com/ftorn/usbarmory) provides Dockerfile configurations for automatic creation of several application images (e.g. Tor Anonymizing Middlebox, Electrum Bitcoin wallet images).
 
+* Andrea Covello of [scip AG](https://www.scip.ch/en/?) published two excellent tutorials on setting up INTERLOCK on the USB armory: [part 1](https://www.scip.ch/en/?labs.20160811), [part 2](https://www.scip.ch/en/?labs.20160922)
+
 ### Papers, Articles
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
