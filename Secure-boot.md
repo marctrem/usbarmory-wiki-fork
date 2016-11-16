@@ -119,7 +119,7 @@ tar xvf u-boot-2016.05.tar.bz2 && cd u-boot-2016.05
 ```
 
 Apply the following patch which enables i.MX53 High Assurance Boot (HAB)
-support in U-Boot by adding the 'hab_status' command, which allows verification
+support in U-Boot by adding the `hab_status` command, which allows verification
 of secure boot state.
 
 * [0001-ARM-mx53-add-support-for-HAB-commands.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2016.05_patches/0001-ARM-mx53-add-support-for-HAB-commands.patch)
@@ -134,7 +134,7 @@ serial console access.
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
 [Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
-the path is under buildroot 'output/build/linux-<version>' directory.
+the path is under buildroot `output/build/linux-<version>` directory.
 
 The following commands are meant to be issued within the U-Boot source
 directory:
@@ -182,7 +182,7 @@ The compilation results in the two following files:
   microSD card (instead of u-boot.imx), as shown in the next sections.
 
 * usbarmory.itb: image tree blob file containing the kernel, to be copied under
-  '/boot' on the target microSD card (replaces zImage/uImage).
+  `/boot` on the target microSD card (replaces zImage/uImage).
 
 ### Prepare the CSF file
 
