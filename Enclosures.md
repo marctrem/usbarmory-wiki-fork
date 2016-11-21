@@ -15,7 +15,7 @@ The enclosure can be ordered at [Inverse Path](https://inversepath.com/usbarmory
     * body: 61 x 24 x 9 mm
     * plug cap: 13 x 23 x 7 mm
   * Material: NEVIESTER EG83 (PETG)
-  * Color: transparent
+  * Color: transparent (clear or [black](https://twitter.com/AndreaBarisani/status/800652673171279872))
 
 **HINT**: To remove the microSD sliding cover push it outwards with your thumb, on the side of the memory card, and pull it simultaneously with your other hand index fingernail, on the opposite side.
 
