@@ -29,6 +29,7 @@ and updates see the [project page](https://inversepath.com/usbarmory).
 ## Software
 
 * [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
+* [Buildroot profiles](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
 * [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
 * [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
