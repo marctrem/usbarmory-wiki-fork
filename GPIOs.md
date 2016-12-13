@@ -25,10 +25,10 @@ The following example shows how to set bit 30 of the i.MX53 GPIO5 interface,
 corresponding to pin 7, in output mode and write 1 and 0 from a Linux shell.
 
 ```
-# echo 158 > /sys/class/gpio/export             # 128 (GPIO5[0]) + 30 = GPIO5[30]
-# echo out > /sys/class/gpio/gpio158/direction
-# echo 1 > /sys/class/gpio/gpio158/value
-# echo 0 > /sys/class/gpio/gpio158/value
+echo 158 > /sys/class/gpio/export             # 128 (GPIO5[0]) + 30 = GPIO5[30]
+echo out > /sys/class/gpio/gpio158/direction
+echo 1 > /sys/class/gpio/gpio158/value
+echo 0 > /sys/class/gpio/gpio158/value
 ```
 
 ### LED Control
@@ -38,18 +38,18 @@ The Mk I LED can be controlled in different ways depending on your Linux kernel 
 Debian examples:
 
 ```
-## unload the default LED modules
-# modprobe -r leds_gpio led_class ledtrig_heartbeat
+# unload the default LED modules
+modprobe -r leds_gpio led_class ledtrig_heartbeat
 
-# echo 123 > /sys/class/gpio/export             # 96 (GPIO4[27]) + 27 == GPIO4[27]
+echo 123 > /sys/class/gpio/export             # 96 (GPIO4[27]) + 27 == GPIO4[27]
 
-## full brightness
-# echo out > /sys/class/gpio/gpio123/direction
-# echo 0 > /sys/class/gpio/gpio123/value        # LED on
-# echo 1 > /sys/class/gpio/gpio123/value        # LED off
+# full brightness
+echo out > /sys/class/gpio/gpio123/direction
+echo 1 > /sys/class/gpio/gpio123/value        # LED off
+echo 0 > /sys/class/gpio/gpio123/value        # LED on
 
-## mid-brightness trick
-# echo in > /sys/class/gpio/gpio123/direction
+# mid-brightness trick
+echo in > /sys/class/gpio/gpio123/direction
 ```
 
 To permanently disable the default LED usage
@@ -64,17 +64,17 @@ echo -e "blacklist leds_gpio\nblacklist led_class" > /etc/modprobe.d/led-blackli
 Arch Linux examples:
 
 ```
-## trigger on USB activity
-# echo usb-gadget > /sys/devices/platform/leds/leds/LED/trigger
+# trigger on USB activity
+echo usb-gadget > /sys/devices/platform/leds/leds/LED/trigger
 
-## trigger on microSD activity
-# echo mmc0 > /sys/devices/platform/leds/leds/LED/trigger
+# trigger on microSD activity
+echo mmc0 > /sys/devices/platform/leds/leds/LED/trigger
 
-## disable trigger
-# echo none > /sys/devices/platform/leds/leds/LED/trigger
+# disable trigger
+echo none > /sys/devices/platform/leds/leds/LED/trigger
 
 # LED on
-# echo 1 > /sys/devices/platform/leds/leds/LED/brightness
+echo 1 > /sys/devices/platform/leds/leds/LED/brightness
 
 # LED off
-# echo 0 > /sys/devices/platform/leds/leds/LED/brightness
+echo 0 > /sys/devices/platform/leds/leds/LED/brightness
