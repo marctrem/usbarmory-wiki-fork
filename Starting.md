@@ -18,7 +18,7 @@ loads, mind its temperature while handling it.
 
 The USB armory requires a microSD card with a valid operating system to boot.
 
-**IMPORTANT**: in order to remove/insert the microSD card (with or without enclosure) please check this [FAQ entry](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)#how-can-i-removeinsert-the-microsd-card)
+**IMPORTANT**: in order to remove/insert the microSD card (with or without enclosure) please check this [FAQ entry](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)#how-can-i-removeinsert-the-microsd-card).
 
 ### Pre-imaged microSD card
 
