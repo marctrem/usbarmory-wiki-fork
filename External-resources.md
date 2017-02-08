@@ -41,6 +41,8 @@
 
 * [Mubix “Rob” Fuller](https://room362.com/about/) wrote a step by step guide titled ["Snagging creds from locked machines"](https://room362.com/post/2016/snagging-creds-from-locked-machines/) that illustrates how to use the USB armory to capture credential hashes on certain Windows and OS X versions, even when locked out.
 
+* [Yorick Koster](https://twitter.com/yorickkoster) authored [U3 armory](https://github.com/securifybv/u3-armory), a project for emulating a U3 thumb drive with the USB armory to [trigger and exploit Windows AutoRun](https://securify.nl/blog/SFY20170201/autorun_is_dead__long_live_autorun.html).
+
 ### Presentations
 
 * [Inverse Path](https://inversepath.com) - [Forging the USB armory](https://dev.inversepath.com/download/usbarmory/forging_the_usb_armory.pdf)
