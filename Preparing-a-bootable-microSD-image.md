@@ -96,14 +96,14 @@ sudo chroot $TARGET_MNT /usr/sbin/useradd -s /bin/bash -p `sudo chroot $TARGET_M
 sudo rm ${TARGET_MNT}/usr/bin/qemu-arm-static
 ```
 
-Kernel: Linux 4.9.0
+Kernel: Linux 4.10.1
 -------------------
 
 ```
 export ARCH=arm
-wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.9.tar.xz
-tar xvf linux-4.9.tar.xz && cd linux-4.9
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.9.config -O .config
+wget https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.10.1.tar.xz
+tar xvf linux-4.10.1.tar.xz && cd linux-4.10.1
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.10.config -O .config
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-host.dts -O arch/arm/boot/dts/imx53-usbarmory-host.dts
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-gpio.dts -O arch/arm/boot/dts/imx53-usbarmory-gpio.dts
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-spi.dts -O arch/arm/boot/dts/imx53-usbarmory-spi.dts
@@ -116,12 +116,12 @@ sudo make INSTALL_MOD_PATH=$TARGET_MNT ARCH=arm modules_install
 sudo umount $TARGET_MNT
 ```
 
-Bootloader: U-Boot 2016.11
+Bootloader: U-Boot 2017.01
 --------------------------
 
 ```
-wget ftp://ftp.denx.de/pub/u-boot/u-boot-2016.11.tar.bz2
-tar xvf u-boot-2016.11.tar.bz2 && cd u-boot-2016.11
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2017.01.tar.bz2
+tar xvf u-boot-2017.01.tar.bz2 && cd u-boot-2017.01
 make distclean
 make usbarmory_config
 make ARCH=arm
