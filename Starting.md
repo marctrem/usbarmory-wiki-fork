@@ -24,9 +24,9 @@ The USB armory requires a microSD card with a valid operating system to boot.
 
 If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](https://inversepath.com) default image, please see notes and default credentials [here](https://github.com/inversepath/usbarmory-debian-base_image/releases) (specifically the **Connecting** section). If you have issues connecting always make sure that:
 
-1. the LED is blinking (indicates Linux kernel heartbeat)
+1. The LED is blinking (indicates Linux kernel heartbeat)
 
-2. the network interface on your USB host, associated to the USB armory (Linux: usbX, macOS/Windows: RNDIS), is correctly set up with the required host address (typically 10.0.0.2 with netmask 255.255.255.0)
+2. The network interface on your USB host, associated to the USB armory (Linux: usbX, macOS/Windows: RNDIS), is correctly set up (either using DHCP or manually) with the required host address (typically 10.0.0.2 with netmask 255.255.255.0).
 
 ### Preparing your own microSD card
 
