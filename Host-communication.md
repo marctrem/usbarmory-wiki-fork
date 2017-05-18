@@ -28,7 +28,7 @@ options g_ether use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2
 
 #### Setup & Connection Sharing: Linux
 
-The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the instructions in this section reflect these settings.
+**NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings. The image comes with a DHCP server enabled by default, for this reason static IP address configuration should not be required on most configurations.
 
 **NOTE**: This is a command line example that assumes no interference from running Network Managers, in general favor following the predefined configuration files and/or UIs for your specific Linux distribution.
 
@@ -49,7 +49,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 #### Setup & Connection Sharing: macOS
 
-**NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings.
+**NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings. The image comes with a DHCP server enabled by default, for this reason static IP address configuration should not be required on most configurations.
 
 1. Open 'System Preferences' -> 'Network'.
 
@@ -87,7 +87,7 @@ $ echo "nat on en0 from 10.0.0.0/8 to any -> (en0)" | sudo pfctl -f -
 
 #### Setup & Connection Sharing: Windows 7, 8, 10
 
-**NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings.
+**NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings. The image comes with a DHCP server enabled by default, for this reason static IP address configuration should not be required on most configurations.
 
 1. Plug in the USB armory and let Windows install the network adapter driver. The driver installation is usually automatic, however on certain Windows installations it has been reported that this is not the case. To manually install a driver, success has been reported with the [Linux USB Ethernet/RNDIS Gadget](https://www.kernel.org/doc/Documentation/usb/linux.inf) or the [Acer USB Ethernet/RNDIS Gadget](http://catalog.update.microsoft.com/v7/site/ScopedViewRedirect.aspx?updateid=37e35bd4-d788-4b83-9416-f78e439f90a2) (in case of driver issues some tips can be found in this [thread](https://groups.google.com/forum/#!topic/usbarmory/bFZBrTKq2Mg)) (it has also been reported that adding options `idVendor=0x04b3 idProduct=0x4010` to g_ether can trigger successful usage of an IBM driver that is typically included in Windows installations).
 
