@@ -6,7 +6,7 @@ The following table summarizes the list of available pre-compiled images:
 
 | OS            | Author             | Link |
 |:--------------|:-------------------|-----:|
-| Debian Jessie | [Inverse Path](https://inversepath.com)       | [USB armory base images](https://dev.inversepath.com/download/usbarmory) |
+| Debian Jessie | [Inverse Path](https://inversepath.com)       | [USB armory base images](https://github.com/inversepath/usbarmory-debian-base_image/releases) |
 | Linux kernel w/ [INTERLOCK buildroot](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md) | [Inverse Path](https://inversepath.com) | [INTERLOCK releases](https://github.com/inversepath/interlock/releases) |
 | Arch Linux    | [Arch Linux ARM](http://archlinuxarm.org/)     | [Arch Linux ARM Installation](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory) |
 | Void Linux    | Juan RP et al.     | [Void Linux USB armory Installation](https://github.com/voidlinux/documentation/wiki/USB-Armory) |
