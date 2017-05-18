@@ -6,7 +6,7 @@
 
 #### Help, I can't connect to my USB armory.
 
-If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](https://inversepath.com) default image, please see notes and default credentials [here](https://dev.inversepath.com/usbarmory) (specifically the **CONNECTING** section). If you have issues connecting always make sure that:
+If you received a pre-imaged microSD card with your USB armory it almost certainly includes [Inverse Path](https://inversepath.com) default image, please see notes and default credentials [here](https://github.com/inversepath/usbarmory-debian-base_image/releases) (specifically the **Connecting** section). If you have issues connecting always make sure that:
 
 1. the LED is blinking (indicates Linux kernel heartbeat)
 
