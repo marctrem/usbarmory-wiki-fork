@@ -1,8 +1,8 @@
 #### High Assurance Boot (HABv4)
 
-The HAB feature enables on-chip [internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM) authentication of initial bootloader (i.e. Secure Boot) with a digital signature, establishing the first trust anchor for code authentication. See [Secure Boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot) for more information and usage instructions.
-
 **IMPORTANT**: this feature is currently deprecated, see the related [security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
+
+The HAB feature enables on-chip [internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM) authentication of initial bootloader (i.e. Secure Boot) with a digital signature, establishing the first trust anchor for code authentication. See [Secure Boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot) for more information and usage instructions.
 
 #### Security Controller (SCCv2)
 
