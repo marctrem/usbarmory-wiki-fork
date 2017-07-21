@@ -3,7 +3,7 @@
 These Terms cover the USB armory Mark I ("USB ARMORY").
 
 IMPORTANT – BEFORE INSTALLING OR USING THE F-SECURE USB ARMORY, CAREFULLY READ
-THESE LICENSE TERMS (”TERMS”). BY OPTING TO ACCEPT, BY INSTALLING  OR USING THE
+THESE TERMS OF USE (”TERMS”). BY OPTING TO ACCEPT, BY INSTALLING  OR USING THE
 USB ARMORY YOU (EITHER AN INDIVIDUAL OR AN ENTITY) WARRANT THAT YOU HAVE READ
 THESE TERMS, UNDERSTAND THEM AND AGREE TO BE LEGALLY BOUND BY THEM. IF YOU DO
 NOT AGREE TO ALL OF THE TERMS, DO NOT INSTALL  OR USE THE USB ARMORY.
@@ -62,23 +62,23 @@ equivalent to new in reliability and performance, or (c) refund the original
 purchase price. This Warranty excludes damage resulting from accidents, abuse
 or other causes that can be determined not to be defects in materials and
 workmanship including but not limited to if the product has been used or
-maintained in a manner not conforming to the user documentation and End User
-License Terms. The removal, defacing, and/or altering of the original factory
-serial number or modifying or repairing of the F-Secure hardware without
-authorization from F-Secure will void this warranty.  All warranties,
-conditions and other terms not set out in this warranty document are excluded
-from the warranty, except for the rights entitled to you by the laws of your
-jurisdiction. F-Secure does not warrant, represent or undertake that it will be
-able to repair or replace the hardware under this warranty without risk to
-and/or loss of information and/or data stored on the hardware. ln no event will
-F-Secure be liable for (a) any losses that were not caused by F-Secure’s breach
-of this warranty (b) any loss or damage that was not, at the time of the
-purchase of the hardware, a reasonably foreseeable consequence of F-Secure
-breaching this warranty or (c) losses relating to any business, loss of proﬁts,
-loss of data or loss of opportunity. The provisions of this warranty shall not
-apply to (1) death or personal injury, (2) fraud or gross negligence, or (3)
-fraudulent misrepresentation, or (4) any other liability that cannot be limited
-or excluded as a matter of law. Certain states or countries may not allow
+maintained in a manner not conforming to the user documentation and Terms of
+Use. The removal, defacing, and/or altering of the original factory serial
+number or modifying or repairing of the F-Secure hardware without authorization
+from F-Secure will void this warranty.  All warranties, conditions and other
+terms not set out in this warranty document are excluded from the warranty,
+except for the rights entitled to you by the laws of your jurisdiction.
+F-Secure does not warrant, represent or undertake that it will be able to
+repair or replace the hardware under this warranty without risk to and/or loss
+of information and/or data stored on the hardware. ln no event will F-Secure be
+liable for (a) any losses that were not caused by F-Secure’s breach of this
+warranty (b) any loss or damage that was not, at the time of the purchase of
+the hardware, a reasonably foreseeable consequence of F-Secure breaching this
+warranty or (c) losses relating to any business, loss of proﬁts, loss of data
+or loss of opportunity. The provisions of this warranty shall not apply to (1)
+death or personal injury, (2) fraud or gross negligence, or (3) fraudulent
+misrepresentation, or (4) any other liability that cannot be limited or
+excluded as a matter of law. Certain states or countries may not allow
 limitations on how long a warranty lasts, or allow exclusion or limitation of
 incidental or consequential damages. Because of this, the above limitations or
 exclusions may not apply to you. Note that this warranty gives you speciﬁc
@@ -109,8 +109,8 @@ DISTRIBUTORS’ MAXIMUM AGGREGATE LIABILITY TO YOU FOR ACTUAL DAMAGES FOR ANY
 CAUSE WHATSOEVER SHALL IN NO EVENT EXCEED THE AMOUNT PAID BY YOU FOR THE USB
 ARMORY. IN CASE OF DAMAGE RESULTING FROM A FAILURE OF THE USB ARMORY LEADING TO
 LOSS, CORRUPTION, UNAUTHORIZED DISCLOSURE OR EXTENDED UNAVAILABILITY OF THE
-CONTENT, THE LIABILITY SHALL BE EXPRESSLY LIMITED TO THE AMOUNT PAID FOR YOUR
-LICENSE TO THE USB ARMORY FOR SIX MONTHS IMMEDIATELY PRECEDING SUCH FAILURE.
+CONTENT, THE LIABILITY SHALL BE EXPRESSLY LIMITED TO THE AMOUNT PAID FOR THE
+USB ARMORY FOR SIX MONTHS IMMEDIATELY PRECEDING SUCH FAILURE.
 
 **Unalienable Consumer Rights, Beneficiaries to Terms**. Some jurisdictions do
 not allow the limitation or exclusion of liability for incidental or
@@ -123,11 +123,11 @@ liability as provided in these Terms, but in no other respects and for no other
 purpose.
 
 **Limitation of Liability under German and Austrian Laws**. In respect of
-licenses purchased by consumers residing in Germany or Austria, the following
+products purchased by consumers residing in Germany or Austria, the following
 limitations of liabilities shall apply in lieu of sections 1 and 2 above:
 Concerning claims for damages, claims for compensation of expenses and other
 liability claims, whether arising in contract, tort, breach of statutory duty
-or otherwise under this license the following applies: F-Secure, its licensors,
+or otherwise under these terms the following applies: F-Secure, its licensors,
 its distributors or its suppliers shall be liable without restriction for i)
 damage caused intentionally or through gross negligence, ii) for claims
 according to the German/Austrian Product Liability Act and iii) in the case of
@@ -167,10 +167,10 @@ or (ii) to any country or region subject to a comprehensive EU or US embargo
 (currently Cuba, Iran, North Korea, Sudan, Syria and the regions Crimea and
 Sevastopol).
 
-**U.S. Government License Rights**. If this license is acquired for or on
-behalf of the United States of America, its agencies and/or instrumentalities
-("U.S. Government"), you acknowledge that the USB ARMORY and the documentation
-are “commercial computer USB ARMORY” and respectively “commercial computer USB
+**U.S. Government Rights**. If the USB ARMORY is acquired for or on behalf of
+the United States of America, its agencies and/or instrumentalities ("U.S.
+Government"), you acknowledge that the USB ARMORY and the documentation are
+“commercial computer USB ARMORY” and respectively “commercial computer USB
 ARMORY documentation” as those terms are defined for purposes of the Federal
 Acquisition Regulations (FARs) in the case of procurement by civilian agencies
 (48 C.F.R. 2.101) and the Department of Defense Federal Acquisition Regulation
@@ -197,14 +197,14 @@ Terms shall be governed under the laws of Finland without regard to conflict of
 laws rules and principles and without regard to the United Nations Convention
 of Contracts for the International Sale of Goods. The courts of Finland shall
 have the exclusive jurisdiction and venue to adjudicate any dispute arising out
-of these Terms.  In the case of licenses purchased within or on behalf of
-licensees residing within the United States or operating under the laws of the
-United States the governing law of these Terms shall be the laws of the State
-of New York without regard to conflict of laws rules and principles and without
-regard to the United Nations Convention of Contracts for the International Sale
-of Goods. In such cases, the exclusive jurisdiction and venue to adjudicate any
+of these Terms.  In the case of products purchased within or on behalf of users
+residing within the United States or operating under the laws of the United
+States the governing law of these Terms shall be the laws of the State of New
+York without regard to conflict of laws rules and principles and without regard
+to the United Nations Convention of Contracts for the International Sale of
+Goods. In such cases, the exclusive jurisdiction and venue to adjudicate any
 dispute arising out of these Terms shall be of the federal and state courts
-located in New York. In respect of licenses purchased by consumers residing
+located in New York. In respect of products purchased by consumers residing
 outside Finland or the United States, these Terms may be governed by the
 mandatory local laws of such jurisdictions. Where F-Secure should elect not to
 insist upon enforcing its rights in line with these Terms, this shall not be
