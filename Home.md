@@ -75,3 +75,7 @@ OHL v.1.2 (http://ohwr.org/cernohl). This documentation is distributed WITHOUT
 ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY
 QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the CERN OHL v.1.2 for
 applicable conditions.
+
+## Terms of Use
+
+The following [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use) apply to USB armory Mk I boards manufactured by Inverse Path and/or F-Secure and sold directly or through one of its resellers.
