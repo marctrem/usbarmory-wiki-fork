@@ -31,6 +31,8 @@
 
 * Pedro Vilaca authored an USB armory based [USB sandbox](https://github.com/gdbinit/armorysandbox), described in this [article](https://sentinelone.com/blogs/armory-sandbox-building-usb-analyzer-usb-armory/)
 
+* [Georg](https://github.com/tuxlifan) provides a fork for our official [basic Debian image generation](https://github.com/inversepath/usbarmory-debian-base_image) that allows [basic Devuan image generation](https://github.com/tuxlifan/usbarmory-devuan-base_image).
+
 ### Papers, Articles
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
