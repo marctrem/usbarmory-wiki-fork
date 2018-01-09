@@ -6,9 +6,9 @@ The USB armory i.MX53 CPU clocks by default at 800 MHz, depending on the mounted
 
 Production runs (batch number 0415) mounting the automotive version (i.MX534, P/N MCIMX534AVV8C), which is officially advertised with a clock of 800 MHz, have been positively tested running with a 1 GHz clock with no issues.
 
-Production runs (batch numbers 1315, 4115, 0416, 3516), mounting the consumer version (i.MX535, P/N MCIMX535DVV1C), are officially advertised with a clock of 1 GHz.
+Production runs (batch numbers 1315, 4115, 0416, 3516) mounting the consumer version (i.MX535, P/N MCIMX535DVV1C), are officially advertised with a clock of 1 GHz.
 
-Production runs (batch number 1717), mounting the industrial version (i.MX537, P/N MCIMX537CVV8C), are officially advertised with a clock of 800 Mhz.
+Production runs (batch number 4817) mounting the industrial version (i.MX537, P/N MCIMX537CVV8C), are officially advertised with a clock of 800 MHz.
 
 #### nbench
 
