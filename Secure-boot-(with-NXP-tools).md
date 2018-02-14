@@ -107,27 +107,27 @@ openssl genrsa -F4 -out ${RSA_KEYS_PATH}/usbarmory.key 2048
 openssl req -batch -new -x509 -key ${RSA_KEYS_PATH}/usbarmory.key -out ${RSA_KEYS_PATH}/usbarmory.crt
 ```
 
-### Prepare U-Boot (2016.05) with Verified Boot and HAB support
+### Prepare U-Boot (2018.01) with Verified Boot and HAB support
 
 Download and extract U-Boot sources:
 
 ```
-wget ftp://ftp.denx.de/pub/u-boot/u-boot-2016.05.tar.bz2
-tar xvf u-boot-2016.05.tar.bz2 && cd u-boot-2016.05
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2018.01.tar.bz2
+tar xvf u-boot-2018.01.tar.bz2 && cd u-boot-2018.01
 ```
 
 Apply the following patch which enables i.MX53 High Assurance Boot (HAB)
 support in U-Boot by adding the `hab_status` command, which helps verification
 of secure boot state (optional but highly recommended).
 
-* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2016.05_patches/0001-Add-HAB-support.patch)
+* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2018.01_patches/0001-Add-HAB-support.patch)
 
 Apply the following patches to enable Verified Boot support, disable the U-Boot
 command line and external environment variables to further lock down physical
 serial console access.
 
-* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2016.05_patches/0002-Add-verified-boot-support.patch)
-* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2016.05_patches/0003-Disable-CLI.patch)
+* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2018.01_patches/0002-Add-verified-boot-support.patch)
+* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2018.01_patches/0003-Disable-CLI.patch)
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
@@ -288,7 +288,7 @@ image was correctly authenticated:
 ```
 => hab_status
 
-Secure boot enabled
+Secure boot disabled
 
 HAB Configuration: 0xf0, HAB State: 0x66
 No HAB Events Found!
