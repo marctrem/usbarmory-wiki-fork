@@ -316,7 +316,16 @@ enables secure boot (remember to enable VDD_FUSE power supply as shown earlier):
 ```
 
 The USB armory will now refuse to run bootloader images not correctly signed
-with keys corresponding to the fused hashes.
+with keys corresponding to the fused hashes:
+
+```
+=> hab_status
+
+Secure boot enabled
+
+HAB Configuration: 0xcc, HAB State: 0x99
+No HAB Events Found!
+```
 
 ### External documentation
 
