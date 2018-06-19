@@ -36,7 +36,7 @@ executed code is not covered in this guide and left out to implementors.
 
 This document illustrates the procedure using the Code Signing Tool from NXP
 (IMX_CST_TOOL), available for
-[download](http://www.nxp.com/products/microcontrollers-and-processors/arm-processors/i.mx-applications-processors-based-on-arm-cores/i.mx-software-and-tools/i.mx-design-tools:IMX_DESIGN)
+[download](https://www.nxp.com/webapp/Download?colCode=IMX_CST_TOOL&appType=license&Parent_nodeId=1297866175545717803818&Parent_pageType=product)
 (requires registration). An alternate method, using custom developed open
 source tools, is described
 [here](https://github.com/inversepath/usbarmory/wiki/Secure-boot).
