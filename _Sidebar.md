@@ -16,7 +16,6 @@
 * Software
   * [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
   * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
-  * [Buildroot profiles](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
   * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
   * [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
   * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
