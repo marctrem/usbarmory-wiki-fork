@@ -26,6 +26,12 @@ encryption front-end, with Signal messaging support, developed for, but not
 limited to, usage with the USB armory. A Buildroot environment is also
 [available](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md).
 
+### Qubes Split GPG server
+
+[Qubes Split GPG](https://www.qubes-os.org/doc/split-gpg/) support for isolated
+Qubes OS GPG server with encrypted storage is [available](https://github.com/inversepath/usbarmory/blob/master/software/buildroot/README-Qubes_Split_GPG.md)
+as a custom Buildroot environment.
+
 ### Password manager
 
 A PoC from [Michael Weissbacher](http://mweissbacher.com) is available at [https://github.com/mweissbacher/armory-pass](https://github.com/mweissbacher/armory-pass).
@@ -35,7 +41,6 @@ A PoC from [Michael Weissbacher](http://mweissbacher.com) is available at [https
 The Electrum (https://electrum.org/) Bitcoin wallet works out of the box on the
 USB armory, it has been tested with X11 forwarding from Linux as well as
 Windows hosts.
-
 
 ### Tor Anonymizing Middlebox
 
