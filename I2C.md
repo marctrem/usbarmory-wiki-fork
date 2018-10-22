@@ -6,7 +6,7 @@ is included in your kernel source directory.
 
 Also ensure that i2c support is enabled in the kernel configuration, otherwise
 you can recompile the kernel with the latest configuration
-[usbarmory_linux-4.3.config](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/usbarmory_linux-4.3.config).
+[usbarmory_linux-4.14.config](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/mark-one/usbarmory_linux-4.14.config).
 
 The example device tree enables this I²C configuration on the pin header:
 
