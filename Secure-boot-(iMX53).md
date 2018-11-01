@@ -68,13 +68,13 @@ certificates:
   data (e.g. U-Boot image).
 
 The key material can be created with your own existing CA, an helper
-[Makefile](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Makefile-pki)
+[Makefile](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
 is available to provide reference example for certificate creation and can be
 used as follows:
 
 ```
 # adjust the USBARMORY_GIT, KEYS_* variables according to your environment and preferences
-make -C ${USBARMORY_GIT}/software/secure_boot -f Makefile-pki KEYS_PATH=sb_keys KEY_LENGTH=2048 KEY_EXPIRY=3650 usbarmory_sb_keys
+make -C ${USBARMORY_GIT}/software/secure_boot/hab-pki -f Makefile-pki KEYS_PATH=sb_keys KEY_LENGTH=2048 KEY_EXPIRY=3650 usbarmory_sb_keys
 ```
 
 The four SRKs must be merged in a table for SHA256 hash calculation, the hash
