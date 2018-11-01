@@ -126,14 +126,14 @@ Apply the following patch which enables i.MX53 High Assurance Boot (HAB)
 support in U-Boot by adding the `hab_status` command, which allows verification
 of secure boot state.
 
-* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2018.01_patches/0001-Add-HAB-support.patch)
+* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0001-Add-HAB-support.patch)
 
 Apply the following patches to enable Verified Boot support, disable the U-Boot
 command line and external environment variables to further lock down physical
 serial console access.
 
-* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2018.01_patches/0002-Add-verified-boot-support.patch)
-* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/u-boot-2018.01_patches/0003-Disable-CLI.patch)
+* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0002-Add-verified-boot-support.patch)
+* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0003-Disable-CLI.patch)
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
@@ -157,14 +157,14 @@ insertion:
 
 ```
 # adjust the USBARMORY_GIT variable according to your environment
-dtc -p 0x1000 ${USBARMORY_GIT}/software/secure_boot/pubkey.dts -O dtb -o pubkey.dtb
+dtc -p 0x1000 ${USBARMORY_GIT}/software/secure_boot/mark-one/pubkey.dts -O dtb -o pubkey.dtb
 ```
 
 Prepare image tree blob (itb) file according to the image tree source (its)
 template in the repository:
 
 ```
-tools/mkimage -D "-I dts -O dtb -p 2000 -i $KERNEL_SRC" -f ${USBARMORY_GIT}/software/secure_boot/usbarmory.its usbarmory.itb
+tools/mkimage -D "-I dts -O dtb -p 2000 -i $KERNEL_SRC" -f ${USBARMORY_GIT}/software/secure_boot/mark-one/usbarmory.its usbarmory.itb
 ```
 
 Sign the itb file:
