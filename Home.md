@@ -34,7 +34,7 @@ and updates see the [project page](https://inversepath.com/usbarmory).
 * [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
 * [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
-* [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot)
+* [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-iMX53)
 * Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I2C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)

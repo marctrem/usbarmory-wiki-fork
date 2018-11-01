@@ -20,16 +20,10 @@
   * [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
   * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
   * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications) 
-  * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot)
-  * [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(with-NXP-tools))
+  * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-iMX53)
+  * [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-iMX53-(with-NXP-tools))
   * [GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
   * [I²C](https://github.com/inversepath/usbarmory/wiki/I2C)
   * [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
 * [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use)
-
- 
-
-
-
-
