@@ -1,3 +1,11 @@
+## USB armory Mk II
+
+* [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
+* Hardware
+  * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
+* Software
+  * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
+
 ## USB armory Mk I
 
 * [Home](https://github.com/inversepath/usbarmory/wiki)
@@ -12,7 +20,7 @@
   * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM)
   * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
   * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
-  * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features)
+  * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * Software
   * [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
   * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
@@ -20,8 +28,8 @@
   * [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
   * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
   * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications) 
-  * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(iMX53))
-  * [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-with-NXP-tools-(iMX53))
+  * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
+  * [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I))
   * [GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
   * [I²C](https://github.com/inversepath/usbarmory/wiki/I2C)
   * [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)

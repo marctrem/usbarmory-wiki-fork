@@ -1,6 +1,9 @@
 ### Security information
 
-**IMPORTANT**: this feature is currently deprecated, see the related [security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
+**IMPORTANT**: to address this [security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt)
+this secure boot architecture is meant to work on i.MX6UL with Silicon Revision
+1.2 or greater, implemented on Part Numbers (P/N) with revision "AB" or
+greater.
 
 ### Disclaimer
 
@@ -18,73 +21,78 @@ own risk** and must be approached with care.
 
 The following instructions jointly illustrate the following:
 
-* i.MX53 secure boot configuration, which permanently fuses a hash of four
+* i.MX6UL secure boot configuration, which permanently fuses a hash of four
   concatenated CA public keys in the USB armory SoC fuse box, so that only a
   signed bootloader can ever be executed.
 
 * U-Boot Verified Boot configuration, which embeds a public key in the
   bootloader so that only a signed kernel can ever be executed.
 
-The combination of i.MX53 secure boot and U-Boot verified boot features allows
+The combination of i.MX6UL secure boot and U-Boot verified boot features allows
 a fully verified chain of trust, authenticating the executed Linux kernel.
 When signing a kernel that embeds a root file system, such as the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md),
+[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-imx6ul-pico.md),
 the authentication has full (boot, not runtime) coverage, otherwise Linux kernel verification of
 executed code is not covered in this guide and left out to implementors.
 
+The following instructions apply to the [Technexion i.MX6UL PICO](https://www.technexion.com/products/system-on-modules/pico/pico-compute-modules/detail/PICO-IMX6UL-EMMC)
+board, an i.MX6UL device used for prototyping the USB armory Mk II software.
+
 ### Prerequisites
 
-This document illustrates the procedure using the Code Signing Tool from NXP
-(IMX_CST_TOOL), available for
-[download](https://www.nxp.com/webapp/Download?colCode=IMX_CST_TOOL&appType=license&Parent_nodeId=1297866175545717803818&Parent_pageType=product)
-(requires registration). An alternate method, using custom developed open
-source tools, is described
-[here](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(iMX53)).
-
-A working device tree compiler must be installed, on a recent Debian and Ubuntu
-this can be done as follows:
+A working device tree compiler and make must be installed, on a recent Debian
+and Ubuntu this can be done as follows:
 
 ```
-sudo apt-get install device-tree-compiler
+sudo apt-get install device-tree-compiler make
+```
+
+Additionally a modern Ruby interpreter is required, with the following gems
+installed: bit-struct, digest, getoptlong, openssl.
+
+Required gems can be typically installed as follows:
+
+```
+gem install <name>
 ```
 
 ### Setting up the secure boot PKI infrastructure
 
-Setup and create the secure boot key material as follows (changing the
-passphrase with your own):
+The PKI infrastructure, following NXP conventions, requires the following 
+certificates:
+
+* Four Super Root Key (SRK) Certification Authorities, the USB armory SoC is
+  fused with a SHA256 hash of their concatenated public keys.
+
+* Command Sequence File (CSF) public/private key pair, used to sign CSFs.
+
+* Image signing key (IMG) public/private key pair, used to sign application
+  data (e.g. U-Boot image).
+
+The key material can be created with your own existing CA, an helper
+[Makefile](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
+is available to provide reference example for certificate creation and can be
+used as follows:
 
 ```
-tar xvf cst-2.3.2.tar.gz
-cd cst-2.3.2/keys
-echo "00" > serial
-# the tool requires the passphrase to be placed twice in the following file
-echo "YOUR_CA_PASSPHRASE_CHANGEME" >  key_pass.txt
-echo "YOUR_CA_PASSPHRASE_CHANGEME" >> key_pass.txt
-./hab4_pki_tree.sh
+# adjust the USBARMORY_GIT, KEYS_* variables according to your environment and preferences
+make -C ${USBARMORY_GIT}/software/secure_boot/hab-pki -f Makefile-pki KEYS_PATH=sb_keys KEY_LENGTH=2048 KEY_EXPIRY=3650 usbarmory_sb_keys
 ```
 
-The hab4_pki_tree.sh script prompts a few questions, here are typical answers:
+The four SRKs must be merged in a table for SHA256 hash calculation, the hash
+is going to be eventually fused on the USB armory SoC. The table and hash can
+be generated with the
+[usbarmory_srktool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_srktool)
+as follows:
 
 ```
-Do you want to use an existing CA key (y/n)?: n
-Do you want to use Elliptic Curve Cryptography (y/n)?: n
-Enter key length in bits for PKI tree: 2048
-Enter PKI tree duration (years): 10
-How many Super Root Keys should be generated? 4
-Do you want the SRK certificates to have the CA flag set? (y/n)?: y
-```
-
-The script generates four Super Root Keys (SRK), for each SRK a Command
-Sequence File (CSF) key and an image signing key (IMG) are also generated.  The
-CSF keys are used for signing the CSFs, while the IMG keys are used for signing
-application data (e.g. U-Boot image).
-
-The four SRKs must be merged in a table for SHA256 hash calculation:
-
-```
-cd ../crts # cst-2.3.2/crts
-../linux64/srktool -h 4 -t SRK_1_2_3_4_table.bin -e SRK_1_2_3_4_fuse.bin -d sha256 \
-  -c SRK1_sha256_2048_65537_v3_ca_crt.pem,SRK2_sha256_2048_65537_v3_ca_crt.pem,SRK3_sha256_2048_65537_v3_ca_crt.pem,SRK4_sha256_2048_65537_v3_ca_crt.pem
+usbarmory_srktool  \
+  --key1  ${KEYS_PATH}/SRK_1_crt.pem \
+  --key2  ${KEYS_PATH}/SRK_2_crt.pem \
+  --key3  ${KEYS_PATH}/SRK_3_crt.pem \
+  --key4  ${KEYS_PATH}/SRK_4_crt.pem \
+  --hash  ${KEYS_PATH}/SRK_1_2_3_4_fuse.bin \
+  --table ${KEYS_PATH}/SRK_1_2_3_4_table.bin
 ```
 
 The SHA256 hash is created and can be inspected as follows (**WARNING**: this
@@ -92,7 +100,7 @@ is just an example, your hash will differ and should be used in the following
 instructions instead):
 
 ```
-hexdump -C SRK_1_2_3_4_fuse.bin
+hexdump -C ${KEYS_PATH}/SRK_1_2_3_4_fuse.bin
 00000000  aa bb cc dd ee ff aa bb  cc dd ee ff aa bb cc dd  |................|
 00000010  ee ff aa bb cc dd ee ff  aa bb cc dd ee ff aa bb  |................|
 ```
@@ -102,32 +110,32 @@ hexdump -C SRK_1_2_3_4_fuse.bin
 A pair of RSA keys must be created for U-Boot verified boot:
 
 ```
-# adjust the RSA_KEYS_PATH variable according to your environment
-openssl genrsa -F4 -out ${RSA_KEYS_PATH}/usbarmory.key 2048
-openssl req -batch -new -x509 -key ${RSA_KEYS_PATH}/usbarmory.key -out ${RSA_KEYS_PATH}/usbarmory.crt
+# adjust the KEYS_PATH variable according to your environment
+openssl genrsa -F4 -out ${KEYS_PATH}/pico.key 2048
+openssl req -batch -new -x509 -key ${KEYS_PATH}/pico.key -out ${KEYS_PATH}/pico.crt
 ```
 
-### Prepare U-Boot (2018.01) with Verified Boot and HAB support
+### Prepare U-Boot (2018.07) with Verified Boot and HAB support
 
 Download and extract U-Boot sources:
 
 ```
-wget ftp://ftp.denx.de/pub/u-boot/u-boot-2018.01.tar.bz2
-tar xvf u-boot-2018.01.tar.bz2 && cd u-boot-2018.01
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2018.07.tar.bz2
+tar xvf u-boot-2018.07.tar.bz2 && cd u-boot-2018.07
 ```
 
 Apply the following patch which enables i.MX53 High Assurance Boot (HAB)
-support in U-Boot by adding the `hab_status` command, which helps verification
-of secure boot state (optional but highly recommended).
+support in U-Boot by adding the `hab_status` command, which allows verification
+of secure boot state.
 
-* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0001-Add-HAB-support.patch)
+* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/imx6ul-pico/u-boot-2018.07_patches/0001-Add-HAB-support.patch)
 
 Apply the following patches to enable Verified Boot support, disable the U-Boot
 command line and external environment variables to further lock down physical
 serial console access.
 
-* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0002-Add-verified-boot-support.patch)
-* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0003-Disable-CLI.patch)
+* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/imx6ul-pico/u-boot-2018.07_patches/0002-Add-verified-boot-support.patch)
+* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/imx6ul-pico/u-boot-2018.07_patches/0003-Disable-CLI.patch)
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
@@ -142,7 +150,7 @@ directory:
 export KERNEL_SRC=$KERNEL_PATH
 export CROSS_COMPILE=arm-none-eabi- # set to your arm toolchain prefix
 make distclean
-make usbarmory_config
+make pico-imx6ul_config
 make tools
 ```
 
@@ -151,28 +159,27 @@ insertion:
 
 ```
 # adjust the USBARMORY_GIT variable according to your environment
-dtc -p 0x1000 ${USBARMORY_GIT}/software/secure_boot/mark-one/pubkey.dts -O dtb -o pubkey.dtb
+dtc -p 0x1000 ${USBARMORY_GIT}/software/secure_boot/imx6ul-pico/pubkey.dts -O dtb -o pubkey.dtb
 ```
 
 Prepare image tree blob (itb) file according to the image tree source (its)
 template in the repository:
 
 ```
-tools/mkimage -D "-I dts -O dtb -p 2000 -i $KERNEL_SRC" -f ${USBARMORY_GIT}/software/secure_boot/mark-one/usbarmory.its usbarmory.itb
+tools/mkimage -D "-I dts -O dtb -p 2000 -i $KERNEL_SRC" -f ${USBARMORY_GIT}/software/secure_boot/imx6ul-pico/pico.its pico.itb
 ```
 
 Sign the itb file:
 
 ```
-tools/mkimage -D "-I dts -O dtb -p 2000" -F -k ${RSA_KEYS_PATH} -K pubkey.dtb -r usbarmory.itb
+tools/mkimage -D "-I dts -O dtb -p 2000" -F -k ${KEYS_PATH} -K pubkey.dtb -r pico.itb
 ```
 
-Now the U-Boot image can be compiled, it will include the embedded public key.
-The image must be compiled in verbose mode to take note of the three
-hexadecimal numbers present on the 'HAB Blocks:' line:
+Now the U-Boot image can be compiled, with inclusion of the embedded public
+key:
 
 ```
-make ARCH=arm V=1 EXT_DTB=pubkey.dtb
+make ARCH=arm EXT_DTB=pubkey.dtb
 ```
 
 The compilation results in the two following files:
@@ -180,24 +187,29 @@ The compilation results in the two following files:
 * u-boot-dtb.imx: bootloader image to be signed and flashed on the target
   microSD card (instead of u-boot.imx), as shown in the next sections.
 
-* usbarmory.itb: image tree blob file containing the kernel, to be copied under
+* pico.itb: image tree blob file containing the kernel, to be copied under
   `/boot` on the target microSD card (replaces zImage/uImage).
 
 ### Prepare the CSF file
 
-Download the example Command Sequence File:
-
-* [hab4.csf](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/hab4.csf)
-
-The file must be modified with the correct 'HAB Blocks' hex triple for the
-u-boot.imx file compiled in the previous step, along with its path.
-
-### Sign the U-Boot image
+Download the
+[usbarmory_csftool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_csftool)
+tool and prepare the Command Sequence File (the example chooses SRK keypair #1):
 
 ```
-cd cst-2.3.2
-linux64/cst -o csf.bin -i hab4.csf
+usbarmory_csftool \
+  --csf_key ${KEYS_PATH}/CSF_1_key.pem \
+  --csf_crt ${KEYS_PATH}/CSF_1_crt.pem \
+  --img_key ${KEYS_PATH}/IMG_1_key.pem \
+  --img_crt ${KEYS_PATH}/IMG_1_crt.pem \
+  --table   ${KEYS_PATH}/SRK_1_2_3_4_table.bin \
+  --index   1 \
+  --image   u-boot-dtb.imx \
+  --output  csf.bin
 ```
+
+The resulting CSF binary contains the signature for the bootloader image and
+the commands that instruct the SoC to verify it.
 
 ### Prepare and flash the signed U-Boot
 
@@ -206,14 +218,13 @@ microSD partitions), ensure that you are specifying the correct one. Errors in
 target specification will result in disk corruption.
 
 ```
-objcopy -I binary -O binary --pad-to 0x2000 --gap-fill=0x00 csf.bin csf_pad.bin
-cat u-boot-dtb.imx csf_pad.bin > u-boot-signed.imx
+cat u-boot-dtb.imx csf.bin > u-boot-signed.imx
 sudo dd if=u-boot-signed.imx of=/dev/sdX bs=512 seek=2 conv=fsync
 ```
 
-**HINT**: It is now a good idea to verify if the resulting boot loader and kernel image
-are working correctly. Only after you have done so proceed with the next steps
-for secure boot activation.
+**HINT**: It is now a good idea to verify if the resulting boot loader and
+kernel image are working correctly. Only after you have done so proceed with
+the next steps for secure boot activation.
 
 ### Fuse the SRK table hash
 

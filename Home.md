@@ -11,10 +11,13 @@ The following page provides useful information on how to get started:
 * [**Getting started**](https://github.com/inversepath/usbarmory/wiki/Starting)
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 
-## Hardware
+# USB armory Mk II
 
-The first hardware revision of the USB armory (Mk I) is currently available, for further information
-and updates see the [project page](https://inversepath.com/usbarmory).
+* [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
+
+# USB armory Mk I
+
+## Hardware
 
 * [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
 * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
@@ -24,7 +27,7 @@ and updates see the [project page](https://inversepath.com/usbarmory).
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM)
 * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
 * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
-* [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features)
+* [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 
 ## Software
 
@@ -33,11 +36,15 @@ and updates see the [project page](https://inversepath.com/usbarmory).
 * [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
 * [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
-* [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(iMX53))
 * Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I2C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
+
+## Application support
+
+* [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
+* [Crucible OTP fusing tool](https://github.com/inversepath/crucible)
 
 ## Supported Operating Systems
 
