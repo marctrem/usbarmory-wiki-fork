@@ -229,7 +229,7 @@ sudo dd if=u-boot-signed.imx of=/dev/sdX bs=512 seek=2 conv=fsync
 kernel image are working correctly. Only after you have done so proceed with
 the next steps for secure boot activation.
 
-### Fuse the SRK table hash
+### Install fusing tool
 
 The One-Time-Programmable (OTP) fuses are stored in the SoC fuse array which is
 accessed via the On-Chip OTP Controller (OCOTP_CTRL). See Table 5-9 of the
@@ -238,7 +238,13 @@ for details.
 
 The [crucible](https://github.com/inversepath/crucible) tool provides user
 space support for reading, and writing, OTP fuses. It is used in all following
-procedures as well and deriving the register bit map illustrations.
+sections to derive register bit map illustrations and implement OTP fuses read
+and write commands.
+
+The crucible tool is meant to be executed on the USB armory itself on a running
+Linux instance with the `nvmem-imx-ocotp` kernel module loaded.
+
+### Fuse the SRK table hash
 
 The SRK hash itself is located in registers ranging from OCOTP_SRK0 to OCOTP_SRK7:
 
@@ -288,7 +294,7 @@ crucible -m IMX6UL -b 2 -e big blow SRK_LOCK 1
 crucible -m IMX6UL -b 2 read SRK_LOCK
 ```
 
-### Verifying HAB
+### Verify HAB configuration
 
 After rebooting the USB armory it can be verified, from the U-Boot shell,
 that no HAB events are generated. If no errors are present then the bootloader
@@ -303,7 +309,7 @@ HAB Configuration: 0xf0, HAB State: 0x66
 No HAB Events Found!
 ```
 
-### Secure boot activation
+### Activate HAB
 
 Only if you are confident that you can correctly generate signed U-Boot images,
 the SoC can be placed in Closed Security Configuration.
