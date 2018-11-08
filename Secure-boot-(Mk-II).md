@@ -269,9 +269,8 @@ instead):
 # write fuse
 crucible -m IMX6UL -b 16 -e little blow SRK_HASH aabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabb
 
-# verify fuse, due to the expected change in endianness output should be:
-# bbaaffeeddccbbaaffeeddccbbaaffeeddccbbaaffeeddccbbaaffeeddccbbaa
-crucible -s -m IMX6UL -b 16 read SRK_HASH
+# verify fuse
+crucible -s -m IMX6UL -b 16 -e little read SRK_HASH
 ```
 
 The fused SRK hash must be locked to prevent bits set to 0 to be fused to 1
