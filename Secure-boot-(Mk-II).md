@@ -269,9 +269,9 @@ instead):
 # write fuse
 crucible -m IMX6UL -b 16 -e little blow SRK_HASH aabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabb
 
-# verify fuse (note the expected change in endianness)
-crucible -m IMX6UL -b 16 read SRK_HASH
-IMX6UL ref:1 op:read addr:0x60 off:0 len:256 val:0xbbaaffeeddccbbaaffeeddccbbaaffeeddccbbaaffeeddccbbaaffeeddccbbaa
+# verify fuse, due to the expected change in endianness output should be:
+# bbaaffeeddccbbaaffeeddccbbaaffeeddccbbaaffeeddccbbaaffeeddccbbaa
+crucible -s -m IMX6UL -b 16 read SRK_HASH
 ```
 
 The fused SRK hash must be locked to prevent bits set to 0 to be fused to 1
@@ -291,8 +291,8 @@ The SRK lock fuse can be fused as follows:
 # write fuse
 crucible -m IMX6UL -b 2 -e big blow SRK_LOCK 1
 
-# verify fuse
-crucible -m IMX6UL -b 2 read SRK_LOCK
+# verify fuse, output should be 1
+crucible -s -m IMX6UL -b 2 read SRK_LOCK
 ```
 
 ### Verify HAB configuration
