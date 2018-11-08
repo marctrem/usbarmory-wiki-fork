@@ -231,66 +231,61 @@ the next steps for secure boot activation.
 
 ### Fuse the SRK table hash
 
-The hash is stored in the SoC Electrical Fuse Array (FUSEBOX) which is accessed
-via the IC Identification Module (IIM):
+The One-Time-Programmable (OTP) fuses are stored in the SoC fuse array which is
+accessed via the On-Chip OTP Controller (OCOTP_CTRL). See Table 5-9 of the
+[i.MX6UL Reference Manual](https://www.nxp.com/docs/en/reference-manual/IMX6ULRM.pdf)
+for details.
 
-| Fuse name         | IIM bank | IIM addr[bits] | Function                             |
-|:-----------------:|:--------:|:--------------:|--------------------------------------|
-| SRK_HASH[255:248] | 1        | 0x0c04         | SRK table hash (part 1)              |
-| SRK_HASH[247:160] | 3        | 0x1404-0x142c  | SRK table hash (part 2)              |
-| SRK_HASH[159:0]   | 3        | 0x1430-0x147c  | SRK table hash (part 3)              |
-| SRK_LOCK          | 1        | 0x0c00[2]      | lock for SRK_HASH[255:248]           |
-| SRK_LOCK88        | 3        | 0x1400[1]      | lock for SRK_HASH[247:160]           |
-| SRK_LOCK160       | 3        | 0x1400[0]      | lock for SRK_HASH[159:0]             |
-| SRK_REVOKE[2:0]   | 4        | 0x1810[2:0]    | SRK keys revocation                  |
-| SEC_CONFIG[1:0]   | 0        | 0x0810[1:0]    | Security configuration               |
-| DIR_BT_DIS[1:0]   | 0        | 0x0814[0]      | Direct external memory boot disable  |
+The [crucible](https://github.com/inversepath/crucible) tool provides user
+space support for reading, and writing, OTP fuses. It is used in all following
+procedures as well and deriving the register bit map illustrations.
 
-See the Addendum to Rev. 2 of the [i.MX53 Reference Manual](http://cache.nxp.com/files/32bit/doc/ref_manual/iMX53RM.pdf)
-for details (Chapter 2 - Fusemap).
-
-The following commands (=> prompt) are meant to be executed on the USB armory,
-within the u-boot bootloader, using the serial port accessible through the
-breakout header (see [Using external
-GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs) for details).
-
-In order to fuse anything, the VDD_FUSE power supply must be enabled:
+The SRK hash itself is located in registers ranging from OCOTP_SRK0 to OCOTP_SRK7:
 
 ```
-=> i2c mw 0x34 0x33 0xf9
-=> i2c mw 0x34 0x10 0x40
-```
-
-**IMPORTANT**: the following commands permanently fuse values in the SoC and are
-**irreversible**, take extra care in ensuring that the right data is written.
-
-The SHA256 hash generated earlier can be fused as follows (**WARNING**: this is
-just an example, your hash will differ and should be used in the following
-commands instead):
-
-```
-# syntax: fuse prog [-y] <bank> <word> <hexval> [<hexval>...] - program 1 or
-#         several fuse words, starting at 'word' (PERMANENT)
-=> fuse prog -y 1 0x1 0xaa
-=> fuse prog -y 3 0x1 0xbb 0xcc 0xdd 0xee 0xff 0xaa 0xbb 0xcc 0xdd 0xee 0xff
-=> fuse prog -y 3 0xc 0xaa 0xbb 0xcc 0xdd 0xee 0xff 0xaa 0xbb 0xcc 0xdd 0xee
-=> fuse prog -y 3 0x17 0xff 0xaa 0xbb 0xcc 0xdd 0xee 0xff 0xaa 0xbb
-```
-
-The fused key can be read and verified:
-```
-# syntax: fuse read <bank> <word> [<cnt>] - read 1 or 'cnt' fuse words,
-#         starting at 'word'
-=> fuse read 1 0x1 1
-=> fuse read 3 0x1 31
-```
-
-The fused hash must be locked to prevent bits set to 0 to be fused to 1
-later on:
+ 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00  OCOTP_SRK0
+┏━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┓ Bank:3 Word:0
+┃SRK_HASH                                                                                       ┃
+┗━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┛
+...
+ 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00  OCOTP_SRK7
+┏━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┓ Bank:3 Word:7
+┃SRK_HASH                                                                                       ┃
+┗━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┛
 
 ```
-=> fuse prog -y 1 0x0 0x4  # SRK_LOCK
-=> fuse prog -y 3 0x0 0x3  # SRK_LOCK88 + SRK_LOCK160
+
+The SRK hash generated earlier can be fused as follows (WARNING: this is just
+an example, your hash will differ and should be used in the following commands
+instead):
+
+```
+# write fuse
+crucible -m IMX6UL -b 16 -e little blow SRK_HASH aabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabb
+
+# verify fuse
+crucible -m IMX6UL -b 16 read SRK_HASH
+```
+
+The fused SRK hash must be locked to prevent bits set to 0 to be fused to 1
+later on, this is accomplished in register OCOTP_LOCK with fuse SRK_LOCK:
+
+```
+ 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00  OCOTP_LOCK
+┏━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┓ Bank:0 Word:0
+┃GP6_L┃GP8_L┃GP7_L┃PI┃GP┃GP┃MI┃RO┃OT┃ANALO┃OT┃SW┃GP┃SR┃GP2_L┃GP1_L┃MAC_A┃  ┃SJ┃MEM_T┃BOOT_┃TESTE┃
+┗━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┛
+                                                    14 ─────────────────────────────────────────  SRK_LOCK
+```
+
+The SRK lock fuse can be fused as follows:
+
+```
+# write fuse
+crucible -m IMX6UL -b 2 -e big blow SRK_LOCK 1
+
+# verify fuse
+crucible -m IMX6UL -b 2 read SRK_LOCK
 ```
 
 ### Verifying HAB
@@ -322,11 +317,58 @@ feature, not a bug.
 
 The activation and use of the secure boot functionality is therefore **at your
 own risk**, the following command permanently locks the fused configuration and
-enables secure boot (remember to enable VDD_FUSE power supply as shown earlier):
+enables secure boot.
+
+In order to enable secure boot the SoC must be placed in Closed Security
+Configuration, additionally every debugging aid that might allow its bypass or
+execute arbitrary code must be disabled.
+
+The following fuses within OCOTP_CFG5 and OCOTP_CFG6 are in scope of such
+procedure:
 
 ```
-=> fuse prog -y 0 0x4 0x2
-=> fuse prog -y 0 0x5 0x1
+ 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00  OCOTP_CFG5
+┏━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┓ Bank:0 Word:6
+┃SD_PW┃PW┃TZ┃JT┃KT┃  ┃DL┃JTAG_┃WD┃SJ┃  ┃SD┃SD┃FO┃DDR3_CONFIG            ┃  ┃  ┃FO┃BT┃DI┃  ┃SEC_C┃ R: 0x00000018
+┗━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┛ W: 0x00000018
+             27 ────────────────────────────────────────────────────────────────────────────────  JTAG_HEO
+                26 ─────────────────────────────────────────────────────────────────────────────  KTE
+                         23 22 ─────────────────────────────────────────────────────────────────  JTAG_SMODE
+                                  20 ───────────────────────────────────────────────────────────  SJC_DISABLE
+                                        18 ─────────────────────────────────────────────────────  SDP_READ_DISABLE
+                                                                                     03 ────────  DIR_BT_DIS
+                                                                                           01 00  SEC_CONFIG
+
+ 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 09 08 07 06 05 04 03 02 01 00  OCOTP_CFG6
+┏━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┳━━┓ Bank:0 Word:7
+┃OV┃MMC_DLL_DLY         ┃  ┃LPB_B┃BT┃BOOT_FAILUR┃SD┃EM┃OV┃US┃EN┃BO┃US┃US┃DL┃SD┃SD┃UA┃DI┃L1┃BT┃OV┃ R: 0x0000001c
+┗━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━╋━━┻━━┻━━┻━━┻━━┻━━┻━━┻━━┛ W: 0x0000001c
+                                                                                  04 ───────────  UART_SERIAL_DOWNLOAD_DISABLE
+```
+
+The relevant fuses are described below, along with their fusing commands:
+
+```
+# set device in Closed Configuration (IMX6ULRM Table 8-2, p245)
+crucible -m IMX6UL -b 2 -e big blow SEC_CONFIG 0b11
+
+# disable NXP reserved mode (IMX6ULRM 8.2.6, p244)
+crucible -m IMX6UL -b 2 -e big blow DIR_BT_DIS 1
+
+# Disable debugging features (IMX6ULRM Table 5-9, p216)
+# * disable Secure JTAG controller
+# * disable JTAG debug mode
+# * disable HAB ability to enable JTAG
+# * disable tracing
+crucible -m IMX6UL -b 2 -e big blow SJC_DISABLE 1
+crucible -m IMX6UL -b 2 -e big blow JTAG_SMODE 0b11
+crucible -m IMX6UL -b 2 -e big blow JTAG_HEO 1
+crucible -m IMX6UL -b 2 -e big blow KTE 1
+
+# To further reduce the attack surface:
+#  * disable Serial Download Protocol (SDP) READ_REGISTER command (IMX6ULRM 8.9.3, p310)
+#  * disable SDP over UART (IMX6ULRM 8.9, p305)
+crucible -m IMX6UL -b 2 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
 ```
 
 The USB armory will now refuse to run bootloader images not correctly signed
@@ -343,4 +385,4 @@ No HAB Events Found!
 
 ### External documentation
 
-* [i.MX53 Secure Boot Application Note](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
+* [i.MX6 Secure Boot Application Note](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
