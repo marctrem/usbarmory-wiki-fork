@@ -267,10 +267,10 @@ instead):
 
 ```
 # write fuse
-crucible -m IMX6UL -b 16 -e little blow SRK_HASH aabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabb
+crucible -m IMX6UL -r 1 -b 16 -e little blow SRK_HASH aabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabb
 
 # verify fuse
-crucible -s -m IMX6UL -b 16 -e little read SRK_HASH
+crucible -s -m IMX6UL -r 1 -b 16 -e little read SRK_HASH
 ```
 
 The fused SRK hash must be locked to prevent bits set to 0 to be fused to 1
@@ -288,10 +288,10 @@ The SRK lock fuse can be fused as follows:
 
 ```
 # write fuse
-crucible -m IMX6UL -b 2 -e big blow SRK_LOCK 1
+crucible -m IMX6UL -r 1 -b 2 -e big blow SRK_LOCK 1
 
 # verify fuse, output should be 1
-crucible -s -m IMX6UL -b 2 read SRK_LOCK
+crucible -s -m IMX6UL -r 1 -b 2 read SRK_LOCK
 ```
 
 ### Verify HAB configuration
@@ -356,25 +356,25 @@ The relevant fuses are described below, along with their fusing commands:
 
 ```
 # set device in Closed Configuration (IMX6ULRM Table 8-2, p245)
-crucible -m IMX6UL -b 2 -e big blow SEC_CONFIG 0b11
+crucible -m IMX6UL -r 1 -b 2 -e big blow SEC_CONFIG 0b11
 
 # disable NXP reserved mode (IMX6ULRM 8.2.6, p244)
-crucible -m IMX6UL -b 2 -e big blow DIR_BT_DIS 1
+crucible -m IMX6UL -r 1 -b 2 -e big blow DIR_BT_DIS 1
 
 # Disable debugging features (IMX6ULRM Table 5-9, p216)
 # * disable Secure JTAG controller
 # * disable JTAG debug mode
 # * disable HAB ability to enable JTAG
 # * disable tracing
-crucible -m IMX6UL -b 2 -e big blow SJC_DISABLE 1
-crucible -m IMX6UL -b 2 -e big blow JTAG_SMODE 0b11
-crucible -m IMX6UL -b 2 -e big blow JTAG_HEO 1
-crucible -m IMX6UL -b 2 -e big blow KTE 1
+crucible -m IMX6UL -r 1 -b 2 -e big blow SJC_DISABLE 1
+crucible -m IMX6UL -r 1 -b 2 -e big blow JTAG_SMODE 0b11
+crucible -m IMX6UL -r 1 -b 2 -e big blow JTAG_HEO 1
+crucible -m IMX6UL -r 1 -b 2 -e big blow KTE 1
 
 # To further reduce the attack surface:
 #  * disable Serial Download Protocol (SDP) READ_REGISTER command (IMX6ULRM 8.9.3, p310)
 #  * disable SDP over UART (IMX6ULRM 8.9, p305)
-crucible -m IMX6UL -b 2 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
+crucible -m IMX6UL -r 1 -b 2 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
 ```
 
 The USB armory will now refuse to run bootloader images not correctly signed
