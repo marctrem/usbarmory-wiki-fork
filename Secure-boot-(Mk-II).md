@@ -127,7 +127,7 @@ wget ftp://ftp.denx.de/pub/u-boot/u-boot-2018.07.tar.bz2
 tar xvf u-boot-2018.07.tar.bz2 && cd u-boot-2018.07
 ```
 
-Apply the following patch which enables i.MX53 High Assurance Boot (HAB)
+Apply the following patch which enables High Assurance Boot (HAB)
 support in U-Boot by adding the `hab_status` command, which allows verification
 of secure boot state.
 
