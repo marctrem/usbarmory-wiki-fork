@@ -188,12 +188,12 @@ make ARCH=arm EXT_DTB=pubkey.dtb
 The compilation results in the two following files:
 
 * u-boot-dtb.imx: bootloader image to be signed and flashed on the target
-  microSD card (instead of u-boot.imx), as shown in the next sections.
+  eMMC (instead of u-boot.imx), as shown in the next sections.
 
 * pico.itb: image tree blob file containing the kernel, to be copied under
-  `/boot` on the target microSD card (replaces zImage/uImage).
+  `/boot` on the target eMMC (replaces zImage/uImage).
 
-### Prepare the CSF file
+### Sign the bootloader
 
 Download the
 [usbarmory_csftool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_csftool)
@@ -214,20 +214,20 @@ usbarmory_csftool \
 The resulting CSF binary contains the signature for the bootloader image and
 the commands that instruct the SoC to verify it.
 
-### Prepare and flash the signed U-Boot
-
-**IMPORTANT**: /dev/sdX must be replaced with your microSD device (not eventual
-microSD partitions), ensure that you are specifying the correct one. Errors in
-target specification will result in disk corruption.
+Concatenate the bootloader and the CSF file to create the signed bootloader.
 
 ```
 cat u-boot-dtb.imx csf.bin > u-boot-signed.imx
-sudo dd if=u-boot-signed.imx of=/dev/sdX bs=512 seek=2 conv=fsync
 ```
 
-**HINT**: It is now a good idea to verify if the resulting boot loader and
-kernel image are working correctly. Only after you have done so proceed with
-the next steps for secure boot activation.
+### Install the bootloader and kernel image
+
+The signed bootloader `u-boot-signed.imx` and image tree blob `pico.itb` can
+now be installed as shown in the last two sections of the documentation for the device
+[buildroot profile](https://github.com/inversepath/usbarmory/blob/master/software/buildroot/README-INTERLOCK-imx6ul-pico.md).
+
+The `u-boot-signed.imx` file replaces `u-boot.imx` in all procedures,
+similarily `pico.itb` replaces `zImage`.
 
 ### Install fusing tool
 
