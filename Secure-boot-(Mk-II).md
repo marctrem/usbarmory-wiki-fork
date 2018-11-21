@@ -142,7 +142,7 @@ serial console access.
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
+[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-imx6ul-pico.md)
 the path is under buildroot `output/build/linux-<version>` directory.
 
 The following commands are meant to be issued within the U-Boot source
