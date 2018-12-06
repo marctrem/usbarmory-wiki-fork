@@ -53,16 +53,17 @@ the AXI bus, allowing OTF DRAM encryption.
 The i.MX6UL SoC features an [ARM® TrustZone®](http://www.arm.com/products/processors/technologies/trustzone/)
 implementation in its CPU core as well as its internal peripherals.
 
-### External cryptographic co-processor (ATECC608A)
+### External cryptographic co-processor (ATECC608A or A71CH)
 
-The [Microchip ATECC608A](https://www.microchip.com/wwwproducts/en/ATECC608A)
-features hardware acceleration for elliptic-curve cryptography as well as
+The [Microchip ATECC608A](https://www.microchip.com/wwwproducts/en/ATECC608A) and
+[AT71CH](https://www.nxp.com/products/identification-and-security/authentication/plug-and-trust-the-fast-easy-way-to-deploy-secure-iot-connections:A71CH)
+feature hardware acceleration for elliptic-curve cryptography as well as
 hardware based key storage.
 
-Additionally it can provide high-endurance monotonic counters, useful for
+Additionally they can provide high-endurance monotonic counters, useful for
 external verification of firmware downgrade/rollback attacks.
 
-It is available on the I²C bus and features authenticated and encrypted
+Both P/Ns communicate on the I²C bus and feature authenticated and encrypted
 sessions for host communication.
 
 ### eMMC Replay Protected Memory Blocks (RPMB)
