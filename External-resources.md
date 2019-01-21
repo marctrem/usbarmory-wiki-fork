@@ -33,6 +33,8 @@
 
 * [Georg](https://github.com/tuxlifan) provides a fork for our official [basic Debian image generation](https://github.com/inversepath/usbarmory-debian-base_image) that allows [basic Devuan image generation](https://github.com/tuxlifan/usbarmory-devuan-base_image).
 
+* [Wincent Balin](https://github.com/wincentbalin) [contributed](https://gist.github.com/wincentbalin/83749d46ea5aadec6c3dcfd3ff672d21) a [mode switcher](https://ofdigitalwater.postach.io/post/mode-switcher-for-usb-armory) script.
+
 ### Papers, Articles
 
 * Jeroen van Kessel and Nick Petros Triantafyllidis authored a paper titled [USB Armory as an Offensive Attack Platform](contrib/USB Armory as an Offensive Attack Platform Jeroen_van_Kessel-and-Nick_Triantafyllidis.pdf), exploring implementation of DNS hijacking and traffic diversion attacks...BadUSB style.
