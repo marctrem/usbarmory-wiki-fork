@@ -1,8 +1,6 @@
 ### Device tree
 
-Download and compile the example Inter-Integrated Circuit (I²C) device tree file [imx53-usbarmory-i2c.dts](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-i2c.dts)
-making sure that the latest version of the device tree include file [imx53-usbarmory-common.dtsi](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/imx53-usbarmory-common.dtsi),
-is included in your kernel source directory.
+Download and compile the example Inter-Integrated Circuit (I²C) device tree file [imx53-usbarmory-i2c.dts](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/kernel_conf/mark-one/imx53-usbarmory-i2c.dts).
 
 Also ensure that i2c support is enabled in the kernel configuration, otherwise
 you can recompile the kernel with the latest configuration
