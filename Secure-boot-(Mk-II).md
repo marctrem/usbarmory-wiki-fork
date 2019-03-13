@@ -296,18 +296,16 @@ crucible -s -m IMX6UL -r 1 -b 2 read SRK_LOCK
 
 ### Verify HAB configuration
 
-After rebooting the USB armory it can be verified, from the U-Boot shell,
-that no HAB events are generated. If no errors are present then the bootloader
-image was correctly authenticated:
+After rebooting the USB armory, the security state can be verified by checking
+the [caam-keyblob driver](https://github.com/inversepath/caam-keyblob) log
+message which should read:
 
 ```
-=> hab_status
-
-Secure boot disabled
-
-HAB Configuration: 0xf0, HAB State: 0x66
-No HAB Events Found!
+caam_keyblob: Secure State detected
 ```
+
+The `caam_keyblob` kernel module is compiled by default in the
+[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-imx6ul-pico.md).
 
 ### Activate HAB
 
@@ -329,7 +327,7 @@ In order to enable secure boot the SoC must be placed in Closed Security
 Configuration, additionally every debugging aid that might allow its bypass or
 execute arbitrary code must be disabled.
 
-The following fuses within OCOTP_CFG5 and OCOTP_CFG6 are in scope of such
+The following fuses, within registers `OCOTP_CFG5` and `OCOTP_CFG6`, are in scope of such
 procedure:
 
 ```
@@ -378,15 +376,12 @@ crucible -m IMX6UL -r 1 -b 2 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
 ```
 
 The USB armory will now refuse to run bootloader images not correctly signed
-with keys corresponding to the fused hashes:
+with keys corresponding to the fused hashes.
+
+The security state log (see _Verify HAB configuration_) should now read as follows:
 
 ```
-=> hab_status
-
-Secure boot enabled
-
-HAB Configuration: 0xcc, HAB State: 0x99
-No HAB Events Found!
+caam_keyblob: Trusted State detected
 ```
 
 ### External documentation

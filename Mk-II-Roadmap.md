@@ -19,7 +19,7 @@ drivers, is underway and mostly completed.
 The USB armory Mk II System-on-Chip (SoC) is planned to be a member of the
 i.MX6UL family, P/N series MCIMX6G3 (528 Mhz),
 
-A SoC variant using the pin-to-pin compatible i.MX6ULL P/N is planned to
+A SoC variant using the pin-to-pin compatible i.MX6ULZ P/N is planned to
 provide higher speed (900 Mhz) if desired, with the tradeoff of lack of OTF
 DRAM encryption (no CAAM and BEE modules otherwise available on i.MX6UL).
 
