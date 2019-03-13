@@ -39,7 +39,7 @@ Using Type-C USB allows us to have a plug for traditional USB based
 along with an integrated socket to act as a host, without requiring a
 [host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter).
 
-The USB Power Delivery protocol would allow to ensure that adequate current is
+The USB Type-C current mode allows to ensure that adequate current is
 requested on the plug side, to enable connection of additional devices on the
 socket side.
 
