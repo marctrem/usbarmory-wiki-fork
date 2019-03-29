@@ -9,6 +9,5 @@ The following table summarizes the list of available pre-compiled images:
 | Debian Stretch | [Inverse Path](https://inversepath.com)       | [USB armory base images](https://github.com/inversepath/usbarmory-debian-base_image/releases) |
 | Linux kernel w/ [INTERLOCK buildroot](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md) | [Inverse Path](https://inversepath.com) | [INTERLOCK releases](https://github.com/inversepath/interlock/releases) |
 | Arch Linux     | [Arch Linux ARM](http://archlinuxarm.org/)     | [Arch Linux ARM Installation](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory) |
-| Void Linux     | Juan RP et al.     | [Void Linux USB armory Installation](https://github.com/voidlinux/documentation/wiki/USB-Armory) |
 | Kali Linux     | [Offensive Security](https://www.offensive-security.com/) | [Kali Linux on USB armory](http://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
 | Gentoo Linux   | [sakaki](https://github.com/sakaki-) | [gentoo-on-armory](https://github.com/sakaki-/gentoo-on-armory) |
