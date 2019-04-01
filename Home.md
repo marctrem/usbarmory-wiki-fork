@@ -15,6 +15,14 @@ The following page provides useful information on how to get started:
 
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
 
+## Hardware
+
+* [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
+
+## Software
+
+* [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
+
 # USB armory Mk I
 
 ## Hardware
