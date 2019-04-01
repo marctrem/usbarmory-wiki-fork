@@ -8,7 +8,7 @@ Just like the USB armory, the enclosure manufacturing, including its material, i
 
 The enclosure can be ordered at [Inverse Path](https://inversepath.com/usbarmory).
 
-* [Technical Diagram](https://github.com/inversepath/usbarmory/blob/master/hardware/enclosure/technical_diagram-20150611.pdf)
+* [Technical Diagram](https://github.com/inversepath/usbarmory/blob/master/hardware/mark-one/enclosure_diagram-20150611.pdf)
 
 * Specifications:
   * Dimensions:
