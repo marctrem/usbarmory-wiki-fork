@@ -2,11 +2,6 @@
 
 ## High Assurance Boot (HABv4)
 
-*IMPORTANT*: HABv4 on the i.MX6UL requires Silicon Revision 1.2 and HAB 4.1 or
-greater, implemented on Part Numbers (P/N) with revision "AB" or greater, as
-they include patches for erratas ERR010873 and ERR010872, see the following
-[security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
-
 The HAB feature enables on-chip internal Boot ROM authentication of initial
 bootloader (i.e. Secure Boot) with a digital signature, establishing the first
 trust anchor for code authentication. See
