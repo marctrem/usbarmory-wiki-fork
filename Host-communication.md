@@ -72,35 +72,6 @@ The Internet Connection Sharing on macOS requires an IP range on a
 address between the range 192.168.2.2-192.168.2.254 on its usb0 interface,
 using 192.168.2.1 as default gateway.
 
-Additionally the DHCP server on the USB armory must be disabled, and replaced
-with a DHCP client (or alternatively a static IP address). On the USB armory
-standard Debian image, the DHCP server can be replaced with a DHCP client as
-follows:
-
-1. Disable the DHCP server:
-
-```
-sudo systemctl stop isc-dhcp-server
-sudo systemctl disable isc-dhcp-server
-```
-
-2. In `/etc/network/interfaces`, replace the following entries:
-
-```
-iface usb0 inet static
-  address 10.0.0.1
-  netmask 255.255.255.0
-  gateway 10.0.0.2
-
-```
-
-with
-
-
-```
-iface usb0 inet dhcp
-```
-
 Once these steps are performed Internet Connection Sharing can be enabled as
 follows:
 
