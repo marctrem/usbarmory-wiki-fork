@@ -28,9 +28,15 @@ options g_ether use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2
 
 #### Setup & Connection Sharing: Linux
 
-**NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings. The image comes with a DHCP server enabled by default, for this reason static IP address configuration should not be required on most configurations.
+**NOTE**: The USB armory standard Debian image configures it with IP address
+10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions
+reflect these settings. The image comes with a DHCP server enabled by default,
+for this reason static IP address configuration should not be required on most
+configurations.
 
-**NOTE**: This is a command line example that assumes no interference from running Network Managers, in general favor following the predefined configuration files and/or UIs for your specific Linux distribution.
+**NOTE**: This is a command line example that assumes no interference from
+running Network Managers, in general favor following the predefined
+configuration files and/or UIs for your specific Linux distribution.
 
 ```
 # bring the USB virtual Ethernet interface up
@@ -49,7 +55,11 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 #### Setup & Connection Sharing: macOS
 
-**NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings. The image comes with a DHCP server enabled by default, for this reason static IP address configuration should not be required on most configurations.
+**NOTE**: The USB armory standard Debian image configures it with IP address
+10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions
+reflect these settings. The image comes with a DHCP server enabled by default,
+for this reason static IP address configuration should not be required on most
+configurations.
 
 1. Open 'System Preferences' -> 'Network'.
 
@@ -57,7 +67,42 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 3. Set IPv4 configuration to Manual with IP Address 10.0.0.2, Netmask 255.255.255.0.
 
-The Internet Connection Sharing on macOS requires an IP range on a **different** subnet, this requires re-configuring the USB armory with an IP address between the range 192.168.2.2-192.168.2.254 on its usb0 interface, using 192.168.2.1 as default gateway (which must be set as static IP address on the 'RNDIS/Ethernet Gadget' interface). Once this is performed Internet Connection Sharing can be enabled as follows:
+The Internet Connection Sharing on macOS requires an IP range on a
+**different** subnet, this requires re-configuring the USB armory with an IP
+address between the range 192.168.2.2-192.168.2.254 on its usb0 interface,
+using 192.168.2.1 as default gateway.
+
+Additionally the DHCP server on the USB armory must be disabled, and replaced
+with a DHCP client (or alternatively a static IP address). On the USB armory
+standard Debian image, the DHCP server can be replaced with a DHCP client as
+follows:
+
+1. Disable the DHCP server:
+
+```
+sudo systemctl stop isc-dhcp-server
+sudo systemctl disable isc-dhcp-server
+```
+
+2. In `/etc/network/interfaces`, replace the following entries:
+
+```
+iface usb0 inet static
+  address 10.0.0.1
+  netmask 255.255.255.0
+  gateway 10.0.0.2
+
+```
+
+with
+
+
+```
+iface usb0 inet dhcp
+```
+
+Once these steps are performed Internet Connection Sharing can be enabled as
+follows:
 
 1. On the Mac choose Apple menu > 'System Preferences' and click Sharing.
 
@@ -69,7 +114,10 @@ from'
 4. Depending on the chosen USB armory Ethernet emulation tick the RNDIS or
 CDC Ethernet checkboxes in 'To computers using'.
 
-Alternatively Internet Connection Sharing can also be manually enabled without having to modify the default USB armory usb0 address, the following example assumes en0 as the Internet interface and en5 as the RNDIS/CDC USB armory interface on the host machine (your assignment might vary):
+Alternatively Internet Connection Sharing can also be manually enabled without
+having to modify the default USB armory usb0 address, the following example
+assumes en0 as the Internet interface and en5 as the RNDIS/CDC USB armory
+interface on the host machine (your assignment might vary):
 
 ```
 # enable IP forwarding
@@ -87,7 +135,11 @@ $ echo "nat on en0 from 10.0.0.0/8 to any -> (en0)" | sudo pfctl -f -
 
 #### Setup & Connection Sharing: Windows 7, 8, 10
 
-**NOTE**: The official pre-imaged microSD card for the USB armory configures it with IP address 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions reflect these settings. The image comes with a DHCP server enabled by default, for this reason static IP address configuration should not be required on most configurations.
+**NOTE**: The USB armory standard Debian image configures it with IP address
+10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions
+reflect these settings. The image comes with a DHCP server enabled by default,
+for this reason static IP address configuration should not be required on most
+configurations.
 
 1. Plug in the USB armory and let Windows install the network adapter driver. The driver installation is usually automatic, however on certain Windows installations it has been reported that this is not the case. To manually install a driver, success has been reported with the [Linux USB Ethernet/RNDIS Gadget](https://www.kernel.org/doc/Documentation/usb/linux.inf) or the [Acer USB Ethernet/RNDIS Gadget](http://catalog.update.microsoft.com/v7/site/ScopedViewRedirect.aspx?updateid=37e35bd4-d788-4b83-9416-f78e439f90a2) (in case of driver issues some tips can be found in this [thread](https://groups.google.com/forum/#!topic/usbarmory/bFZBrTKq2Mg)) (it has also been reported that adding options `idVendor=0x04b3 idProduct=0x4010` to g_ether can trigger successful usage of an IBM driver that is typically included in Windows installations).
 
