@@ -1,4 +1,4 @@
-### CDC Ethernet
+# CDC Ethernet
 
 This mode allows to interact with the USB armory just like a standard TCP/IP
 server, additionally this also allows the USB armory to contact the USB host
@@ -26,7 +26,7 @@ Options in /etc/modprobe.d/usbarmory.conf:
 options g_ether use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2
 ```
 
-#### Setup & Connection Sharing: Linux
+## Setup & Connection Sharing: Linux
 
 **NOTE**: The USB armory standard Debian image configures it with IP address
 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions
@@ -53,7 +53,7 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 ```
 
-#### Setup & Connection Sharing: macOS
+## Setup & Connection Sharing: macOS
 
 **NOTE**: The USB armory standard Debian image configures it with IP address
 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions
@@ -133,7 +133,7 @@ $ echo "nat on en0 from en5:network to any -> (en0)" | sudo pfctl -f -
 $ echo "nat on en0 from 10.0.0.0/8 to any -> (en0)" | sudo pfctl -f -
 ```
 
-#### Setup & Connection Sharing: Windows 7, 8, 10
+## Setup & Connection Sharing: Windows 7, 8, 10
 
 **NOTE**: The USB armory standard Debian image configures it with IP address
 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions
@@ -160,13 +160,13 @@ The Internet Connection Sharing on Windows requires by default an IP range on a 
 
 4. Depending on the interface assigned to the USB armory Ethernet emulation check its relevant entry in the "Home networking connection" selector.
 
-#### Connecting
+## Connecting
 
 When using CDC Ethernet emulation any standard TCP/IP server can be used to communicate with the USB armory board.
 
 The typical, and first, interaction would be via OpenSSH server, using an SSH client on the USB host.
 
-### Mass Storage emulation
+# Mass Storage emulation
 
 No particular host configuration is required, when configured for mass storage
 operation the USB armory is detected as a standard USB flash drive.
@@ -181,7 +181,7 @@ Options in /etc/modprobe.d/usbarmory.conf:
 options g_mass_storage file=disk.img
 ```
 
-### Combined CDC Ethernet and Mass Storage emulation
+# Combined CDC Ethernet and Mass Storage emulation
 
 It is possible to have simultaneous ethernet and mass storage emulation with the Multifunction Composite Gadget (g_multi).
 
@@ -195,14 +195,14 @@ Options in /etc/modprobe.d/usbarmory.conf:
 options g_multi use_eem=0 dev_addr=aa:bb:cc:dd:ee:f1 host_addr=aa:bb:cc:dd:ee:f2 file=disk.img
 ```
 
-### Mouse/Keyboard emulation via USB Human Interface Device (HID) Gadget
+# Mouse/Keyboard emulation via USB Human Interface Device (HID) Gadget
 
 The following respository, contributed by [Collin Mulliner](https://github.com/crmulliner) provides HID emulation helpers to support composite CDC Ethernet and HID gadget.
 
 [https://github.com/crmulliner/hidemulation](https://github.com/crmulliner/hidemulation)
 
 
-### Serial Download Protocol (SDP)
+# Serial Download Protocol (SDP)
 
 The serial downloader can be found in the [imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader) and used to directly download and execute code on the SoC.
 
