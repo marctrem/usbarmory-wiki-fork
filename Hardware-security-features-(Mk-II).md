@@ -1,4 +1,4 @@
-# i.MX6UL System-on-Chip
+# i.MX6UL/i.MX6ULZ System-on-Chip
 
 ## High Assurance Boot (HABv4)
 
@@ -8,7 +8,7 @@ trust anchor for code authentication. See
 [Secure Boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II)) for
 more information and usage instructions.
 
-## Cryptographic accelerator and assurance module (CAAM)
+## Cryptographic accelerator and assurance module (CAAM) - i.MX6UL
 
 From the i.MX6UL datasheet: "CAAM is a cryptographic accelerator and assurance
 module. CAAM implements several encryption and hashing functions, a run-time
@@ -16,36 +16,49 @@ integrity checker, and a Pseudo Random Number Generator (PRNG)...CAAM also
 implements a Secure Memory mechanism."
 
 The CAAM accelerator driver is included and operational in modern Linux
-kernels, once loaded its activation is indicated by the following kernel log
-message:
+kernels, once loaded it exposes its algorithms through the Crypto API interface
+(see `/proc/crypto`).
 
-```
-caam algorithms registered in /proc/crypto
-```
+## Data Co-Processor (DCP) - i.MX6ULZ
+
+On boards mounting the i.MX6ULZ SoC option the CAAM is replaced with the DCP
+module, providing a subset of the CAAM features.
+
+From the i.MX6ULZ datasheet: "This module provides support for general
+encryption and hashing functions typically used for security functions."
+
+The DCP module driver is included and operational in modern Linux kernels, once
+loaded it exposes its algorithms through the Crypto API interface (see
+`/proc/crypto`).
 
 ## Secure Non-Volatile Storage (SNVS)
 
-From the i.MX53 datasheet: "Secure Non-Volatile Storage, including Secure Real
+From the i.MX6UL datasheet: "Secure Non-Volatile Storage, including Secure Real
 Time Clock, Security State Machine, Master Key Control, and Violation/Tamper
 Detection and reporting."
 
 A device specific random 256-bit OTPMK key is fused in each SoC at
-manufacturing time, this key is unreadable and can only be used by the CAAM for
-AES encryption/decryption of user data, through the Secure Non-Volatile Storage
-(SNVS) companion block.
+manufacturing time, this key is unreadable and can only be used by the CAAM
+(i.MX6UL) or DCP (i.MX6ULZ) for AES encryption/decryption of user data, through
+the Secure Non-Volatile Storage (SNVS) companion block.
 
-A Linux kernel driver for the CAAM, which takes advantage of the OTPMK released
-by the SNVS, is available at
+A Linux kernel driver for the CAAM (i.MX6UL), which takes advantage of the
+OTPMK released by the SNVS, is available at
 [https://github.com/inversepath/caam-keyblob](https://github.com/inversepath/caam-keyblob).
 
-## Bus Encryption Engine (BEE)
+A Linux kernel driver for the DCP (i.MX6ULZ), which takes advantage of the
+OTPMK released by the SNVS, is available at
+[https://github.com/inversepath/mxs-dcp](https://github.com/inversepath/mxs-dcp).
 
-The BEE supports on-the-fly (OTF) AES-128 (ECB or CTR) encryption/decryption on
-the AXI bus, allowing OTF DRAM encryption.
+## Bus Encryption Engine (BEE) - i.MX6UL
+
+The BEE is included only in boards mounting the i.MX6UL SoC, it supports
+on-the-fly (OTF) AES-128 (ECB or CTR) encryption/decryption on the AXI bus,
+allowing OTF DRAM encryption.
 
 ## ARM® TrustZone®
 
-The i.MX6UL SoC features an [ARM® TrustZone®](http://www.arm.com/products/processors/technologies/trustzone/)
+The i.MX6 SoC family features an [ARM® TrustZone®](http://www.arm.com/products/processors/technologies/trustzone/)
 implementation in its CPU core as well as its internal peripherals.
 
 # External cryptographic co-processors (ATECC608A, A71CH)
