@@ -13,6 +13,9 @@ The following page provides useful information on how to get started:
 
 # USB armory Mk II
 
+![Mk II Bottom](images/armory-mark-two-bottom.svg)
+![Mk II Top](images/armory-mark-two-top.svg)
+
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
 
 ## Hardware
@@ -24,6 +27,9 @@ The following page provides useful information on how to get started:
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
 
 # USB armory Mk I
+
+![Mk I Top](images/armory-mark-one-top.svg)
+![Mk I Bottom](images/armory-mark-one-bottom.svg)
 
 ## Hardware
 
