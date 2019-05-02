@@ -108,8 +108,8 @@ USB Type-C allows accessory mode to route analog/debug signals over its
 connector, the USB armory Mk II leverages on this to break out UART, SPI, I2C,
 CAN, GPIOs.
 
-A dedicated debug accessory board allows to access most signals through USB,
-without requiring probes, through an FTDI FT2232. This allows, for example,
+A dedicated debug accessory board allows to access UART and GPIO signals through USB,
+without requiring probes, through an FTDI FT4232H. This allows, for example,
 accessing the USB armory Mk II serial console without wires or probes, natively
 using only USB cables.
 
