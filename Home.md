@@ -21,6 +21,7 @@ The following page provides useful information on how to get started:
 ## Hardware
 
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
+* [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(MkII))
 
 ## Software
 
@@ -33,15 +34,15 @@ The following page provides useful information on how to get started:
 
 ## Hardware
 
+* [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
 * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
 * [Power consumption](https://github.com/inversepath/usbarmory/wiki/Power-consumption)
 * [X-ray](https://github.com/inversepath/usbarmory/wiki/X-ray)
-* [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM)
+* [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(MkI))
 * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
 * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
-* [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 
 ## Software
 

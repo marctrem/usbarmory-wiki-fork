@@ -2,8 +2,8 @@ The internal i.MX53 64KB Boot ROM is permanently set by the SoC manufacturer, fo
 
 ```
 $ gcc -o imx53_bootrom-dump imx53_bootrom-dump.c
-$ sudo ./imx53_bootrom-dump 0 16        > imx53-bootrom-16K.bin
-$ sudo ./imx53_bootrom-dump 0x404000 48 > imx53-bootrom-48K.bin
+$ sudo ./imx53_bootrom-dump 0x00000000 16 > imx53-bootrom-16K.bin
+$ sudo ./imx53_bootrom-dump 0x00404000 48 > imx53-bootrom-48K.bin
 ```
 
 The resulting binary images can be verified by comparing their SHA256 hashes with the following ones:

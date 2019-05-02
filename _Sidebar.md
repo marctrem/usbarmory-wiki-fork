@@ -3,6 +3,7 @@
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
 * Hardware
   * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
+  * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
 * Software
   * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
 
@@ -12,15 +13,15 @@
 * [**Getting started**](https://github.com/inversepath/usbarmory/wiki/Starting)
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * Hardware
+  * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
   * [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
   * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
   * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
   * [Power consumption](https://github.com/inversepath/usbarmory/wiki/Power-consumption)
   * [X-ray](https://github.com/inversepath/usbarmory/wiki/X-ray)
-  * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM)
+  * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-I))
   * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
   * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
-  * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * Software
   * [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
   * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
