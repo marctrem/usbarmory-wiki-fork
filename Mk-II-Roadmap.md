@@ -104,13 +104,13 @@ board, an i.MX6UL device used for prototyping the USB armory Mk II software:
 
 ## Accessory mode
 
-USB Type-C allows accessory mode to route analog/debug signals over its
-connector, the USB armory Mk II leverages on this to break out UART, SPI, I2C,
-CAN, GPIOs.
+USB Type-C allows a 'debug accessory mode' to route analog/debug signals over
+its connector, the USB armory Mk II leverages on this to break out UART, SPI,
+I²C, CAN (pre-transceiver), GPIOs.
 
-A dedicated debug accessory board allows to access UART and GPIO signals through USB,
-without requiring probes, through an FTDI FT4232H. This allows, for example,
-accessing the USB armory Mk II serial console without wires or probes, natively
-using only USB cables.
+A dedicated debug accessory board allows to access UART and GPIO signals
+through USB, without requiring probes, through an FTDI FT4232H. This allows,
+for example, accessing the USB armory Mk II serial console without wires or
+probes, natively using only USB cables.
 
 ![Mk II debug accessory](images/armory-mark-two-debug-accessory.svg)
