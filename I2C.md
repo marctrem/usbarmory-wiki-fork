@@ -8,7 +8,7 @@ you can recompile the kernel with the latest configuration
 
 The example device tree enables this I²C configuration on the pin header:
 
-| PIN | Mk I         |
+| pin | Mk I         |
 |:---:|--------------|
 |  1  | Ground       |
 |  2  | USB 5V       |

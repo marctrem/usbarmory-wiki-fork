@@ -1,6 +1,6 @@
 ### Breakout header
 
-| PIN | Beta                                | Mk I                                |
+| pin | Beta                                | Mk I                                |
 |:---:|-------------------------------------|-------------------------------------|
 |  1  | Ground                              | Ground                              |
 |  2  | USB 5V                              | USB 5V                              |

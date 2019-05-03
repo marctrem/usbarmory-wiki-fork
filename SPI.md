@@ -4,7 +4,7 @@ Download and compile the example Serial Peripheral Interface (SPI) device tree f
 
 The example device tree enables this SPI configuration on the pin header:
 
-| PIN | Mk I         |
+| pin | Mk I         |
 |:---:|--------------|
 |  1  | Ground       |
 |  2  | USB 5V       |
