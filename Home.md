@@ -29,7 +29,7 @@ The following page provides useful information on how to get started:
 
 # USB armory Mk I
 
-![Mk I Top](images/armory-mark-one-top.png)
+![Mk I](images/armory-mark-one.png)
 
 ## Hardware
 
