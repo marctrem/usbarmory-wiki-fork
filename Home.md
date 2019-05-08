@@ -14,6 +14,7 @@ The following page provides useful information on how to get started:
 # USB armory Mk II
 
 ![Mk II Top](images/armory-mark-two-top.png)
+![Mk II Bottom](images/armory-mark-two-bottom.png)
 
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
 
