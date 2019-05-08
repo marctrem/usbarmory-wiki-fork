@@ -113,4 +113,4 @@ through USB, without requiring probes, through an FTDI FT4232H. This allows,
 for example, accessing the USB armory Mk II serial console without wires or
 probes, natively using only USB cables.
 
-![Mk II debug accessory](images/armory-mark-two-debug-accessory.svg)
+![Mk II debug accessory](images/armory-mark-two-debug-accessory.png)
