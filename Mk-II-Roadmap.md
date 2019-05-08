@@ -7,6 +7,7 @@ under development.
 This page provides information on the development plan and current progress.
 
 ![Mk II Top](images/armory-mark-two-top.png)
+![Mk II Bottom](images/armory-mark-two-bottom.png)
 
 ## Current progress
 
