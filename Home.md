@@ -81,6 +81,8 @@ in the [Applications](https://github.com/inversepath/usbarmory/wiki/Applications
 
 A discussion group is available on [Google Groups](https://groups.google.com/d/forum/usbarmory).
 
+## Support
+
 If you think anything is missing on this wiki, or require further support, please email us at support@inversepath.com.
 
 ## License
