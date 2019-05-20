@@ -8,19 +8,20 @@ microSD cards have been identified.
 
 | Vendor/Model  | Format | Speed class | UHS Speed class | Size  |
 |:--------------|-------:|------------:|----------------:|------:|
-| TDK LoR       | SDHC   | 4           | N/A             |  4 GB |
-| TDK LoR       | SDHC   | 10          | 1               |  8 GB |
-| Verbatim      | SDHC   | 10          | 1               |  8 GB |
-| Samsung EVO   | SDHC   | 10          | 1               |  8 GB |
-| Samsung EVO   | SDHC   | 10          | 1               | 32 GB |
-| Samsung       | SDHC   | 4           | N/A             |  4 GB |
-| Samsung       | SDHC   | 6           | N/A             | 16 GB |
-| Samsung       | SDHC   | 6           | N/A             | 32 GB |
-| SanDisk Ultra | SDHC   | 4           | 1               |  4 GB |
-| SanDisk Ultra | SDHC   | 4           | 1               |  8 GB |
-| SanDisk Ultra | SDHC   | 10          | 1               |  8 GB |
-| SanDisk Ultra | SDHC   | 10          | 1               | 32 GB |
-| SanDisk Ultra | SDXC   | 10          | 1               | 64 GB |
-| SanDisk Ultra | SDXC   | 10          | 1               |128 GB |
-| Sony SR-64UY  | SDXC   | 10          | 1               | 64 GB |
-| QILIVE Q.8503 | SDHC   | 10          | 1               | 32 GB |
+| TDK LoR       | SDHC   | 4           | N/A             |   4 GB |
+| TDK LoR       | SDHC   | 10          | 1               |   8 GB |
+| Verbatim      | SDHC   | 10          | 1               |   8 GB |
+| Samsung EVO   | SDXC   | 10          | 3               | 512 GB |
+| Samsung EVO   | SDHC   | 10          | 1               |   8 GB |
+| Samsung EVO   | SDHC   | 10          | 1               |  32 GB |
+| Samsung       | SDHC   | 4           | N/A             |   4 GB |
+| Samsung       | SDHC   | 6           | N/A             |  16 GB |
+| Samsung       | SDHC   | 6           | N/A             |  32 GB |
+| SanDisk Ultra | SDHC   | 4           | 1               |   4 GB |
+| SanDisk Ultra | SDHC   | 4           | 1               |   8 GB |
+| SanDisk Ultra | SDHC   | 10          | 1               |   8 GB |
+| SanDisk Ultra | SDHC   | 10          | 1               |  32 GB |
+| SanDisk Ultra | SDXC   | 10          | 1               |  64 GB |
+| SanDisk Ultra | SDXC   | 10          | 1               | 128 GB |
+| Sony SR-64UY  | SDXC   | 10          | 1               |  64 GB |
+| QILIVE Q.8503 | SDHC   | 10          | 1               |  32 GB |
