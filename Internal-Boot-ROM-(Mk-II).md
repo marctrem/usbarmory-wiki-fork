@@ -14,4 +14,5 @@ The resulting binary images can be verified by comparing their SHA256 hashes wit
 | Model    | P/N             | SHA256                                                             |
 |:---------|-----------------|--------------------------------------------------------------------|
 | i.MX6UL  | MCIMX6G2DVM05AB | `ee21dac73ac185510b2d5cb5953db29cb2f20b95be8971a1b2f10b33d337b996` |
+| i.MX6UL  | MCIMX6G3DVM05AB | `1f7bb1207c378e9b3da051b6195151661522eeaec17d557ecd855fb56eb374e7` |
 | i.MX6ULL | MCIMX6Y2DVM09AB | `1727a0f46dbde555b583e9a138ae359389974b7be4369ffd4a252a8730f7e59b` |

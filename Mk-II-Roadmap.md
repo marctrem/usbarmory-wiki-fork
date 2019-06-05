@@ -96,12 +96,10 @@ OTPMK released by the SNVS, is available at
 The [crucible](https://github.com/inversepath/crucible) tool provides user
 space support for reading, and writing, One-Time-Programmable (OTP) fuses.
 
-The following procedures/software are made available for the
-[Technexion i.MX6UL PICO](https://www.technexion.com/products/system-on-modules/pico/pico-compute-modules/detail/PICO-IMX6UL-EMMC)
-board, an i.MX6UL device used for prototyping the USB armory Mk II software:
+The following procedures/software are available:
 
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
-* [Embedded INTERLOCK distribution (i.MX6UL PICO)](https://github.com/inversepath/usbarmory/blob/master/software/buildroot/README-INTERLOCK-imx6ul-pico.md)
+* [Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/blob/master/software/buildroot/README-INTERLOCK-mark-two.md)
 
 ## Accessory mode
 
