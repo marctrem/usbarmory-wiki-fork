@@ -18,7 +18,6 @@ The example device tree enables this I²C configuration on the pin header:
 |  6  | GPIO5[29]    |
 |  7  | GPIO5[30]    |
 
-
 ### I²C EEPROM
 
 Once the i2c-dev kernel module is loaded, it is possible to access the I²C

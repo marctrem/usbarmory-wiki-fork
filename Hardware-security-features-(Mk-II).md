@@ -68,14 +68,14 @@ The [Microchip ATECC608A](https://www.microchip.com/wwwproducts/en/ATECC608A) an
 feature hardware acceleration for elliptic-curve cryptography as well as
 hardware based key storage. The ATECC608A also features symmetric AES-128-GCM encryption.
 
-Additionally they can provide high-endurance monotonic counters, useful for
-external verification of firmware downgrade/rollback attacks.
+Both components provide high-endurance monotonic counters, useful for external
+verification of firmware downgrade/rollback attacks.
 
-Both P/Ns communicate on the I²C bus and feature authenticated and encrypted
-sessions for host communication.
+Both components communicate on the I²C bus and feature authenticated and
+encrypted sessions for host communication.
 
-The USB armory Mk II PCB layout features landing areas for both components, either
-or both will be assembled on board.
+The USB armory Mk II PCB layout features landing areas for both P/Ns, either or
+both will be assembled on board.
 
 # eMMC Replay Protected Memory Blocks (RPMB)
 
