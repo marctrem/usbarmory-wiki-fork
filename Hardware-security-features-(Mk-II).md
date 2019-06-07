@@ -31,6 +31,15 @@ The DCP module driver is included and operational in modern Linux kernels, once
 loaded it exposes its algorithms through the Crypto API interface (see
 `/proc/crypto`).
 
+## Random Number Generator (RNGB) - i.MX6ULZ
+
+On boards mounting the i.MX6ULZ SoC option the CAAM TRNG functionality is
+replaced with a dedicated RNGB block, which incorporates a TRNG.
+
+The RNGB driver is included and operational in modern Linux kernels, once
+loaded it enables the component within Linux hw_random framework (see
+`/dev/hwrng` and `rng-tools`).
+
 ## Secure Non-Volatile Storage (SNVS)
 
 From the i.MX6UL datasheet: "Secure Non-Volatile Storage, including Secure Real
