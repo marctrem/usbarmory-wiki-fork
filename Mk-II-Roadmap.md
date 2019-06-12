@@ -21,13 +21,13 @@ drivers, is underway and mostly completed.
 
 ## System-on-Chip
 
-The USB armory Mk II System-on-Chip (SoC) is planned to be a member of the
-i.MX6UL family, P/N series MCIMX6G3 (528 Mhz),
+The USB armory Mk II default System-on-Chip (SoC) is planned to be the NXP
+i.MX6ULZ, P/N MCIMX6Z0DVM09AB (900 MHz).
 
-A SoC variant using the pin-to-pin compatible i.MX6ULZ P/N is planned to
-provide higher speed (900 Mhz) if desired, with the tradeoff of lack of OTF
-DRAM encryption (due to lack of CAAM and BEE modules, otherwise available on
-i.MX6UL).
+A SoC variant using the pin-to-pin compatible i.MX6UL, P/N MCIMX6G3DVM05AB (528
+MHz) is planned, for custom orders, to provide additional security features such as OTF DRAM
+encryption ([features comparison](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))),
+with the trade-off of a slower clock rate.
 
 ## Security features
 
@@ -105,7 +105,7 @@ The following procedures/software are available:
 
 USB Type-C allows a 'debug accessory mode' to route analog/debug signals over
 its connector, the USB armory Mk II leverages on this to break out UART, SPI,
-I²C, CAN (pre-transceiver), GPIOs.
+I²C, GPIOs.
 
 A dedicated debug accessory board allows to access UART and GPIO signals
 through USB, without requiring probes, through an FTDI FT4232H. This allows,

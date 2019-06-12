@@ -1,5 +1,29 @@
 # i.MX6UL/i.MX6ULZ System-on-Chip
 
+The following table summarizes the available hardware security features,
+depending on the possible USB armory Mk II variants.
+
+The standard retail version opts for a faster (900 MHz) i.MX6ULZ SoC, compared
+to the i.MX6UL (528 MHz), with the main trade-off of lack of OTF DRAM
+encryption.
+
+The i.MX6U variant with additional security properties, allowing external RAM
+encryption and a more complete internal cryptographic accelerator, is available
+for custom/bulk orders.
+
+| Name  | Use                                  | Variants           | Availability |
+|-------|--------------------------------------|--------------------|--------------|
+| HABv4 | Secure Boot                          | all                | retail       |
+| CAAM  | Cryptographic acceleration, TRNG     | i.MX6UL  (528 MHz) | custom order |
+| DCP   | Cryptographic acceleration           | i.MX6ULZ (900 MHz) | retail       |
+| RNGB  | TRNG                                 | i.MX6ULZ (900 MHz) | retail       |
+| SNVS  | Secure Non-Volatile Storage          | all                | retail       |
+| BEE   | On-the-fly external RAM encryption   | i.MX6UL  (528 MHz) | custom order |
+| TZ    | ARM® TrustZone®                      | all                | retail       |
+| ATECC | External cryptographic co-processor  | all                | retail       |
+| A71CH | External cryptographic co-processor  | all                | retail       |
+| RPMB  | Protected flash memory region        | all                | retail       |
+
 ## High Assurance Boot (HABv4)
 
 The HAB feature enables on-chip internal Boot ROM authentication of initial
