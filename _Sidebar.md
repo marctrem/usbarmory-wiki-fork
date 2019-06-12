@@ -1,3 +1,5 @@
+* [Home](https://github.com/inversepath/usbarmory/wiki)
+
 ## USB armory Mk II
 
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
@@ -10,7 +12,6 @@
 
 ## USB armory Mk I
 
-* [Home](https://github.com/inversepath/usbarmory/wiki)
 * [**Getting started**](https://github.com/inversepath/usbarmory/wiki/Starting)
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * Hardware

@@ -1,9 +1,9 @@
 ### Security information
 
 To address the [HABv4 security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt),
-the secure boot architecture is meant to work on i.MX6UL with Silicon Revision
-1.2 or greater, implemented on Part Numbers (P/N) with revision "AB" or
-greater.
+the secure boot architecture is meant to work on i.MX6UL parts with Silicon
+Revision 1.2 or greater, implemented on Part Numbers (P/N) with revision "AB"
+or greater.
 
 To address the [U-Boot security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_IPVR2018-0001.txt),
 always ensure that all listed mitigations are implemented.
@@ -34,12 +34,11 @@ The following instructions jointly illustrate the following:
 The combination of i.MX6UL secure boot and U-Boot verified boot features allows
 a fully verified chain of trust, authenticating the executed Linux kernel.
 When signing a kernel that embeds a root file system, such as the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-imx6ul-pico.md),
+[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md),
 the authentication has full (boot, not runtime) coverage, otherwise Linux kernel verification of
 executed code is not covered in this guide and left out to implementors.
 
-The following instructions apply to the [Technexion i.MX6UL PICO](https://www.technexion.com/products/system-on-modules/pico/pico-compute-modules/detail/PICO-IMX6UL-EMMC)
-board, an i.MX6UL device used for prototyping the USB armory Mk II software.
+The following instructions apply identically to variants i.MX6ULL and i.MX6ULZ.
 
 ### Prerequisites
 
@@ -114,46 +113,47 @@ A pair of RSA keys must be created for U-Boot verified boot:
 
 ```
 # adjust the KEYS_PATH variable according to your environment
-openssl genrsa -F4 -out ${KEYS_PATH}/pico.key 2048
-openssl req -batch -new -x509 -key ${KEYS_PATH}/pico.key -out ${KEYS_PATH}/pico.crt
+openssl genrsa -F4 -out ${KEYS_PATH}/usbarmory.key 2048
+openssl req -batch -new -x509 -key ${KEYS_PATH}/usbarmory.key -out ${KEYS_PATH}/usbarmory.crt
 ```
 
-### Prepare U-Boot (2018.07) with Verified Boot and HAB support
+### Prepare U-Boot with Verified Boot and HAB support
 
 Download and extract U-Boot sources:
 
 ```
-wget ftp://ftp.denx.de/pub/u-boot/u-boot-2018.07.tar.bz2
-tar xvf u-boot-2018.07.tar.bz2 && cd u-boot-2018.07
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2019.04.tar.bz2
+tar xvf u-boot-2019.04.tar.bz2 && cd u-boot-2019.04
 ```
 
-Apply the following patch which enables High Assurance Boot (HAB)
-support in U-Boot by adding the `hab_status` command, which allows verification
-of secure boot state.
+Apply the following patch to enable USB armory Mk II support within U-Boot:
 
-* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/imx6ul-pico/u-boot-2018.07_patches/0001-Add-HAB-support.patch)
+* [0001-USB-armory-mark-two-alpha.patch](https://github.com/inversepath/usbarmory/tree/master/software/u-boot/0001-USB-armory-mark-two-alpha.patch)
 
-Apply the following patches to enable Verified Boot support, disable the U-Boot
-command line and external environment variables to further lock down physical
-serial console access.
+The following commands are meant to be issued within the U-Boot source
+directory.
 
-* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/imx6ul-pico/u-boot-2018.07_patches/0002-Add-verified-boot-support.patch)
-* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/imx6ul-pico/u-boot-2018.07_patches/0003-Disable-CLI.patch)
+Enable Verified Boot support, disable the U-Boot command line and external
+environment variables to further lock down physical serial console access, as
+follows:
+
+```
+wget https://github.com/inversepath/usbarmory/tree/master/software/secure_boot/mark_two/usbarmory_mark-two_defconfig -O configs/usbarmory_mark-two_defconfig
+```
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-imx6ul-pico.md)
+[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md),
 the path is under buildroot `output/build/linux-<version>` directory.
 
-The following commands are meant to be issued within the U-Boot source
-directory:
+Apply the configuration and compile the required tools:
 
 ```
 # adjust the KERNEL_SRC variable according to your environment
 export KERNEL_SRC=$KERNEL_PATH
 export CROSS_COMPILE=arm-none-eabi- # set to your arm toolchain prefix
 make distclean
-make pico-imx6ul_config
+make usbarmory_mark-two_config
 make tools
 ```
 
@@ -162,20 +162,20 @@ insertion:
 
 ```
 # adjust the USBARMORY_GIT variable according to your environment
-dtc -p 0x1000 ${USBARMORY_GIT}/software/secure_boot/imx6ul-pico/pubkey.dts -O dtb -o pubkey.dtb
+dtc -p 0x1000 ${USBARMORY_GIT}/software/secure_boot/mark-two/pubkey.dts -O dtb -o pubkey.dtb
 ```
 
 Prepare image tree blob (itb) file according to the image tree source (its)
 template in the repository:
 
 ```
-tools/mkimage -D "-I dts -O dtb -p 2000 -i $KERNEL_SRC" -f ${USBARMORY_GIT}/software/secure_boot/imx6ul-pico/pico.its pico.itb
+tools/mkimage -D "-I dts -O dtb -p 2000 -i $KERNEL_SRC" -f ${USBARMORY_GIT}/software/secure_boot/mark-two/usbarmory.its usbarmory.itb
 ```
 
 Sign the itb file:
 
 ```
-tools/mkimage -D "-I dts -O dtb -p 2000" -F -k ${KEYS_PATH} -K pubkey.dtb -r pico.itb
+tools/mkimage -D "-I dts -O dtb -p 2000" -F -k ${KEYS_PATH} -K pubkey.dtb -r usbarmory.itb
 ```
 
 Now the U-Boot image can be compiled, with inclusion of the embedded public
@@ -190,7 +190,7 @@ The compilation results in the two following files:
 * u-boot-dtb.imx: bootloader image to be signed and flashed on the target
   eMMC (instead of u-boot.imx), as shown in the next sections.
 
-* pico.itb: image tree blob file containing the kernel, to be copied under
+* usbarmory.itb: image tree blob file containing the kernel, to be copied under
   `/boot` on the target eMMC (replaces zImage/uImage).
 
 ### Sign the bootloader
@@ -222,12 +222,12 @@ cat u-boot-dtb.imx csf.bin > u-boot-signed.imx
 
 ### Install the bootloader and kernel image
 
-The signed bootloader `u-boot-signed.imx` and image tree blob `pico.itb` can
+The signed bootloader `u-boot-signed.imx` and image tree blob `usbarmory.itb` can
 now be installed as shown in the last two sections of the documentation for the device
-[buildroot profile](https://github.com/inversepath/usbarmory/blob/master/software/buildroot/README-INTERLOCK-imx6ul-pico.md).
+[buildroot profile](https://github.com/inversepath/usbarmory/blob/master/software/buildroot/README-INTERLOCK-mark-two.md).
 
 The `u-boot-signed.imx` file replaces `u-boot.imx` in all procedures,
-similarily `pico.itb` replaces `zImage`.
+similarily `usbarmory.itb` replaces `zImage`.
 
 ### Install fusing tool
 
@@ -294,7 +294,20 @@ crucible -m IMX6UL -r 1 -b 2 -e big blow SRK_LOCK 1
 crucible -s -m IMX6UL -r 1 -b 2 read SRK_LOCK
 ```
 
-### Verify HAB configuration
+### Verify HAB configuration (i.MX6ULL/i.MX6ULZ)
+
+After rebooting the USB armory, the security state can be verified by checking
+the [mxs-dcp driver](https://github.com/inversepath/mxs-dcp) log
+message which should read:
+
+```
+mxs_dcp: Secure State detected
+```
+
+The `mxs_dcp` kernel module is compiled by default in the
+[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md).
+
+### Verify HAB configuration (i.MX6UL)
 
 After rebooting the USB armory, the security state can be verified by checking
 the [caam-keyblob driver](https://github.com/inversepath/caam-keyblob) log
@@ -303,9 +316,6 @@ message which should read:
 ```
 caam_keyblob: Secure State detected
 ```
-
-The `caam_keyblob` kernel module is compiled by default in the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-imx6ul-pico.md).
 
 ### Activate HAB
 
