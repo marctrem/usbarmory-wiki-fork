@@ -7,7 +7,7 @@ The standard retail version opts for a faster (900 MHz) i.MX6ULZ SoC, compared
 to the i.MX6UL (528 MHz), with the main trade-off of lack of OTF DRAM
 encryption.
 
-The i.MX6U variant with additional security properties, allowing external RAM
+The i.MX6UL variant with additional security properties, allowing external RAM
 encryption and a more complete internal cryptographic accelerator, is available
 for custom/bulk orders.
 
