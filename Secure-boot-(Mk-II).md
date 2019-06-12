@@ -1,9 +1,9 @@
 ### Security information
 
 To address the [HABv4 security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt),
-the secure boot architecture is meant to work on i.MX6UL parts with Silicon
-Revision 1.2 or greater, implemented on Part Numbers (P/N) with revision "AB"
-or greater.
+the secure boot architecture is meant to work on i.MX6UL/i.MX6ULL/i.MX6ULZ
+parts with Silicon Revision 1.2 or greater, implemented on Part Numbers (P/N)
+with revision "AB" or greater.
 
 To address the [U-Boot security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_IPVR2018-0001.txt),
 always ensure that all listed mitigations are implemented.
@@ -162,7 +162,7 @@ insertion:
 
 ```
 # adjust the USBARMORY_GIT variable according to your environment
-dtc -p 0x1000 ${USBARMORY_GIT}/software/secure_boot/mark-two/pubkey.dts -O dtb -o pubkey.dtb
+scripts/dtc/dtc -p 0x1000 ${USBARMORY_GIT}/software/secure_boot/mark-two/pubkey.dts -O dtb -o pubkey.dtb
 ```
 
 Prepare image tree blob (itb) file according to the image tree source (its)
@@ -388,11 +388,9 @@ crucible -m IMX6UL -r 1 -b 2 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
 The USB armory will now refuse to run bootloader images not correctly signed
 with keys corresponding to the fused hashes.
 
-The security state log (see _Verify HAB configuration_) should now read as follows:
-
-```
-caam_keyblob: Trusted State detected
-```
+The security state log (see _Verify HAB configuration_) should now print a
+`Trusted State detected` when the relevant cryptographic co-processor module is
+loaded.  ```
 
 ### External documentation
 

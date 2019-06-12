@@ -1,4 +1,5 @@
 * [Home](https://github.com/inversepath/usbarmory/wiki)
+* [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use)
 
 ## USB armory Mk II
 
@@ -37,4 +38,3 @@
   * [I²C](https://github.com/inversepath/usbarmory/wiki/I2C)
   * [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
-* [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use)
