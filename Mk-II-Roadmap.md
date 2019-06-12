@@ -24,7 +24,7 @@ drivers, is underway and mostly completed.
 The USB armory Mk II default System-on-Chip (SoC) is planned to be the NXP
 i.MX6ULZ, P/N MCIMX6Z0DVM09AB (900 MHz).
 
-A SoC variant using the pin-to-pin compatible i.MX6UL, P/N MCIMX6G3DVM05AB (528
+An SoC variant using the pin-to-pin compatible i.MX6UL, P/N MCIMX6G3DVM05AB (528
 MHz) is planned, for custom orders, to provide additional security features such as OTF DRAM
 encryption ([features comparison](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))),
 with the trade-off of a slower clock rate.
