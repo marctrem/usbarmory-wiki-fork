@@ -6,15 +6,7 @@ including, and not limited to, compilation options, kernel options and
 configuration, running processes, etc. These results provide only an
 approximate reference and should be taken with a grain of salt.
 
-## USB armory Mk II
-
-The USB armory Mk II i.MX6ULZ (P/N MCIMX6Z0DVM09AB) clocks at 900 MHz.
-
-The variant (available for custom orders, see [features
-comparison](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))),
-using the i.MX6UL (P/N MCIMX6G3DVM05AB) clocks at 528 MHz.
-
-## USB armory Mk I
+## USB armory Mk I variants
 
 The USB armory Mk I i.MX53 CPU clocks by default at 800 MHz, depending on the
 mounted SoC model the CPU can be optionally clocked at 1 GHz.
@@ -40,8 +32,6 @@ The [nbench](http://www.tux.org/~mayer/linux/bmark.html) utility is compiled wit
 
 | Device           | Memory Index  | Integer Index | Floating-Point Index |
 |:-----------------|--------------:|--------------:|---------------------:|
-| Mk II - 900 MHz  |         4.723 |         6.449 |                5.609 |
-| Mk II - 528 MHz  |         2.763 |         3.780 |                3.306 |
 | Mk I  -   1 GHz  |         7.005 |         6.401 |                1.751 |
 | Mk I  - 800 MHz  |         5.605 |         5.113 |                1.404 |
 
@@ -58,18 +48,6 @@ compiler: gcc -fPIC -pthread -Wa,--noexecstack -march=armv7-a -mfloat-abi=hard -
 
 | Device          | Algorithm   | 16 bytes  | 64 bytes  | 256 bytes | 1024 bytes | 8192 bytes |
 |:----------------|:------------|----------:|----------:|----------:|-----------:|-----------:|
-| Mk II - 900 MHz | aes-128-cbc | 17054.68k | 21172.78k | 22657.37k |  23062.19k |  23205.21k |
-| Mk II - 528 MHz | aes-128-cbc |  9999.55k | 12403.37k | 13272.66k |  13509.29k |  13579.61k |
-| Mk II - 900 MHz | aes-256-cbc | 13615.14k | 16110.95k | 16932.52k |  17150.29k |  17216.85k |
-| Mk II - 528 MHz | aes-256-cbc |  7984.23k |  9445.63k |  9920.34k |  10048.17k |  10084.35k |
-| Mk II - 900 MHz | md5         |  5780.65k | 18823.51k | 49765.03k |  83087.36k | 103410.35k |
-| Mk II - 528 MHz | md5         |  3384.74k | 11023.49k | 29140.48k |  48677.21k |  60547.07k |
-| Mk II - 900 MHz | sha1        |  4748.28k | 14280.92k | 32903.34k |  48758.78k |  56726.87k |
-| Mk II - 528 MHz | sha1        |  2791.46k |  8385.94k | 19295.15k |  28568.23k |  33226.75k |
-| Mk II - 900 MHz | sha256      |  3683.56k |  9855.96k | 20408.15k |  27864.06k |  31178.75k |
-| Mk II - 528 MHz | sha256      |  2149.78k |  5787.99k | 11973.80k |  16328.70k |  18262.70k |
-| Mk II - 900 MHz | sha512      |  2289.54k |  9198.98k | 15903.57k |  23693.31k |  27658.92k |
-| Mk II - 528 MHz | sha512      |  1332.70k |  5363.24k |  9300.82k |  13867.35k |  16198.31k |
 | Mk I -   1 GHz  | aes-128-cbc | 33570.21k | 40444.07k | 43008.85k |  43665.41k |  43900.93k |
 | Mk I - 800 MHz  | aes-128-cbc | 26857.25k | 32359.13k | 34405.72k |  34959.02k |  35121.83k |
 | Mk I -   1 GHz  | aes-256-cbc | 26992.09k | 31242.22k | 32757.76k |  33170.09k |  33289.56k |
