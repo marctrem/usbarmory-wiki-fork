@@ -21,6 +21,7 @@ The following page provides useful information on how to get started:
 ## Hardware
 
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
+* [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
 
 ## Software

@@ -3,6 +3,7 @@
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
 * Hardware
   * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
+  * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
   * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
 * Software
   * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
