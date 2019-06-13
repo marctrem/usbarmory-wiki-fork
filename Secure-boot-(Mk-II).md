@@ -138,7 +138,7 @@ environment variables to further lock down physical serial console access, as
 follows:
 
 ```
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-two/usbarmory_mark-two_defconfig
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-two/usbarmory_mark-two_defconfig -O configs/usbarmory_mark-two_defconfig
 ```
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
