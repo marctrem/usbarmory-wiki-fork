@@ -154,7 +154,7 @@ export KERNEL_SRC=$KERNEL_PATH
 export CROSS_COMPILE=arm-none-eabi- # set to your arm toolchain prefix
 make distclean
 make usbarmory_mark-two_config
-make tools
+make tools CONFIG_MKIMAGE_DTC_PATH="scripts/dtc/dtc"
 ```
 
 Compile the Flattened Device Tree file by leaving room for later public key
