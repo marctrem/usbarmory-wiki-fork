@@ -126,9 +126,12 @@ wget ftp://ftp.denx.de/pub/u-boot/u-boot-2019.04.tar.bz2
 tar xvf u-boot-2019.04.tar.bz2 && cd u-boot-2019.04
 ```
 
-Apply the following patch to enable USB armory Mk II support within U-Boot:
+Apply the patch for USB armory Mk II support within U-Boot, according to your
+boot media preference:
 
-* [0001-USB-armory-mark-two-alpha.patch](https://github.com/inversepath/usbarmory/tree/master/software/u-boot/0001-USB-armory-mark-two-alpha.patch)
+* External microSD: [0001-USB-armory-mark-two-alpha-uSD.patch](https://github.com/inversepath/usbarmory/tree/master/software/u-boot/0001-USB-armory-mark-two-alpha-uSD.patch)
+
+* Internal eMMC: [0001-USB-armory-mark-two-alpha-eMMC.patch](https://github.com/inversepath/usbarmory/tree/master/software/u-boot/0001-USB-armory-mark-two-alpha-eMMC.patch)
 
 The following commands are meant to be issued within the U-Boot source
 directory.
