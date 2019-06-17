@@ -141,7 +141,7 @@ environment variables to further lock down physical serial console access, as
 follows:
 
 ```
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-two/usbarmory_mark-two_defconfig -O configs/usbarmory_mark-two_defconfig
+wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-two/usbarmory-mark-two_defconfig -O configs/usbarmory-mark-two_defconfig
 ```
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
@@ -156,7 +156,7 @@ Apply the configuration and compile the required tools:
 export KERNEL_SRC=$KERNEL_PATH
 export CROSS_COMPILE=arm-none-eabi- # set to your arm toolchain prefix
 make distclean
-make usbarmory_mark-two_config
+make usbarmory-mark-two_config
 make tools CONFIG_MKIMAGE_DTC_PATH="scripts/dtc/dtc"
 ```
 
