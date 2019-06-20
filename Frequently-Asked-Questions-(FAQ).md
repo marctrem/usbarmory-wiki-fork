@@ -1,8 +1,12 @@
-### How can I remove/insert the microSD card?
+### How can I remove/insert the microSD card? (USB armory Mk I)
 
 1. (official enclosure only, if present) To remove the microSD sliding cover push it outwards with your thumb, on the side of the memory card, and pull it simultaneously with your other hand index fingernail, on the opposite side.
 
 2. Please note that the microSD slot is with "hinge" type insertion and not a pull-push slot. In order to open it gently slide the closed metal hinge towards the opposite direction of the little arrow engraved on it, a small "click" indicates successful opening. Lift the hinge upwards and place the microSD card from the top, once inserted close it by putting the hinge back in position and by sliding it towards the arrow direction.
+
+### How can I remove/insert the microSD card? (USB armory Mk II)
+
+The microSD slot is a "Push-Push" kind.
 
 ### Help, I can't connect to my USB armory.
 
@@ -12,7 +16,7 @@ If you received a pre-imaged microSD card with your USB armory it almost certain
 
 2. the network interface on your USB host, associated to the USB armory (Linux: usbX, macOS/Windows: RNDIS), is correctly set up with the required host address (typically 10.0.0.2 with netmask 255.255.255.0)
 
-### How do I resize the microSD partition on available images smaller than the total available space ?
+### How do I resize the microSD/eMMC partition on available images smaller than the total available space ?
 
 A tutorial on how to do this can be found [here](http://elinux.org/Beagleboard:Expanding_File_System_Partition_On_A_microSD).
 
@@ -38,6 +42,6 @@ Install package 'locales' and then run ```dpkg-reconfigure locales```.
 
 Remove the CONFIG_USB_OTG kernel option on your host.
 
-### Why is LUKS not working?
+### Why is LUKS not working? (USB armory Mk I)
 
 There is a known issue in modern Linux kernels which breaks cryptsetup aes-xts-plain64 when the SAHARA driver (`sahara` kernel module) is loaded. For this reason it is recommended to blacklist the module when using LUKS on the USB armory.

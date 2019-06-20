@@ -9,25 +9,25 @@ please see information at the [USB armory project page](https://inversepath.com/
 The following page provides useful information on how to get started:
 
 * [**Getting started**](https://github.com/inversepath/usbarmory/wiki/Starting)
+* [Preparing a bootable image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
+* [Buildroot profiles](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
+* [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
+* [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
+* [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
+
+The following sections provide information specific to each USB armory model.
 
 # USB armory Mk II
 
-![Mk II Top](images/armory-mark-two-top.png)
-![Mk II Bottom](images/armory-mark-two-bottom.png)
+![Mk II Top](images/armory-mark-two-top.png) ![Mk II Bottom](images/armory-mark-two-bottom.png)
 
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
-
-## Hardware
-
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
+* [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk II))
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
 * [Debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
-
-## Software
-
-* [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
 
 # USB armory Mk I
 
@@ -36,28 +36,19 @@ The following page provides useful information on how to get started:
 ## Hardware
 
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
-* [microSD compatibility](https://github.com/inversepath/usbarmory/wiki/microSD-compatibility)
+* [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
+* [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I))
 * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
+* [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
 * [Power consumption](https://github.com/inversepath/usbarmory/wiki/Power-consumption)
 * [X-ray](https://github.com/inversepath/usbarmory/wiki/X-ray)
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(MkI))
 * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
 * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
-
-## Software
-
-* [Preparing a bootable microSD image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
-* [Buildroot profiles](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
-* [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
-* [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
-* [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
-* [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
 * Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I2C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
-* [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
-* [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
 
-## Application support
+# Applications
 
 * [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
 * [Crucible OTP fusing tool](https://github.com/inversepath/crucible)
@@ -65,13 +56,11 @@ The following page provides useful information on how to get started:
 ## Supported Operating Systems
 
 * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
-* [Debian, Ubuntu image preparation](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-microSD-image)
-* [Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
+* [Debian image preparation](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
+* Embedded INTERLOCK distribution: [Mk II](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md), [Mk I](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
 * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
 * [Kali Linux](https://www.offensive-security.com/kali-linux-vmware-arm-image-download)
-* [VoidLinux](http://www.voidlinux.eu/news/2015/04/USB-armory.html)
 * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
-* [Darwin](http://embeddedideation.com/2016/02/08/darwin-on-armory/) (experimental)
 
 ## How to Contribute
 
@@ -85,7 +74,8 @@ A discussion group is available on [Google Groups](https://groups.google.com/d/f
 
 ## Support
 
-If you think anything is missing on this wiki, or require further support, please email us at support@inversepath.com.
+If you think anything is missing on this wiki, or require further support,
+please email us at support@inversepath.com.
 
 ## License
 
