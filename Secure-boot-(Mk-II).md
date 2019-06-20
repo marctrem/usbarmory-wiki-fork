@@ -393,7 +393,7 @@ with keys corresponding to the fused hashes.
 
 The security state log (see _Verify HAB configuration_) should now print a
 `Trusted State detected` when the relevant cryptographic co-processor module is
-loaded.  ```
+loaded.
 
 ### External documentation
 
