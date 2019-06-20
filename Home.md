@@ -31,7 +31,7 @@ The following sections provide information specific to each USB armory model.
 
 # USB armory Mk I
 
-<img src="images/armory-mark-two-one.png" width="350"> <img src="images/armory-mark-one-bottom.png" width="350">
+<img src="images/armory-mark-one-top.png" width="350"> <img src="images/armory-mark-one-bottom.png" width="350">
 
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
