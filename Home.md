@@ -25,7 +25,7 @@ The following sections provide information specific to each USB armory model.
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
-* [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk II))
+* [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk-II))
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
 * [Debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
 
@@ -43,7 +43,7 @@ The following sections provide information specific to each USB armory model.
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
 * [Power consumption](https://github.com/inversepath/usbarmory/wiki/Power-consumption)
 * [X-ray](https://github.com/inversepath/usbarmory/wiki/X-ray)
-* [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(MkI))
+* [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-I))
 * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
 * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
 * Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I2C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
