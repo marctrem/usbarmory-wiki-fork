@@ -191,10 +191,10 @@ make ARCH=arm EXT_DTB=pubkey.dtb
 The compilation results in the two following files:
 
 * u-boot-dtb.imx: bootloader image to be signed and flashed on the target
-  eMMC (instead of u-boot.imx), as shown in the next sections.
+  microSD or eMMC (instead of u-boot.imx), as shown in the next sections.
 
 * usbarmory.itb: image tree blob file containing the kernel, to be copied under
-  `/boot` on the target eMMC (replaces zImage/uImage).
+  `/boot` on the target microSD or eMMC (replaces zImage/uImage).
 
 ### Sign the bootloader
 
