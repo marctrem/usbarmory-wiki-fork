@@ -22,6 +22,9 @@ The following sections provide information specific to each USB armory model.
 
 ![Mk II Top](images/armory-mark-two-top.png) ![Mk II Bottom](images/armory-mark-two-bottom.png)
 
+<img src="images/armory-mark-two-top.png" width="300">
+<img src="images/armory-mark-two-bottom.png" width="300">
+
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
