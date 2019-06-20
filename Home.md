@@ -33,8 +33,6 @@ The following sections provide information specific to each USB armory model.
 
 ![Mk I](images/armory-mark-one.png)
 
-## Hardware
-
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
 * [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I))
