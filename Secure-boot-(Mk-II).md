@@ -1,5 +1,10 @@
 ### Security information
 
+The USB armory Mk II is produced with up to date hardware and firmware to
+address all known security issues, nonetheless the following security
+information is highlighted for anyone that wants to apply these instructions on
+other hardware based on i.MX6UL P/Ns.
+
 To address the [HABv4 security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt),
 the secure boot architecture is meant to work on i.MX6UL/i.MX6ULL/i.MX6ULZ
 parts with Silicon Revision 1.2 or greater, implemented on Part Numbers (P/N)
