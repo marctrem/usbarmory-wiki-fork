@@ -39,5 +39,5 @@
 * [Debian](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
 * [Buildroot profiles](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
 * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
-* [Kali Linux](https://www.offensive-security.com/kali-linux-vmware-arm-image-download)
+* [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
 * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
