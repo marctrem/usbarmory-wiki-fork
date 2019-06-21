@@ -27,8 +27,6 @@ The [nbench](http://www.tux.org/~mayer/linux/bmark.html) utility is compiled wit
 | Mk II - 900 MHz  |         4.723 |         6.449 |                5.609 |
 | Mk II - 528 MHz  |         2.763 |         3.780 |                3.306 |
 
-It should be noted that the USB armory ARM Cortex-A8 CPU includes the VFPLite floating point unit which is not as fast as other ARM FPUs.
-
 ## OpenSSL
 
 The standard openssl speed test (-evp <algorithm> -elapsed) for the USB armory performed with the following OpenSSL version:
