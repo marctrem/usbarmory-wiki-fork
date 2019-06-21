@@ -302,29 +302,6 @@ crucible -m IMX6UL -r 1 -b 2 -e big blow SRK_LOCK 1
 crucible -s -m IMX6UL -r 1 -b 2 read SRK_LOCK
 ```
 
-### Verify HAB configuration (i.MX6ULL/i.MX6ULZ)
-
-After rebooting the USB armory, the security state can be verified by checking
-the [mxs-dcp driver](https://github.com/inversepath/mxs-dcp) log
-message which should read:
-
-```
-mxs_dcp: Secure State detected
-```
-
-The `mxs_dcp` kernel module is compiled by default in the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md).
-
-### Verify HAB configuration (i.MX6UL)
-
-After rebooting the USB armory, the security state can be verified by checking
-the [caam-keyblob driver](https://github.com/inversepath/caam-keyblob) log
-message which should read:
-
-```
-caam_keyblob: Secure State detected
-```
-
 ### Activate HAB
 
 Only if you are confident that you can correctly generate signed U-Boot images,
@@ -399,6 +376,29 @@ with keys corresponding to the fused hashes.
 The security state log (see _Verify HAB configuration_) should now print a
 `Trusted State detected` when the relevant cryptographic co-processor module is
 loaded.
+
+### Verify HAB configuration (i.MX6ULL/i.MX6ULZ)
+
+After rebooting the USB armory, the security state can be verified by checking
+the [mxs-dcp driver](https://github.com/inversepath/mxs-dcp) log
+message which should read:
+
+```
+mxs_dcp: Secure State detected
+```
+
+The `mxs_dcp` kernel module is compiled by default in the
+[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md).
+
+### Verify HAB configuration (i.MX6UL)
+
+After rebooting the USB armory, the security state can be verified by checking
+the [caam-keyblob driver](https://github.com/inversepath/caam-keyblob) log
+message which should read:
+
+```
+caam_keyblob: Secure State detected
+```
 
 ### External documentation
 
