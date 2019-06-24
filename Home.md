@@ -20,7 +20,7 @@ The following sections provide information specific to each USB armory model.
 
 # USB armory Mk II
 
-<img src="images/armory-mark-two-top.png" width="350"> <img src="images/armory-mark-two-bottom.png" width="350">
+<img src="images/armory-mark-two-bottom.png" width="350"> <img src="images/armory-mark-two-top.png" width="350">
 
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
