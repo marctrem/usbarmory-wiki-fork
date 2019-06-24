@@ -14,8 +14,6 @@ This page provides information on the development plan and current progress.
 The Mk II alpha has been [manufactured](https://twitter.com/AndreaBarisani/status/1133263401826816000)
 and it is currently in testing phase.
 
-![Mk II α](https://pbs.twimg.com/media/D7opDhqWwAA_0Eb.jpg)
-
 The porting of Mk I software framework, and integration of Mk II specific
 drivers, is underway and mostly completed.
 
