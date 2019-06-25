@@ -12,7 +12,7 @@ match the position of the storage media components:
 * left  (towards eMMC):         boot from internal eMMC
 * right (towards microSD slot): boot from external microSD
 
-![Mk II boot switch](images/armory-mark-two-boot-switch.png?nocache)
+![Mk II boot switch](images/armory-mark-two-boot-switch.png)
 
 # Fallback
 
