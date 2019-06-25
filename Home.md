@@ -16,11 +16,11 @@ The following page provides useful information on how to get started:
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
 
-* Application repositories:
+* Application repositories
   * [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
   * [Crucible OTP fusing tool](https://github.com/inversepath/crucible)
 
-* Operating Systems:
+* Operating Systems
   * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
   * [Debian image preparation](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
   * Embedded INTERLOCK distribution: [Mk II](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md), [Mk I](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)

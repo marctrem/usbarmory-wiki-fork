@@ -3,7 +3,7 @@
 * [Preparing a bootable image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
 * [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
-* [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
+* [FAQ](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
 * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
 * [Debian](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
@@ -25,7 +25,6 @@
 
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
-* [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I))
 * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Stand-alone mode](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
