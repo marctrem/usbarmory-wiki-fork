@@ -6,8 +6,8 @@ The USB armory Mk II supports 3 boot mechanisms:
 * external microSD
 * USB Serial Download Protocol (SDP)
 
-A slide switch allows selection of tha primary boot mode (microSD vs eMMC). The
-switch positions match the position of the storage media components:
+A slide switch allows selection of tha primary boot mode. The switch positions
+match the position of the storage media components:
 
 * left  (towards eMMC):         boot from internal eMMC
 * right (towards microSD slot): boot from external microSD
