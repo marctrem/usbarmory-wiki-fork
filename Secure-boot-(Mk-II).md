@@ -301,6 +301,24 @@ crucible -m IMX6UL -r 1 -b 2 -e big blow SRK_LOCK 1
 # verify fuse, output should be 1
 crucible -s -m IMX6UL -r 1 -b 2 read SRK_LOCK
 ```
+### Verifying HAB (pre-activation)
+
+After rebooting the USB armory it can be verified, from the U-Boot shell,
+that no HAB events are generated. If no errors are present then the bootloader
+image was correctly authenticated:
+
+```
+=> hab_status
+
+Secure boot disabled
+
+HAB Configuration: 0xf0, HAB State: 0x66
+No HAB Events Found!
+```
+
+**IMPORTANT**: in case of errors activation must be avoided to prevent any
+irreversible lock out from the device. Always ensure that this verification
+step passes before following the activation steps of the next section.
 
 ### Activate HAB
 
