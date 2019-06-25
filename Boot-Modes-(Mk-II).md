@@ -30,10 +30,12 @@ fails not find valid instructions.
 
 # Serial Download Protocol (SDP)
 
-The serial downloader can be found in the [imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader) and used to directly download and execute code on the SoC.
+The serial downloader can be found in the [imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader)
+and used to directly download and execute code on the SoC.
 
-The ```verify``` and ```debugmode``` flags can also be used as debugging aid to verify correct SoC operation.
+The ```verify``` and ```debugmode``` flags can also be used as debugging aid to
+verify correct SoC operation.
 
 ```
-./imx_usb -v -d u-boot.imx
+imx_usb -v -d u-boot.imx
 ```
