@@ -12,8 +12,6 @@
 * [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
 * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)  
 
-* [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use)
-
 ## USB armory Mk II
 
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
@@ -38,3 +36,9 @@
 * [GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [I²C](https://github.com/inversepath/usbarmory/wiki/I2C)
 * [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
+
+## Legal
+
+* [Hardware License](https://ohwr.org/cernohl)
+* [Software License](https://www.gnu.org/licenses/gpl-3.0.en.html)
+* [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use)
