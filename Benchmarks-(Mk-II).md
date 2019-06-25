@@ -19,13 +19,13 @@ using the i.MX6UL (P/N MCIMX6G3DVM05AB) clocks at 528 MHz.
 The [nbench](https://github.com/santoshsk007/nbench) utility is compiled with the following gcc flags:
 
 ```
--s -static -Wall -O3 -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a8 -mtune=cortex-a8 -fomit-frame-pointer -marm -funroll-loops -ffast-math
+-s -static -Wall -O3 -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a7 -mtune=cortex-a7 -fomit-frame-pointer -marm -funroll-loops -ffast-math
 ```
 
 | Device           | Memory Index  | Integer Index | Floating-Point Index |
 |:-----------------|--------------:|--------------:|---------------------:|
-| Mk II - 900 MHz  |         4.723 |         6.449 |                5.609 |
-| Mk II - 528 MHz  |         2.763 |         3.780 |                3.306 |
+| Mk II - 900 MHz  |         5.348 |         6.449 |                5.609 |
+| Mk II - 528 MHz  |         3.156 |         3.780 |                3.306 |
 
 ## OpenSSL
 
