@@ -53,4 +53,4 @@ board, please see information at the [USB armory project page](https://inversepa
 
 **Fun fact**: the host adapter can also be used to prevent accidental data exchange enabling secure charging.
 
-![USB armory host adapter](https://inversepath.com/images/usbarmory_host_adapter.jpg)
+![USB armory host adapter](images/armory-mark-one-host-adapter.jpg)

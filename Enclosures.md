@@ -21,8 +21,8 @@ The enclosure can be ordered at [Inverse Path](https://inversepath.com/usbarmory
 
 **NOTE**: A cap for the USB plug was included in earlier enclosures but later removed due to width tolerance issues.
 
-![Enclosure Rendering](https://inversepath.com/images/usbarmory_enclosure.jpg?nocache1)
-![Exploded Enclosure Renderings](https://inversepath.com/images/usbarmory_enclosure_exploded.jpg?nocache1)
+![Enclosure Rendering](images/armory-mark-one-enclosure.jpg)
+![Exploded Enclosure Renderings](images/armory-mark-one-enclosure-exploded.jpg)
 
 ## 3rd party
 
