@@ -20,6 +20,7 @@
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk-II))
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
 * [Debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
+* [Boot modes](https://github.com/inversepath/usbarmory/wiki/Boot-Modes-(Mk-II))
 
 ## USB armory Mk I
 

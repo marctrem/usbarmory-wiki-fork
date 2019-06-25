@@ -33,6 +33,8 @@ ALL OF THE TERMS, DO NOT INSTALL OR USE THE USB ARMORY.
 The USB armory requires a valid operating system to boot on either the external
 microSD card (Mk I, Mk II) or the internal eMMC (Mk II).
 
+* [Boot modes](https://github.com/inversepath/usbarmory/wiki/Boot-Modes-(Mk-II)) (Mk II)
+
 ### Pre-imaged microSD card
 
 If you received a pre-imaged microSD card with your USB armory it almost

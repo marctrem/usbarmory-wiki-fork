@@ -68,7 +68,7 @@ authentication, isolation and limiting trust towards the host.
 ## Storage media
 
 Apart from the traditional microSD slot (now with a push/pull mechanism) the
-USB armory Mk II includs an eMMC flash memory on the board.
+USB armory Mk II includes an eMMC flash memory on the board.
 
 This allows easier provisioning procedures, factory pre-imaging without the
 burden of microSD card installation and enables additional security features.
