@@ -367,6 +367,7 @@ crucible -m IMX6UL -r 1 -b 2 -e big blow KTE 1
 # To further reduce the attack surface:
 #  * disable Serial Download Protocol (SDP) READ_REGISTER command (IMX6ULRM 8.9.3, p310)
 #  * disable SDP over UART (IMX6ULRM 8.9, p305)
+crucible -m IMX6UL -r 1 -b 2 -e big blow SDP_READ_DISABLE 1
 crucible -m IMX6UL -r 1 -b 2 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
 ```
 
