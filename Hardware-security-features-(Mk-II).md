@@ -14,9 +14,9 @@ for custom/bulk orders.
 | Name  | Use                                  | Variants           | Availability |
 |-------|--------------------------------------|--------------------|--------------|
 | HABv4 | Secure Boot                          | all                | retail       |
-| CAAM  | Cryptographic acceleration, TRNG     | i.MX6UL  (528 MHz) | custom order |
-| DCP   | Cryptographic acceleration           | i.MX6ULZ (900 MHz) | retail       |
 | RNGB  | TRNG                                 | i.MX6ULZ (900 MHz) | retail       |
+| DCP   | Cryptographic acceleration           | i.MX6ULZ (900 MHz) | retail       |
+| CAAM  | Cryptographic acceleration, TRNG     | i.MX6UL  (528 MHz) | custom order |
 | SNVS  | Secure Non-Volatile Storage          | all                | retail       |
 | BEE   | On-the-fly external RAM encryption   | i.MX6UL  (528 MHz) | custom order |
 | TZ    | ARM® TrustZone®                      | all                | retail       |
@@ -32,16 +32,14 @@ trust anchor for code authentication. See
 [Secure Boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II)) for
 more information and usage instructions.
 
-## Cryptographic accelerator and assurance module (CAAM) - i.MX6UL
+## Random Number Generator (RNGB) - i.MX6ULZ
 
-From the i.MX6UL datasheet: "CAAM is a cryptographic accelerator and assurance
-module. CAAM implements several encryption and hashing functions, a run-time
-integrity checker, and a Pseudo Random Number Generator (PRNG)...CAAM also
-implements a Secure Memory mechanism."
+On boards mounting the i.MX6ULZ SoC option the CAAM TRNG functionality is
+replaced with a dedicated RNGB block, which incorporates a TRNG.
 
-The CAAM accelerator driver is included and operational in modern Linux
-kernels, once loaded it exposes its algorithms through the Crypto API interface
-(see `/proc/crypto`).
+The RNGB driver is included and operational in modern Linux kernels, once
+loaded it enables the component within Linux hw_random framework (see
+`/dev/hwrng` and `rng-tools`).
 
 ## Data Co-Processor (DCP) - i.MX6ULZ
 
@@ -55,14 +53,16 @@ The DCP module driver is included and operational in modern Linux kernels, once
 loaded it exposes its algorithms through the Crypto API interface (see
 `/proc/crypto`).
 
-## Random Number Generator (RNGB) - i.MX6ULZ
+## Cryptographic accelerator and assurance module (CAAM) - i.MX6UL
 
-On boards mounting the i.MX6ULZ SoC option the CAAM TRNG functionality is
-replaced with a dedicated RNGB block, which incorporates a TRNG.
+From the i.MX6UL datasheet: "CAAM is a cryptographic accelerator and assurance
+module. CAAM implements several encryption and hashing functions, a run-time
+integrity checker, and a Pseudo Random Number Generator (PRNG)...CAAM also
+implements a Secure Memory mechanism."
 
-The RNGB driver is included and operational in modern Linux kernels, once
-loaded it enables the component within Linux hw_random framework (see
-`/dev/hwrng` and `rng-tools`).
+The CAAM accelerator driver is included and operational in modern Linux
+kernels, once loaded it exposes its algorithms through the Crypto API interface
+(see `/proc/crypto`).
 
 ## Secure Non-Volatile Storage (SNVS)
 
@@ -75,13 +75,13 @@ manufacturing time, this key is unreadable and can only be used by the CAAM
 (i.MX6UL) or DCP (i.MX6ULZ) for AES encryption/decryption of user data, through
 the Secure Non-Volatile Storage (SNVS) companion block.
 
-A Linux kernel driver for the CAAM (i.MX6UL), which takes advantage of the
-OTPMK released by the SNVS, is available at
-[https://github.com/inversepath/caam-keyblob](https://github.com/inversepath/caam-keyblob).
-
 A Linux kernel driver for the DCP (i.MX6ULZ), which takes advantage of the
 OTPMK released by the SNVS, is available at
 [https://github.com/inversepath/mxs-dcp](https://github.com/inversepath/mxs-dcp).
+
+A Linux kernel driver for the CAAM (i.MX6UL), which takes advantage of the
+OTPMK released by the SNVS, is available at
+[https://github.com/inversepath/caam-keyblob](https://github.com/inversepath/caam-keyblob).
 
 ## Bus Encryption Engine (BEE) - i.MX6UL
 

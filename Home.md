@@ -14,7 +14,6 @@ The following page provides useful information on how to get started:
 * [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
 * [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
-* [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
 
 * Application repositories
   * [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
@@ -27,6 +26,8 @@ The following page provides useful information on how to get started:
   * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
   * [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
   * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
+
+* [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
 
 The following sections provide information specific to each USB armory model.
 
