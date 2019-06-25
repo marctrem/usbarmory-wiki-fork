@@ -60,6 +60,8 @@
 
 * [Yorick Koster](https://twitter.com/yorickkoster) authored [U3 armory](https://github.com/securifybv/u3-armory), a project for emulating a U3 thumb drive with the USB armory to [trigger and exploit Windows AutoRun](https://securify.nl/blog/SFY20170201/autorun_is_dead__long_live_autorun.html).
 
+* [Teddy Reed V](https://github.com/theopolis) authored an excellent [writeup](https://casualhacking.io/blog/2018/2/10/exploring-secured-boot-on-the-sabre-lite-imx6s-v13-sbc-and-nxp-habv4) on the vulnerability covered by our [own advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt) and [exploit PoC](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_csftool#L227).
+
 ### Presentations
 
 * [Inverse Path](https://inversepath.com) - [Forging the USB armory](https://dev.inversepath.com/download/usbarmory/forging_the_usb_armory.pdf)
