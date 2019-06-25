@@ -10,7 +10,9 @@
 * [Buildroot profiles](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
 * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
 * [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
-* [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
+* [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)  
+
+* [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use)
 
 ## USB armory Mk II
 
@@ -36,5 +38,3 @@
 * [GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [I²C](https://github.com/inversepath/usbarmory/wiki/I2C)
 * [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
-
-* [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use)
