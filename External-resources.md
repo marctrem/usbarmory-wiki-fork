@@ -14,7 +14,9 @@
   * [i.MX53 System Development User's Guide](http://cache.nxp.com/files/32bit/doc/user_guide/MX53UG.pdf)
   * [i.MX53 Secure Boot Application Note](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
 
-* [Secure Boot Application Note](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
+* Secure Boot
+  * [Secure Boot using HABv4](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
+  * [HABv4 RVT Guidelines and Recommendations](https://www.nxp.com/docs/en/application-note/AN12263.pdf)
 
 ### Contributions
 
