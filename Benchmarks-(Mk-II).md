@@ -16,10 +16,10 @@ using the i.MX6UL (P/N MCIMX6G3DVM05AB) clocks at 528 MHz.
 
 ## nbench
 
-The [nbench](http://www.tux.org/~mayer/linux/bmark.html) utility is compiled with the following gcc (Debian 4.6.3-14) flags:
+The [nbench](https://github.com/santoshsk007/nbench) utility is compiled with the following gcc flags:
+
 ```
-# $cpu set to either cortex-a7 (mark-one) or cortex-a8 (mark-two)
--s -static -Wall -O3 -mfpu=neon -mfloat-abi=hard -mcpu=$cpu -mtune=$cpu -fomit-frame-pointer -marm -funroll-loops -ffast-math
+-s -static -Wall -O3 -mfpu=neon-vfpv4 -mfloat-abi=hard -mcpu=cortex-a8 -mtune=cortex-a8 -fomit-frame-pointer -marm -funroll-loops -ffast-math
 ```
 
 | Device           | Memory Index  | Integer Index | Floating-Point Index |
@@ -31,16 +31,17 @@ The [nbench](http://www.tux.org/~mayer/linux/bmark.html) utility is compiled wit
 
 The standard openssl speed test (-evp <algorithm> -elapsed) for the USB armory performed with the following OpenSSL version:
 ```
-OpenSSL 1.1.1c  28 May 2019
+OpenSSL 1.1.0k  28 May 2019
 platform: linux-armv4
-compiler: gcc -fPIC -pthread -Wa,--noexecstack -march=armv7-a -mfloat-abi=hard -mfpu=vfpv3-d16 -O2 -pipe -fstack-protector-strong -fno-plt -Wa,--noexecstack -D_FORTIFY_SOURCE=2 -march=armv7-a -mfloat-abi=hard -mfpu=vfpv3-d16 -O2 -pipe -fstack-protector-strong -fno-plt -Wl,-O1,--sort-common,--as-needed,-z,relro,-z,now -DOPENSSL_USE_NODELETE -DOPENSSL_PIC -DOPENSSL_CPUID_OBJ -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DKECCAK1600_ASM -DAES_ASM -DBSAES_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DPOLY1305_ASM -DNDEBUG -D_FORTIFY_SOURCE=2
+compiler: gcc -DDSO_DLFCN -DHAVE_DLFCN_H -DNDEBUG -DOPENSSL_THREADS -DOPENSSL_NO_STATIC_ENGINE -DOPENSSL_PIC -DOPENSSL_BN_ASM_MONT -DOPENSSL_BN_ASM_GF2m -DSHA1_ASM -DSHA256_ASM -DSHA512_ASM -DAES_ASM -DBSAES_ASM -DGHASH_ASM -DECP_NISTZ256_ASM -DPOLY1305_ASM -mcpu=cortex-a7 -mfpu=neon-vfpv4 -mfloat-abi=hard
+
 ```
 
 | Device          | Algorithm   | 16 bytes  | 64 bytes  | 256 bytes | 1024 bytes | 8192 bytes |
 |:----------------|:------------|----------:|----------:|----------:|-----------:|-----------:|
-| Mk II - 900 MHz | aes-128-cbc | 17054.68k | 21172.78k | 22657.37k |  23062.19k |  23205.21k |
+| Mk II - 900 MHz | aes-128-cbc | 18176.31k | 21646.76k | 22924.80k |  23288.83k |  23382.70k |
 | Mk II - 528 MHz | aes-128-cbc |  9999.55k | 12403.37k | 13272.66k |  13509.29k |  13579.61k |
-| Mk II - 900 MHz | aes-256-cbc | 13615.14k | 16110.95k | 16932.52k |  17150.29k |  17216.85k |
+| Mk II - 900 MHz | aes-256-cbc | 14284.35k | 16436.16k | 17245.27k |  17459.88k |  17517.23k |
 | Mk II - 528 MHz | aes-256-cbc |  7984.23k |  9445.63k |  9920.34k |  10048.17k |  10084.35k |
 | Mk II - 900 MHz | md5         |  5780.65k | 18823.51k | 49765.03k |  83087.36k | 103410.35k |
 | Mk II - 528 MHz | md5         |  3384.74k | 11023.49k | 29140.48k |  48677.21k |  60547.07k |

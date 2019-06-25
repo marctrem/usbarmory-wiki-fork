@@ -16,6 +16,18 @@ The following page provides useful information on how to get started:
 * [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
 
+* Application repositories:
+  * [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
+  * [Crucible OTP fusing tool](https://github.com/inversepath/crucible)
+
+* Operating Systems:
+  * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
+  * [Debian image preparation](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
+  * Embedded INTERLOCK distribution: [Mk II](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md), [Mk I](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
+  * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
+  * [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
+  * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
+
 The following sections provide information specific to each USB armory model.
 
 # USB armory Mk II
@@ -28,6 +40,7 @@ The following sections provide information specific to each USB armory model.
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk-II))
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
 * [Debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
+* Cryptography co-processor drivers: [DCP](https://github.com/inversepath/mxs-dcp) (i.MX6ULZ), [CAAM](https://github.com/inversepath/caam-keyblob) (i.MX6UL)
 
 # USB armory Mk I
 
@@ -47,20 +60,7 @@ The following sections provide information specific to each USB armory model.
 * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
 * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
 * Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I2C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
-
-# Applications
-
-* [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
-* [Crucible OTP fusing tool](https://github.com/inversepath/crucible)
-
-## Supported Operating Systems
-
-* [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
-* [Debian image preparation](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
-* Embedded INTERLOCK distribution: [Mk II](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md), [Mk I](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
-* [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
-* [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
-* [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
+* Cryptography co-processor driver: [SCCv2](https://github.com/inversepath/mxc-scc2) (i.MX53)
 
 ## How to Contribute
 
