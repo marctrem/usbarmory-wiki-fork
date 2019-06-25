@@ -1,14 +1,14 @@
 ### SoC documentation (Mk II)
 
-* Mk II - i.MX6ULZ:
+* Mk II - i.MX6ULZ
   * [i.MX6ULZ Reference Manual](https://www.nxp.com/webapp/Download?colCode=IMX6ULZRM)
   * [i.MX6ULZ Datasheet](https://www.nxp.com/docs/en/data-sheet/IMX6ULZCEC.pdf)
 
-* Mk II - i.MX6UL:
+* Mk II - i.MX6UL
   * [i.MX6UL Reference Manual](https://www.nxp.com/webapp/Download?colCode=IMX6ULRM)
   * [i.MX6UL Datasheet](https://www.nxp.com/docs/en/data-sheet/IMX6ULCEC.pdf)  
 
-* Mk I - i.MX53:
+* Mk I - i.MX53
   * [i.MX53 Reference Manual](http://cache.nxp.com/files/32bit/doc/ref_manual/iMX53RM.pdf)
   * [i.MX53xD Datasheet](http://cache.nxp.com/files/32bit/doc/data_sheet/IMX53CEC.pdf)
   * [i.MX53 System Development User's Guide](http://cache.nxp.com/files/32bit/doc/user_guide/MX53UG.pdf)
