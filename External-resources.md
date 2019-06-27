@@ -8,6 +8,10 @@
   * [i.MX6UL Reference Manual](https://www.nxp.com/webapp/Download?colCode=IMX6ULRM)
   * [i.MX6UL Datasheet](https://www.nxp.com/docs/en/data-sheet/IMX6ULCEC.pdf)  
 
+* Mk II - BLE
+  * [ANNA-B112 Datasheet](https://www.u-blox.com/sites/default/files/ANNA-B112_DataSheet_%28UBX-18011707%29.pdf)
+  * [nRF528832 Datasheet](https://www.nordicsemi.com/-/media/Software-and-other-downloads/Product-Briefs/nRF52832-product-brief.pdf?la=en)
+
 * Mk I - i.MX53
   * [i.MX53 Reference Manual](http://cache.nxp.com/files/32bit/doc/ref_manual/iMX53RM.pdf)
   * [i.MX53xD Datasheet](http://cache.nxp.com/files/32bit/doc/data_sheet/IMX53CEC.pdf)

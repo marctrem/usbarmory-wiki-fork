@@ -65,6 +65,14 @@ The addition of a Bluetooth module opens up a variety of new use cases for the
 USB armory Mk II, greatly enhancing its security applications in terms of
 authentication, isolation and limiting trust towards the host.
 
+The ANNA-B112 module supports an "OpenCPU" option to allow arbitrary firmware,
+replacing the built-in u-blox one, on its Nordic Semiconductor nRF52832 SoC.
+This allows provisioning of the SoC with Nordic SDK, Wirepas mesh, ARM Mbed or
+arbitrary user firmware. The nRF52832 SoC features an ARM Cortex-M4 CPU with
+512 kB of internal Flash and 64 kB of RAM.
+
+See additional information [here](https://github.com/inversepath/usbarmory/wiki/Bluetooth).
+
 ## Storage media
 
 Apart from the traditional microSD slot (now with a push/pull mechanism) the

@@ -46,6 +46,7 @@ The following sections provide information specific to each USB armory model.
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
 * [Debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
 * [Boot modes](https://github.com/inversepath/usbarmory/wiki/Boot-Modes-(Mk-II))
+* [Bluetooth](https://github.com/inversepath/usbarmory/wiki/Bluetooth)
 * Cryptography co-processor drivers: [DCP](https://github.com/inversepath/mxs-dcp) (i.MX6ULZ), [CAAM](https://github.com/inversepath/caam-keyblob) (i.MX6UL)
 
 # USB armory Mk I
