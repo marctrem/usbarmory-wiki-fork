@@ -94,7 +94,7 @@ allowing OTF DRAM encryption.
 The i.MX6 SoC family features an [ARM® TrustZone®](http://www.arm.com/products/processors/technologies/trustzone/)
 implementation in its CPU core as well as its internal peripherals.
 
-# External cryptographic co-processors (ATECC608A, A71CH)
+# External cryptographic co-processors
 
 The [Microchip ATECC608A](https://www.microchip.com/wwwproducts/en/ATECC608A) and
 [AT71CH](https://www.nxp.com/products/identification-and-security/authentication/plug-and-trust-the-fast-easy-way-to-deploy-secure-iot-connections:A71CH)
