@@ -2,7 +2,7 @@
 
 The USB armory Mk II supports 3 boot mechanisms:
 
-* internal eMMC
+* internal 16GB eMMC
 * external microSD
 * USB Serial Download Protocol (SDP)
 
@@ -13,6 +13,9 @@ match the position of the storage media components:
 * right (towards microSD slot): boot from external microSD
 
 ![Mk II boot switch](images/armory-mark-two-boot-switch.png)
+
+*Tip*: if you have a microSD card you can use one of its edges to change the
+switch position.
 
 # Fallback
 

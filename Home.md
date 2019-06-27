@@ -32,6 +32,13 @@ The following sections provide information specific to each USB armory model.
 
 <img src="images/armory-mark-two-bottom.png" width="350"> <img src="images/armory-mark-two-top.png" width="350">
 
+* Specifications
+  * SoC: NXP i.MX6UL/i.MX6ULZ ARM® Cortex™-A7 900Mhz
+  * RAM: 512MB/1GB DDR3
+  * Storage: internal 16GB eMMC + external microSD
+  * Bluetooth module: u-blox ANNA-B112 BLE
+  * USB Type-C ports: OTG receptacle + UFP plug
+  * Secure elements: Microchip ATECC608A + NXP A71CH
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
@@ -45,8 +52,11 @@ The following sections provide information specific to each USB armory model.
 
 <img src="images/armory-mark-one-top.png" width="350"> <img src="images/armory-mark-one-bottom.png" width="350">
 
-*Note*: the USB armory Mk I reached End-of-life (EOL) and no longer available.
-
+* Specifications
+  * SoC: NXP i.MX53 ARM® Cortex™-A8 800Mhz
+  * RAM: 512MB DDR3
+  * Storage: external microSD
+  * USB Type-A: 1x OTG plug
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
 * [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I))
@@ -60,6 +70,8 @@ The following sections provide information specific to each USB armory model.
 * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
 * Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I2C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
 * Cryptography co-processor driver: [SCCv2](https://github.com/inversepath/mxc-scc2) (i.MX53)
+
+*Note*: the USB armory Mk I reached End-of-life (EOL) and is no longer available.
 
 ## How to Contribute
 
