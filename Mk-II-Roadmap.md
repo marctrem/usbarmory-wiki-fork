@@ -19,6 +19,8 @@ drivers, is completed.
 
 The design has been validated and the first pre-production batch is being manufactured.
 
+Ordering information will be published in Q3 2019.
+
 ## System-on-Chip
 
 The USB armory Mk II default System-on-Chip (SoC) is planned to be the NXP
