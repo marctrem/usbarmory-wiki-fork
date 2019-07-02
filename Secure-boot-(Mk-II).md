@@ -141,9 +141,8 @@ boot media preference:
 The following commands are meant to be issued within the U-Boot source
 directory.
 
-Enable Verified Boot support, disable the U-Boot command line and external
-environment variables to further lock down physical serial console access, as
-follows:
+The U-Boot configuration enables Verified Boot, disables the U-Boot command line and external
+environment variables and finally disables serial console access pads:
 
 ```
 wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-two/usbarmory-mark-two_defconfig -O configs/usbarmory-mark-two_defconfig
