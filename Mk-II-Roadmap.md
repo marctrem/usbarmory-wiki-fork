@@ -12,10 +12,12 @@ This page provides information on the development plan and current progress.
 ## Current progress
 
 The Mk II alpha has been [manufactured](https://twitter.com/AndreaBarisani/status/1133263401826816000)
-and it is currently in testing phase.
+and it is currently in pre-production phase.
 
 The porting of Mk I software framework, and integration of Mk II specific
-drivers, is underway and mostly completed.
+drivers, is completed.
+
+The design has been validated and the first pre-production batch is being manufactured.
 
 ## System-on-Chip
 
