@@ -47,7 +47,7 @@ The following sections provide information specific to each USB armory model.
 * [Debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
 * [Boot modes](https://github.com/inversepath/usbarmory/wiki/Boot-Modes-(Mk-II))
 * [Bluetooth](https://github.com/inversepath/usbarmory/wiki/Bluetooth)
-* [I²C](https://github.com/inversepath/usbarmory/wiki/I2C-(Mk-II))
+* [I²C](https://github.com/inversepath/usbarmory/wiki/I²C-(Mk-II))
 * Cryptography co-processor drivers: [DCP](https://github.com/inversepath/mxs-dcp) (i.MX6ULZ), [CAAM](https://github.com/inversepath/caam-keyblob) (i.MX6UL)
 
 # USB armory Mk I
@@ -70,7 +70,7 @@ The following sections provide information specific to each USB armory model.
 * [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-I))
 * [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures)
 * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
-* Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I2C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
+* Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I²C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
 * Cryptography co-processor driver: [SCCv2](https://github.com/inversepath/mxc-scc2) (i.MX53)
 
 *Note*: the USB armory Mk I reached End-of-life (EOL) and is no longer available.
