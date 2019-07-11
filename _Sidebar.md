@@ -22,6 +22,7 @@
 * [Debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
 * [Boot modes](https://github.com/inversepath/usbarmory/wiki/Boot-Modes-(Mk-II))
 * [Bluetooth](https://github.com/inversepath/usbarmory/wiki/Bluetooth)
+* [I²C](https://github.com/inversepath/usbarmory/wiki/I2C-(Mk-II))
 
 ## USB armory Mk I
 
