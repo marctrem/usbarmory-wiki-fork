@@ -182,3 +182,7 @@ The ```verify``` and ```debugmode``` flags can also be used as debugging aid to 
 ```
 ./imx_usb -v -d u-boot.imx
 ```
+
+# USB VID/PID
+
+For custom drivers, or whenever Linux gadget default USB VID/PID values are not desired, the USB armory has been assigned a USB Product ID through the [pid.codes](http://pid.codes/) project: ID [1209:2702](http://pid.codes/1209/2702/).
