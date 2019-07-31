@@ -140,6 +140,40 @@ Apply the following patches for USB armory Mk II support within U-Boot:
 The following commands are meant to be issued within the U-Boot source
 directory.
 
+The default boot media is the external micro SD card, if you wish to compile a
+bootloader for the internal eMMC card the following changes are required:
+
+```
+# disable CONFIG_SYS_BOOT_DEV_MICROSD
+# enable  CONFIG_SYS_BOOT_DEV_EMMC
+sed -i -e 's/CONFIG_SYS_BOOT_DEV_MICROSD=y/# CONFIG_SYS_BOOT_DEV_MICROSD is not set/' configs/usbarmory-mark-two_defconfig
+sed -i -e 's/# CONFIG_SYS_BOOT_DEV_EMMC is not set/CONFIG_SYS_BOOT_DEV_EMMC=y/' configs/usbarmory-mark-two_defconfig
+```
+
+The bootloader boot mode must be changed to enable Verified Boot, in doing so,
+to perform the step later described in _Verifying HAB (pre-activation)_, it is
+a good idea to leave the bootloader command line available before creating
+production images:
+
+```
+# disable CONFIG_SYS_BOOT_MODE_NORMAL
+# enable  CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN
+sed -i -e 's/CONFIG_SYS_BOOT_MODE_NORMAL=y/# CONFIG_SYS_BOOT_MODE_NORMAL is not set/' configs/usbarmory-mark-two_defconfig
+sed -i -e 's/# CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN is not set/CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN=y/' configs/usbarmory-mark-two_defconfig
+```
+
+After successful activation, see _Activate HAB_, remember to re-compile the
+bootloader with the command line disabled, changing the boot mode as follows
+and repeating the subsequent steps:
+
+```
+# disable CONFIG_SYS_BOOT_MODE_NORMAL, CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN
+# enable  CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED
+sed -i -e 's/CONFIG_SYS_BOOT_MODE_NORMAL=y/# CONFIG_SYS_BOOT_MODE_NORMAL is not set/' configs/usbarmory-mark-two_defconfig
+sed -i -e 's/CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN=y/# CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN is not set/' configs/usbarmory-mark-two_defconfig
+sed -i -e 's/# CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED is not set/CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED=y/' configs/usbarmory-mark-two_defconfig
+```
+
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
 [Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md),
@@ -155,40 +189,6 @@ make distclean
 make usbarmory-mark-two_config
 make tools CONFIG_MKIMAGE_DTC_PATH="scripts/dtc/dtc"
 make dtbs ARCH=arm CONFIG_MKIMAGE_DTC_PATH="scripts/dtc/dtc"
-```
-
-The default boot media is the external micro SD card, if you wish to compile a
-bootloader for the internal eMMC card the following is required:
-
-```
-# disable CONFIG_SYS_BOOT_DEV_MICROSD
-# enable  CONFIG_SYS_BOOT_DEV_EMMC
-sed -i -e 's/CONFIG_SYS_BOOT_DEV_MICROSD=y/# CONFIG_SYS_BOOT_DEV_MICROSD is not set/' .config
-sed -i -e 's/# CONFIG_SYS_BOOT_DEV_EMMC is not set/CONFIG_SYS_BOOT_DEV_EMMC=y/' .config
-```
-
-The bootloader boot mode must now be changed to enable Verified Boot.
-
-To perform the step later described in _Verifying HAB (pre-activation)_ it is a
-good idea to leave the bootloader command line available before creating
-production images:
-
-```
-# disable CONFIG_SYS_BOOT_MODE_NORMAL
-# enable  CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN
-sed -i -e 's/CONFIG_SYS_BOOT_MODE_NORMAL=y/# CONFIG_SYS_BOOT_MODE_NORMAL is not set/' .config
-sed -i -e 's/# CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN is not set/CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN=y/' .config
-```
-
-After successful activation, see _Activate HAB_, remember to re-compile the
-bootloader with the command line disabled, changing the boot mode as follows:
-
-```
-# disable CONFIG_SYS_BOOT_MODE_NORMAL, CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN
-# enable  CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED
-sed -i -e 's/CONFIG_SYS_BOOT_MODE_NORMAL=y/# CONFIG_SYS_BOOT_MODE_NORMAL is not set/' .config
-sed -i -e 's/CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN=y/# CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN is not set/' .config
-sed -i -e 's/# CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED is not set/CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED=y/' .config
 ```
 
 Prepare image tree blob (itb) file according to the image tree source (its)
