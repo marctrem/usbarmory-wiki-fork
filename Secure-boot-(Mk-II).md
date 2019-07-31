@@ -127,26 +127,18 @@ openssl req -batch -new -x509 -key ${KEYS_PATH}/usbarmory.key -out ${KEYS_PATH}/
 Download and extract U-Boot sources:
 
 ```
-wget ftp://ftp.denx.de/pub/u-boot/u-boot-2019.04.tar.bz2
-tar xvf u-boot-2019.04.tar.bz2 && cd u-boot-2019.04
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2019.07.tar.bz2
+tar xvf u-boot-2019.07.tar.bz2 && cd u-boot-2019.07
 ```
 
-Apply the patch for USB armory Mk II support within U-Boot, according to your
-boot media preference:
+Apply the following patches for USB armory Mk II support within U-Boot:
 
-* External microSD: [0001-USB-armory-mark-two-alpha-uSD.patch](https://github.com/inversepath/usbarmory/tree/master/software/u-boot/0001-USB-armory-mark-two-alpha-uSD.patch)
+* [0001-ARM-mx6-add-support-for-USB-armory-Mk-II-board.patch](https://github.com/inversepath/usbarmory/tree/master/software/u-boot/0001-ARM-mx6-add-support-for-USB-armory-Mk-II-board.patch)
 
-* Internal eMMC: [0001-USB-armory-mark-two-alpha-eMMC.patch](https://github.com/inversepath/usbarmory/tree/master/software/u-boot/0001-USB-armory-mark-two-alpha-eMMC.patch)
+* [0001-Drop-linker-generated-array-creation-when-CONFIG_CMD.patch](https://github.com/inversepath/usbarmory/tree/master/software/u-boot/0001-Drop-linker-generated-array-creation-when-CONFIG_CMD.patch)
 
 The following commands are meant to be issued within the U-Boot source
 directory.
-
-The U-Boot configuration enables Verified Boot, disables the U-Boot command line and external
-environment variables and finally disables serial console access pads:
-
-```
-wget https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-two/usbarmory-mark-two_defconfig -O configs/usbarmory-mark-two_defconfig
-```
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
@@ -162,34 +154,62 @@ export CROSS_COMPILE=arm-none-eabi- # set to your arm toolchain prefix
 make distclean
 make usbarmory-mark-two_config
 make tools CONFIG_MKIMAGE_DTC_PATH="scripts/dtc/dtc"
+make dtbs ARCH=arm CONFIG_MKIMAGE_DTC_PATH="scripts/dtc/dtc"
 ```
 
-Compile the Flattened Device Tree file by leaving room for later public key
-insertion:
+The default boot media is the external micro SD card, if you wish to compile a
+bootloader for the internal eMMC card the following is required:
 
 ```
-# adjust the USBARMORY_GIT variable according to your environment
-scripts/dtc/dtc -p 0x1000 ${USBARMORY_GIT}/software/secure_boot/mark-two/pubkey.dts -O dtb -o pubkey.dtb
+# disable CONFIG_SYS_BOOT_DEV_MICROSD
+# enable  CONFIG_SYS_BOOT_DEV_EMMC
+sed -i -e 's/CONFIG_SYS_BOOT_DEV_MICROSD=y/# CONFIG_SYS_BOOT_DEV_MICROSD is not set/' .config
+sed -i -e 's/# CONFIG_SYS_BOOT_DEV_EMMC is not set/CONFIG_SYS_BOOT_DEV_EMMC=y/' .config
+```
+
+The bootloader boot mode must now be changed to enable Verified Boot.
+
+To perform the step later described in _Verifying HAB (pre-activation)_ it is a
+good idea to leave the bootloader command line available before creating
+production images:
+
+```
+# disable CONFIG_SYS_BOOT_MODE_NORMAL
+# enable  CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN
+sed -i -e 's/CONFIG_SYS_BOOT_MODE_NORMAL=y/# CONFIG_SYS_BOOT_MODE_NORMAL is not set/' .config
+sed -i -e 's/# CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN is not set/CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN=y/' .config
+```
+
+After successful activation, see _Activate HAB_, remember to re-compile the
+bootloader with the command line disabled, changing the boot mode as follows:
+
+```
+# disable CONFIG_SYS_BOOT_MODE_NORMAL, CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN
+# enable  CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED
+sed -i -e 's/CONFIG_SYS_BOOT_MODE_NORMAL=y/# CONFIG_SYS_BOOT_MODE_NORMAL is not set/' .config
+sed -i -e 's/CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN=y/# CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN is not set/' .config
+sed -i -e 's/# CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED is not set/CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED=y/' .config
 ```
 
 Prepare image tree blob (itb) file according to the image tree source (its)
 template in the repository:
 
 ```
+# adjust the USBARMORY_GIT variable according to your environment
 tools/mkimage -D "-I dts -O dtb -p 2000 -i $KERNEL_SRC" -f ${USBARMORY_GIT}/software/secure_boot/mark-two/usbarmory.its usbarmory.itb
 ```
 
 Sign the itb file:
 
 ```
-tools/mkimage -D "-I dts -O dtb -p 2000" -F -k ${KEYS_PATH} -K pubkey.dtb -r usbarmory.itb
+tools/mkimage -D "-I dts -O dtb -p 2000" -F -k ${KEYS_PATH} -K arch/arm/dts/imx6ull-usbarmory.dtb -r usbarmory.itb
 ```
 
 Now the U-Boot image can be compiled, with inclusion of the embedded public
 key:
 
 ```
-make ARCH=arm EXT_DTB=pubkey.dtb
+make ARCH=arm
 ```
 
 The compilation results in the two following files:
@@ -302,7 +322,8 @@ crucible -s -m IMX6UL -r 1 -b 2 read SRK_LOCK
 ```
 ### Verifying HAB (pre-activation)
 
-After rebooting the USB armory it can be verified, from the U-Boot shell,
+After rebooting the USB armory it can be verified, from the U-Boot shell and
+only when configuration setting `CONFIG_SYS_BOOT_MODE_VERIFIED_OPEN` is set,
 that no HAB events are generated. If no errors are present then the bootloader
 image was correctly authenticated:
 
@@ -394,6 +415,10 @@ with keys corresponding to the fused hashes.
 The security state log (see _Verify HAB configuration_) should now print a
 `Trusted State detected` when the relevant cryptographic co-processor module is
 loaded.
+
+For security purposes, the U-Boot image should now be re-compiled with
+`CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED` enabled, to ensure that command line
+access is disabled.
 
 ### Verify HAB configuration (i.MX6ULL/i.MX6ULZ)
 
