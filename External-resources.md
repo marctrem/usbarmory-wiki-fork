@@ -1,4 +1,4 @@
-### SoC documentation (Mk II)
+### SoC documentation
 
 * Mk II - i.MX6ULZ
   * [i.MX6ULZ Reference Manual](https://www.nxp.com/webapp/Download?colCode=IMX6ULZRM)
