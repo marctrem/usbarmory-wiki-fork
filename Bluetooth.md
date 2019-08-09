@@ -53,7 +53,7 @@ source [find target/nrf52.cfg]
 4. Create the interface file as follows:
 
 ```
-cp ./tcl/interface/imx-native.cfg .
+cp ./tcl/interface/imx-native.cfg ./usbarmory-mark-two.cfg
 sed -i -e 's/imx_gpio_swd_nums 1 6/imx_gpio_swd_nums 4 6/'
 
 ```
