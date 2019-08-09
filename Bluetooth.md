@@ -27,3 +27,75 @@ arbitrary user firmware. The nRF52832 SoC features an ARM Cortex-M4 CPU with
 512 kB of internal Flash and 64 kB of RAM.
 
   * [nRF528832 Datasheet](https://www.nordicsemi.com/-/media/Software-and-other-downloads/Product-Briefs/nRF52832-product-brief.pdf?la=en)
+
+## Using OpenOCD for JTAG access
+
+The following instructions have been tested on the USB armory Mk II using its
+[standard Debian image](https://github.com/inversepath/usbarmory-debian-base_image).
+
+Download and compile OpenOCD from its github repository:
+
+```
+git clone https://github.com/ntfreak/openocd
+cd openocd
+git submodule init
+git submodule update
+libtoolize --force
+aclocal
+autoheader
+automake --force-missing --add-missing
+autoconf
+./configure --disable-internal-libjaylink --disable-jlink --enable-imx_gpio
+make
+```
+
+Create a `ANNA-B112.cfg` file with the following contents:
+
+```
+source [find interface/imx-native.cfg] 
+transport select swd
+source [find target/nrf52.cfg]
+```
+
+Launch OpenOCD
+
+```
+sudo ./src/openocd --search tcl -f ANNA-B112.cfg
+```
+
+The output should be similar to the following one:
+
+```
+Open On-Chip Debugger 0.10.0+dev-00924-g16496488 (2019-08-09-12:39)
+Licensed under GNU GPL v2
+For bug reports, read
+        http://openocd.org/doc/doxygen/bugs.html
+Info : Listening on port 6666 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Info : imx_gpio GPIO JTAG/SWD bitbang driver
+Info : SWD only mode enabled (specify tck, tms, tdi and tdo gpios to add JTAG mode)
+Info : imx_gpio mmap: pagesize: 4096, regionsize: 131072
+Info : clock speed 1000 kHz
+Info : SWD DPIDR 0x2ba01477
+Info : nrf52.cpu: hardware has 6 breakpoints, 4 watchpoints
+Info : Listening on port 3333 for gdb connections
+Info : accepting 'telnet' connection on tcp/4444
+```
+
+Now GDB (port 3333) and the interactive console (port 4444) can be used for
+full access to the SoC ARM Cortex-M4 CPU and flash memory.
+
+The following example shows how to read the SoC CPU state:
+
+```
+telnet 127.0.0.1 4444
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+Open On-Chip Debugger
+> init
+> nrf52.cpu curstate
+running
+```
+
+Type `help` for all available commands.
