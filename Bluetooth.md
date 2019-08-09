@@ -33,34 +33,35 @@ arbitrary user firmware. The nRF52832 SoC features an ARM Cortex-M4 CPU with
 The following instructions have been tested on the USB armory Mk II using its
 [standard Debian image](https://github.com/inversepath/usbarmory-debian-base_image).
 
-Download and compile OpenOCD from its github repository:
+1. Download and compile OpenOCD from its github repository:
 
 ```
 git clone https://github.com/ntfreak/openocd
 cd openocd
-git submodule init
-git submodule update
-libtoolize --force
-aclocal
-autoheader
-automake --force-missing --add-missing
-autoconf
+./bootstrap
 ./configure --disable-internal-libjaylink --disable-jlink --enable-imx_gpio
 make
 ```
 
-Create a `ANNA-B112.cfg` file with the following contents:
+2. Create the `ANNA-B112.cfg` configuration file with the following contents:
 
 ```
-source [find interface/imx-native.cfg] 
 transport select swd
 source [find target/nrf52.cfg]
 ```
 
-Launch OpenOCD
+4. Create the interface file as follows:
 
 ```
-sudo ./src/openocd --search tcl -f ANNA-B112.cfg
+cp ./tcl/interface/imx-native.cfg .
+sed -i -e 's/imx_gpio_swd_nums 1 6/imx_gpio_swd_nums 4 6/'
+
+```
+
+3. Launch OpenOCD
+
+```
+sudo ./src/openocd --search ./tcl -f usbarmory-mark-two.cfg -f ANNA-B112.cfg
 ```
 
 The output should be similar to the following one:
@@ -81,6 +82,8 @@ Info : nrf52.cpu: hardware has 6 breakpoints, 4 watchpoints
 Info : Listening on port 3333 for gdb connections
 Info : accepting 'telnet' connection on tcp/4444
 ```
+
+4. Test OpenOCD
 
 Now GDB (port 3333) and the interactive console (port 4444) can be used for
 full access to the SoC ARM Cortex-M4 CPU and flash memory.
