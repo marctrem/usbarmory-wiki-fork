@@ -20,7 +20,7 @@ The following mobile applications are provided by u-blox for module evaluation:
 
 # Inital configuration
 
-A one-time configuration, to force the internal RC oscillator as clock source,
+A one-time configuration, to force the internal RC oscillator as low frequency clock source,
 must be performed through the following AT commands:
 
 ```
