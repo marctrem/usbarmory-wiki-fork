@@ -21,7 +21,7 @@ The following page provides useful information on how to get started:
   * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
   * [Debian image preparation](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
   * Embedded INTERLOCK distribution: [Mk II](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md), [Mk I](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
-  * Arch Linux ARM: [Mk II](https://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mkii), [Mk I](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
+  * Arch Linux ARM: [Mk II](https://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mk-ii), [Mk I](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
   * [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
   * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
