@@ -18,6 +18,18 @@ The following mobile applications are provided by u-blox for module evaluation:
   * iOS: [u-blox BLE](https://apps.apple.com/us/app/u-blox-ble/id575523395)
   * Android: [u-blox BLE](https://play.google.com/store/apps/details?id=com.ublox.BLE&hl=en)
 
+# Inital configuration
+
+A one-time configuration, to force the internal RC oscillator as clock source,
+must be performed through the following AT commands:
+
+```
+picocom -b 115200 /dev/ttymxc0
+
+AT+UPROD=1
+AT+UPRODLFCLK=0,16,2
+```
+
 # OpenCPU mode
 
 The ANNA-B112 module supports an "OpenCPU" option to allow arbitrary firmware,
