@@ -91,7 +91,7 @@ echo "27" > /sys/class/gpio/export
 echo "out" > /sys/class/gpio/gpio9/direction
 echo "out" > /sys/class/gpio/gpio26/direction
 echo "out" > /sys/class/gpio/gpio27/direction
-# set SW1 and SW2 to low
+# set SWITCH_1 and SWITCH_2 to low
 echo "0" > /sys/class/gpio/gpio27/value
 echo "0" > /sys/class/gpio/gpio26/value
 # toggle RESET_N
@@ -136,7 +136,7 @@ minicom this can be done using shortcut Ctrl+a+S.
 ## Place the module in normal mode
 
 ```
-# set SW1 and SW2 to high
+# set SWITCH_1 and SWITCH_2 to high
 echo "1" > /sys/class/gpio/gpio27/value
 echo "1" > /sys/class/gpio/gpio26/value
 # toggle RESET_N
