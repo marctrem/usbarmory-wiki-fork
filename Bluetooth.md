@@ -81,7 +81,7 @@ subdirectory, which are used during the update:
  * u-connect application:  `ANNA-B112-SW-x.x.x.bin`
  * update metadata: `ANNA-B112-Configuration-x.x.x.json`
 
-## Place the module in bootloader mode
+## Enter bootloader mode
 
 ```
 # configure GPIOs
@@ -133,7 +133,7 @@ x <Address>
 2. Send the file `ANNA-B112-SW-x.x.x.bin` using xmodem transfer mode, with
 minicom this can be done using shortcut Ctrl+a+S.
 
-## Place the module in normal mode
+## Exit bootloader mode
 
 ```
 # set SWITCH_1 and SWITCH_2 to high
