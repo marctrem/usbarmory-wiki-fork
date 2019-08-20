@@ -119,7 +119,7 @@ x <Address>
 c SOFTDEVICE <Size> <Crc32>
 ```
 
-## Update the u-connect firmware
+## Update the u-connect application
 
 The `ConnectivitySoftware` section of the update metadata contains the
 `Address` value to be used in the following commands:
