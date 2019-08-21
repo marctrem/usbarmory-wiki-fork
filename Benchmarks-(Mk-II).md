@@ -8,7 +8,10 @@ approximate reference and should be taken with a grain of salt.
 
 ## USB armory Mk II variants
 
-The USB armory Mk II i.MX6ULZ (P/N MCIMX6Z0DVM09AB) clocks at 900 MHz.
+The USB armory Mk II CPU is an ARM Cortex-A7, with an approximate efficiency
+rating of 1.9 DMIPS/MHz.
+
+The i.MX6ULZ CPU (P/N MCIMX6Z0DVM09AB) clocks at 900 MHz.
 
 The variant (available for custom orders, see [features
 comparison](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))),

@@ -8,8 +8,11 @@ approximate reference and should be taken with a grain of salt.
 
 ## USB armory Mk I variants
 
-The USB armory Mk I i.MX53 CPU clocks by default at 800 MHz, depending on the
-mounted SoC model the CPU can be optionally clocked at 1 GHz.
+The USB armory Mk I i.MX53 CPU is an ARM Cortex-A8, with an approximate
+efficiency rating of 2.0 DMIPS/MHz.
+
+The i.MX53 CPU clocks by default at 800 MHz, depending on the mounted SoC model
+the CPU can be optionally clocked at 1 GHz.
 
 Production runs (batch number 0415) mounting the automotive version (i.MX534,
 P/N MCIMX534AVV8C), which is officially advertised with a clock of 800 MHz,
