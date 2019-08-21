@@ -40,7 +40,7 @@ It should be noted that the USB armory ARM Cortex-A8 CPU includes the VFPLite fl
 
 ## OpenSSL
 
-The standard openssl speed test (-evp <algorithm> -elapsed) for the USB armory performed with the following OpenSSL version:
+The standard openssl speed test (`-evp <algorithm> -elapsed`) for the USB armory performed with the following OpenSSL version:
 ```
 OpenSSL 1.1.1c  28 May 2019
 platform: linux-armv4
