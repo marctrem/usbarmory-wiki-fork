@@ -1,10 +1,10 @@
-### How can I remove/insert the microSD card? (USB armory Mk I)
+### How can I remove/insert the microSD card? (Mk I)
 
 1. (official enclosure only, if present) To remove the microSD sliding cover push it outwards with your thumb, on the side of the memory card, and pull it simultaneously with your other hand index fingernail, on the opposite side.
 
 2. Please note that the microSD slot is with "hinge" type insertion and not a pull-push slot. In order to open it gently slide the closed metal hinge towards the opposite direction of the little arrow engraved on it, a small "click" indicates successful opening. Lift the hinge upwards and place the microSD card from the top, once inserted close it by putting the hinge back in position and by sliding it towards the arrow direction.
 
-### How can I remove/insert the microSD card? (USB armory Mk II)
+### How can I remove/insert the microSD card? (Mk II)
 
 The microSD slot is a "Push-Push" kind.
 
@@ -42,6 +42,12 @@ Install package 'locales' and then run ```dpkg-reconfigure locales```.
 
 Remove the CONFIG_USB_OTG kernel option on your host.
 
-### Why is LUKS not working? (USB armory Mk I)
+### Why is LUKS not working? (Mk I)
 
 There is a known issue in modern Linux kernels which breaks cryptsetup aes-xts-plain64 when the SAHARA driver (`sahara` kernel module) is loaded. For this reason it is recommended to blacklist the module when using LUKS on the USB armory.
+
+### No serial console with debug accessory (Mk II)
+
+The connection between the debug accessory and the target is supported only
+with the same orientation for both top layers (side with components for the
+accessory, side with LEDs for the USB armory).
