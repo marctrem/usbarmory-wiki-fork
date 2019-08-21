@@ -32,7 +32,7 @@ The [nbench](https://github.com/santoshsk007/nbench) utility is compiled with th
 
 ## OpenSSL
 
-The standard openssl speed test (-evp <algorithm> -elapsed) for the USB armory performed with the following OpenSSL version:
+The standard openssl speed test (`-evp <algorithm> -elapsed`) for the USB armory performed with the following OpenSSL version:
 ```
 OpenSSL 1.1.0k  28 May 2019
 platform: linux-armv4
