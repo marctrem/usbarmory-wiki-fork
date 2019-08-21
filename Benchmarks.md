@@ -1,10 +1,12 @@
 The following benchmarks aim to provide an approximate reference for USB armory
-CPU performance. 
+CPU performance.
 
 Please keep in mind that all benchmarks are affected by a multitude of factors
 including, and not limited to, compilation options, kernel options and
 configuration, running processes, etc. These results provide only an
 approximate reference and should be taken with a grain of salt.
+
+All tests have been performed under Arch Linux ARM.
 
 ## USB armory Mk I variants
 
@@ -32,9 +34,10 @@ The [nbench](https://github.com/santoshsk007/nbench) utility is compiled with th
 -s -static -Wall -O3 -mfpu=neon -mfloat-abi=hard -mcpu=cortex-a8 -mtune=cortex-a8 -fomit-frame-pointer -marm -funroll-loops -ffast-math
 ```
 
-| Device          | Memory Index  | Integer Index | Floating-Point Index |
-|:----------------|--------------:|--------------:|---------------------:|
-| Mk I  - 800 MHz |         5.489 |         5.374 |                1.664 |
+| Device         | Memory Index  | Integer Index | Floating-Point Index |
+|:---------------|--------------:|--------------:|---------------------:|
+| Mk I -   1 GHz |         6.865 |         6.696 |                2.074 |
+| Mk I - 800 MHz |         5.489 |         5.374 |                1.664 |
 
 It should be noted that the USB armory ARM Cortex-A8 CPU includes the VFPLite floating point unit which is not as fast as other ARM FPUs.
 
@@ -49,9 +52,15 @@ compiler: gcc -fPIC -pthread -Wa,--noexecstack -march=armv7-a -mfloat-abi=hard -
 
 | Device         | Algorithm   | 16 bytes  | 64 bytes  | 256 bytes | 1024 bytes | 8192 bytes |
 |:---------------|:------------|----------:|----------:|----------:|-----------:|-----------:|
+| Mk I -   1 GHz | aes-128-cbc | 29687.22k | 39413.65k | 43330.99k |  44437.50k |  44763.82k |
+| Mk I -   1 GHz | aes-256-cbc | 23856.62k | 29832.90k | 32042.33k |  32642.73k |  32814.42k |
+| Mk I -   1 GHz | md5         |  8104.33k | 27627.54k | 76176.04k | 135892.65k | 176289.11k |
+| Mk I -   1 GHz | sha1        |  7774.18k | 25597.29k | 68051.54k | 115800.06k | 145615.53k |
+| Mk I -   1 GHz | sha256      |  6440.22k | 19502.38k | 44834.65k |  67462.83k |  79055.53k |
+| Mk I -   1 GHz | sha512      |  3439.53k | 13391.85k | 24435.63k |  36465.32k |  42737.66k |
 | Mk I - 800 MHz | aes-128-cbc | 23138.08k | 30913.64k | 34063.79k |  34768.21k |  34856.96k |
 | Mk I - 800 MHz | aes-256-cbc | 18633.98k | 23418.56k | 25074.69k |  25591.81k |  25665.54k |
-| Mk I - 800 MHz | md5         | 6900.10k  | 23245.16k | 62323.29k | 108426.58k | 138171.73k |
-| Mk I - 800 MHz | sha1        | 6582.23k  | 21377.34k | 55330.73k |  92574.38k | 114890.07k |
-| Mk I - 800 MHz | sha256      | 5297.29k  | 15914.39k | 35794.94k |  53226.50k |  61794.99k |
-| Mk I - 800 MHz | sha512      | 2528.83k  | 10322.69k | 18838.95k |  28400.64k |  33314.13k |
+| Mk I - 800 MHz | md5         |  6900.10k | 23245.16k | 62323.29k | 108426.58k | 138171.73k |
+| Mk I - 800 MHz | sha1        |  6582.23k | 21377.34k | 55330.73k |  92574.38k | 114890.07k |
+| Mk I - 800 MHz | sha256      |  5297.29k | 15914.39k | 35794.94k |  53226.50k |  61794.99k |
+| Mk I - 800 MHz | sha512      |  2528.83k | 10322.69k | 18838.95k |  28400.64k |  33314.13k |
