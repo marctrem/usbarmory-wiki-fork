@@ -8,7 +8,7 @@ The USB armory Mk II has the following components accessible as I²C slaves:
 | 0x48    | NXP A71CH                 | Cryptographic co-processor        |           400 kHz |
 | 0x60    | Microchip ATECC608A       | Cryptographic co-processor        |             1 MHz |
 | 0x61    | Texas Instruments TUSB320 | Type-C plug port controller       |           400 kHz |
-| 0x31    | ON Semiconductor FUSB303   | Type-C receptacle port controller |           400 kHz |
+| 0x31    | ON Semiconductor FUSB303  | Type-C receptacle port controller |           400 kHz |
 
 The following example shows how to perform detection of on-board slaves on a
 Debian installation running on the USB armory Mk II:
@@ -32,7 +32,7 @@ Continue? [Y/n] Y
 70: -- -- -- -- -- -- -- --
 ```
 
-The following example shows how to read the `DEVICE ID` register of the TUSB320
+The following example shows how to read the `DEVICE ID` register of the FUSB303
 Type-C receptacle port controller:
 
 ```
