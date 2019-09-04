@@ -45,5 +45,3 @@ The enclosure can be ordered at [Inverse Path](https://inversepath.com/usbarmory
 ![BG enclosure](https://github.com/bgamari/usb-armory-case/blob/master/render.png)
 
 * Lars Pötter: [https://www.youmagine.com/designs/case-for-usb-armory](https://www.youmagine.com/designs/case-for-usb-armory)
-
-![LP enclosure](https://d36c0vbvwjb9cx.cloudfront.net/uploads/image/file/82445/medium_usbarmory_bottom.png)
