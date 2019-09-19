@@ -49,6 +49,7 @@ The following sections provide information specific to each USB armory model.
 * [Bluetooth](https://github.com/inversepath/usbarmory/wiki/Bluetooth)
 * [I²C](https://github.com/inversepath/usbarmory/wiki/I²C-(Mk-II))
 * Cryptography co-processor drivers: [DCP](https://github.com/inversepath/mxs-dcp) (i.MX6ULZ), [CAAM](https://github.com/inversepath/caam-keyblob) (i.MX6UL)
+* Peripheral control tool: [armoryctl](https://github.com/inversepath/armoryctl)
 
 # USB armory Mk I
 
