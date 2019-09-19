@@ -10,6 +10,12 @@ The USB armory Mk II has the following components accessible as I²C slaves:
 | 0x61    | Texas Instruments TUSB320 | Type-C plug port controller       |           400 kHz |
 | 0x31    | ON Semiconductor FUSB303  | Type-C receptacle port controller |           400 kHz |
 
+### Control tool
+
+The USB armory Mk II I²C slaves can be queried/controlled using [armoryctl](https://github.com/inversepath/armoryctl).
+
+### Manual access
+
 The following example shows how to perform detection of on-board slaves on a
 Debian installation running on the USB armory Mk II:
 
@@ -42,5 +48,5 @@ i2cget -y 0 0x31 0x01
 
 ## External I²C slaves
 
-Using the [Debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
+Using the [debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
 external I²C slaves can be accessed.
