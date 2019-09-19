@@ -21,6 +21,10 @@ The following mobile applications are provided by u-blox for module evaluation:
   * iOS: [u-blox BLE](https://apps.apple.com/us/app/u-blox-ble/id575523395)
   * Android: [u-blox BLE](https://play.google.com/store/apps/details?id=com.ublox.BLE&hl=en)
 
+# Control tool
+
+The [armoryctl](https://github.com/inversepath/armoryctl) can be used to perform some of the procedures illustrated below.
+
 # Serial connection
 
 All serial AT commands can be issued with your favorite terminal program
@@ -40,6 +44,8 @@ AT+UPROD=1
 AT+UPRODLFCLK=0,16,2
 ```
 
+This can also be accomplished with [armoryctl](https://github.com/inversepath/armoryctl) `ble rc_lfck (flash|at)` command.
+
 # Toggling visibility
 
 The following AT commands set BLE as non discoverable, non pairable, non
@@ -58,10 +64,14 @@ The following command allow sto permanently store the configuration
 AT&W
 ```
 
+This can also be accomplished with [armoryctl](https://github.com/inversepath/armoryctl) `ble (enable|disable)` commands.
+
 # Firmware update
 
 The following procedure allows to update the u-blox connectivity software
-(u-connect):
+(u-connect).
+
+This can also be accomplished with [armoryctl](https://github.com/inversepath/armoryctl) `ble update` command.
 
 ## Check the running firmware version
 
