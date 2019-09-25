@@ -1,5 +1,7 @@
 Welcome to the USB armory wiki.
 
+![USB armory Mk II](images/armory-mark-two-enclosure.jpg)
+
 The USB armory from [Inverse Path](https://inversepath.com) is an open source
 hardware design, implementing a flash drive sized computer.
 
