@@ -63,7 +63,7 @@ The following sections provide information specific to each USB armory model.
   * SoC: NXP i.MX53 ARM® Cortex™-A8 800Mhz
   * RAM: 512MB DDR3
   * Storage: external microSD
-  * USB Type-A: OTG plug
+  * USB 2.0 over Type-A: OTG plug
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
 * [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I))
