@@ -39,7 +39,7 @@ The following sections provide information specific to each USB armory model.
   * RAM: 512MB/1GB DDR3
   * Storage: internal 16GB eMMC + external microSD
   * Bluetooth module: u-blox ANNA-B112 BLE
-  * USB Type-C ports: OTG receptacle + UFP plug
+  * USB 2.0 over USB-C: OTG receptacle + UFP plug
   * Secure elements: Microchip ATECC608A + NXP A71CH
 * [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))

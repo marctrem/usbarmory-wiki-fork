@@ -1,3 +1,10 @@
+
+The USB armory Mk II supports USB 2.0 connectivity over USB-C connectors, one
+dual role One-The-Go (OTG) receptacle and one Upstream Facing Port (UFP) plug.
+
+The USB armory Mk I supports USB 2.0 connectivity over a single One-The-Go
+(OTG) Type-A plug.
+
 # CDC Ethernet
 
 This mode allows to interact with the USB armory just like a standard TCP/IP
