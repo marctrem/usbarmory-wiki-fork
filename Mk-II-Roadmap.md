@@ -11,23 +11,17 @@ This page provides information on the development plan and current progress.
 
 ## Current progress
 
-The Mk II alpha has been [manufactured](https://twitter.com/AndreaBarisani/status/1133263401826816000)
-and it is currently in pre-production phase.
+The Mk II initial prototype (rev. α) and validation prototype (rev. β) have been [manufactured](https://twitter.com/AndreaBarisani/status/1133263401826816000) and tested, the final design is currently in pre-production phase and pre-orders are accepted on [Crowd Supply](https://www.crowdsupply.com/f-secure/usb-armory-mk-ii).
 
-The porting of Mk I software framework, and integration of Mk II specific
-drivers, is completed.
-
-The design has been validated and the first pre-production batch is being manufactured.
-
-Ordering information will be published in Q3 2019.
+The porting of the Mk I software framework, and integration of Mk II specific
+drivers, is completed and available on [github](https://github.com/inversepath).
 
 ## System-on-Chip
 
-The USB armory Mk II default System-on-Chip (SoC) is planned to be the NXP
-i.MX6ULZ, P/N MCIMX6Z0DVM09AB (900 MHz).
+The USB armory Mk II default System-on-Chip (SoC) is the NXP i.MX6ULZ, P/N MCIMX6Z0DVM09AB (900 MHz).
 
 An SoC variant using the pin-to-pin compatible i.MX6UL, P/N MCIMX6G3DVM05AB (528
-MHz) is planned, for custom orders, to provide additional security features such as OTF DRAM
+MHz) is available, for custom orders, to provide additional security features such as OTF DRAM
 encryption ([features comparison](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))),
 with the trade-off of a slower clock rate.
 
