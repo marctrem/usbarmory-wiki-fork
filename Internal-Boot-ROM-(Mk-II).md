@@ -2,7 +2,7 @@ The internal i.MX6UL Boot ROM is permanently set by the SoC manufacturer, for
 verification purposes its initial 92KB can be dumped with a custom
 [imx6ul_bootrom-dump utility](https://github.com/inversepath/usbarmory/blob/master/software/util/imx6ul_bootrom-dump.c).
 
-The last 4KB section is a protected aread and therefore not accessible.
+The last 4KB section is a protected area and therefore not accessible.
 
 ```
 $ gcc -o imx6ul_bootrom-dump imx6ul_bootrom-dump.c
