@@ -72,3 +72,5 @@
 ### Presentations
 
 * [Inverse Path](https://inversepath.com) - [Forging the USB armory](https://dev.inversepath.com/download/usbarmory/forging_the_usb_armory.pdf)
+* [F-Secure Foundry](http://foundry.f-secure.com) - [USB armory reloaded](https://github.com/abarisani/abarisani.github.io/raw/master/research/usbarmory/usb_armory_reloaded.pdf)
+
