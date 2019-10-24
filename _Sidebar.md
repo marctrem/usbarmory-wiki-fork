@@ -10,6 +10,7 @@
 * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
 * [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
 * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
+* [TamaGo](https://github.com/inversepath/tamago/tree/master/usbarmory)
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
 
 ## USB armory Mk II
