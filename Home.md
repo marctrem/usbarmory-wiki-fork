@@ -26,6 +26,7 @@ The following page provides useful information on how to get started:
   * Arch Linux ARM: [Mk II](https://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mk-ii), [Mk I](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
   * [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
   * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
+* [TamaGo](https://github.com/inversepath/tamago/tree/master/usbarmory)
 * [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
 
 The following sections provide information specific to each USB armory model.
