@@ -42,6 +42,7 @@
 * [GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [I²C](https://github.com/inversepath/usbarmory/wiki/I²C)
 * [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
+* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-one.html)
 
 ## Legal
 
