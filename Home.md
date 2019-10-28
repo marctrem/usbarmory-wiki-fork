@@ -112,7 +112,7 @@ ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY
 QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the CERN OHL v.1.2 for
 applicable conditions.
 
-## Terms of Use
+## Terms of Use and Compliance information
 
 The following Terms of Use apply to USB armory boards manufactured by Inverse
 Path and/or F-Secure and sold directly or through one of its resellers.
@@ -125,3 +125,4 @@ THEM AND AGREE TO BE LEGALLY BOUND BY THEM. IF YOU DO NOT AGREE TO ALL OF THE
 TERMS, DO NOT INSTALL OR USE THE USB ARMORY.
 
 * [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use)
+* [Compliance information](https://github.com/inversepath/usbarmory/wiki/Compliance-information)
