@@ -48,5 +48,6 @@
 ## Legal
 
 * [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use)
+* [Compliance information](https://github.com/inversepath/usbarmory/wiki/Compliance-information)
 * [Hardware License](https://ohwr.org/cernohl)
 * [Software License](https://www.gnu.org/licenses/gpl-3.0.en.html)
