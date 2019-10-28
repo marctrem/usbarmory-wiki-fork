@@ -2,8 +2,8 @@ Welcome to the USB armory wiki.
 
 ![USB armory Mk II](images/armory-mark-two-enclosure.jpg)
 
-The USB armory from [Inverse Path](https://inversepath.com) is an open source
-hardware design, implementing a flash drive sized computer.
+The USB armory from [F-Secure Foundry](https://foundry.f-secure.com) is an open
+source hardware design, implementing a flash drive sized computer.
 
 For a project introduction and information about purchasing an USB armory board
 please see information at the [USB armory project page](https://inversepath.com/usbarmory).
@@ -42,7 +42,8 @@ The following sections provide information specific to each USB armory model.
   * Bluetooth module: u-blox ANNA-B112 BLE
   * USB 2.0 over USB-C: OTG receptacle + UFP plug
   * Secure elements: Microchip ATECC608A + NXP A71CH
-* [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
+* [Introduction](https://github.com/inversepath/usbarmory/wiki/Mk-II-Introduction)
+* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-two.html)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk-II))

@@ -15,7 +15,7 @@
 
 ## USB armory Mk II
 
-* [Roadmap](https://github.com/inversepath/usbarmory/wiki/Mk-II-Roadmap)
+* [Introduction](https://github.com/inversepath/usbarmory/wiki/Mk-II-Introduction)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk-II))
@@ -26,6 +26,7 @@
 * [Bluetooth](https://github.com/inversepath/usbarmory/wiki/Bluetooth)
 * [I²C](https://github.com/inversepath/usbarmory/wiki/I²C-(Mk-II))
 * [Errata](https://github.com/inversepath/usbarmory/wiki/Errata-(Mk-II))
+* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-two.html)
 
 ## USB armory Mk I
 
