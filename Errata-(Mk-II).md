@@ -144,8 +144,8 @@ operation, as the majority of receptacle port use cases would not involved a
 sink connection to a host.
 
 In cases where users desire a sink connection to a host, using the receptacle
-port, the default firmware behavior can be overridden by software as the
-ENABLE command issued by the bootloader can be disabled.
+port, the default firmware behavior can be overridden by software as the ENABLE
+command issued by the bootloader can be disabled.
 
 Useful links:  
 https://e2e.ti.com/support/interface/f/138/p/707926/2608914  
