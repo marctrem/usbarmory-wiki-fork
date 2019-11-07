@@ -9,6 +9,7 @@ Bluetooth 5 and Bluetooth mesh.
 
   * [ANNA-B112 Datasheet](https://www.u-blox.com/sites/default/files/ANNA-B112_DataSheet_%28UBX-18011707%29.pdf)
   * [ANNA-B112 Protocol Specification](https://www.u-blox.com/sites/default/files/Bootloader_ProtocolSpec_%28UBX-17065404%29.pdf)
+  * [ANNA-B112 System Integration Manual](https://www.u-blox.com/sites/default/files/ANNA-B112_SIM_%28UBX-18009821%29.pdf)
   * [u-connect AT Commands Manual](https://www.u-blox.com/sites/default/files/u-connect-ATCommands-Manual_%28UBX-14044127%29.pdf)
   * [u-blox Extended Data Mode](https://www.u-blox.com/sites/default/files/ExtendedDataMode_ProtocolSpec_%28UBX-14044126%29.pdf)
   * [u-blox Low Energy Serial Port Service](https://www.u-blox.com/sites/default/files/LowEnergySerialPortService_ProtocolSpec_%28UBX-16011192%29.pdf)

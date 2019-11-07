@@ -26,9 +26,8 @@ setting.
 Both methods are implemented in the `ble rc_lfck (flash|at)` command of the
 [armoryctl](https://github.com/inversepath/armoryctl) tool.
 
-Following our bug report, u-blox now recommends grounding of the `XL_1` and
-`XL_2` pads, the ANNA-B112 System Integration Manual will be updated
-accordingly in the near future.
+Following our bug report, u-blox recommends grounding of the `XL_1` and `XL_2`
+pads in ANNA-B112 System Integration Manual revisions R06 or later.
 
 The final USB armory Mk II design remains unchanged to avoid re-certification
 and given the availability of an effective workaround.
