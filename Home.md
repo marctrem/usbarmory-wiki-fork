@@ -5,10 +5,11 @@ Welcome to the USB armory wiki.
 The USB armory from [F-Secure Foundry](https://foundry.f-secure.com) is an open
 source hardware design, implementing a flash drive sized computer.
 
-For a project introduction and information about purchasing an USB armory board
-please see information at the [USB armory project page](https://www.f-secure.com/en/consulting/foundry/usb-armory).
+The USB armory Mk II can be ordered at the following resellers:
+  * [Crowd Supply](https://www.crowdsupply.com/f-secure/usb-armory-mk-ii)
 
-The following page provides useful information on how to get started:
+Additionally custom/bulk order inquiries can be placed directly by contacting
+support@inversepath.com.
 
 * [**Getting started**](https://github.com/inversepath/usbarmory/wiki/Starting)
 * [Preparing a bootable image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
