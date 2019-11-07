@@ -1,7 +1,7 @@
 USB armory Mk II (rev. >= β)
 ============================
 
-Errata: unreliable serial connection to BLE module (solved with workaround)
+Errata: unreliable serial connection to BLE module (resolved with workaround)
 ---------------------------------------------------------------------------
 
 On a relevant percentage of pre-production boards (~25%) the serial connection
@@ -33,7 +33,7 @@ accordingly in the near future.
 The final USB armory Mk II design remains unchanged to avoid re-certification
 and given the availability of an effective workaround.
 
-Errata: instability with specific Linux kernel versions (solved on <= 4.19, >= 5.3)
+Errata: instability with specific Linux kernel versions (resolved on <= 4.19, >= 5.3)
 -----------------------------------------------------------------------------------
 
 The following commit introduces CPU/memory instability (kernel versions > 4.9):
@@ -48,14 +48,14 @@ the following one:
 
 The patch is included in kernels >= 5.3,
 
-Errata: glitch on CPU frequency changes (solved)
+Errata: glitch on CPU frequency changes (resolved)
 ------------------------------------------------
 
 When the Linux CPU governor is set `ondemand`, and on high CPU loads, the
 system is highly unstable on a relevant percentage of pre-production boards
 (~40%).
 
-The instability is solved by forcing the CPU governor to `performance`.
+The instability is resolved by forcing the CPU governor to `performance`.
 
 The issue appears similar to what reported at the following URL, which also
 includes a utility which reliably triggers the issue:
@@ -66,7 +66,7 @@ if the problem stemmed from a CPU frequency scaling problem.":
   https://boundarydevices.com/i-mx-6dq-u-boot-updates/
 
 The issue has been evaluated as the result of tight DDR calibration values,
-using a different round of DDR calibration solved the issue:
+using a different round of DDR calibration resolved the issue:
   https://github.com/inversepath/usbarmory/commit/99c8c4537b4e28c13a58563010fd7606024995f9
 
 Errata: charger detection issues
@@ -103,7 +103,7 @@ itself (due to Serial Download Protocol mode) prevents the issue.
 The issue remains unsolved as it has only been encountered on a single laptop,
 only on one of its ports and while using a Type-A adapter.
 
-Errata: Type-C plug/receptacle reset (plug: solved, receptacle: workaround)
+Errata: Type-C plug/receptacle reset (plug: resolved, receptacle: workaround)
 ---------------------------------------------------------------------------
 
 The FUSB303 Type-C port Controller, when in I2C mode, requires the ENABLE bit
