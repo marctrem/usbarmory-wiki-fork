@@ -5,11 +5,15 @@ Welcome to the USB armory wiki.
 The USB armory from [F-Secure Foundry](https://foundry.f-secure.com) is an open
 source hardware design, implementing a flash drive sized computer.
 
-The USB armory Mk II can be ordered at the following resellers:
+# Purchasing
+
+The USB armory Mk II can be purchased at the following resellers:
   * [Crowd Supply](https://www.crowdsupply.com/f-secure/usb-armory-mk-ii)
 
 Additionally custom/bulk order inquiries can be placed directly by contacting
 support@inversepath.com.
+
+# Documentation
 
 * [**Getting started**](https://github.com/inversepath/usbarmory/wiki/Starting)
 * [Preparing a bootable image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
@@ -84,22 +88,21 @@ The following sections provide information specific to each USB armory model.
 
 *Note*: the USB armory Mk I reached End-of-life (EOL) and is no longer available.
 
-## How to Contribute
+# How to Contribute
 
-Obtain a USB armory board and start developing! Please see ordering information
-at the [USB armory project page](https://www.f-secure.com/en/consulting/foundry/usb-armory).
+Get a USB armory board and start developing!
 
 A list of project ideas is available in the
 [Applications](https://github.com/inversepath/usbarmory/wiki/Applications) section.
 
 A discussion group is available on [Google Groups](https://groups.google.com/d/forum/usbarmory).
 
-## Support
+# Support
 
 If you think anything is missing on this wiki, or require further support,
 please email us at support@inversepath.com.
 
-## License
+# License
 
 USB armory | https://github.com/inversepath/usbarmory  
 Copyright (c) F-Secure Corporation
@@ -113,7 +116,7 @@ ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY
 QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the CERN OHL v.1.2 for
 applicable conditions.
 
-## Terms of Use and Compliance information
+# Terms of Use and Compliance information
 
 The following Terms of Use apply to USB armory boards manufactured by Inverse
 Path and/or F-Secure and sold directly or through one of its resellers.

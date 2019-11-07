@@ -6,9 +6,9 @@ The USB armory Mk II is the successor of the previous Mk I model.
 ![Mk II Top](images/armory-mark-two-top.png)
 ![Mk II Bottom](images/armory-mark-two-bottom.png)
 
-## Ordering
+## Purchasing
 
-The Mk II can be ordered at the following resellers:
+The Mk II can be purchased at the following resellers:
   * [Crowd Supply](https://www.crowdsupply.com/f-secure/usb-armory-mk-ii)
 
 Additionally custom/bulk order inquiries can be placed directly by contacting
