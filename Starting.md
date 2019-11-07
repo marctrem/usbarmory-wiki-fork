@@ -39,8 +39,7 @@ microSD card (Mk I, Mk II) or the internal eMMC (Mk II).
 ### Pre-imaged microSD card
 
 If you received a pre-imaged microSD card with your USB armory it almost
-certainly includes [Inverse Path](https://inversepath.com) default image,
-please see notes and default credentials
+certainly includes the default image, please see notes and default credentials
 [here](https://github.com/inversepath/usbarmory-debian-base_image/releases)
 (specifically the **Connecting** section). If you have issues connecting always
 make sure that:
@@ -68,7 +67,7 @@ install a Linux distribution from a Linux computer:
 For additional information check the available pages on the rest of the
 [wiki](https://github.com/inversepath/usbarmory/wiki), especially the
 [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)),
-or information available on the [main project page](https://inversepath.com/usbarmory).
+or information available on the [main project page](https://www.f-secure.com/en/consulting/foundry/usb-armory).
 
 ## Support
 

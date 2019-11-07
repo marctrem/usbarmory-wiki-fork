@@ -1,12 +1,10 @@
 ## Official
 
-The [USB armory](https://inversepath.com/usbarmory) enclosure from [Inverse Path](https://inversepath.com) is a custom 4 pieces design (3 body parts + 1 cap) specifically designed to accommodate and protect the board.
+The USB armory enclosure from [Inverse Path](https://inversepath.com) is a custom 4 pieces design (3 body parts + 1 cap) specifically designed to accommodate and protect the board.
 
 The enclosure can be easily assembled by snapping in three separate body parts, one of which acts as a sliding cover for the microSD card. A removable cap protects the 5-pin breakout header.
 
 Just like the USB armory, the enclosure manufacturing, including its material, is entirely made in Italy.
-
-The enclosure can be ordered at [Inverse Path](https://inversepath.com/usbarmory).
 
 * [Technical Diagram](https://github.com/inversepath/usbarmory/blob/master/hardware/mark-one/enclosure_diagram-20150611.pdf)
 

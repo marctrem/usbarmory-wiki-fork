@@ -48,9 +48,6 @@ recommended for people with experience in DIY hardware and electronics):
   * D+, D- bridged from a Type A receptacle to the other
   * VBUS, GND shorted between the two Type A receptacles and a micro-USB one
 
-The adapter is available for purchase along with the USB armory
-board, please see information at the [USB armory project page](https://inversepath.com/usbarmory).
-
 **Fun fact**: the host adapter can also be used to prevent accidental data exchange enabling secure charging.
 
 ![USB armory host adapter](images/armory-mark-one-host-adapter.jpg)

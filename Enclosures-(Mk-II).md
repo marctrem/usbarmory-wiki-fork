@@ -8,7 +8,7 @@ The enclosure can be easily assembled by snapping the two separate body parts.
 Just like the USB armory, the enclosure manufacturing, including its material,
 is entirely made in Italy.
 
-Please see ordering information at the [USB armory project page](https://inversepath.com/usbarmory).
+Please see ordering information at the [USB armory project page](https://www.f-secure.com/en/consulting/foundry/usb-armory).
 
 * Specifications:
   * Dimensions:
