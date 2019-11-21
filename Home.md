@@ -11,7 +11,7 @@ The USB armory Mk II can be purchased at the following resellers:
   * [Crowd Supply](https://www.crowdsupply.com/f-secure/usb-armory-mk-ii)
 
 Additionally custom/bulk order inquiries can be placed directly by contacting
-support@inversepath.com.
+usbarmory@f-secure.com.
 
 # Documentation
 
@@ -100,7 +100,7 @@ A discussion group is available on [Google Groups](https://groups.google.com/d/f
 # Support
 
 If you think anything is missing on this wiki, or require further support,
-please email us at support@inversepath.com.
+please email us at usbarmory@f-secure.com.
 
 # License
 

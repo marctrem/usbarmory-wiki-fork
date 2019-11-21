@@ -72,4 +72,4 @@ or information available on the [main project page](https://www.f-secure.com/en/
 ## Support
 
 If you think anything is missing or require further support please email us at
-support@inversepath.com.
+usbarmory@f-secure.com.

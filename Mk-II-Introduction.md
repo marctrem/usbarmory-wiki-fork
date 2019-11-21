@@ -12,7 +12,7 @@ The Mk II can be purchased at the following resellers:
   * [Crowd Supply](https://www.crowdsupply.com/f-secure/usb-armory-mk-ii)
 
 Additionally custom/bulk order inquiries can be placed directly by contacting
-support@inversepath.com.
+usbarmory@f-secure.com.
 
 ## System-on-Chip
 
