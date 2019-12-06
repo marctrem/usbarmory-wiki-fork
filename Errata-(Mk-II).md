@@ -1,6 +1,32 @@
 USB armory Mk II (rev. >= β)
 ============================
 
+Errata: unreliable USB Serial Downloader (resolved with workaround)
+-------------------------------------------------------------------
+
+The Serial Downloader mode checks first for activity on UART1/UART2, then on
+the USB OTG1 interface. When activity is detected on UART1/UART2 the USB
+interface is not configured for serial download.
+
+On some devices when booting in Serial Downloader mode (e.g. without a valid
+boot media) the device detects spurious activity on UART1 caused by the BLE
+module at startup, this prevents configuration of Serial Downloader mode over
+USB and results of the following messages on the host (Linux example shown):
+
+```
+kernel: usb 2-2.3: new high-speed USB device number 94 using xhci_hcd
+kernel: usb 2-2.3: device descriptor read/64, error -110
+```
+
+The issue is worked around by disabling the UART Serial Downloader mode,
+leaving only the USB mode active, by fusing the `UART_SERIAL_DOWNLOAD_DISABLE`
+OTP fuse (example with [crucible](https://github.com/inversepath/crucible) tool
+shown):
+
+```
+crucible -m IMX6ULZ -r 0 -b 16 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
+```
+
 Errata: unreliable serial connection to BLE module (resolved with workaround)
 -----------------------------------------------------------------------------
 
