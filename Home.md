@@ -85,6 +85,7 @@ The following sections provide information specific to each USB armory model.
 * [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
 * Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I²C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
 * Cryptography co-processor driver: [SCCv2](https://github.com/inversepath/mxc-scc2) (i.MX53)
+* [Errata](https://github.com/inversepath/usbarmory/wiki/Errata-(Mk-I))
 
 *Note*: the USB armory Mk I reached End-of-life (EOL) and is no longer available.
 

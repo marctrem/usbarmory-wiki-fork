@@ -16,6 +16,7 @@
 ## USB armory Mk II
 
 * [Introduction](https://github.com/inversepath/usbarmory/wiki/Mk-II-Introduction)
+* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-two.html)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk-II))
@@ -26,10 +27,10 @@
 * [Bluetooth](https://github.com/inversepath/usbarmory/wiki/Bluetooth)
 * [I²C](https://github.com/inversepath/usbarmory/wiki/I²C-(Mk-II))
 * [Errata](https://github.com/inversepath/usbarmory/wiki/Errata-(Mk-II))
-* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-two.html)
 
 ## USB armory Mk I
 
+* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-one.html)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
 * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
@@ -43,7 +44,7 @@
 * [GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs)
 * [I²C](https://github.com/inversepath/usbarmory/wiki/I²C)
 * [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
-* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-one.html)
+* [Errata](https://github.com/inversepath/usbarmory/wiki/Errata-(Mk-I))
 
 ## Legal
 
