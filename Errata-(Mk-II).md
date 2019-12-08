@@ -92,7 +92,7 @@ if the problem stemmed from a CPU frequency scaling problem.":
 
 The issue has been evaluated as the result of tight DDR calibration values,
 using a different round of DDR calibration resolved the issue:
-  https://github.com/inversepath/usbarmory/commit/99c8c4537b4e28c13a58563010fd7606024995f9
+  https://github.com/inversepath/usbarmory/commit/d3f98bbc812c619e6d1d4136b53806169ea2d34e
 
 Errata: charger detection issues
 --------------------------------
