@@ -132,7 +132,7 @@ Errata: Type-C plug/receptacle reset (plug: resolved, receptacle: workaround)
 -----------------------------------------------------------------------------
 
 The FUSB303 Type-C port Controller, when in I2C mode, requires the ENABLE bit
-set in CONTROl1 register, in order to enable its operation and consequently
+set in CONTROL1 register, in order to enable its operation and consequently
 allow the following:
 
   * reading the amount of current made available by the host
