@@ -50,7 +50,7 @@ The following sections provide information specific to each USB armory model.
   * USB 2.0 over USB-C: OTG receptacle + UFP plug
   * Secure elements: Microchip ATECC608A + NXP A71CH
 * [Introduction](https://github.com/inversepath/usbarmory/wiki/Mk-II-Introduction)
-* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-two.html)
+* [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk-II))
@@ -73,7 +73,7 @@ The following sections provide information specific to each USB armory model.
   * RAM: 512MB DDR3
   * Storage: external microSD
   * USB 2.0 over Type-A: OTG plug
-* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-one.html)
+* [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-one.html)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
 * [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I))

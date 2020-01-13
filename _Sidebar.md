@@ -16,7 +16,7 @@
 ## USB armory Mk II
 
 * [Introduction](https://github.com/inversepath/usbarmory/wiki/Mk-II-Introduction)
-* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-two.html)
+* [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk-II))
@@ -30,7 +30,7 @@
 
 ## USB armory Mk I
 
-* [Bill of materials](https://inversepath.github.io/BOM/usbarmory-mark-one.html)
+* [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-one.html)
 * [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
 * [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
