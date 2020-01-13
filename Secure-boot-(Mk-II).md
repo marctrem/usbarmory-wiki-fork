@@ -5,12 +5,12 @@ address all known security issues, nonetheless the following security
 information is highlighted for anyone that wants to apply these instructions on
 other hardware based on i.MX6UL P/Ns.
 
-To address the [HABv4 security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt),
+To address the [HABv4 security advisory](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt),
 the secure boot architecture is meant to work on i.MX6UL/i.MX6ULL/i.MX6ULZ
 parts with Silicon Revision 1.2 or greater, implemented on Part Numbers (P/N)
 with revision "AB" or greater.
 
-To address the [U-Boot security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_IPVR2018-0001.txt),
+To address the [U-Boot security advisory](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_IPVR2018-0001.txt),
 always ensure that all listed mitigations are implemented.
 
 ### Disclaimer
@@ -39,7 +39,7 @@ The following instructions jointly illustrate the following:
 The combination of i.MX6UL secure boot and U-Boot verified boot features allows
 a fully verified chain of trust, authenticating the executed Linux kernel.
 When signing a kernel that embeds a root file system, such as the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md),
+[Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md),
 the authentication has full (boot, not runtime) coverage, otherwise Linux kernel verification of
 executed code is not covered in this guide and left out to implementors.
 
@@ -77,7 +77,7 @@ certificates:
   data (e.g. U-Boot image).
 
 The key material can be created with your own existing CA, an helper
-[Makefile](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
+[Makefile](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
 is available to provide reference example for certificate creation and can be
 used as follows:
 
@@ -89,7 +89,7 @@ make -C ${USBARMORY_GIT}/software/secure_boot/hab-pki -f Makefile-pki KEYS_PATH=
 The four SRKs must be merged in a table for SHA256 hash calculation, the hash
 is going to be eventually fused on the USB armory SoC. The table and hash can
 be generated with the
-[usbarmory_srktool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_srktool)
+[usbarmory_srktool](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/usbarmory_srktool)
 as follows:
 
 ```
@@ -133,9 +133,9 @@ tar xvf u-boot-2019.07.tar.bz2 && cd u-boot-2019.07
 
 Apply the following patches for USB armory Mk II support within U-Boot:
 
-* [0001-ARM-mx6-add-support-for-USB-armory-Mk-II-board.patch](https://github.com/inversepath/usbarmory/tree/master/software/u-boot/0001-ARM-mx6-add-support-for-USB-armory-Mk-II-board.patch)
+* [0001-ARM-mx6-add-support-for-USB-armory-Mk-II-board.patch](https://github.com/f-secure-foundry/usbarmory/tree/master/software/u-boot/0001-ARM-mx6-add-support-for-USB-armory-Mk-II-board.patch)
 
-* [0001-Drop-linker-generated-array-creation-when-CONFIG_CMD.patch](https://github.com/inversepath/usbarmory/tree/master/software/u-boot/0001-Drop-linker-generated-array-creation-when-CONFIG_CMD.patch)
+* [0001-Drop-linker-generated-array-creation-when-CONFIG_CMD.patch](https://github.com/f-secure-foundry/usbarmory/tree/master/software/u-boot/0001-Drop-linker-generated-array-creation-when-CONFIG_CMD.patch)
 
 The following commands are meant to be issued within the U-Boot source
 directory.
@@ -176,7 +176,7 @@ sed -i -e 's/# CONFIG_SYS_BOOT_MODE_VERIFIED_LOCKED is not set/CONFIG_SYS_BOOT_M
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md),
+[Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md),
 the path is under buildroot `output/build/linux-<version>` directory.
 
 Apply the configuration and compile the required tools:
@@ -223,7 +223,7 @@ The compilation results in the two following files:
 ### Sign the bootloader
 
 Download the
-[usbarmory_csftool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_csftool)
+[usbarmory_csftool](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/usbarmory_csftool)
 tool and prepare the Command Sequence File (the example chooses SRK keypair #1):
 
 ```
@@ -251,7 +251,7 @@ cat u-boot-dtb.imx csf.bin > u-boot-signed.imx
 
 The signed bootloader `u-boot-signed.imx` and image tree blob `usbarmory.itb` can
 now be installed as shown in the last two sections of the documentation for the device
-[buildroot profile](https://github.com/inversepath/usbarmory/blob/master/software/buildroot/README-INTERLOCK-mark-two.md).
+[buildroot profile](https://github.com/f-secure-foundry/usbarmory/blob/master/software/buildroot/README-INTERLOCK-mark-two.md).
 
 The `u-boot-signed.imx` file replaces `u-boot.imx` in all procedures,
 similarily `usbarmory.itb` replaces `zImage`.
@@ -263,7 +263,7 @@ accessed via the On-Chip OTP Controller (OCOTP_CTRL). See Table 5-9 of the
 [i.MX6UL Reference Manual](https://www.nxp.com/docs/en/reference-manual/IMX6ULRM.pdf)
 for details.
 
-The [crucible](https://github.com/inversepath/crucible) tool provides user
+The [crucible](https://github.com/f-secure-foundry/crucible) tool provides user
 space support for reading, and writing, OTP fuses. It is used in all following
 sections to derive register bit map illustrations and implement OTP fuses read
 and write commands.
@@ -423,7 +423,7 @@ access is disabled.
 ### Verify HAB configuration (i.MX6ULL/i.MX6ULZ)
 
 After rebooting the USB armory, the security state can be verified by checking
-the [mxs-dcp driver](https://github.com/inversepath/mxs-dcp) log
+the [mxs-dcp driver](https://github.com/f-secure-foundry/mxs-dcp) log
 message which should read:
 
 ```
@@ -431,12 +431,12 @@ mxs_dcp: Secure State detected
 ```
 
 The `mxs_dcp` kernel module is compiled by default in the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md).
+[Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md).
 
 ### Verify HAB configuration (i.MX6UL)
 
 After rebooting the USB armory, the security state can be verified by checking
-the [caam-keyblob driver](https://github.com/inversepath/caam-keyblob) log
+the [caam-keyblob driver](https://github.com/f-secure-foundry/caam-keyblob) log
 message which should read:
 
 ```

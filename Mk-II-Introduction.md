@@ -22,12 +22,12 @@ The USB armory Mk II default System-on-Chip (SoC) is the NXP i.MX6ULZ, P/N MCIMX
 
 An SoC variant using the pin-to-pin compatible i.MX6UL, P/N MCIMX6G3DVM05AB (528
 MHz) is available, for custom orders, to provide additional security features such as OTF DRAM
-encryption ([features comparison](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))),
+encryption ([features comparison](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II))),
 with the trade-off of a slower clock rate.
 
 ## Security features
 
-See a detailed description [here](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II)).
+See a detailed description [here](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)).
 
 ## Communication interfaces
 
@@ -37,9 +37,9 @@ The USB armory Mk II features Type-C USB ports, a Type-A variant is available
 for custom/bulk orders.
 
 Using Type-C USB allows the Mk II to have a plug for traditional USB based
-[host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
+[host communication](https://github.com/f-secure-foundry/usbarmory/wiki/Host-communication)
 along with an integrated receptacle to act as a host (or device) (without requiring a
-[host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter) like the Mk I used to).
+[host adapter](https://github.com/f-secure-foundry/usbarmory/wiki/Host-adapter) like the Mk I used to).
 
 The USB Type-C current mode allows to ensure that adequate current is
 requested on the plug side, to enable connection of additional devices on the
@@ -69,7 +69,7 @@ This allows provisioning of the SoC with Nordic SDK, Wirepas mesh, ARM Mbed or
 arbitrary user firmware. The nRF52832 SoC features an ARM Cortex-M4 CPU with
 512 kB of internal Flash and 64 kB of RAM.
 
-See additional information [here](https://github.com/inversepath/usbarmory/wiki/Bluetooth).
+See additional information [here](https://github.com/f-secure-foundry/usbarmory/wiki/Bluetooth).
 
 ## Storage media
 
@@ -81,36 +81,36 @@ burden of microSD card installation and enables additional security features.
 
 Additionally a slide switch allows selection of the boot mode (microSD vs
 eMMC), supporting easy selection of boot media for dual boot purposes (e.g.
-full Linux OS vs [INTERLOCK](https://github.com/inversepath/interlock)
+full Linux OS vs [INTERLOCK](https://github.com/f-secure-foundry/interlock)
 protected image).
 
 ## Software
 
 A Linux kernel driver for the CAAM (i.MX6UL), which takes advantage of the
 OTPMK released by the SNVS, is available at
-[https://github.com/inversepath/caam-keyblob](https://github.com/inversepath/caam-keyblob).
+[https://github.com/f-secure-foundry/caam-keyblob](https://github.com/f-secure-foundry/caam-keyblob).
 
-The [INTERLOCK](https://github.com/inversepath/interlock) file encryption
+The [INTERLOCK](https://github.com/f-secure-foundry/interlock) file encryption
 front-end supports the CAAM through this driver.
 
 A Linux kernel driver for the DCP (i.MX6ULZ), which takes advantage of the
 OTPMK released by the SNVS, is available at
-[https://github.com/inversepath/mxs-dcp](https://github.com/inversepath/mxs-dcp).
+[https://github.com/f-secure-foundry/mxs-dcp](https://github.com/f-secure-foundry/mxs-dcp).
 
-The [crucible](https://github.com/inversepath/crucible) tool provides user
+The [crucible](https://github.com/f-secure-foundry/crucible) tool provides user
 space support for reading, and writing, One-Time-Programmable (OTP) fuses.
 
-The [armoryctl](https://github.com/inversepath/armoryctl) tool provides user
+The [armoryctl](https://github.com/f-secure-foundry/armoryctl) tool provides user
 space support for communicating with the Mk II internal peripherals.
 
 The following procedures/software are available:
 
-* [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
-* [Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/blob/master/software/buildroot/README-INTERLOCK-mark-two.md)
+* [Secure boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II))
+* [Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/blob/master/software/buildroot/README-INTERLOCK-mark-two.md)
 
-The [TamaGo](https://github.com/inversepath/tamago) bare metal Go compiler
-includes drivers for the [imx6](https://github.com/inversepath/tamago/tree/master/imx6)
-leveraged by its [Mk II support](https://github.com/inversepath/tamago/tree/master/usbarmory).
+The [TamaGo](https://github.com/f-secure-foundry/tamago) bare metal Go compiler
+includes drivers for the [imx6](https://github.com/f-secure-foundry/tamago/tree/master/imx6)
+leveraged by its [Mk II support](https://github.com/f-secure-foundry/tamago/tree/master/usbarmory).
 
 ## Accessory mode
 
@@ -118,7 +118,7 @@ USB Type-C allows a 'debug accessory mode' to route analog/debug signals over
 its connector, the USB armory Mk II leverages on this to break out UART, SPI,
 I²C, GPIOs.
 
-A dedicated [debug accessory board](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
+A dedicated [debug accessory board](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory)
 allows access to UART and GPIO signals through USB, without requiring probes,
 through an FTDI FT4232H. This allows, for example, accessing the USB armory Mk
 II serial console without wires or probes, natively using only USB cables.

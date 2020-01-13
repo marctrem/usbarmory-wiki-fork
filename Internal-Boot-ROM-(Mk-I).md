@@ -1,4 +1,4 @@
-The internal i.MX53 64KB Boot ROM is permanently set by the SoC manufacturer, for verification purposes it can be dumped with a custom [imx53_bootrom-dump utility](https://github.com/inversepath/usbarmory/blob/master/software/util/imx53_bootrom-dump.c).
+The internal i.MX53 64KB Boot ROM is permanently set by the SoC manufacturer, for verification purposes it can be dumped with a custom [imx53_bootrom-dump utility](https://github.com/f-secure-foundry/usbarmory/blob/master/software/util/imx53_bootrom-dump.c).
 
 ```
 $ gcc -o imx53_bootrom-dump imx53_bootrom-dump.c

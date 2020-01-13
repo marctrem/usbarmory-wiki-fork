@@ -24,7 +24,7 @@ The following mobile applications are provided by u-blox for module evaluation:
 
 # Control tool
 
-The [armoryctl](https://github.com/inversepath/armoryctl) can be used to perform some of the procedures illustrated below.
+The [armoryctl](https://github.com/f-secure-foundry/armoryctl) can be used to perform some of the procedures illustrated below.
 
 # Serial connection
 
@@ -45,7 +45,7 @@ AT+UPROD=1
 AT+UPRODLFCLK=0,16,2
 ```
 
-This can also be accomplished with [armoryctl](https://github.com/inversepath/armoryctl) `ble rc_lfck (flash|at)` command.
+This can also be accomplished with [armoryctl](https://github.com/f-secure-foundry/armoryctl) `ble rc_lfck (flash|at)` command.
 
 # Toggling visibility
 
@@ -65,14 +65,14 @@ The following command allow sto permanently store the configuration
 AT&W
 ```
 
-This can also be accomplished with [armoryctl](https://github.com/inversepath/armoryctl) `ble (enable|disable)` commands.
+This can also be accomplished with [armoryctl](https://github.com/f-secure-foundry/armoryctl) `ble (enable|disable)` commands.
 
 # Firmware update
 
 The following procedure allows to update the u-blox connectivity software
 (u-connect).
 
-This can also be accomplished with [armoryctl](https://github.com/inversepath/armoryctl) `ble update` command.
+This can also be accomplished with [armoryctl](https://github.com/f-secure-foundry/armoryctl) `ble update` command.
 
 ## Check the running firmware version
 
@@ -168,7 +168,7 @@ arbitrary user firmware. The nRF52832 SoC features an ARM Cortex-M4 CPU with
 ## Using OpenOCD for JTAG access
 
 The following instructions have been tested on the USB armory Mk II using its
-[standard Debian image](https://github.com/inversepath/usbarmory-debian-base_image).
+[standard Debian image](https://github.com/f-secure-foundry/usbarmory-debian-base_image).
 
 1. Download and compile OpenOCD from its github repository:
 

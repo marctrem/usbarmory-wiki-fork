@@ -12,7 +12,7 @@ The USB armory Mk II has the following components accessible as I²C slaves:
 
 ### Control tool
 
-The USB armory Mk II I²C slaves can be queried/controlled using [armoryctl](https://github.com/inversepath/armoryctl).
+The USB armory Mk II I²C slaves can be queried/controlled using [armoryctl](https://github.com/f-secure-foundry/armoryctl).
 
 ### Manual access
 
@@ -48,5 +48,5 @@ i2cget -y 0 0x31 0x01
 
 ## External I²C slaves
 
-Using the [debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
+Using the [debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory)
 external I²C slaves can be accessed.

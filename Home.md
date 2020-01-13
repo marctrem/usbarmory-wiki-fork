@@ -17,24 +17,24 @@ usbarmory@f-secure.com.
 
 # Documentation
 
-* [**Getting started**](https://github.com/inversepath/usbarmory/wiki/Starting)
-* [Preparing a bootable image](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
-* [Buildroot profiles](https://github.com/inversepath/usbarmory/tree/master/software/buildroot)
-* [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
-* [Applications](https://github.com/inversepath/usbarmory/wiki/Applications)
-* [Frequently Asked Questions (FAQ)](https://github.com/inversepath/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
+* [**Getting started**](https://github.com/f-secure-foundry/usbarmory/wiki/Starting)
+* [Preparing a bootable image](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image)
+* [Buildroot profiles](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot)
+* [Host communication](https://github.com/f-secure-foundry/usbarmory/wiki/Host-communication)
+* [Applications](https://github.com/f-secure-foundry/usbarmory/wiki/Applications)
+* [Frequently Asked Questions (FAQ)](https://github.com/f-secure-foundry/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * Application repositories
-  * [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/inversepath/interlock)
-  * [Crucible OTP fusing tool](https://github.com/inversepath/crucible)
+  * [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/f-secure-foundry/interlock)
+  * [Crucible OTP fusing tool](https://github.com/f-secure-foundry/crucible)
 * Operating Systems
-  * [Precompiled images](https://github.com/inversepath/usbarmory/wiki/Available-images)
-  * [Debian image preparation](https://github.com/inversepath/usbarmory/wiki/Preparing-a-bootable-image)
-  * Embedded INTERLOCK distribution: [Mk II](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md), [Mk I](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
+  * [Precompiled images](https://github.com/f-secure-foundry/usbarmory/wiki/Available-images)
+  * [Debian image preparation](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image)
+  * Embedded INTERLOCK distribution: [Mk II](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md), [Mk I](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
   * Arch Linux ARM: [Mk II](https://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mk-ii), [Mk I](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
   * [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
-  * [Genode OS](https://github.com/inversepath/usbarmory/wiki/Genode-OS)
-* [TamaGo](https://github.com/inversepath/tamago/tree/master/usbarmory)
-* [External resources](https://github.com/inversepath/usbarmory/wiki/External-resources)
+  * [Genode OS](https://github.com/f-secure-foundry/usbarmory/wiki/Genode-OS)
+* [TamaGo](https://github.com/f-secure-foundry/tamago/tree/master/usbarmory)
+* [External resources](https://github.com/f-secure-foundry/usbarmory/wiki/External-resources)
 
 The following sections provide information specific to each USB armory model.
 
@@ -49,20 +49,20 @@ The following sections provide information specific to each USB armory model.
   * Bluetooth module: u-blox ANNA-B112 BLE
   * USB 2.0 over USB-C: OTG receptacle + UFP plug
   * Secure elements: Microchip ATECC608A + NXP A71CH
-* [Introduction](https://github.com/inversepath/usbarmory/wiki/Mk-II-Introduction)
+* [Introduction](https://github.com/f-secure-foundry/usbarmory/wiki/Mk-II-Introduction)
 * [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html)
-* [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))
-* [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
-* [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks-(Mk-II))
-* [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
-* [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures-(Mk-II))
-* [Debug accessory](https://github.com/inversepath/usbarmory/tree/master/hardware/mark-two-debug-accessory)
-* [Boot modes](https://github.com/inversepath/usbarmory/wiki/Boot-Modes-(Mk-II))
-* [Bluetooth](https://github.com/inversepath/usbarmory/wiki/Bluetooth)
-* [I²C](https://github.com/inversepath/usbarmory/wiki/I²C-(Mk-II))
-* Cryptography co-processor drivers: [DCP](https://github.com/inversepath/mxs-dcp) (i.MX6ULZ), [CAAM](https://github.com/inversepath/caam-keyblob) (i.MX6UL)
-* Hardware control tool: [armoryctl](https://github.com/inversepath/armoryctl)
-* [Errata](https://github.com/inversepath/usbarmory/wiki/Errata-(Mk-II))
+* [Security features](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II))
+* [Secure boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II))
+* [Benchmarks](https://github.com/f-secure-foundry/usbarmory/wiki/Benchmarks-(Mk-II))
+* [Internal Boot ROM](https://github.com/f-secure-foundry/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
+* [Enclosures](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-II))
+* [Debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory)
+* [Boot modes](https://github.com/f-secure-foundry/usbarmory/wiki/Boot-Modes-(Mk-II))
+* [Bluetooth](https://github.com/f-secure-foundry/usbarmory/wiki/Bluetooth)
+* [I²C](https://github.com/f-secure-foundry/usbarmory/wiki/I²C-(Mk-II))
+* Cryptography co-processor drivers: [DCP](https://github.com/f-secure-foundry/mxs-dcp) (i.MX6ULZ), [CAAM](https://github.com/f-secure-foundry/caam-keyblob) (i.MX6UL)
+* Hardware control tool: [armoryctl](https://github.com/f-secure-foundry/armoryctl)
+* [Errata](https://github.com/f-secure-foundry/usbarmory/wiki/Errata-(Mk-II))
 
 # USB armory Mk I
 
@@ -74,20 +74,20 @@ The following sections provide information specific to each USB armory model.
   * Storage: external microSD
   * USB 2.0 over Type-A: OTG plug
 * [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-one.html)
-* [Security features](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-I))
-* [Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I))
-* [Secure boot (with NXP tools)](https://github.com/inversepath/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I))
-* [Host adapter](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
-* [Device communication (stand-alone mode)](https://github.com/inversepath/usbarmory/wiki/Host-adapter)
-* [Benchmarks](https://github.com/inversepath/usbarmory/wiki/Benchmarks)
-* [Power consumption](https://github.com/inversepath/usbarmory/wiki/Power-consumption)
-* [X-ray](https://github.com/inversepath/usbarmory/wiki/X-ray)
-* [Internal Boot ROM](https://github.com/inversepath/usbarmory/wiki/Internal-Boot-ROM-(Mk-I))
-* [Enclosures](https://github.com/inversepath/usbarmory/wiki/Enclosures-(Mk-I))
-* [JTAG](https://github.com/inversepath/usbarmory/wiki/JTAG)
-* Using the breakout header: [Serial, GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs), [I²C](https://github.com/inversepath/usbarmory/wiki/I²C), [SPI](https://github.com/inversepath/usbarmory/wiki/SPI)
-* Cryptography co-processor driver: [SCCv2](https://github.com/inversepath/mxc-scc2) (i.MX53)
-* [Errata](https://github.com/inversepath/usbarmory/wiki/Errata-(Mk-I))
+* [Security features](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-I))
+* [Secure boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-I))
+* [Secure boot (with NXP tools)](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I))
+* [Host adapter](https://github.com/f-secure-foundry/usbarmory/wiki/Host-adapter)
+* [Device communication (stand-alone mode)](https://github.com/f-secure-foundry/usbarmory/wiki/Host-adapter)
+* [Benchmarks](https://github.com/f-secure-foundry/usbarmory/wiki/Benchmarks)
+* [Power consumption](https://github.com/f-secure-foundry/usbarmory/wiki/Power-consumption)
+* [X-ray](https://github.com/f-secure-foundry/usbarmory/wiki/X-ray)
+* [Internal Boot ROM](https://github.com/f-secure-foundry/usbarmory/wiki/Internal-Boot-ROM-(Mk-I))
+* [Enclosures](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-I))
+* [JTAG](https://github.com/f-secure-foundry/usbarmory/wiki/JTAG)
+* Using the breakout header: [Serial, GPIOs](https://github.com/f-secure-foundry/usbarmory/wiki/GPIOs), [I²C](https://github.com/f-secure-foundry/usbarmory/wiki/I²C), [SPI](https://github.com/f-secure-foundry/usbarmory/wiki/SPI)
+* Cryptography co-processor driver: [SCCv2](https://github.com/f-secure-foundry/mxc-scc2) (i.MX53)
+* [Errata](https://github.com/f-secure-foundry/usbarmory/wiki/Errata-(Mk-I))
 
 *Note*: the USB armory Mk I reached End-of-life (EOL) and is no longer available.
 
@@ -96,7 +96,7 @@ The following sections provide information specific to each USB armory model.
 Get a USB armory board and start developing!
 
 A list of project ideas is available in the
-[Applications](https://github.com/inversepath/usbarmory/wiki/Applications) section.
+[Applications](https://github.com/f-secure-foundry/usbarmory/wiki/Applications) section.
 
 A discussion group is available on [Google Groups](https://groups.google.com/d/forum/usbarmory).
 
@@ -107,7 +107,7 @@ please email us at usbarmory@f-secure.com.
 
 # License
 
-USB armory | https://github.com/inversepath/usbarmory  
+USB armory | https://github.com/f-secure-foundry/usbarmory  
 Copyright (c) F-Secure Corporation
 
 This is an open hardware design licensed under the terms of the CERN Open
@@ -131,5 +131,5 @@ INDIVIDUAL OR AN ENTITY) WARRANT THAT YOU HAVE READ THESE TERMS, UNDERSTAND
 THEM AND AGREE TO BE LEGALLY BOUND BY THEM. IF YOU DO NOT AGREE TO ALL OF THE
 TERMS, DO NOT INSTALL OR USE THE USB ARMORY.
 
-* [Terms of Use](https://github.com/inversepath/usbarmory/wiki/Terms-of-Use)
-* [Compliance information](https://github.com/inversepath/usbarmory/wiki/Compliance-information)
+* [Terms of Use](https://github.com/f-secure-foundry/usbarmory/wiki/Terms-of-Use)
+* [Compliance information](https://github.com/f-secure-foundry/usbarmory/wiki/Compliance-information)

@@ -16,7 +16,7 @@ rating of 1.9 DMIPS/MHz.
 The i.MX6ULZ CPU (P/N MCIMX6Z0DVM09AB) clocks at 900 MHz.
 
 The variant (available for custom orders, see [features
-comparison](https://github.com/inversepath/usbarmory/wiki/Hardware-security-features-(Mk-II))),
+comparison](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II))),
 using the i.MX6UL (P/N MCIMX6G3DVM05AB) clocks at 528 MHz.
 
 ## nbench

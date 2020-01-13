@@ -20,7 +20,7 @@ kernel: usb 2-2.3: device descriptor read/64, error -110
 
 The issue is worked around by disabling the UART Serial Downloader mode,
 leaving only the USB mode active, by fusing the `UART_SERIAL_DOWNLOAD_DISABLE`
-OTP fuse (example with [crucible](https://github.com/inversepath/crucible) tool
+OTP fuse (example with [crucible](https://github.com/f-secure-foundry/crucible) tool
 shown):
 
 ```
@@ -50,7 +50,7 @@ flash to manually overwrite the `CUSTOMER[31]` register with the desired
 setting.
 
 Both methods are implemented in the `ble rc_lfck (flash|at)` command of the
-[armoryctl](https://github.com/inversepath/armoryctl) tool.
+[armoryctl](https://github.com/f-secure-foundry/armoryctl) tool.
 
 Following our bug report, u-blox recommends grounding of the `XL_1` and `XL_2`
 pads in ANNA-B112 System Integration Manual revisions R06 or later.
@@ -92,7 +92,7 @@ if the problem stemmed from a CPU frequency scaling problem.":
 
 The issue has been evaluated as the result of tight DDR calibration values,
 using a different round of DDR calibration resolved the issue:
-  https://github.com/inversepath/usbarmory/commit/d3f98bbc812c619e6d1d4136b53806169ea2d34e
+  https://github.com/f-secure-foundry/usbarmory/commit/d3f98bbc812c619e6d1d4136b53806169ea2d34e
 
 Errata: charger detection issues
 --------------------------------
@@ -178,4 +178,4 @@ https://e2e.ti.com/support/interface/f/138/t/813069
 
 Manual enable:
 `i2cset -y 0 0x31 0x5 0xbb` or
- [armoryctl](https://github.com/inversepath/armoryctl) `fusb (enable|disable)`
+ [armoryctl](https://github.com/f-secure-foundry/armoryctl) `fusb (enable|disable)`

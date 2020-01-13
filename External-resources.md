@@ -49,7 +49,7 @@
 
 * Pedro Vilaca authored an USB armory based [USB sandbox](https://github.com/gdbinit/armorysandbox), described in this [article](https://sentinelone.com/blogs/armory-sandbox-building-usb-analyzer-usb-armory/)
 
-* [Georg](https://github.com/tuxlifan) provides a fork for our official [basic Debian image generation](https://github.com/inversepath/usbarmory-debian-base_image) that allows [basic Devuan image generation](https://github.com/tuxlifan/usbarmory-devuan-base_image).
+* [Georg](https://github.com/tuxlifan) provides a fork for our official [basic Debian image generation](https://github.com/f-secure-foundry/usbarmory-debian-base_image) that allows [basic Devuan image generation](https://github.com/tuxlifan/usbarmory-devuan-base_image).
 
 * [Wincent Balin](https://github.com/wincentbalin) [contributed](https://gist.github.com/wincentbalin/83749d46ea5aadec6c3dcfd3ff672d21) a [mode switcher](https://ofdigitalwater.postach.io/post/mode-switcher-for-usb-armory) script.
 
@@ -67,10 +67,10 @@
 
 * [Yorick Koster](https://twitter.com/yorickkoster) authored [U3 armory](https://github.com/securifybv/u3-armory), a project for emulating a U3 thumb drive with the USB armory to [trigger and exploit Windows AutoRun](https://securify.nl/blog/SFY20170201/autorun_is_dead__long_live_autorun.html).
 
-* [Teddy Reed V](https://github.com/theopolis) authored an excellent [writeup](https://casualhacking.io/blog/2018/2/10/exploring-secured-boot-on-the-sabre-lite-imx6s-v13-sbc-and-nxp-habv4) on the vulnerability covered by our [own advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt) and [exploit PoC](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_csftool#L227).
+* [Teddy Reed V](https://github.com/theopolis) authored an excellent [writeup](https://casualhacking.io/blog/2018/2/10/exploring-secured-boot-on-the-sabre-lite-imx6s-v13-sbc-and-nxp-habv4) on the vulnerability covered by our [own advisory](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt) and [exploit PoC](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/usbarmory_csftool#L227).
 
 ### Presentations
 
-* [Inverse Path](https://inversepath.com) - [Forging the USB armory](https://dev.inversepath.com/download/usbarmory/forging_the_usb_armory.pdf)
+* [Inverse Path](https://inversepath.com) - [Forging the USB armory](https://github.com/abarisani/abarisani.github.io/raw/master/research/usbarmory/forging_the_usb_armory.pdf)
 * [F-Secure Foundry](http://foundry.f-secure.com) - [USB armory reloaded](https://github.com/abarisani/abarisani.github.io/raw/master/research/usbarmory/usb_armory_reloaded.pdf)
 

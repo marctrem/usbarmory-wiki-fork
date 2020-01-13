@@ -1,6 +1,6 @@
 ### Security information
 
-**IMPORTANT**: this feature is currently deprecated, see the related [security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
+**IMPORTANT**: this feature is currently deprecated, see the related [security advisory](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
 
 ### Disclaimer
 
@@ -28,7 +28,7 @@ The following instructions jointly illustrate the following:
 The combination of i.MX53 secure boot and U-Boot verified boot features allows
 a fully verified chain of trust, authenticating the executed Linux kernel.
 When signing a kernel that embeds a root file system, such as the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md),
+[Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md),
 the authentication has full (boot, not runtime) coverage, otherwise Linux kernel verification of
 executed code is not covered in this guide and left out to implementors.
 
@@ -39,7 +39,7 @@ This document illustrates the procedure using the Code Signing Tool from NXP
 [download](https://www.nxp.com/webapp/Download?colCode=IMX_CST_TOOL&appType=license&Parent_nodeId=1297866175545717803818&Parent_pageType=product)
 (requires registration). An alternate method, using custom developed open
 source tools, is described
-[here](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-I)).
+[here](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-I)).
 
 A working device tree compiler must be installed, on a recent Debian and Ubuntu
 this can be done as follows:
@@ -120,18 +120,18 @@ Apply the following patch which enables i.MX53 High Assurance Boot (HAB)
 support in U-Boot by adding the `hab_status` command, which helps verification
 of secure boot state (optional but highly recommended).
 
-* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0001-Add-HAB-support.patch)
+* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0001-Add-HAB-support.patch)
 
 Apply the following patches to enable Verified Boot support, disable the U-Boot
 command line and external environment variables to further lock down physical
 serial console access.
 
-* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0002-Add-verified-boot-support.patch)
-* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0003-Disable-CLI.patch)
+* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0002-Add-verified-boot-support.patch)
+* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0003-Disable-CLI.patch)
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
+[Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
 the path is under buildroot `output/build/linux-<version>` directory.
 
 The following commands are meant to be issued within the U-Boot source
@@ -187,7 +187,7 @@ The compilation results in the two following files:
 
 Download the example Command Sequence File:
 
-* [hab4.csf](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/hab4.csf)
+* [hab4.csf](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/hab4.csf)
 
 The file must be modified with the correct 'HAB Blocks' hex triple for the
 u-boot.imx file compiled in the previous step, along with its path.
@@ -238,7 +238,7 @@ for details (Chapter 2 - Fusemap).
 The following commands (=> prompt) are meant to be executed on the USB armory,
 within the u-boot bootloader, using the serial port accessible through the
 breakout header (see [Using external
-GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs) for details).
+GPIOs](https://github.com/f-secure-foundry/usbarmory/wiki/GPIOs) for details).
 
 In order to fuse anything, the VDD_FUSE power supply must be enabled:
 

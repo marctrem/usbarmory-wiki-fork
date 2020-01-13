@@ -13,23 +13,22 @@ the USB armory concept:
 
 This section is meant to track available software PoC, projects and/or
 procedures oriented towards implementing such application ideas and any other
-interesting USB armory usage. If you have tested an interesting use case for
-the USB armory please submit it at info@inversepath.com for inclusion.
+interesting USB armory usage.
 
-See also [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
+See also [Host communication](https://github.com/f-secure-foundry/usbarmory/wiki/Host-communication)
 for interfacing options.
 
 ### File encryption
 
-The [INTERLOCK](https://github.com/inversepath/interlock) application is a file
+The [INTERLOCK](https://github.com/f-secure-foundry/interlock) application is a file
 encryption front-end, with Signal messaging support, developed for, but not
 limited to, usage with the USB armory. A Buildroot environment is also
-[available](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md).
+[available](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md).
 
 ### Qubes Split GPG server
 
 [Qubes Split GPG](https://www.qubes-os.org/doc/split-gpg/) support for isolated
-Qubes OS GPG server with encrypted storage is [available](https://github.com/inversepath/usbarmory/blob/master/software/buildroot/README-Qubes_Split_GPG.md)
+Qubes OS GPG server with encrypted storage is [available](https://github.com/f-secure-foundry/usbarmory/blob/master/software/buildroot/README-Qubes_Split_GPG.md)
 as a custom Buildroot environment.
 
 ### Password manager
@@ -47,7 +46,7 @@ Windows hosts.
 Assumptions:
 * host main interface on network 192.168.1.0/24 with default gateway 192.168.1.1
 * USB armory on network 10.0.0.0/24 with IP address 10.0.0.1
-* USB armory masqueraded and routed as described in [Host communication](https://github.com/inversepath/usbarmory/wiki/Host-communication)
+* USB armory masqueraded and routed as described in [Host communication](https://github.com/f-secure-foundry/usbarmory/wiki/Host-communication)
 
 #### USB armory setup
 

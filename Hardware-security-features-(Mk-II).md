@@ -29,7 +29,7 @@ for custom/bulk orders.
 The HAB feature enables on-chip internal Boot ROM authentication of initial
 bootloader (i.e. Secure Boot) with a digital signature, establishing the first
 trust anchor for code authentication. See
-[Secure Boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II)) for
+[Secure Boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II)) for
 more information and usage instructions.
 
 ## Random Number Generator (RNGB) - i.MX6ULZ
@@ -77,11 +77,11 @@ the Secure Non-Volatile Storage (SNVS) companion block.
 
 A Linux kernel driver for the DCP (i.MX6ULZ), which takes advantage of the
 OTPMK released by the SNVS, is available at
-[https://github.com/inversepath/mxs-dcp](https://github.com/inversepath/mxs-dcp).
+[https://github.com/f-secure-foundry/mxs-dcp](https://github.com/f-secure-foundry/mxs-dcp).
 
 A Linux kernel driver for the CAAM (i.MX6UL), which takes advantage of the
 OTPMK released by the SNVS, is available at
-[https://github.com/inversepath/caam-keyblob](https://github.com/inversepath/caam-keyblob).
+[https://github.com/f-secure-foundry/caam-keyblob](https://github.com/f-secure-foundry/caam-keyblob).
 
 ## Bus Encryption Engine (BEE) - i.MX6UL
 

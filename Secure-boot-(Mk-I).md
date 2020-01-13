@@ -2,10 +2,10 @@
 
 **IMPORTANT**: this feature is currently deprecated on i.MX53 based hardware,
 see the related
-[security advisory](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
+[security advisory](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
 
 The USB armory Mk II design is recommended for anyone needing
-[Secure boot](https://github.com/inversepath/usbarmory/wiki/Secure-boot-(Mk-II))
+[Secure boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II))
 capabilities.
 
 ### Disclaimer
@@ -34,7 +34,7 @@ The following instructions jointly illustrate the following:
 The combination of i.MX53 secure boot and U-Boot verified boot features allows
 a fully verified chain of trust, authenticating the executed Linux kernel.
 When signing a kernel that embeds a root file system, such as the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md),
+[Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md),
 the authentication has full (boot, not runtime) coverage, otherwise Linux kernel verification of
 executed code is not covered in this guide and left out to implementors.
 
@@ -42,7 +42,7 @@ executed code is not covered in this guide and left out to implementors.
 
 This document illustrates the procedure using custom developed open source
 tools, an alternate method, using NXP Code Signing Tool (IMX_CST_TOOL), is
-available [here](https://github.com/inversepath/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I)).
+available [here](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I)).
 
 A working device tree compiler and make must be installed, on a recent Debian
 and Ubuntu this can be done as follows:
@@ -74,7 +74,7 @@ certificates:
   data (e.g. U-Boot image).
 
 The key material can be created with your own existing CA, an helper
-[Makefile](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
+[Makefile](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
 is available to provide reference example for certificate creation and can be
 used as follows:
 
@@ -86,7 +86,7 @@ make -C ${USBARMORY_GIT}/software/secure_boot/hab-pki -f Makefile-pki KEYS_PATH=
 The four SRKs must be merged in a table for SHA256 hash calculation, the hash
 is going to be eventually fused on the USB armory SoC. The table and hash can
 be generated with the
-[usbarmory_srktool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_srktool)
+[usbarmory_srktool](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/usbarmory_srktool)
 as follows:
 
 ```
@@ -132,18 +132,18 @@ Apply the following patch which enables i.MX53 High Assurance Boot (HAB)
 support in U-Boot by adding the `hab_status` command, which allows verification
 of secure boot state.
 
-* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0001-Add-HAB-support.patch)
+* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0001-Add-HAB-support.patch)
 
 Apply the following patches to enable Verified Boot support, disable the U-Boot
 command line and external environment variables to further lock down physical
 serial console access.
 
-* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0002-Add-verified-boot-support.patch)
-* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/inversepath/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0003-Disable-CLI.patch)
+* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0002-Add-verified-boot-support.patch)
+* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0003-Disable-CLI.patch)
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path, if using the
-[Embedded INTERLOCK distribution](https://github.com/inversepath/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
+[Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
 the path is under buildroot `output/build/linux-<version>` directory.
 
 The following commands are meant to be issued within the U-Boot source
@@ -197,7 +197,7 @@ The compilation results in the two following files:
 ### Prepare the CSF file
 
 Download the
-[usbarmory_csftool](https://github.com/inversepath/usbarmory/blob/master/software/secure_boot/usbarmory_csftool)
+[usbarmory_csftool](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/usbarmory_csftool)
 tool and prepare the Command Sequence File (the example chooses SRK keypair #1):
 
 ```
@@ -253,7 +253,7 @@ for details (Chapter 2 - Fusemap).
 The following commands (=> prompt) are meant to be executed on the USB armory,
 within the u-boot bootloader, using the serial port accessible through the
 breakout header (see [Using external
-GPIOs](https://github.com/inversepath/usbarmory/wiki/GPIOs) for details).
+GPIOs](https://github.com/f-secure-foundry/usbarmory/wiki/GPIOs) for details).
 
 In order to fuse anything, the VDD_FUSE power supply must be enabled:
 
