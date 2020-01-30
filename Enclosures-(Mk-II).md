@@ -10,6 +10,8 @@ is entirely made in Italy.
 
 Please see purchasing information at the [USB armory project page](https://www.f-secure.com/en/consulting/foundry/usb-armory).
 
+* [Technical Diagram](https://github.com/f-secure-foundry/usbarmory/blob/master/hardware/mark-two/enclosure_diagram-20191007.pdf)
+
 * Specifications:
   * Dimensions:
     * body: 60 x 24 x 11 mm
