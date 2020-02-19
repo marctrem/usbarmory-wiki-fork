@@ -16,6 +16,18 @@ If you received a pre-imaged microSD card with your USB armory it almost certain
 
 2. the network interface on your USB host, associated to the USB armory (Linux: usbX, macOS/Windows: RNDIS), is correctly set up with the required host address (typically 10.0.0.2 with netmask 255.255.255.0)
 
+### The SSH server responds but the default credentials are not recognized.
+
+There is a chance that if the very first boot is interrupted (e.g. device unplugged) the SSH key generation is interrupted leaving a corrupted OpenSSH state.
+
+If you can ping and SSH the USB armory IP address, but default credentials do not work, there is a chance this might have happened.
+
+To solve this issue options are:
+
+  * login with default credentials on the serial port using the [debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory) to delete corrupted keys
+  * mount the microSD card on another machine to delete corrupted keys
+  * re-image the microSD card
+
 ### How do I resize the microSD/eMMC partition on available images smaller than the total available space ?
 
 A tutorial on how to do this can be found [here](http://elinux.org/Beagleboard:Expanding_File_System_Partition_On_A_microSD).
@@ -48,6 +60,6 @@ There is a known issue in modern Linux kernels which breaks cryptsetup aes-xts-p
 
 ### No serial console with debug accessory (Mk II)
 
-The connection between the debug accessory and the target is supported only
+The connection between the [debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory) and the target is supported only
 with the same orientation for both top layers (side with components for the
 accessory, side with LEDs for the USB armory).
