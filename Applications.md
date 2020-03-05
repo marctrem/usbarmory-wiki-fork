@@ -20,10 +20,9 @@ for interfacing options.
 
 ### File encryption
 
-The [INTERLOCK](https://github.com/f-secure-foundry/interlock) application is a file
-encryption front-end, with Signal messaging support, developed for, but not
-limited to, usage with the USB armory. A Buildroot environment is also
-[available](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md).
+The [INTERLOCK](https://github.com/f-secure-foundry/interlock) application is a
+file encryption front-end developed for, but not limited to, usage with the USB
+armory. A Buildroot environment is also [available](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md).
 
 ### Qubes Split GPG server
 

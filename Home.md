@@ -24,7 +24,7 @@ usbarmory@f-secure.com.
 * [Applications](https://github.com/f-secure-foundry/usbarmory/wiki/Applications)
 * [Frequently Asked Questions (FAQ)](https://github.com/f-secure-foundry/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * Application repositories
-  * [INTERLOCK file encryption front-end, with Signal messaging support](https://github.com/f-secure-foundry/interlock)
+  * [INTERLOCK file encryption front-end](https://github.com/f-secure-foundry/interlock)
   * [Crucible OTP fusing tool](https://github.com/f-secure-foundry/crucible)
 * Operating Systems
   * [Precompiled images](https://github.com/f-secure-foundry/usbarmory/wiki/Available-images)
