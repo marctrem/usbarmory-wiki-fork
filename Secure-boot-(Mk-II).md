@@ -10,8 +10,8 @@ the secure boot architecture is meant to work on i.MX6UL/i.MX6ULL/i.MX6ULZ
 parts with Silicon Revision 1.2 or greater, implemented on Part Numbers (P/N)
 with revision "AB" or greater.
 
-To address the [U-Boot security advisory](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_IPVR2018-0001.txt),
-always ensure that all listed mitigations are implemented.
+To address U-Boot security advisories always ensure that you are running the
+latest version and configuration illustrated in this document.
 
 ### Disclaimer
 
@@ -441,6 +441,24 @@ message which should read:
 
 ```
 caam_keyblob: Secure State detected
+```
+
+### Revoking keys
+
+Each of the first 3 Super Root Keys (SRK) (corresponding to index 1-3 passed to
+`usbarmory_csftool`) can be revoked on a single unit, this is useful to prevent
+vulnerable (e.g. because of known security issues) signed images from being
+used again on a device.
+
+To do so the `OCOTP_SRK_REVOKE` fuse can be used with the
+[crucible](https://github.com/f-secure-foundry/crucible) tool to set
+`SRK_REVOKE[0:2]` bits, reflecting the index of the revoked key.
+
+Example of revocation for key with `usbarmory_csftool` index 3 (corresponding
+to `SRK_REVOKE` bit 2):
+
+```
+crucible -m IMX6UL -r 1 -b 2 -e big blow OCOTP_SRK_REVOKE 0b100
 ```
 
 ### External documentation
