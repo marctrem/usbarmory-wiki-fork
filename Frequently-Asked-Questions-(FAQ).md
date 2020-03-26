@@ -63,3 +63,9 @@ There is a known issue in modern Linux kernels which breaks cryptsetup aes-xts-p
 The connection between the [debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory) and the target is supported only
 with the same orientation for both top layers (side with components for the
 accessory, side with LEDs for the USB armory).
+
+The [USB armory Debian base image](https://github.com/f-secure-foundry/usbarmory-debian-base_image/releases) serial console can be accessed, with the debug accessory jumper set to UART position, as follows (example on Linux host with picocom):
+
+```
+picocom -b 115200 -eb /dev/ttyUSB2 --imap lfcrlf
+```
