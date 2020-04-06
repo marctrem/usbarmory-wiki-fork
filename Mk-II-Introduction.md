@@ -86,16 +86,16 @@ protected image).
 
 ## Software
 
+A Linux kernel driver for the DCP (i.MX6ULZ), which takes advantage of the
+OTPMK released by the SNVS, is available at
+[https://github.com/f-secure-foundry/mxs-dcp](https://github.com/f-secure-foundry/mxs-dcp).
+
 A Linux kernel driver for the CAAM (i.MX6UL), which takes advantage of the
 OTPMK released by the SNVS, is available at
 [https://github.com/f-secure-foundry/caam-keyblob](https://github.com/f-secure-foundry/caam-keyblob).
 
 The [INTERLOCK](https://github.com/f-secure-foundry/interlock) file encryption
-front-end supports the CAAM through this driver.
-
-A Linux kernel driver for the DCP (i.MX6ULZ), which takes advantage of the
-OTPMK released by the SNVS, is available at
-[https://github.com/f-secure-foundry/mxs-dcp](https://github.com/f-secure-foundry/mxs-dcp).
+front-end supports both CAAM and DCP through such drivers.
 
 The [crucible](https://github.com/f-secure-foundry/crucible) tool provides user
 space support for reading, and writing, One-Time-Programmable (OTP) fuses.
@@ -103,14 +103,11 @@ space support for reading, and writing, One-Time-Programmable (OTP) fuses.
 The [armoryctl](https://github.com/f-secure-foundry/armoryctl) tool provides user
 space support for communicating with the Mk II internal peripherals.
 
-The following procedures/software are available:
-
-* [Secure boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II))
-* [Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/blob/master/software/buildroot/README-INTERLOCK-mark-two.md)
-
 The [TamaGo](https://github.com/f-secure-foundry/tamago) bare metal Go compiler
-includes drivers for the [imx6](https://github.com/f-secure-foundry/tamago/tree/master/imx6)
-leveraged by its [Mk II support](https://github.com/f-secure-foundry/tamago/tree/master/usbarmory).
+includes [imx6 drivers](https://github.com/f-secure-foundry/tamago/tree/master/imx6)
+and [Mk II board support](https://github.com/f-secure-foundry/tamago/tree/master/usbarmory).
+
+The [GoKey](https://github.com/f-secure-foundry/GoKey) turns the USB armory Mk II in an OpenPGP smartcard, implemented in pure Go with [TamaGo](https://github.com/f-secure-foundry/tamago) support.
 
 ## Accessory mode
 
