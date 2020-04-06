@@ -43,7 +43,7 @@ The following sections provide information specific to each USB armory model.
 <img src="images/armory-mark-two-bottom.png" width="350"> <img src="images/armory-mark-two-top.png" width="350">
 
 * Specifications
-  * SoC: NXP i.MX6UL/i.MX6ULZ ARM® Cortex™-A7 900Mhz
+  * SoC: NXP i.MX6UL/i.MX6ULZ ARM® Cortex™-A7 528/900Mhz
   * RAM: 512MB/1GB DDR3
   * Storage: internal 16GB eMMC + external microSD
   * Bluetooth module: u-blox ANNA-B112 BLE
