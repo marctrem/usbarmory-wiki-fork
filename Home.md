@@ -43,9 +43,9 @@ The following sections provide information specific to each USB armory model.
 <img src="images/armory-mark-two-bottom.png" width="350"> <img src="images/armory-mark-two-top.png" width="350">
 
 * Specifications
-  * SoC: NXP i.MX6UL/i.MX6ULZ ARM® Cortex™-A7 528/900MHz
-  * RAM: 512MB/1GB DDR3
-  * Storage: internal 16GB eMMC + external microSD
+  * SoC: NXP i.MX6UL/i.MX6ULZ ARM® Cortex™-A7 528/900 MHz
+  * RAM: 512 MB or 1 GB DDR3
+  * Storage: internal 16 GB eMMC + external microSD
   * Bluetooth module: u-blox ANNA-B112 BLE
   * USB 2.0 over USB-C: DRP receptacle + UFP plug
   * Secure elements: Microchip ATECC608A + NXP A71CH
@@ -69,8 +69,8 @@ The following sections provide information specific to each USB armory model.
 <img src="images/armory-mark-one-top.png" width="350"> <img src="images/armory-mark-one-bottom.png" width="350">
 
 * Specifications
-  * SoC: NXP i.MX53 ARM® Cortex™-A8 800MHz
-  * RAM: 512MB DDR3
+  * SoC: NXP i.MX53 ARM® Cortex™-A8 800 MHz
+  * RAM: 512 MB DDR3
   * Storage: external microSD
   * USB 2.0 over Type-A: OTG plug
 * [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-one.html)

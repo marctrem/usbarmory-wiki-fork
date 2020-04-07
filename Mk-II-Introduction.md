@@ -74,7 +74,7 @@ See additional information [here](https://github.com/f-secure-foundry/usbarmory/
 ## Storage media
 
 Apart from the traditional microSD slot (now with a push/pull mechanism) the
-USB armory Mk II includes a 16GB eMMC flash memory on the board.
+USB armory Mk II includes a 16 GB eMMC flash memory on the board.
 
 This allows easier provisioning procedures, factory pre-imaging without the
 burden of microSD card installation and enables additional security features.
