@@ -51,3 +51,5 @@ recommended for people with experience in DIY hardware and electronics):
 **Fun fact**: the host adapter can also be used to prevent accidental data exchange enabling secure charging.
 
 ![USB armory host adapter](images/armory-mark-one-host-adapter.jpg)
+
+![USB armory host adapter schematics](images/armory-mark-one-host-adapter-schematics.png)
