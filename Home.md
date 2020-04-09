@@ -12,7 +12,7 @@ The USB armory Mk II can be purchased at the following resellers:
   * [Hackerwarehouse](https://hackerwarehouse.com/product/usb-armory-mkii)
   * [HackmoD](http://www.hackmod.de/USB-Armory-Stick-Mark-2)
 
-Additionally custom/bulk order inquiries can be placed directly by contacting
+Custom/bulk order inquiries can be placed directly by contacting
 usbarmory@f-secure.com.
 
 # Documentation
