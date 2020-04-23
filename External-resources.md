@@ -23,6 +23,10 @@
   * [HABv4 RVT Guidelines and Recommendations](https://www.nxp.com/docs/en/application-note/AN12263.pdf)
   * [i.MX Secure and Encrypted Boot using HABv4](https://gitlab.denx.de/u-boot/u-boot/blob/master/doc/imx/habv4/introduction_habv4.txt)
 
+### Projects
+
+* [GlobaLeaks](https://www.globaleaks.org/) maintains a [USB armory specific image](https://github.com/globaleaks/globaleaks-usbarmory-image)
+
 ### Contributions
 
 * [ckuethe](https://github.com/ckuethe) is contributing [scripts, configurations and much more](https://github.com/ckuethe/usbarmory) as well as additional [documentation](https://github.com/ckuethe/usbarmory/wiki)
