@@ -1,14 +1,23 @@
 In order to boot the USB armory it is possible to either use a pre-compiled
 disk image or [manually prepare your own](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image).
 
-The following table summarizes the list of available pre-compiled images:
+The following table summarizes the list of available pre-compiled Linux
+distributions:
 
 | Device | OS                                                                                                                                      | Author                                                    | Link                                                                                                                                       |
 |:-------|-----------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------:|
 | Mk II  | Debian 10 (Buster)                                                                                                                      | [F-Secure Foundry](https://foundry.f-secure.com)          | [latest Mk II Debian base image release (20200408)](https://github.com/f-secure-foundry/usbarmory-debian-base_image/releases/tag/20200408) |
 | Mk II  | Arch Linux                                                                                                                              | [Arch Linux ARM](http://archlinuxarm.org/)                | [Arch Linux ARM Installation](https://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mk-ii)                                         |
 | Mk I   | Debian 9 (Stretch)                                                                                                                      | [F-Secure Foundry](https://foundry.f-secure.com)          | [latest Mk I Debian base image release (20190506)](https://github.com/f-secure-foundry/usbarmory-debian-base_image/releases/tag/20190506)  |
-| Mk I   | Linux kernel w/ [INTERLOCK buildroot](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md) | [F-Secure Foundry](https://foundry.f-secure.com)          | [INTERLOCK releases](https://github.com/f-secure-foundry/interlock/releases)                                                               |
 | Mk I   | Arch Linux                                                                                                                              | [Arch Linux ARM](http://archlinuxarm.org/)                | [Arch Linux ARM Installation](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)                                                |
 | Mk I   | Kali Linux                                                                                                                              | [Offensive Security](https://www.offensive-security.com/) | [Kali Linux on USB armory](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)                                                     |
 | Mk I   | Gentoo Linux                                                                                                                            | [sakaki](https://github.com/sakaki-)                      | [gentoo-on-armory](https://github.com/sakaki-/gentoo-on-armory)                                                                            |
+
+The following table summarizes the list of available pre-compiled application
+specific images:
+
+| Device | OS                                                                                                                                      | Author                                                    | Link                                                                                                                                       |
+|:-------|-----------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------:|
+| Mk I   | Linux kernel w/ [INTERLOCK buildroot](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md) | [F-Secure Foundry](https://foundry.f-secure.com)          | [INTERLOCK releases](https://github.com/f-secure-foundry/interlock/releases)                                                               |
+| Mk II  | Debian 10 (Buster) w/ [GlobaLeaks]((https://github.com/globaleaks/globaleaks-usbarmory-image)                                           | [GlobaLeaks]((https://www.globaleaks.org/)                | [USB armory GlobaLeaks image releases](https://github.com/globaleaks/globaleaks-usbarmory-image/releases)                                  |
+
