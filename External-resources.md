@@ -1,8 +1,9 @@
-### SoC documentation
+### System-on-Chip resources
 
 * Mk II - i.MX6ULZ
   * [i.MX6ULZ Reference Manual](https://www.nxp.com/webapp/Download?colCode=IMX6ULZRM)
   * [i.MX6ULZ Datasheet](https://www.nxp.com/docs/en/data-sheet/IMX6ULZCEC.pdf)
+  * [John McMaster](https://twitter.com/johndmcmaster) [chip map for P/N MCIMX6Z0DVM09AB](https://siliconpr0n.org/map/nxp/mcimx6z0dvm09ab/mz_mit20x/)
 
 * Mk II - i.MX6UL
   * [i.MX6UL Reference Manual](https://www.nxp.com/webapp/Download?colCode=IMX6ULRM)
