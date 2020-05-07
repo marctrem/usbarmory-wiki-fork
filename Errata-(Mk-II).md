@@ -1,5 +1,20 @@
-USB armory Mk II (rev. >= β)
-============================
+USB armory Mk II (rev. β)
+=========================
+
+Errata: speed class limitation for external uSD and internal eMMC
+-----------------------------------------------------------------
+
+The SD and NAND SoC blocks, as well as the associated cards, receive a 3.3V
+power supply, this prevents use of higher speed SD/MMC bus modes that require
+1.8V signaling.
+
+For this reason the maximum achievable speeds are High Speed mode (25MB/s,
+50MHz, 3.3V) for external uSD and High Speed DDR mode (104MB/s, 52MHz, 3.3V)
+for the internal eMMC.
+
+Future USB armory Mk II revisions will change to a 1.8V power supply to allow
+uSD support for uSD SDR104 (104MB/s, 208MHz, 1.8V) and eMMC HS200 (200MB/s,
+200MHz, 1.8V but at 150MB/s due to NXP ERR010450) modes.
 
 Errata: unreliable USB Serial Downloader (resolved with workaround)
 -------------------------------------------------------------------
