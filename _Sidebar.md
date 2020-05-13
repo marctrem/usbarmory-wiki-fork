@@ -8,7 +8,7 @@
 * [Debian](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image)
 * [Buildroot profiles](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot)
 * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
-* [Kali Linux](https://docs.kali.org/kali-on-arm/kali-linux-on-usb-armory)
+* [Kali Linux](https://www.kali.org/docs/arm/kali-linux-usb-armory/)
 * [Genode OS](https://github.com/f-secure-foundry/usbarmory/wiki/Genode-OS)
 * [TamaGo](https://github.com/f-secure-foundry/tamago/tree/master/usbarmory)
 * [GoKey](https://github.com/f-secure-foundry/GoKey)
