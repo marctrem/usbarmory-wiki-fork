@@ -44,7 +44,8 @@ configurations.
 **NOTE**: This is a command line example that assumes no interference from
 running Network Managers, in general favor following the predefined
 configuration files and/or UIs for your specific Linux distribution.
-
+The interface names usb0 and wlan0 should be adjusted to reflect your
+configuration.
 ```
 # bring the USB virtual Ethernet interface up
 /sbin/ip link set usb0 up
