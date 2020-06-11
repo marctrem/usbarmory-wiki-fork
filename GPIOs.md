@@ -52,9 +52,8 @@ echo 0 > /sys/class/gpio/gpio123/value        # LED on
 echo in > /sys/class/gpio/gpio123/direction
 ```
 
-To permanently disable the default LED usage
-comment the ledtrig_heartbeat line from /etc/modules
-and blacklist leds_gpio and led_class:
+To permanently disable the default LED usage comment the `ledtrig_heartbeat`
+line from /etc/modules and prevent loading of `leds_gpio` and `led_class`:
 
 ```
 sed -i /etc/modules -e 's/ledtrig_heartbeat/#ledtrig_heartbeat/'
