@@ -127,15 +127,13 @@ openssl req -batch -new -x509 -key ${KEYS_PATH}/usbarmory.key -out ${KEYS_PATH}/
 Download and extract U-Boot sources:
 
 ```
-wget ftp://ftp.denx.de/pub/u-boot/u-boot-2019.07.tar.bz2
-tar xvf u-boot-2019.07.tar.bz2 && cd u-boot-2019.07
+wget ftp://ftp.denx.de/pub/u-boot/u-boot-2020.04.tar.bz2
+tar xvf u-boot-2020.04.tar.bz2 && cd u-boot-2020.04
 ```
 
-Apply the following patches for USB armory Mk II support within U-Boot:
+Apply the following patch for USB armory Mk II support within U-Boot:
 
 * [0001-ARM-mx6-add-support-for-USB-armory-Mk-II-board.patch](https://github.com/f-secure-foundry/usbarmory/tree/master/software/u-boot/0001-ARM-mx6-add-support-for-USB-armory-Mk-II-board.patch)
-
-* [0001-Drop-linker-generated-array-creation-when-CONFIG_CMD.patch](https://github.com/f-secure-foundry/usbarmory/tree/master/software/u-boot/0001-Drop-linker-generated-array-creation-when-CONFIG_CMD.patch)
 
 The following commands are meant to be issued within the U-Boot source
 directory.
