@@ -16,6 +16,36 @@ Future USB armory Mk II revisions will change to a 1.8V power supply to allow
 uSD support for uSD SDR104 (104MB/s, 208MHz, 1.8V) and eMMC HS200 (200MB/s,
 200MHz, 1.8V but at 150MB/s due to NXP ERR010450) modes.
 
+Errata: inverted UART RTS/CTS signals (resolved with workaround)
+----------------------------------------------------------------
+
+The UART1 and UART2 hardware flow control RTS/CTS signals, routed respectively
+from the ANNA-B112 BLE module and the debug accessory connection towards the
+SoC, are inverted.
+
+This prevents automatic hardware flow control when sending/receiving data from
+either the BLE module or the debug accessory FT4232H converter.
+
+For UART1 the issue does not affect standard uses of the BLE module as, even at
+highest rates, the Linux i.MX serial driver is buffered adequately and never
+suffers from RX FIFO overruns.
+
+The lack of flow control might become evident only on high data rate BLE
+Extended Data Mode (EDM) transfers, executed by polling (e.g. without
+interrupts) and without buffering.
+
+In such occurrences the issue can be worked around by using RTS/CTS as GPIOs to
+enforce correct direction and drive them by software, bypassing the UART
+controller automatic flow control.
+
+The UART2 is accessible through the USB armory Mk II
+[debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory)
+in UART mode, when accessing it ensure that hardware flow control is disabled
+(default with the Linux FTDI driver and most terminal applications).
+
+Future USB armory Mk II revisions will swap UART1 and UART2 RTS/CTS to address
+the issue.
+
 Errata: unreliable USB Serial Downloader (resolved with workaround)
 -------------------------------------------------------------------
 
