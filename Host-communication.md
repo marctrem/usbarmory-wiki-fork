@@ -5,6 +5,11 @@ dual role port (DRP) receptacle and one Upstream Facing Port (UFP) plug.
 The USB armory Mk I supports USB 2.0 connectivity over a single One-The-Go
 (OTG) Type-A plug.
 
+The following instructions assume that a Linux distribution is running on the
+USB armory, mind that alternatively host communication can also be achieved
+in a similar manner when using [TamaGo](https://github.com/f-secure-foundry/tamago)
+unikernels ([example](https://github.com/f-secure-foundry/tamago-example)).
+
 # CDC Ethernet
 
 This mode allows to interact with the USB armory just like a standard TCP/IP
