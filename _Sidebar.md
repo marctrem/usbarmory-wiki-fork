@@ -29,6 +29,7 @@
 * [Boot modes](https://github.com/f-secure-foundry/usbarmory/wiki/Boot-Modes-(Mk-II))
 * [Bluetooth](https://github.com/f-secure-foundry/usbarmory/wiki/Bluetooth)
 * [I²C](https://github.com/f-secure-foundry/usbarmory/wiki/I²C-(Mk-II))
+* [armoryctl](https://github.com/f-secure-foundry/armoryctl)
 * [Errata](https://github.com/f-secure-foundry/usbarmory/wiki/Errata-(Mk-II))
 
 ## USB armory Mk I
