@@ -104,8 +104,8 @@ The [armoryctl](https://github.com/f-secure-foundry/armoryctl) tool provides use
 space support for communicating with the Mk II internal peripherals.
 
 The [TamaGo](https://github.com/f-secure-foundry/tamago) bare metal Go compiler
-includes [imx6 drivers](https://github.com/f-secure-foundry/tamago/tree/master/imx6)
-and [Mk II board support](https://github.com/f-secure-foundry/tamago/tree/master/usbarmory).
+includes [imx6 drivers](https://github.com/f-secure-foundry/tamago/tree/master/soc/imx6)
+and [Mk II board support](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory).
 
 The [GoKey](https://github.com/f-secure-foundry/GoKey) turns the USB armory Mk II in an OpenPGP smartcard, implemented in pure Go with [TamaGo](https://github.com/f-secure-foundry/tamago) support.
 

@@ -55,8 +55,8 @@ target eMMC/microSD.
 ## Flashing i.MX native images
 
 The `imx` image format represents bootable images that can be loaded directly
-by the SoC boot ROM, examples include bootloaders (e.g. U-Boot) or bare metal
-unikernels (e.g. [TamaGo](https://github.com/f-secure-foundry/tamago)).
+by the SoC boot ROM, examples include bootloaders (e.g. U-Boot, [armory-boot](https://github.com/f-secure-foundry/armory-boot))
+or bare metal unikernels (e.g. [TamaGo](https://github.com/f-secure-foundry/tamago)).
 
 Linux (verify target from terminal using `dmesg`, e.g. /dev/sdX):
 ```
