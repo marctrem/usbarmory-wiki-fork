@@ -37,7 +37,7 @@ The pre-requisites of an effective secure booted environment are the following:
 The combination of i.MX6UL secure boot and armory-boot authentication features
 allow a fully verified chain of trust, to boot a trusted Linux kernel image.
 
-When signing a [TamaGo unikernel]((https://github.com/f-secure-foundry/tamago)
+When signing a [TamaGo unikernel](https://github.com/f-secure-foundry/tamago)
 or a Linux kernel which embeds a root file system the authentication has full
 boot (not runtime) coverage. The runtime Linux kernel verification of executed
 code, if required, is out of scope of this guide.
