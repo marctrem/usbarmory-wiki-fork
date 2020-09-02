@@ -125,7 +125,7 @@ Specifically the armory-boot [Secure Boot documentation](https://github.com/f-se
 illustrates how to maintain the chain of trust with authenticated bootloader
 configuration, ensuring target Linux kernel authentication.
 
-### Installing OTP fusing tool
+### Fusing the SRK table hash
 
 The One-Time-Programmable (OTP) fuses are stored in the SoC fuse array which is
 accessed via the On-Chip OTP Controller (`OCOTP_CTRL`). See Table 5-9 of the
@@ -139,8 +139,6 @@ and write commands.
 
 The crucible tool is meant to be executed on the USB armory Mk II itself, on a
 running Linux instance with the `nvmem-imx-ocotp` kernel module loaded.
-
-### Fusing the SRK table hash
 
 The SRK hash itself is located in registers ranging from `OCOTP_SRK0` to `OCOTP_SRK7`:
 
@@ -190,7 +188,7 @@ crucible -m IMX6UL -r 1 -b 2 -e big blow SRK_LOCK 1
 crucible -s -m IMX6UL -r 1 -b 2 read SRK_LOCK
 ```
 
-### Activate HAB
+### Activating HAB
 
 Only if you are confident that you can correctly generate signed bootloader
 images, the SoC can be placed in Closed Security Configuration.
@@ -262,7 +260,7 @@ crucible -m IMX6UL -r 1 -b 2 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
 The USB armory will now refuse to run bootloader images not correctly signed
 with keys corresponding to the fused hashes.
 
-### Verify HAB configuration (i.MX6ULL/i.MX6ULZ)
+### Verifying HAB configuration (i.MX6ULL/i.MX6ULZ)
 
 After rebooting the USB armory, the security state can be verified by checking
 the [mxs-dcp driver](https://github.com/f-secure-foundry/mxs-dcp) log
@@ -275,7 +273,7 @@ mxs_dcp: Secure State detected
 The `mxs_dcp` kernel module is compiled by default in the USB armory Mk II
 [Debian base image](https://github.com/f-secure-foundry/usbarmory-debian-base_image/releases).
 
-### Verify HAB configuration (i.MX6UL)
+### Verifying HAB configuration (i.MX6UL)
 
 After rebooting the USB armory, the security state can be verified by checking
 the [caam-keyblob driver](https://github.com/f-secure-foundry/caam-keyblob) log
