@@ -18,7 +18,7 @@ Future USB armory Mk II revisions will integrate the following changes:
     (200MB/s - 200MHz, 1.8V but at 150MB/s - 150MHz due to NXP ERR010450).
 
   * uSD: switchable 1.8V/3.3V signaling voltage to support up to SDR104
-    (104MB/ - 208MHz, 1.8V but at 75MB/s - 150MHz due to NXP ERR010450) .
+    (104MB/s - 208MHz, 1.8V but at 75MB/s - 150MHz due to NXP ERR010450) .
 
 Errata: inverted UART RTS/CTS signals (resolved with workaround)
 ----------------------------------------------------------------
