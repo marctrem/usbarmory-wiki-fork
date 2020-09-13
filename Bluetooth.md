@@ -59,10 +59,11 @@ AT+UBTCM=1
 AT+UBTLE=0
 ```
 
-The following command allow sto permanently store the configuration
+The following commands allow permanently store the configuration
 
 ```
 AT&W
+AT+CPWROFF
 ```
 
 This can also be accomplished with [armoryctl](https://github.com/f-secure-foundry/armoryctl) `ble (enable|disable)` commands.
