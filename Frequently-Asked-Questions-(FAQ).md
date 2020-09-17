@@ -69,3 +69,8 @@ When running the [USB armory Debian base image](https://github.com/f-secure-foun
 ```
 picocom -b 115200 -eb /dev/ttyUSB2 --imap lfcrlf
 ```
+
+### How do I set the USB Type-C receptacle in device mode? (Mk II)
+
+The USB armory Mk II is configured as a host by default, to enable device mode see this [example](https://github.com/f-secure-foundry/usbarmory/issues/53#issuecomment-572959387) on how to use it as a second RNDIS (usb1) interface.
+
