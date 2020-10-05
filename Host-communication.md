@@ -68,6 +68,8 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 
 ## Setup & Connection Sharing: macOS
 
+### Without connection sharing
+
 **NOTE**: The USB armory standard Debian image configures it with IP address
 10.0.0.1/24 and default gateway 10.0.0.2, the following setup instructions
 reflect these settings. The image comes with a DHCP server enabled by default,
@@ -80,10 +82,31 @@ configurations.
 
 3. Set IPv4 configuration to Manual with IP Address 10.0.0.2, Netmask 255.255.255.0.
 
+### With connection sharing
+
 The Internet Connection Sharing on macOS requires an IP range on a
-**different** subnet, this requires re-configuring the USB armory with an IP
-address between the range 192.168.2.2-192.168.2.254 on its usb0 interface,
+**different** subnet, this requires re-configuring the USB armory with a static
+IP address between the range 192.168.2.2-192.168.2.254 on its usb0 interface,
 using 192.168.2.1 as default gateway.
+
+Example interface entry for `/etc/network/interfaces`:
+
+```
+iface usb0 inet static
+  address 192.168.2.2
+  netmask 255.255.255.0
+  gateway 192.168.2.1
+
+```
+
+Once the USB armory is re-configured the macOS interface must be then set as
+follows:
+
+1. Open 'System Preferences' -> 'Network'.
+
+2. Select the 'RNDIS/Ethernet Gadget' interface.
+
+3. Set IPv4 configuration to Manual with IP Address 192.168.2.1, Netmask 255.255.255.0.
 
 Once these steps are performed Internet Connection Sharing can be enabled as
 follows:
