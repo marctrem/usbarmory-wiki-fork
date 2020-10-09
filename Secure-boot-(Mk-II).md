@@ -280,7 +280,7 @@ the [caam-keyblob driver](https://github.com/f-secure-foundry/caam-keyblob) log
 message which should read:
 
 ```
-caam_keyblob: Secure State detected
+caam_keyblob: Trusted State detected
 ```
 
 ### Revoking keys
