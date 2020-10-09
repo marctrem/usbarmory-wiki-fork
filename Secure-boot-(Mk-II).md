@@ -267,7 +267,7 @@ the [mxs-dcp driver](https://github.com/f-secure-foundry/mxs-dcp) log
 message which should read:
 
 ```
-mxs_dcp: Secure State detected
+mxs_dcp: Trusted State detected
 ```
 
 The `mxs_dcp` kernel module is compiled by default in the USB armory Mk II
