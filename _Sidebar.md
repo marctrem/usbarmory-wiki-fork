@@ -13,6 +13,7 @@
 * [TamaGo](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory)
 * [GoKey](https://github.com/f-secure-foundry/GoKey)
 * [External resources](https://github.com/f-secure-foundry/usbarmory/wiki/External-resources)
+* [Support](https://github.com/f-secure-foundry/usbarmory/wiki#support)
 
 ## USB armory Mk II
 
