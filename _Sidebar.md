@@ -23,6 +23,7 @@
 * [Security features](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/f-secure-foundry/usbarmory/wiki/Benchmarks-(Mk-II))
+* [Power consumption](https://github.com/f-secure-foundry/usbarmory/wiki/Power-consumption)
 * [Internal Boot ROM](https://github.com/f-secure-foundry/usbarmory/wiki/Internal-Boot-ROM-(Mk-II))
 * [Enclosures](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-II))
 * [JTAG](https://github.com/f-secure-foundry/usbarmory/wiki/JTAG-(Mk-II))
