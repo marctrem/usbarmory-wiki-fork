@@ -76,8 +76,9 @@
 
 ### Presentations
 
-* [Inverse Path](https://inversepath.com) - [Forging the USB armory](https://github.com/abarisani/abarisani.github.io/raw/master/research/usbarmory/forging_the_usb_armory.pdf)
-* [F-Secure Foundry](http://foundry.f-secure.com):
+* [Inverse Path](https://inversepath.com) (Mk I):
+  * [Forging the USB armory](https://github.com/abarisani/abarisani.github.io/raw/master/research/usbarmory/forging_the_usb_armory.pdf)
+* [F-Secure Foundry](http://foundry.f-secure.com) (Mk II):
   * [USB armory reloaded](https://github.com/abarisani/abarisani.github.io/raw/master/research/usbarmory/usb_armory_reloaded.pdf)
   * [TamaGo](https://github.com/abarisani/abarisani.github.io/tree/master/research/tamago)
 
