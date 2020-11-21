@@ -1,7 +1,7 @@
 # i.MX6UL/i.MX6ULZ System-on-Chip
 
 The following table summarizes the available hardware security features,
-depending on the possible USB armory Mk II [variants](https://github.com/f-secure-foundry/usbarmory/wiki/Models-(Mk-II)) for information on available variants.
+depending on the possible USB armory Mk II [variants](https://github.com/f-secure-foundry/usbarmory/wiki/Models) for information on available variants.
 
 The standard retail version opts for a faster (900 MHz) i.MX6ULZ SoC, compared
 to the i.MX6UL (528 MHz), with the main trade-off of lack of OTF DRAM
