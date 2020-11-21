@@ -13,10 +13,7 @@ All tests have been performed under Arch Linux ARM.
 The USB armory Mk II CPU is an ARM Cortex-A7, with an approximate efficiency
 rating of 1.9 DMIPS/MHz.
 
-The i.MX6ULZ CPU (P/N MCIMX6Z0DVM09AB) clocks at 900 MHz. The i.MX6UL (P/N MCIMX6G3DVM05AB) variant clocks at 528 MHz.
-
-See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models-(Mk-II)) for
-information on USB armory Mk II variants and availability.
+The i.MX6ULZ CPU (P/N MCIMX6Z0DVM09AB) clocks at 900 MHz while the i.MX6UL (P/N MCIMX6G3DVM05AB) variant clocks at 528 MHz. See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models) for information on USB armory Mk II variants and availability.
 
 ## nbench
 
