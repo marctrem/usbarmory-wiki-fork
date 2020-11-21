@@ -7,7 +7,7 @@ source hardware design, implementing a flash drive sized computer.
 
 # Purchasing
 
-See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models-(Mk-II)) for
+See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models) for
 information on USB armory Mk II variants and availability.
 
 The USB armory Mk II can be purchased at the following resellers:
