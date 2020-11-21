@@ -21,9 +21,6 @@ The USB armory Mk II can be purchased at the following resellers:
 Custom/bulk order inquiries can be placed directly by contacting
 usbarmory@f-secure.com.
 
-See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models) for
-information on available USB armory Mk II variants.
-
 # Documentation
 
 * [**Getting started**](https://github.com/f-secure-foundry/usbarmory/wiki/Starting)
