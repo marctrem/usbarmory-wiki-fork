@@ -31,8 +31,6 @@ MHz) is available, for custom orders, to provide additional security features su
 encryption ([features comparison](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II))),
 with the trade-off of a slower clock rate.
 
-See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models) for information on available variants.
-
 ## Security features
 
 See a detailed description [here](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)).
