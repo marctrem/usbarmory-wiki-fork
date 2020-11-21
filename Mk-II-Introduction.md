@@ -1,7 +1,7 @@
 The USB armory from [F-Secure Foundry](https://foundry.f-secure.com) is an open
 source hardware design, implementing a flash drive sized computer.
 
-The USB armory Mk II is the successor of the previous Mk I model.
+The USB armory Mk II is the successor of the previous [Mk I](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-i) model.
 
 ![Mk II Top](images/armory-mark-two-top.png)
 ![Mk II Bottom](images/armory-mark-two-bottom.png)
