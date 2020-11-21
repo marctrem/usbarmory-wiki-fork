@@ -8,7 +8,7 @@ The USB armory Mk II is the successor of the previous [Mk I](https://github.com/
 
 ## Purchasing
 
-See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models-(Mk-II)) for
+See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models) for
 information on USB armory Mk II variants and availability.
 
 The USB armory Mk II can be purchased at the following resellers:
