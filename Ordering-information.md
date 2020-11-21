@@ -34,8 +34,10 @@ Custom/bulk orders
 [F-Secure Foundry](https://foundry.f-secure.com) accepts
 custom orders, in retail or bulk quantities, from companies/OEMs/resellers at usbarmory@f-secure.com.
 
-Discontinued models
--------------------
+End-of-life (EOL)
+-----------------
+
+The following items are discontinued and no longer available.
 
 | P/N                | Description                                                  | Revision            |
 |--------------------|--------------------------------------------------------------|---------------------|
