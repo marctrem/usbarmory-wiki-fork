@@ -1,4 +1,5 @@
 * [Home](https://github.com/f-secure-foundry/usbarmory/wiki)
+* [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models)
 * [**Getting started**](https://github.com/f-secure-foundry/usbarmory/wiki/Starting)
 * [Preparing a bootable image](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image)
 * [Host communication](https://github.com/f-secure-foundry/usbarmory/wiki/Host-communication)
