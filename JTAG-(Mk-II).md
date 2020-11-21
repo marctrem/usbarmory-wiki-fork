@@ -1,5 +1,8 @@
 The USB armory Mk II exposes the i.MX6ULZ JTAG interface using 9 test pads. The
-following picture identifies the relevant pads.
+following sections help identifying the relevant pads.
+
+USB armory Mk II - rev. β
+-------------------------
 
 ![Mk II JTAG picture](images/armory-mark-two-jtag-board.png)
 
