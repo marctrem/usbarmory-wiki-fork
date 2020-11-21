@@ -25,6 +25,8 @@ MHz) is available, for custom orders, to provide additional security features su
 encryption ([features comparison](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II))),
 with the trade-off of a slower clock rate.
 
+See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models-(Mk-II)) for information on available variants.
+
 ## Security features
 
 See a detailed description [here](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)).
@@ -107,7 +109,7 @@ The [TamaGo](https://github.com/f-secure-foundry/tamago) bare metal Go compiler
 includes [imx6 drivers](https://github.com/f-secure-foundry/tamago/tree/master/soc/imx6)
 and [Mk II board support](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory).
 
-The [GoKey](https://github.com/f-secure-foundry/GoKey) turns the USB armory Mk II in an OpenPGP smartcard, implemented in pure Go with [TamaGo](https://github.com/f-secure-foundry/tamago) support.
+The [GoKey](https://github.com/f-secure-foundry/GoKey) turns the USB armory Mk II in an OpenPGP/U2F smartcard, implemented in pure Go with [TamaGo](https://github.com/f-secure-foundry/tamago) support.
 
 ## Accessory mode
 
