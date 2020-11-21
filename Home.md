@@ -7,6 +7,9 @@ source hardware design, implementing a flash drive sized computer.
 
 # Purchasing
 
+See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models-(Mk-II)) for
+information on USB armory Mk II variants and availability.
+
 The USB armory Mk II can be purchased at the following resellers:
   * [Crowd Supply](https://www.crowdsupply.com/f-secure/usb-armory-mk-ii)
   * [Hackerwarehouse](https://hackerwarehouse.com/product/usb-armory-mkii)
@@ -14,6 +17,9 @@ The USB armory Mk II can be purchased at the following resellers:
 
 Custom/bulk order inquiries can be placed directly by contacting
 usbarmory@f-secure.com.
+
+See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models-(Mk-II)) for
+information on available USB armory Mk II variants.
 
 # Documentation
 
@@ -52,6 +58,7 @@ The following sections provide information specific to each USB armory model.
   * Bluetooth module: u-blox ANNA-B112 BLE
   * USB 2.0 over USB-C: DRP receptacle + UFP plug
   * Secure elements: Microchip ATECC608A + NXP A71CH
+* [Models]: https://github.com/f-secure-foundry/usbarmory/wiki/Models-(Mk-II)
 * [Datasheet](https://github.com/f-secure-foundry/usbarmory/wiki/media/usbarmory-mark-two-datasheet-rev1.0.pdf)
 * [Introduction](https://github.com/f-secure-foundry/usbarmory/wiki/Mk-II-Introduction)
 * [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html)
