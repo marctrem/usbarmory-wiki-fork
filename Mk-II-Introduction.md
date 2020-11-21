@@ -94,6 +94,10 @@ protected image).
 
 * A wide variety of Linux distributions is [available](https://github.com/f-secure-foundry/usbarmory/wiki/Available-images), the main one supported by F-Secure is a [Debian image](https://github.com/f-secure-foundry/usbarmory-debian-base_image).
 
+* The [TamaGo](https://github.com/f-secure-foundry/tamago) bare metal Go compiler
+includes [imx6 drivers](https://github.com/f-secure-foundry/tamago/tree/master/soc/imx6)
+and [Mk II board support](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory).
+
 * A Linux kernel driver for the DCP (i.MX6ULZ), which takes advantage of the
 OTPMK released by the SNVS, is available at
 [https://github.com/f-secure-foundry/mxs-dcp](https://github.com/f-secure-foundry/mxs-dcp).
@@ -110,10 +114,6 @@ space support for reading, and writing, One-Time-Programmable (OTP) fuses.
 
 * The [armoryctl](https://github.com/f-secure-foundry/armoryctl) tool provides user
 space support for communicating with the Mk II internal peripherals.
-
-* The [TamaGo](https://github.com/f-secure-foundry/tamago) bare metal Go compiler
-includes [imx6 drivers](https://github.com/f-secure-foundry/tamago/tree/master/soc/imx6)
-and [Mk II board support](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory).
 
 * The [GoKey](https://github.com/f-secure-foundry/GoKey) turns the USB armory Mk II in an OpenPGP/U2F smartcard, implemented in pure Go with [TamaGo](https://github.com/f-secure-foundry/tamago) support.
 
