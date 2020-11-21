@@ -1,4 +1,4 @@
-The internal i.MX6UL Boot ROM is permanently set by the SoC manufacturer, for
+The internal SoC Boot ROM is permanently set by the processor manufacturer (NXP), for
 verification purposes its initial 92KB can be dumped with a custom
 [imx6ul_bootrom-dump utility](https://github.com/f-secure-foundry/usbarmory/blob/master/software/util/imx6ul_bootrom-dump.c).
 
