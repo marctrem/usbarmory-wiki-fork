@@ -11,9 +11,12 @@ See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models-(Mk-II)) 
 information on USB armory Mk II variants and availability.
 
 The USB armory Mk II can be purchased at the following resellers:
+  * [Mouser](https://eu.mouser.com/new/f-secure/crowd-supply-usb-armorymkii)
   * [Crowd Supply](https://www.crowdsupply.com/f-secure/usb-armory-mk-ii)
   * [Hackerwarehouse](https://hackerwarehouse.com/product/usb-armory-mkii)
   * [HackmoD](http://www.hackmod.de/USB-Armory-Stick-Mark-2)
+  * [SparkFun](https://www.sparkfun.com/products/16367)
+  * [Antratek](https://www.antratek.com/usb-armory-mk-ii-w-enclosure)
 
 Custom/bulk order inquiries can be placed directly by contacting
 usbarmory@f-secure.com.
