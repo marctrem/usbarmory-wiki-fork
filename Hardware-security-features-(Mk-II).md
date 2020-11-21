@@ -1,30 +1,31 @@
 # i.MX6UL/i.MX6ULZ System-on-Chip
 
 The following table summarizes the available hardware security features,
-depending on the possible USB armory Mk II [variants](https://github.com/f-secure-foundry/usbarmory/wiki/Models) for information on available variants.
+depending on the USB armory Mk II
+[model](https://github.com/f-secure-foundry/usbarmory/wiki/Ordering-information).
 
-The standard retail version opts for a faster (900 MHz) i.MX6ULZ SoC, compared
-to the i.MX6UL (528 MHz), with the main trade-off of lack of OTF DRAM
+The standard retail version mounts a faster (900 MHz) i.MX6ULZ SoC, compared to
+the i.MX6UL (528 MHz) variant, with the main trade-off of lack of OTF DRAM
 encryption.
 
-The i.MX6UL variant with additional security properties, allowing external RAM
+The i.MX6UL variant features additional security properties, allowing external RAM
 encryption and a more complete internal cryptographic accelerator, is available
-for custom/bulk orders.
+only for [custom/bulk orders](https://github.com/f-secure-foundry/usbarmory/wiki/Ordering-information#custombulk-orders).
 
-| Name  | Use                                  | Variants            | Availability |
+| Name  | Description                          | Models              | Availability |
 |-------|--------------------------------------|---------------------|--------------|
 | HABv4 | Secure Boot                          | all                 | retail       |
 | RNGB  | TRNG                                 | i.MX6ULZ (900 MHz)  | retail       |
-| DCP   | Cryptographic acceleration           | i.MX6ULZ (900 MHz)  | retail       |
-| CAAM  | Cryptographic acceleration, TRNG     | i.MX6UL  (528 MHz)  | custom order |
+| DCP   | Cryptographic accelerator            | i.MX6ULZ (900 MHz)  | retail       |
+| CAAM  | Cryptographic accelerator, TRNG      | i.MX6UL  (528 MHz)  | custom order |
 | SNVS  | Secure Non-Volatile Storage          | all                 | retail       |
 | BEE   | On-the-fly external RAM encryption   | i.MX6UL  (528 MHz)  | custom order |
 | TZ    | ARM® TrustZone®                      | all                 | retail       |
-| ATECC | External cryptographic co-processor  | ATECC608A on rev. β | retail       |
-| ATECC | External cryptographic co-processor  | ATECC608B on rev. γ | TBA          |
-| A71CH | External cryptographic co-processor  | rev. β              | retail       |
-| SE050 | External cryptographic co-processor  | rev. γ              | TBA          |
-| RPMB  | Protected flash memory region        | all                 | retail       |
+| ATECC | Microchip ATECC608A secure element   | all rev. β          | retail       |
+| ATECC | Microchip ATECC608B secure element   | all rev. γ          | TBA          |
+| A71CH | NXP A71CH secure element             | all rev. β          | retail       |
+| SE050 | NXP SE050 secure element             | all rev. γ          | TBA          |
+| RPMB  | Replay protected memory block        | all                 | retail       |
 
 ## High Assurance Boot (HABv4)
 
@@ -93,7 +94,7 @@ allowing OTF DRAM encryption.
 The i.MX6 SoC family features an [ARM® TrustZone®](http://www.arm.com/products/processors/technologies/trustzone/)
 implementation in its CPU core as well as its internal peripherals.
 
-# External cryptographic co-processors
+# External secure elements
 
 On β revisions the [Microchip ATECC608A](https://www.microchip.com/wwwproducts/en/ATECC608A) and
 [NXP AT71CH](https://www.nxp.com/products/identification-and-security/authentication/plug-and-trust-the-fast-easy-way-to-deploy-secure-iot-connections:A71CH)
@@ -105,8 +106,8 @@ On γ revisions (TBA) the [Microchip ATECC608B](https://www.microchip.com/wwwpro
 feature hardware acceleration for elliptic-curve and AES cryptography as well as providing
 hardware based key storage.
 
-All such external co-processors provide high-endurance monotonic counters, useful for external
-verification of firmware downgrade/rollback attacks.
+All such external secure elements provide high-endurance monotonic counters,
+useful for external verification of firmware downgrade/rollback attacks.
 
 The external components communicate on the I²C bus and feature authenticated and
 encrypted sessions for host communication.

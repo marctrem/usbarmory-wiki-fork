@@ -8,8 +8,8 @@ The USB armory Mk II is the successor of the previous [Mk I](https://github.com/
 
 ## Purchasing
 
-See [Models](https://github.com/f-secure-foundry/usbarmory/wiki/Models) for
-information on USB armory Mk II variants and availability.
+See [Ordering information](https://github.com/f-secure-foundry/usbarmory/wiki/Ordering-information)
+for USB armory Mk II variants, accessorie and purchase options.
 
 The USB armory Mk II can be purchased at the following resellers:
   * [Mouser](https://eu.mouser.com/new/f-secure/crowd-supply-usb-armorymkii)
