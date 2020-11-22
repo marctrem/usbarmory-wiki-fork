@@ -1,11 +1,12 @@
 Standard orders
 ---------------
 
-| P/N                | Description                                                  | Revision            |
+| P/N¹               | Description                                                  | Revision            |
 |--------------------|--------------------------------------------------------------|---------------------|
 | `UA-MKII-ULZ-512M` | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6ULZ 900 MHz • 512 MB RAM • [enclosure](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-II)) | β       |
 | `UA-MKII-DA`              | [Debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory) for the USB armory Mk II                                                                        | 1       |
 
+¹ F-Secure part number shown. Resellers identifier may differ, use description and revision information to match.  
 ᵝ [Security features](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)): [HAB](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#high-assurance-boot-habv4), [RNGB](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#random-number-generator-rngb---imx6ulz), [DCP](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#data-co-processor-dcp---imx6ulz), [SNVS](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#secure-non-volatile-storage-snvs), [TZ](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#arm-trustzone), [ATECC608A](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements), [A71CH](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements), [RPMB](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#emmc-replay-protected-memory-blocks-rpmb)
  
 Standard parts can be purchased at the following resellers:
