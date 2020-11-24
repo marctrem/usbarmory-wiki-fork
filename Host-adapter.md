@@ -1,6 +1,8 @@
 ## Scope
 
-This page applies to the USB armory Mk I only, the USB armory Mk II features a USB receptacle which can be natively used for USB host functionality without requiring adapters or re-configuration.
+This page applies to the USB armory Mk I only.
+
+The USB armory Mk II features a USB receptacle which can be natively used for USB host functionality without requiring adapters or re-configuration (see this [FAQ entry](https://github.com/f-secure-foundry/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)#how-do-i-set-the-usb-type-c-receptacle-in-device-mode-mk-ii)).
 
 ### Enabling host mode
 
