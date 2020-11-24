@@ -1,3 +1,7 @@
+## Scope
+
+This page applies to the USB armory Mk I only, the USB armory Mk II features a USB receptacle which can be natively used for USB host functionality without requiring adapters or re-configuration.
+
 ### Enabling host mode
 
 The USB armory is primarily meant to be attached to a USB host, such as a
