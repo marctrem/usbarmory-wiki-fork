@@ -44,7 +44,7 @@
 
 * [Christopher](https://yawnbox.com/index.php/about) published a [guide](https://yawnbox.com/index.php/2015/12/02/configuring-a-usb-armory-as-a-reverse-ssh-server-via-tor-hidden-service/) on configuring the USB armory as a reverse SSH server via Tor hidden service.
 
-* [Julien Desfossez](https://github.com/jdesfossez) published a [guide](https://github.com/jdesfossez/usbarmory/wiki/Preparing-a-Ubuntu-FDE-microSD-image) on manually preparing an Ubuntu image for the USB armory with a full disk encryption and signed boot image.
+* [Julien Desfossez](https://github.com/jdesfossez) published a [guide](https://github.com/jdesfossez/usbarmory/wiki/Preparing-a-Ubuntu-FDE-microSD-image) on manually preparing a Ubuntu image for the USB armory with a full disk encryption and signed boot image.
 
 * [Vince Cali](https://twitter.com/0x56) [ported](https://github.com/darwin-on-arm/xnu/commit/410a687039bbbd35b703e1ead996080fae51a887) Darwin on the USB armory, a detailed writeup with build instruction is available [here](http://embeddedideation.com/2016/02/08/darwin-on-armory/).
 
@@ -52,7 +52,7 @@
 
 * Andrea Covello of [scip AG](https://www.scip.ch/en/?) published two excellent tutorials on setting up INTERLOCK on the USB armory: [part 1](https://www.scip.ch/en/?labs.20160811), [part 2](https://www.scip.ch/en/?labs.20160922)
 
-* Pedro Vilaca authored an USB armory based [USB sandbox](https://github.com/gdbinit/armorysandbox), described in this [article](https://sentinelone.com/blogs/armory-sandbox-building-usb-analyzer-usb-armory/)
+* Pedro Vilaca authored a USB armory based [USB sandbox](https://github.com/gdbinit/armorysandbox), described in this [article](https://sentinelone.com/blogs/armory-sandbox-building-usb-analyzer-usb-armory/)
 
 * [Georg](https://github.com/tuxlifan) provides a fork for our official [basic Debian image generation](https://github.com/f-secure-foundry/usbarmory-debian-base_image) that allows [basic Devuan image generation](https://github.com/tuxlifan/usbarmory-devuan-base_image).
 
