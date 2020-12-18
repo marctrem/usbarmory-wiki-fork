@@ -12,7 +12,7 @@ For this reason the maximum achievable speeds are High Speed mode (25MB/s,
 50MHz, 3.3V) for external uSD and High Speed DDR mode (104MB/s, 52MHz, 3.3V)
 for the internal eMMC.
 
-Future USB armory Mk II revisions will integrate the following changes:
+USB armory Mk II rev. γ integrates the following changes:
 
   * eMMC: signaling voltage set to 1.8V to support up to HS200 mode
     (200MB/s - 200MHz, 1.8V but at 150MB/s - 150MHz due to NXP ERR010450).
@@ -47,8 +47,7 @@ The UART2 is accessible through the USB armory Mk II
 in UART mode, when accessing it ensure that hardware flow control is disabled
 (default with the Linux FTDI driver and most terminal applications).
 
-Future USB armory Mk II revisions will swap UART1 and UART2 RTS/CTS to address
-the issue.
+USB armory Mk II rev. γ swaps UART1 and UART2 RTS/CTS to address the issue.
 
 Errata: unreliable USB Serial Downloader (resolved with workaround)
 -------------------------------------------------------------------
@@ -104,7 +103,7 @@ Both methods are implemented in the `ble rc_lfck (flash|at)` command of the
 Following our bug report, u-blox recommends grounding of the `XL_1` and `XL_2`
 pads in ANNA-B112 System Integration Manual revisions R06 or later.
 
-Future USB armory Mk II revisions will ground `XL_1` and `XL_2`.
+USB armory Mk II rev. γ grounds `XL_1` and `XL_2`.
 
 Errata: instability with specific Linux kernel versions (resolved on <= 4.19, >= 5.3)
 -------------------------------------------------------------------------------------
