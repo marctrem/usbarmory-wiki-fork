@@ -49,32 +49,6 @@ in UART mode, when accessing it ensure that hardware flow control is disabled
 
 USB armory Mk II rev. γ swaps UART1 and UART2 RTS/CTS to address the issue.
 
-Errata: unreliable USB Serial Downloader (resolved with workaround)
--------------------------------------------------------------------
-
-The Serial Downloader mode checks first for activity on UART1/UART2, then on
-the USB OTG1 interface. When activity is detected on UART1/UART2 the USB
-interface is not configured for serial download.
-
-On some devices when booting in Serial Downloader mode (e.g. without a valid
-boot media) the device detects spurious activity on UART1 caused by the BLE
-module at startup, this prevents configuration of Serial Downloader mode over
-USB and results of the following messages on the host (Linux example shown):
-
-```
-kernel: usb 2-2.3: new high-speed USB device number 94 using xhci_hcd
-kernel: usb 2-2.3: device descriptor read/64, error -110
-```
-
-The issue is worked around by disabling the UART Serial Downloader mode,
-leaving only the USB mode active, by fusing the `UART_SERIAL_DOWNLOAD_DISABLE`
-OTP fuse (example with [crucible](https://github.com/f-secure-foundry/crucible) tool
-shown):
-
-```
-crucible -m IMX6ULZ -r 0 -b 16 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
-```
-
 Errata: unreliable serial connection to BLE module (resolved with workaround)
 -----------------------------------------------------------------------------
 
@@ -105,41 +79,36 @@ pads in ANNA-B112 System Integration Manual revisions R06 or later.
 
 USB armory Mk II rev. γ grounds `XL_1` and `XL_2`.
 
-Errata: instability with specific Linux kernel versions (resolved on <= 4.19, >= 5.3)
--------------------------------------------------------------------------------------
+USB armory Mk II (all revisions)
+================================
 
-The following commit introduces CPU/memory instability (kernel versions > 4.9):
-  http://archive.lwn.net:8080/devicetree/1535701998-20443-2-git-send-email-Anson.Huang@nxp.com/t/#m37a316952c72a0b8d2ae16e7d0720a498048409c
+Errata: unreliable USB Serial Downloader (resolved with workaround)
+-------------------------------------------------------------------
 
-It is not clear why P1 IPG clock is required on i.MX6UL MMDC block as the
-reference manual does not reference it.
+The Serial Downloader mode checks first for activity on UART1/UART2, then on
+the USB OTG1 interface. When activity is detected on UART1/UART2 the USB
+interface is not configured for serial download.
 
-The instability is addressed by either reverting the earlier commit or applying
-the following one:
-  https://patchwork.kernel.org/patch/10950145/
+On some devices when booting in Serial Downloader mode (e.g. without a valid
+boot media) the device detects spurious activity on UART1 caused by the BLE
+module at startup, this prevents configuration of Serial Downloader mode over
+USB and results of the following messages on the host (Linux example shown):
 
-The patch is included in kernels >= 5.3,
+```
+kernel: usb 2-2.3: new high-speed USB device number 94 using xhci_hcd
+kernel: usb 2-2.3: device descriptor read/64, error -110
+```
 
-Errata: glitch on CPU frequency changes (resolved)
---------------------------------------------------
+The issue is worked around by disabling the UART Serial Downloader mode,
+leaving only the USB mode active, by fusing the `UART_SERIAL_DOWNLOAD_DISABLE`
+OTP fuse (example with [crucible](https://github.com/f-secure-foundry/crucible) tool
+shown):
 
-When the Linux CPU governor is set `ondemand`, and on high CPU loads, the
-system is highly unstable on a relevant percentage of pre-production boards
-(~40%).
+```
+crucible -m IMX6ULZ -r 0 -b 16 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
+```
 
-The instability is resolved by forcing the CPU governor to `performance`.
-
-The issue appears similar to what reported at the following URL, which also
-includes a utility which reliably triggers the issue:
-  https://github.com/imx6-dongle/linux-imx/issues/9
-
-The following blog post higlights a similar issue which might be "appearing as
-if the problem stemmed from a CPU frequency scaling problem.":
-  https://boundarydevices.com/i-mx-6dq-u-boot-updates/
-
-The issue has been evaluated as the result of tight DDR calibration values,
-using a different round of DDR calibration resolved the issue:
-  https://github.com/f-secure-foundry/usbarmory/commit/d3f98bbc812c619e6d1d4136b53806169ea2d34e
+The OTP fuse is set by F-Secure on all shipped units.
 
 Errata: charger detection issues
 --------------------------------
@@ -226,3 +195,39 @@ https://e2e.ti.com/support/interface/f/138/t/813069
 Manual enable:
 `i2cset -y 0 0x31 0x5 0xbb` or
  [armoryctl](https://github.com/f-secure-foundry/armoryctl) `fusb (enable|disable)`
+
+Errata: instability with specific Linux kernel versions (resolved on <= 4.19, >= 5.3)
+-------------------------------------------------------------------------------------
+
+The following commit introduces CPU/memory instability (kernel versions > 4.9):
+  http://archive.lwn.net:8080/devicetree/1535701998-20443-2-git-send-email-Anson.Huang@nxp.com/t/#m37a316952c72a0b8d2ae16e7d0720a498048409c
+
+It is not clear why P1 IPG clock is required on i.MX6UL MMDC block as the
+reference manual does not reference it.
+
+The instability is addressed by either reverting the earlier commit or applying
+the following one:
+  https://patchwork.kernel.org/patch/10950145/
+
+The patch is included in kernels >= 5.3,
+
+Errata: glitch on CPU frequency changes (resolved)
+--------------------------------------------------
+
+When the Linux CPU governor is set `ondemand`, and on high CPU loads, the
+system is highly unstable on a relevant percentage of pre-production boards
+(~40%).
+
+The instability is resolved by forcing the CPU governor to `performance`.
+
+The issue appears similar to what reported at the following URL, which also
+includes a utility which reliably triggers the issue:
+  https://github.com/imx6-dongle/linux-imx/issues/9
+
+The following blog post higlights a similar issue which might be "appearing as
+if the problem stemmed from a CPU frequency scaling problem.":
+  https://boundarydevices.com/i-mx-6dq-u-boot-updates/
+
+The issue has been evaluated as the result of tight DDR calibration values,
+using a different round of DDR calibration resolved the issue:
+  https://github.com/f-secure-foundry/usbarmory/commit/d3f98bbc812c619e6d1d4136b53806169ea2d34e
