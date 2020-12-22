@@ -5,7 +5,7 @@ The USB armory Mk II has the following components accessible as I²C slaves:
 | Models | Address | P/N                       | Role                              | Max I²C frequency |
 |--------|--------|----------------------------|-----------------------------------|-------------------|
 | all    | 0x08    | NXP F1510                 | Power management controller       |           400 kHz |
-| rev. γ | 0x48    | NXP SE050                 | Cryptographic co-processor        |           1.7 kHz |
+| rev. γ | 0x48    | NXP SE050                 | Cryptographic co-processor        |           1.7 MHz |
 | rev. β | 0x48    | NXP A71CH                 | Cryptographic co-processor        |           400 kHz |
 | rev. γ | 0x60    | Microchip ATECC608B       | Cryptographic co-processor        |             1 MHz |
 | rev. β | 0x60    | Microchip ATECC608A       | Cryptographic co-processor        |             1 MHz |
