@@ -12,20 +12,20 @@ The i.MX6UL variant features additional security properties, allowing external R
 encryption and a more complete internal cryptographic accelerator, is available
 only for [custom/bulk orders](https://github.com/f-secure-foundry/usbarmory/wiki/Ordering-information#custombulk-orders).
 
-| Name  | Description                          | Models              | Availability |
-|-------|--------------------------------------|---------------------|--------------|
-| HABv4 | Secure Boot                          | all                 | retail       |
-| RNGB  | TRNG                                 | i.MX6ULZ (900 MHz)  | retail       |
-| DCP   | Cryptographic accelerator            | i.MX6ULZ (900 MHz)  | retail       |
-| CAAM  | Cryptographic accelerator, TRNG      | i.MX6UL  (528 MHz)  | custom order |
-| SNVS  | Secure Non-Volatile Storage          | all                 | retail       |
-| BEE   | On-the-fly external RAM encryption   | i.MX6UL  (528 MHz)  | custom order |
-| TZ    | ARM® TrustZone®                      | all                 | retail       |
-| ATECC | Microchip ATECC608A secure element   | all rev. β          | retail       |
-| ATECC | Microchip ATECC608B secure element   | all rev. γ          | TBA          |
-| A71CH | NXP A71CH secure element             | all rev. β          | retail       |
-| SE050 | NXP SE050 secure element             | all rev. γ          | TBA          |
-| RPMB  | Replay protected memory block        | all                 | retail       |
+| Name  | Description                          | Models             | Availability |
+|-------|--------------------------------------|--------------------|--------------|
+| HABv4 | Secure Boot                          | all                | retail       |
+| RNGB  | TRNG                                 | i.MX6ULZ (900 MHz) | retail       |
+| DCP   | Cryptographic accelerator            | i.MX6ULZ (900 MHz) | retail       |
+| CAAM  | Cryptographic accelerator, TRNG      | i.MX6UL  (528 MHz) | custom order |
+| SNVS  | Secure Non-Volatile Storage          | all                | retail       |
+| BEE   | On-the-fly external RAM encryption   | i.MX6UL  (528 MHz) | custom order |
+| TZ    | ARM® TrustZone®                      | all                | retail       |
+| ATECC | Microchip ATECC608A secure element   | rev. β             | retail       |
+| ATECC | Microchip ATECC608B secure element   | rev. γ             | TBA          |
+| A71CH | NXP A71CH secure element             | rev. β             | retail       |
+| SE050 | NXP SE050 secure element             | rev. γ             | TBA          |
+| RPMB  | Replay protected memory block        | all                | retail       |
 
 ## High Assurance Boot (HABv4)
 

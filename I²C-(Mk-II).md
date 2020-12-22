@@ -2,13 +2,15 @@
 
 The USB armory Mk II has the following components accessible as I²C slaves:
 
-| Address | P/N                       | Role                              | Max I²C frequency |
-|---------|---------------------------|-----------------------------------|-------------------|
-| 0x08    | NXP F1510                 | Power management controller       |           400 kHz |
-| 0x48    | NXP A71CH                 | Cryptographic co-processor        |           400 kHz |
-| 0x60    | Microchip ATECC608A       | Cryptographic co-processor        |             1 MHz |
-| 0x61    | Texas Instruments TUSB320 | Type-C plug port controller       |           400 kHz |
-| 0x31    | ON Semiconductor FUSB303  | Type-C receptacle port controller |           400 kHz |
+| Models | Address | P/N                       | Role                              | Max I²C frequency |
+|--------|--------|----------------------------|-----------------------------------|-------------------|
+| all    | 0x08    | NXP F1510                 | Power management controller       |           400 kHz |
+| rev. γ | 0x48    | NXP SE050                 | Cryptographic co-processor        |           1.7 kHz |
+| rev. β | 0x48    | NXP A71CH                 | Cryptographic co-processor        |           400 kHz |
+| rev. γ | 0x60    | Microchip ATECC608B       | Cryptographic co-processor        |             1 MHz |
+| rev. β | 0x60    | Microchip ATECC608A       | Cryptographic co-processor        |             1 MHz |
+| all    | 0x61    | Texas Instruments TUSB320 | Type-C plug port controller       |           400 kHz |
+| all    | 0x31    | ON Semiconductor FUSB303  | Type-C receptacle port controller |           400 kHz |
 
 ### Control tool
 
