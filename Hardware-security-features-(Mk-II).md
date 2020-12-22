@@ -21,10 +21,10 @@ only for [custom/bulk orders](https://github.com/f-secure-foundry/usbarmory/wiki
 | SNVS  | Secure Non-Volatile Storage          | all                | retail       |
 | BEE   | On-the-fly external RAM encryption   | i.MX6UL  (528 MHz) | custom order |
 | TZ    | ARM® TrustZone®                      | all                | retail       |
-| ATECC | Microchip ATECC608A secure element   | rev. β             | retail       |
 | ATECC | Microchip ATECC608B secure element   | rev. γ             | TBA          |
-| A71CH | NXP A71CH secure element             | rev. β             | retail       |
+| ATECC | Microchip ATECC608A secure element   | rev. β             | retail       |
 | SE050 | NXP SE050 secure element             | rev. γ             | TBA          |
+| A71CH | NXP A71CH secure element             | rev. β             | retail       |
 | RPMB  | Replay protected memory block        | all                | retail       |
 
 ## High Assurance Boot (HABv4)
