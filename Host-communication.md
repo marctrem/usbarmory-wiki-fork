@@ -128,16 +128,16 @@ interface on the host machine (your assignment might vary):
 
 ```
 # enable IP forwarding
-$ sudo sysctl -w net.inet.ip.forwarding=1
+sudo sysctl -w net.inet.ip.forwarding=1
 
 # enable PF firewall
-$ sudo pfctl -e
+sudo pfctl -e
 
 # Option 1: add NAT rule after en5 is up (USB armory already plugged and started)
-$ echo "nat on en0 from en5:network to any -> (en0)" | sudo pfctl -f -
+echo "nat on en0 from en5:network to any -> (en0)" | sudo pfctl -f -
 
 # Option 2: add NAT rule before USB armory is plugged, requires specifying its network
-$ echo "nat on en0 from 10.0.0.0/8 to any -> (en0)" | sudo pfctl -f -
+echo "nat on en0 from 10.0.0.0/8 to any -> (en0)" | sudo pfctl -f -
 ```
 
 ## Setup & Connection Sharing: Windows 7, 8, 10
@@ -217,14 +217,14 @@ provides a tool that can be used to directly download and execute code on the So
 The ```verify``` and ```debugmode``` flags can also be used as debugging aid to verify correct SoC operation.
 
 ```
-imx_usb -v -d image.imx
+sudo imx_usb -v -d image.imx
 ```
 
 Only for the [USB armory Mk II SDP protocol](https://github.com/f-secure-foundry/usbarmory/wiki/Boot-Modes-(Mk-II))
 there is also our own equivalent [armory-boot-usb loader](https://github.com/f-secure-foundry/armory-boot/tree/master/cmd/armory-boot-usb).
 
 ```
-armory-boot-usb -i image.imx
+sudo armory-boot-usb -i image.imx
 ```
 
 # USB VID/PID
