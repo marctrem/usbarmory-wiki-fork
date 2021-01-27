@@ -217,11 +217,15 @@ provides a tool that can be used to directly download and execute code on the So
 The ```verify``` and ```debugmode``` flags can also be used as debugging aid to verify correct SoC operation.
 
 ```
-./imx_usb -v -d u-boot.imx
+imx_usb -v -d image.imx
 ```
 
 Only for the [USB armory Mk II SDP protocol](https://github.com/f-secure-foundry/usbarmory/wiki/Boot-Modes-(Mk-II))
 there is also our own equivalent [armory-boot-usb loader](https://github.com/f-secure-foundry/armory-boot/tree/master/cmd/armory-boot-usb).
+
+```
+armory-boot-usb -i image.imx
+```
 
 # USB VID/PID
 
