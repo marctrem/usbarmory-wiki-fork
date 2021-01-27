@@ -137,7 +137,7 @@ The symptom can also be eliminated by commenting function
 On some Thinkpad x250 right-hand side USB ports none of those mitigations
 appear to work, suggesting a different/additional issue.
 
-It should be noted that when loading code through `imx_usb` the issue does not
+It should be noted that when loading code through USB SDP the issue does not
 appear, it is speculated that the USB initialization performed by the boot ROM
 itself (due to Serial Download Protocol mode) prevents the issue.
 

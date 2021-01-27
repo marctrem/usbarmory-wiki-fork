@@ -30,10 +30,17 @@ fails to find valid instructions.
 
 # Serial Download Protocol (SDP)
 
-The serial downloader can be found in the [imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader)
-and used to directly download and execute code on the SoC over USB or UART.
+The `armory-boot-usb` serial downloader can be found in the
+[armory-boot repository](https://github.com/f-secure-foundry/armory-boot/tree/master/cmd/armory-boot-usb)
+and used to directly download and execute code on the SoC over USB.
 
-The ```verify``` and ```debugmode``` flags can also be used as debugging aid to
+```
+go get github.com/f-secure-foundry/armory-boot/cmd/armory-boot-usb
+sudo $GOPATH/armory-boot-usb -i image.imx
+```
+
+Alternatively the [imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader)
+can be used, also providing the ```verify``` and ```debugmode``` flags as debugging aid to
 verify correct SoC operation.
 
 ```

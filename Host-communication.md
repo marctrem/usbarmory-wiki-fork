@@ -211,13 +211,17 @@ The following respository, contributed by [Collin Mulliner](https://github.com/c
 
 # Serial Download Protocol (SDP)
 
-The serial downloader can be found in the [imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader) and used to directly download and execute code on the SoC.
+For the USB armory Mk I and Mk II the [imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader)
+provides a tool that can be used to directly download and execute code on the SoC via USB.
 
 The ```verify``` and ```debugmode``` flags can also be used as debugging aid to verify correct SoC operation.
 
 ```
 ./imx_usb -v -d u-boot.imx
 ```
+
+Only for the [USB armory Mk II SDP protocol](https://github.com/f-secure-foundry/usbarmory/wiki/Boot-Modes-(Mk-II))
+there is also our own equivalent [armory-boot-usb loader](https://github.com/f-secure-foundry/armory-boot/tree/master/cmd/armory-boot-usb).
 
 # USB VID/PID
 
