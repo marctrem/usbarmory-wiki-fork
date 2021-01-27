@@ -44,7 +44,7 @@ can be used, also providing the ```verify``` and ```debugmode``` flags as debugg
 verify correct SoC operation.
 
 ```
-imx_usb -v -d image.imx
+sudo imx_usb -v -d image.imx
 ```
 
 # Flashing bootable images on external/internal media
