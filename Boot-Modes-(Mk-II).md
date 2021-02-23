@@ -35,7 +35,7 @@ The `armory-boot-usb` serial downloader can be found in the
 and used to directly download and execute code on the SoC over USB.
 
 ```
-sudo $GOPATH/armory-boot-usb -i image.imx
+sudo $GOPATH/bin/armory-boot-usb -i image.imx
 ```
 
 Alternatively the [imx usb loader repository](https://github.com/boundarydevices/imx_usb_loader)
