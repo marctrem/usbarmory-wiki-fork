@@ -35,7 +35,6 @@ The `armory-boot-usb` serial downloader can be found in the
 and used to directly download and execute code on the SoC over USB.
 
 ```
-go get github.com/f-secure-foundry/armory-boot/cmd/armory-boot-usb
 sudo $GOPATH/armory-boot-usb -i image.imx
 ```
 
