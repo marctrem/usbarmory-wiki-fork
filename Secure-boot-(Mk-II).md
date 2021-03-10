@@ -84,18 +84,17 @@ make -C ${USBARMORY_GIT}/software/secure_boot/hab-pki -f Makefile-pki KEYS_PATH=
 
 The four SRKs must be merged in a table for SHA256 hash calculation, the hash
 is going to be eventually fused on the USB armory SoC. The table and hash can
-be generated with the
-[usbarmory_srktool](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/usbarmory_srktool)
+be generated with `habtool` from the [crucible](https://github.com/f-secure-foundry/crucible) package
 as follows:
 
 ```
-usbarmory_srktool  \
-  --key1  ${HAB_KEYS}/SRK_1_crt.pem \
-  --key2  ${HAB_KEYS}/SRK_2_crt.pem \
-  --key3  ${HAB_KEYS}/SRK_3_crt.pem \
-  --key4  ${HAB_KEYS}/SRK_4_crt.pem \
-  --hash  ${HAB_KEYS}/SRK_1_2_3_4_fuse.bin \
-  --table ${HAB_KEYS}/SRK_1_2_3_4_table.bin
+habtool  \
+  -1 ${HAB_KEYS}/SRK_1_crt.pem \
+  -2 ${HAB_KEYS}/SRK_2_crt.pem \
+  -3 ${HAB_KEYS}/SRK_3_crt.pem \
+  -4 ${HAB_KEYS}/SRK_4_crt.pem \
+  -o ${HAB_KEYS}/SRK_1_2_3_4_fuse.bin \
+  -O ${HAB_KEYS}/SRK_1_2_3_4_table.bin
 ```
 
 The SHA256 hash is created and can be inspected as follows (**WARNING**: this
@@ -286,7 +285,7 @@ caam_keyblob: Trusted State detected
 ### Revoking keys
 
 Each of the first 3 Super Root Keys (SRK) (corresponding to index 1-3 passed to
-`usbarmory_csftool`) can be revoked on a single unit, this is useful to prevent
+`habtool`) can be revoked on a single unit, this is useful to prevent
 vulnerable (e.g. because of known security issues) signed images from being
 used again on a device.
 
@@ -294,7 +293,7 @@ To do so the `OCOTP_SRK_REVOKE` fuse can be used with the
 [crucible](https://github.com/f-secure-foundry/crucible) tool to set
 `SRK_REVOKE[0:2]` bits, reflecting the index of the revoked key.
 
-Example of revocation for key with `usbarmory_csftool` index 3 (corresponding
+Example of revocation for key with index 3 (corresponding
 to `SRK_REVOKE` bit 2):
 
 ```
