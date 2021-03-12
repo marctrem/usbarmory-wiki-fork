@@ -94,7 +94,7 @@ habtool  \
   -3 ${HAB_KEYS}/SRK_3_crt.pem \
   -4 ${HAB_KEYS}/SRK_4_crt.pem \
   -o ${HAB_KEYS}/SRK_1_2_3_4_fuse.bin \
-  -O ${HAB_KEYS}/SRK_1_2_3_4_table.bin
+  -t ${HAB_KEYS}/SRK_1_2_3_4_table.bin
 ```
 
 The SHA256 hash is created and can be inspected as follows (**WARNING**: this
@@ -113,12 +113,42 @@ hexdump -C ${HAB_KEYS}/SRK_1_2_3_4_fuse.bin
 primary boot loader which allows starting Linux kernel images with authenticated
 configuration.
 
-Its `imx_signed` target, when compiled passing the  keys created in the
-previous section through the `HAB_KEYS` variable, allows creation of a signed
-bootloader image.
+The signing procedure applies to any IMX executable, but it is shown against
+the `armory-boot` bootloader in this document.
 
-Follow its [documentation](https://github.com/f-secure-foundry/armory-boot/blob/master/README.md)
-for compilation and installation steps.
+Signatures for IMX executable images can be generated with `habtool` as
+follows:
+
+```
+habtool  \
+  -A ${HAB_KEYS}/CSF_1_key.pem \
+  -a ${HAB_KEYS}/CSF_1_crt.pem \
+  -B ${HAB_KEYS}/IMG_1_key.pem \
+  -b ${HAB_KEYS}/IMG_1_crt.pem \
+  -t ${HAB_KEYS}/SRK_1_2_3_4_table.bin \
+  -x 1 \
+  -i armory-boot.imx \
+  -o armory-boot.csf && \
+```
+
+The signature is meant to be concatenated to the executable for producing the
+final signed image:
+
+```
+cat armory-boot.imx armory-boot.csf > armory-boot-signed.imx
+```
+
+This procedure is automatically performed by the `imx_signed` Makefile target
+for `armory-boot`, when compiled passing the keys created in the previous
+section through the `HAB_KEYS` variable, creating the signed bootloader
+image.
+
+```
+make CROSS_COMPILE=arm-none-eabi- imx_signed
+```
+
+Please refer to [armory-boot documentation](https://github.com/f-secure-foundry/armory-boot/blob/master/README.md)
+for details on the bootloade compilation, installation and configuration.
 
 Specifically the armory-boot [Secure Boot documentation](https://github.com/f-secure-foundry/armory-boot/blob/master/README.md#secure-boot)
 illustrates how to maintain the chain of trust with authenticated bootloader
