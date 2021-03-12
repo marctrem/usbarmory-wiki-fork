@@ -118,7 +118,7 @@ utility provides support for Secure Boot provisioning and executable signing.
 * The [armoryctl](https://github.com/f-secure-foundry/armoryctl) tool provides user
 space support for communicating with the Mk II internal peripherals.
 
-* The [TamaGo](https://github.com/f-secure-foundry/tamago) enables creation of
+* The [TamaGo](https://github.com/f-secure-foundry/tamago) framework enables creation of
 pure Go bare metal unikernels, such as:
   * [GoKey](https://github.com/f-secure-foundry/GoKey), turn the USB armory Mk II in an
     OpenPGP/U2F smartcard.
