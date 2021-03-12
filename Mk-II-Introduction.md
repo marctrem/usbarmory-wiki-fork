@@ -109,13 +109,20 @@ OTPMK released by the SNVS, is available at
 * The [INTERLOCK](https://github.com/f-secure-foundry/interlock) file encryption
 front-end supports both CAAM and DCP through such drivers.
 
-* The [crucible](https://github.com/f-secure-foundry/crucible) tool provides user
-space support for reading, and writing, One-Time-Programmable (OTP) fuses.
+* The [crucible](https://github.com/f-secure-foundry/crucible/tree/master/cmd/crucible)
+utility provides user space support for reading, and writing, One-Time-Programmable (OTP) fuses.
+
+* The [habtool](https://github.com/f-secure-foundry/crucible/tree/master/cmd/habtool)
+utility provides support for Secure Boot provisioning and executable signing.
 
 * The [armoryctl](https://github.com/f-secure-foundry/armoryctl) tool provides user
 space support for communicating with the Mk II internal peripherals.
 
-* The [GoKey](https://github.com/f-secure-foundry/GoKey) turns the USB armory Mk II in an OpenPGP/U2F smartcard, implemented in pure Go with [TamaGo](https://github.com/f-secure-foundry/tamago) support.
+* The [TamaGo](https://github.com/f-secure-foundry/tamago) enables creation of
+pure Go bare metal unikernels, such as:
+  * [GoKey](https://github.com/f-secure-foundry/GoKey), turn the USB armory Mk II in an
+    OpenPGP/U2F smartcard.
+  * [armory-boot](https://github.com/f-secure-foundry/armory-boot), a secure primary boot loader.
 
 ## Accessory mode
 

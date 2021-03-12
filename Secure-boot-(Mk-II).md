@@ -84,7 +84,7 @@ make -C ${USBARMORY_GIT}/software/secure_boot/hab-pki -f Makefile-pki KEYS_PATH=
 
 The four SRKs must be merged in a table for SHA256 hash calculation, the hash
 is going to be eventually fused on the USB armory SoC. The table and hash can
-be generated with `habtool` from the [crucible](https://github.com/f-secure-foundry/crucible) package
+be generated with [habtool](https://github.com/f-secure-foundry/crucible/tree/master/cmd/habtool)
 as follows:
 
 ```
@@ -161,10 +161,10 @@ accessed via the On-Chip OTP Controller (`OCOTP_CTRL`). See Table 5-9 of the
 [i.MX6UL Reference Manual](https://www.nxp.com/docs/en/reference-manual/IMX6ULRM.pdf)
 for details.
 
-The [crucible](https://github.com/f-secure-foundry/crucible) tool provides user
-space support for reading, and writing, OTP fuses. It is used in all following
-sections to derive register bit map illustrations and implement OTP fuses read
-and write commands.
+The [crucible](https://github.com/f-secure-foundry/crucible/tree/master/cmd/crucible)
+tool provides user space support for reading, and writing, OTP fuses. It is
+used in all following sections to derive register bit map illustrations and
+implement OTP fuses read and write commands.
 
 The crucible tool is meant to be executed on the USB armory Mk II itself, on a
 running Linux instance with the `nvmem-imx-ocotp` kernel module loaded.

@@ -39,7 +39,7 @@ usbarmory@f-secure.com.
   * Arch Linux ARM: [Mk II](https://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mk-ii), [Mk I](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
   * Kali Linux: [Mk I](https://www.kali.org/docs/arm/kali-linux-usb-armory/)
   * Genode OS: [Mk I](https://github.com/f-secure-foundry/usbarmory/wiki/Genode-OS)
-* Go unikernels with [TamaGo](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory)
+* Go bare metal unikernels with [TamaGo](https://github.com/f-secure-foundry/tamago)
   * OpenPGP/U2F smartcard: [GoKey](https://github.com/f-secure-foundry/GoKey)
   * USB Mass Storage interfacing: [armory-ums](https://github.com/f-secure-foundry/armory-ums)
   * Secure primary boot loader: [armory-boot](https://github.com/f-secure-foundry/armory-boot)
