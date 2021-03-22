@@ -72,14 +72,30 @@ certificates:
 * Image signing key (IMG) public/private key pair, used to sign application
   data (e.g. bootloader image).
 
-The key material can be created with your own existing CA, an helper
+The [habtool](https://github.com/f-secure-foundry/crucible/tree/master/cmd/habtool)
+utility provides a reference for certificate creation (existing CAs or OpenSSL
+can also be used, see this
 [Makefile](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
-is available to provide reference example for certificate creation and can be
-used as follows:
+for an alternative method).
 
 ```
-# adjust the USBARMORY_GIT and HAB_KEYS variables according to your environment and preferences
-make -C ${USBARMORY_GIT}/software/secure_boot/hab-pki -f Makefile-pki KEYS_PATH=$HAB_KEYS KEY_LENGTH=2048 KEY_EXPIRY=3650 usbarmory_sb_keys
+# adjust the HAB_KEYS variables according to your preferred path
+
+habtool \
+  -C ${HAB_KEYS}/SRK_1_crt.pem
+  -c ${HAB_KEYS}/SRK_1_key.pem
+
+habtool \
+  -C ${HAB_KEYS}/SRK_2_crt.pem
+  -c ${HAB_KEYS}/SRK_2_key.pem
+
+habtool \
+  -C ${HAB_KEYS}/SRK_3_crt.pem
+  -c ${HAB_KEYS}/SRK_3_key.pem
+
+habtool \
+  -C ${HAB_KEYS}/SRK_4_crt.pem
+  -c ${HAB_KEYS}/SRK_4_key.pem
 ```
 
 The four SRKs must be merged in a table for SHA256 hash calculation, the hash
@@ -88,7 +104,7 @@ be generated with [habtool](https://github.com/f-secure-foundry/crucible/tree/ma
 as follows:
 
 ```
-habtool  \
+habtool \
   -1 ${HAB_KEYS}/SRK_1_crt.pem \
   -2 ${HAB_KEYS}/SRK_2_crt.pem \
   -3 ${HAB_KEYS}/SRK_3_crt.pem \
@@ -120,7 +136,7 @@ Signatures for IMX executable images can be generated with `habtool` as
 follows:
 
 ```
-habtool  \
+habtool \
   -A ${HAB_KEYS}/CSF_1_key.pem \
   -a ${HAB_KEYS}/CSF_1_crt.pem \
   -B ${HAB_KEYS}/IMG_1_key.pem \
