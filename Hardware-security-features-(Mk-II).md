@@ -21,9 +21,8 @@ only for [custom/bulk orders](https://github.com/f-secure-foundry/usbarmory/wiki
 | SNVS  | Secure Non-Volatile Storage          | all                | retail       |
 | BEE   | On-the-fly external RAM encryption   | i.MX6UL  (528 MHz) | custom order |
 | TZ    | ARM® TrustZone®                      | all                | retail       |
-| ATECC | Microchip ATECC608B secure element   | rev. γ             | TBA          |
-| ATECC | Microchip ATECC608A secure element   | rev. β             | retail       |
 | SE050 | NXP SE050 secure element             | rev. γ             | TBA          |
+| ATECC | Microchip ATECC608A secure element   | rev. β             | retail       |
 | A71CH | NXP A71CH secure element             | rev. β             | retail       |
 | RPMB  | Replay protected memory block        | all                | retail       |
 
@@ -101,9 +100,8 @@ On β revisions the [Microchip ATECC608A](https://www.microchip.com/wwwproducts/
 feature hardware acceleration for elliptic-curve cryptography as well as
 providing hardware based key storage. The ATECC608A also features symmetric AES-128-GCM encryption.
 
-On γ revisions (TBA) the [Microchip ATECC608B](https://www.microchip.com/wwwproducts/en/ATECC608A) and
-[NXP SE050](https://www.nxp.com/products/security-and-authentication/authentication/edgelock-se050-plug-trust-secure-element-family-enhanced-iot-security-with-maximum-flexibility:SE050)
-feature hardware acceleration for elliptic-curve and AES cryptography as well as providing
+On γ revisions (TBA) the [NXP SE050](https://www.nxp.com/products/security-and-authentication/authentication/edgelock-se050-plug-trust-secure-element-family-enhanced-iot-security-with-maximum-flexibility:SE050)
+features hardware acceleration for elliptic-curve and AES cryptography as well as providing
 hardware based key storage.
 
 All such external secure elements provide high-endurance monotonic counters,
