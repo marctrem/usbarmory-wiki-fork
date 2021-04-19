@@ -95,19 +95,19 @@ implementation in its CPU core as well as its internal peripherals.
 
 # External secure elements
 
+On γ revisions the [NXP SE050](https://www.nxp.com/products/security-and-authentication/authentication/edgelock-se050-plug-trust-secure-element-family-enhanced-iot-security-with-maximum-flexibility:SE050)
+features hardware acceleration for elliptic-curve and AES cryptography as well as providing
+hardware based key storage.
+
 On β revisions the [Microchip ATECC608A](https://www.microchip.com/wwwproducts/en/ATECC608A) and
 [NXP AT71CH](https://www.nxp.com/products/identification-and-security/authentication/plug-and-trust-the-fast-easy-way-to-deploy-secure-iot-connections:A71CH)
 feature hardware acceleration for elliptic-curve cryptography as well as
 providing hardware based key storage. The ATECC608A also features symmetric AES-128-GCM encryption.
 
-On γ revisions (TBA) the [NXP SE050](https://www.nxp.com/products/security-and-authentication/authentication/edgelock-se050-plug-trust-secure-element-family-enhanced-iot-security-with-maximum-flexibility:SE050)
-features hardware acceleration for elliptic-curve and AES cryptography as well as providing
-hardware based key storage.
-
-All such external secure elements provide high-endurance monotonic counters,
+All external secure elements provide high-endurance monotonic counters,
 useful for external verification of firmware downgrade/rollback attacks.
 
-The external components communicate on the I²C bus and feature authenticated and
+The external secure elements communicate on the I²C bus and feature authenticated and
 encrypted sessions for host communication.
 
 # eMMC Replay Protected Memory Blocks (RPMB)
