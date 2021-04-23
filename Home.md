@@ -57,10 +57,10 @@ The following sections provide information specific to each USB armory model.
   * Storage: internal 16 GB eMMC + external microSD
   * Bluetooth module: u-blox ANNA-B112 BLE
   * USB 2.0 over USB-C: DRP receptacle + UFP plug
-  * Secure elements: SE050 (rev. γ), Microchip ATECC608A + NXP A71CH (rev. β)
+  * Secure elements: NXP SE050 (rev. γ), Microchip ATECC608A + NXP A71CH (rev. β)
 * [Datasheet](https://github.com/f-secure-foundry/usbarmory/wiki/media/usbarmory-mark-two-datasheet-rev2.0.pdf)
 * [Introduction](https://github.com/f-secure-foundry/usbarmory/wiki/Mk-II-Introduction)
-* [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html)
+* Bill of materials: [rev. γ](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html)
 * [Security features](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/f-secure-foundry/usbarmory/wiki/Benchmarks-(Mk-II))
@@ -123,13 +123,11 @@ USB armory | https://github.com/f-secure-foundry/usbarmory
 Copyright (c) F-Secure Corporation
 
 This is an open hardware design licensed under the terms of the CERN Open
-Hardware Licence (OHL) v1.2.
+Hardware Licence, see board revision source directories for applicable
+versions.
 
-You may redistribute and modify this documentation under the terms of the CERN
-OHL v.1.2 (http://ohwr.org/cernohl). This documentation is distributed WITHOUT
-ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY
-QUALITY AND FITNESS FOR A PARTICULAR PURPOSE. Please see the CERN OHL v.1.2 for
-applicable conditions.
+This source is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING
+OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE.
 
 # Terms of Use and Compliance information
 
