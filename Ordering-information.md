@@ -3,7 +3,7 @@ Standard orders
 
 | P/N¹               | Revision¹ | Description                                                                                                                                                                                                  |
 |--------------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `UA-MKII-ULZ-512M` | γ, ᵝ      | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6ULZ 900 MHz • 512 MB RAM • [enclosure](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-II)) |
+| `UA-MKII-ULZ-512M` | γ, β      | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6ULZ 900 MHz • 512 MB RAM • [enclosure](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-II)) |
 | `UA-MKII-DA`       | 1         | [Debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory) for the USB armory Mk II                                                                      |
 
 ¹ F-Secure referencing shown. Resellers identifiers may differ, use description and revision information to match.  
@@ -44,7 +44,7 @@ The following items are discontinued and no longer manufactured.
 
 | P/N                | Revision | Description                                                                                                             |
 |--------------------|----------|-------------------------------------------------------------------------------------------------------------------------|
-| `UA-MKII-ULZ-512M` | ᵝ        | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6ULZ 900 MHz • 512 MB RAM |
+| `UA-MKII-ULZ-512M` | β        | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6ULZ 900 MHz • 512 MB RAM |
 | `UA-MKI`           | Mk I     | [USB armory Mk I](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-i) • i.MX53 800 MHz • 512 MB RAM     |
 | `UA-MKI-HA`        | 1        | [Host adapter](https://github.com/f-secure-foundry/usbarmory/wiki/Host-adapter) for the USB armory Mk I                 |
 | `UA-MKI-ENC`       | Black    | [Enclosure](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-I)) for the USB armory Mk I               |
