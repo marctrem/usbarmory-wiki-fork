@@ -1,22 +1,24 @@
 The following example security application ideas illustrate the flexibility of
 the USB armory concept:
 
+* Encrypted storage solutions
 * Hardware Security Module (HSM)
-* file storage with advanced features such as automatic encryption, virus scanning, host authentication and data self-destruct
-* OpenSSH client and agent for untrusted hosts (kiosk)
-* router for end-to-end VPN tunnelling, Tor
-* password manager with integrated web server
-* electronic wallet (e.g. pocket Bitcoin wallet)
-* authentication token
-* portable penetration testing platform
-* low level USB security testing
+* Enhanced smartcards
+* Electronic vaults (e.g. cryptocurrency wallets)
+* Key escrow services
+* Authentication, provisioning, licensing tokens
+* USB firewall
 
-This section is meant to track available software PoC, projects and/or
-procedures oriented towards implementing such application ideas and any other
-interesting USB armory usage.
+This section is meant to track available software projects, PoCs and procedures oriented
+towards implementing such application ideas and any other interesting USB armory usage.
 
 See also [Host communication](https://github.com/f-secure-foundry/usbarmory/wiki/Host-communication)
 for interfacing options.
+
+### Smartcard
+
+The [GoKey](https://github.com/f-secure-foundry/GoKey) unikernel implements a USB smartcard in pure Go with support for
+OpenPGP 3.4 and FIDO U2F.
 
 ### File encryption
 
@@ -118,8 +120,6 @@ done
 iptables -A OUTPUT -m owner --uid-owner $_tor_uid -j ACCEPT
 iptables -A OUTPUT -j REJECT
 ```
-
-
 
 #### Host setup
 
