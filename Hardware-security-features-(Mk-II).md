@@ -17,13 +17,14 @@ only for [custom/bulk orders](https://github.com/f-secure-foundry/usbarmory/wiki
 | HABv4 | Secure Boot                          | all                | retail       |
 | RNGB  | TRNG                                 | i.MX6ULZ (900 MHz) | retail       |
 | DCP   | Cryptographic accelerator            | i.MX6ULZ (900 MHz) | retail       |
-| CAAM  | Cryptographic accelerator, TRNG      | i.MX6UL  (528 MHz) | custom order |
+| CAAM  | Cryptographic accelerator, TRNG      | i.MX6UL  (528 MHz) | custom/bulk  |
 | SNVS  | Secure Non-Volatile Storage          | all                | retail       |
-| BEE   | On-the-fly external RAM encryption   | i.MX6UL  (528 MHz) | custom order |
+| BEE   | On-the-fly external RAM encryption   | i.MX6UL  (528 MHz) | custom/bulk  |
 | TZ    | ARM® TrustZone®                      | all                | retail       |
-| SE050 | NXP SE050 secure element             | rev. γ             | TBA          |
-| ATECC | Microchip ATECC608A secure element   | rev. β             | retail       |
-| A71CH | NXP A71CH secure element             | rev. β             | retail       |
+| SE050 | NXP SE050 secure element             | rev. γ             | retail       |
+| ATECC | Microchip ATECC608B secure element   | all                | custom/bulk  |
+| ATECC | Microchip ATECC608A secure element   | rev. β             | custom/bulk  |
+| A71CH | NXP A71CH secure element             | rev. β             | custom/bulk  |
 | RPMB  | Replay protected memory block        | all                | retail       |
 
 ## High Assurance Boot (HABv4)
@@ -103,6 +104,9 @@ On β revisions the [Microchip ATECC608A](https://www.microchip.com/wwwproducts/
 [NXP AT71CH](https://www.nxp.com/products/identification-and-security/authentication/plug-and-trust-the-fast-easy-way-to-deploy-secure-iot-connections:A71CH)
 feature hardware acceleration for elliptic-curve cryptography as well as
 providing hardware based key storage. The ATECC608A also features symmetric AES-128-GCM encryption.
+
+The updated [Microchip ATECC608B](https://www.microchip.com/wwwproducts/en/ATECC608B) can be
+included on custom/bulk γ revision orders.
 
 All external secure elements provide high-endurance monotonic counters,
 useful for external verification of firmware downgrade/rollback attacks.
