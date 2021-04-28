@@ -26,13 +26,12 @@ standard and customer orders, in retail or bulk quantities, from companies/OEMs/
 Custom/bulk orders
 ------------------
 
-| P/N                | Revision | Description                                                                                                            |
-|--------------------|----------|------------------------------------------------------------------------------------------------------------------------|
-| `UA-MKII-UL-512M`  | γ        | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6UL 528 MHz • 512 MB RAM |
-| `UA-MKII-UL-1G`    | γ        | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6UL 528 MHz • 1 GB RAM   |
-| `UA-MKII-ULZ-1G`   | γ        | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6ULZ 900 MHz • 1 GB RAM  |
-| `UA-MKII-ENC`      | 1        | [Enclosure](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-II)) for the USB armory Mk II            |
-
+| P/N                | Revision     | Description                                                                                                            |
+|--------------------|--------------|------------------------------------------------------------------------------------------------------------------------|
+| `UA-MKII-UL-512M`  | γ            | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6UL 528 MHz • 512 MB RAM |
+| `UA-MKII-UL-1G`    | γ            | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6UL 528 MHz • 1 GB RAM   |
+| `UA-MKII-ULZ-1G`   | γ            | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6ULZ 900 MHz • 1 GB RAM  |
+| `UA-MKII-ENC`      | 2 (for γ, β) | [Enclosure](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-II)) for the USB armory Mk II • custom colors available |
 
 ᵞ [Security features](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)): [HAB](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#high-assurance-boot-habv4), [CAAM](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#cryptographic-accelerator-and-assurance-module-caam---imx6ul) (UL), [RNGB](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#random-number-generator-rngb---imx6ulz) (ULZ), [DCP](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#data-co-processor-dcp---imx6ulz) (ULZ), [SNVS](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#secure-non-volatile-storage-snvs), [TZ](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#arm-trustzone), [RPMB](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#emmc-replay-protected-memory-blocks-rpmb), [ATECC608B](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements), [SE050](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements)  
 
