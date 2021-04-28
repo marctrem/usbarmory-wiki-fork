@@ -49,7 +49,7 @@ The following items are discontinued and no longer manufactured.
 |--------------------|----------|-------------------------------------------------------------------------------------------------------------------------|
 | `UA-MKII-ULZ-512M` | β        | [USB armory Mk II](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-ii) • i.MX6ULZ 900 MHz • 512 MB RAM |
 | `UA-MKI`           | Mk I     | [USB armory Mk I](https://github.com/f-secure-foundry/usbarmory/wiki#usb-armory-mk-i) • i.MX53 800 MHz • 512 MB RAM     |
-| `UA-MKI-HA`        | 1        | [Host adapter](https://github.com/f-secure-foundry/usbarmory/wiki/Host-adapter) for the USB armory Mk I                 |
+| `UA-MKI-HA`        | R1       | [Host adapter](https://github.com/f-secure-foundry/usbarmory/wiki/Host-adapter) for the USB armory Mk I                 |
 | `UA-MKI-ENC`       | Black    | [Enclosure](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-I)) for the USB armory Mk I               |
 | `UA-MKI-ENC`       | Clear    | [Enclosure](https://github.com/f-secure-foundry/usbarmory/wiki/Enclosures-(Mk-I)) for the USB armory Mk I               |
 
