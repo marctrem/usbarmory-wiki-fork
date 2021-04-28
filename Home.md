@@ -37,7 +37,7 @@ usbarmory@f-secure.com.
   * [Debian image preparation](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image)
   * Embedded INTERLOCK distribution: [Mk II](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md), [Mk I](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
   * Arch Linux ARM: [Mk II](https://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mk-ii), [Mk I](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
-  * Kali Linux: [Mk I](https://www.kali.org/docs/arm/kali-linux-usb-armory/)
+  * Kali Linux: [Mk II](https://www.kali.org/docs/arm/usb-armory-mkii/), [Mk I](https://www.kali.org/docs/arm/usb-armory-mki/)
   * Genode OS: [Mk I](https://github.com/f-secure-foundry/usbarmory/wiki/Genode-OS)
 * Go bare metal unikernels with [TamaGo](https://github.com/f-secure-foundry/tamago)
   * OpenPGP/U2F smartcard: [GoKey](https://github.com/f-secure-foundry/GoKey)
