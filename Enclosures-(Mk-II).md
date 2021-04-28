@@ -16,7 +16,7 @@ Please see purchasing information at the [USB armory project page](https://www.f
   * Dimensions:
     * body: 60 x 24 x 11 mm
   * Material: NEVIESTER EG83 (PETG)
-  * Color: transparent
+  * Color: black (transparent)
 
 ![Enclosure Rendering](images/armory-mark-two-enclosure.jpg)
 ![Exploded Enclosure Renderings](images/armory-mark-two-enclosure-exploded.jpg)
