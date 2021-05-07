@@ -171,7 +171,13 @@ arbitrary user firmware. The nRF52832 SoC features an ARM Cortex-M4 CPU with
 The following instructions have been tested on the USB armory Mk II using its
 [standard Debian image](https://github.com/f-secure-foundry/usbarmory-debian-base_image).
 
-1. Download and compile OpenOCD from its github repository:
+1. Install the following dependencies:
+
+```
+apt-get install git build-essential autotools automake libtool pkg-config
+```
+
+2. Download and compile OpenOCD from its github repository:
 
 ```
 git clone https://github.com/ntfreak/openocd
@@ -181,7 +187,7 @@ cd openocd
 make
 ```
 
-2. Create the `ANNA-B112.cfg` configuration file with the following contents:
+3. Create the `ANNA-B112.cfg` configuration file with the following contents:
 
 ```
 transport select swd
@@ -195,7 +201,7 @@ cp ./tcl/interface/imx-native.cfg usbarmory-mark-two.cfg
 sed -i -e 's/imx_gpio_swd_nums 1 6/imx_gpio_swd_nums 4 6/' usbarmory-mark-two.cfg
 ```
 
-3. Launch OpenOCD
+5. Launch OpenOCD
 
 ```
 sudo ./src/openocd --search ./tcl -f usbarmory-mark-two.cfg -f ANNA-B112.cfg
@@ -220,7 +226,7 @@ Info : Listening on port 3333 for gdb connections
 Info : accepting 'telnet' connection on tcp/4444
 ```
 
-4. Test OpenOCD
+6. Test OpenOCD
 
 Now GDB (port 3333) and the interactive console (port 4444) can be used for
 full access to the SoC ARM Cortex-M4 CPU and flash memory.
