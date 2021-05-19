@@ -14,6 +14,9 @@ match the position of the storage media components:
 
 ![Mk II boot switch](images/armory-mark-two-boot-switch.png)
 
+> :warning: the switch has a small orange plastic film on top of it, you can slide the switch
+> with the plastic in place or you can also peel the film away.
+
 # Fallback
 
 The boot process falls back to other boot modes, in case the attempted boot
