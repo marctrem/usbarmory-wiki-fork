@@ -43,6 +43,7 @@ usbarmory@f-secure.com.
   * OpenPGP/U2F smartcard: [GoKey](https://github.com/f-secure-foundry/GoKey)
   * USB Mass Storage interfacing: [armory-ums](https://github.com/f-secure-foundry/armory-ums)
   * Secure primary boot loader: [armory-boot](https://github.com/f-secure-foundry/armory-boot)
+  * Example application: [tamago-example](https://github.com/f-secure-foundry/tamago-example)
 * [External resources](https://github.com/f-secure-foundry/usbarmory/wiki/External-resources)
 
 The following sections provide information specific to each USB armory model.
