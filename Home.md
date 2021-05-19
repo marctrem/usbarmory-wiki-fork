@@ -31,7 +31,9 @@ usbarmory@f-secure.com.
 * [Frequently Asked Questions (FAQ)](https://github.com/f-secure-foundry/usbarmory/wiki/Frequently-Asked-Questions-(FAQ))
 * Application repositories
   * [INTERLOCK file encryption front-end](https://github.com/f-secure-foundry/interlock)
-  * [Crucible OTP fusing tool](https://github.com/f-secure-foundry/crucible)
+  * [Crucible - OTP fusing tool](https://github.com/f-secure-foundry/crucible/tree/master/cmd/crucible)
+  * [Crucible - Secure Boot utility](https://github.com/f-secure-foundry/crucible/tree/master/cmd/habtool)
+  * [Serial download tool](https://github.com/f-secure-foundry/armory-boot/tree/master/cmd/armory-boot-usb)
 * Operating Systems
   * [Precompiled images](https://github.com/f-secure-foundry/usbarmory/wiki/Available-images)
   * [Debian image preparation](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image)
