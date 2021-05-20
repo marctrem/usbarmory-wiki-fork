@@ -31,8 +31,8 @@ The pre-requisites of an effective secure booted environment are the following:
   signed bootloader can ever be executed.
 
 * A bootloader with an embedded public key to ensure authenticated
-  configuration, to this end [armory-boot](https://github.com/f-secure-foundry/armory-boot)
-  is used on the USB armory Mk II.
+  configuration, [armory-boot](https://github.com/f-secure-foundry/armory-boot)
+  is recommended for the USB armory Mk II and used in this guide.
 
 The combination of i.MX6UL secure boot and armory-boot authentication features
 allow a fully verified chain of trust, to boot a trusted Linux kernel image.
