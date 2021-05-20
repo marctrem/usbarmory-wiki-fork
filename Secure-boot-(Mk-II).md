@@ -38,26 +38,17 @@ The combination of i.MX6UL secure boot and armory-boot authentication features
 allow a fully verified chain of trust, to boot a trusted Linux kernel image.
 
 When signing a [TamaGo unikernel](https://github.com/f-secure-foundry/tamago)
-or a Linux kernel which embeds a root file system the authentication has full
-boot (not runtime) coverage. The runtime Linux kernel verification of executed
-code, if required, is out of scope of this guide.
+or a Linux kernel which embeds a root file system the authentication achieve full
+boot (not runtime) coverage. The post-boot Linux kernel verification of executed
+code, or encrypted disk unlock, is out of scope of this guide.
 
 The following instructions apply identically to variants i.MX6ULL and i.MX6ULZ.
 
 ### Prerequisites
 
-A modern Ruby interpreter is required, with the following gems installed:
-bit-struct, digest, getoptlong, openssl.
-
-Required gems can be typically installed as follows:
-
-```
-gem install <name>
-```
-
-Either [signify](https://man.openbsd.org/signify) (sometimes packaged as
-`signify-openbsd`) or [minisign](https://jedisct1.github.io/minisign/) are
-required for authenticating bootloader configuration.
+* [Go](https://golang.org/) >= 1.16 to install [crucible](https://github.com/f-secure-foundry/crucible)
+* [signify](https://man.openbsd.org/signify) (sometimes packaged as
+`signify-openbsd`) or [minisign](https://jedisct1.github.io/minisign/) to sign bootloader configuration.
 
 ### Setting up the secure boot PKI infrastructure
 
@@ -113,9 +104,10 @@ habtool \
   -t ${HAB_KEYS}/SRK_1_2_3_4_table.bin
 ```
 
-The SHA256 hash is created and can be inspected as follows (**WARNING**: this
-is just an example, your hash will differ and should be used in the following
-instructions instead):
+The SHA256 hash is created and can be inspected as follows:
+
+> :warning: the `aabbccdd..eeffaabb` value is just an an example, your hash will
+> differ.
 
 ```
 hexdump -C ${HAB_KEYS}/SRK_1_2_3_4_fuse.bin
@@ -164,7 +156,7 @@ make CROSS_COMPILE=arm-none-eabi- imx_signed
 ```
 
 Please refer to [armory-boot documentation](https://github.com/f-secure-foundry/armory-boot/blob/master/README.md)
-for details on the bootloade compilation, installation and configuration.
+for details on the bootloader compilation, installation and configuration.
 
 Specifically the armory-boot [Secure Boot documentation](https://github.com/f-secure-foundry/armory-boot/blob/master/README.md#secure-boot)
 illustrates how to maintain the chain of trust with authenticated bootloader
@@ -200,12 +192,13 @@ The SRK hash itself is located in registers ranging from `OCOTP_SRK0` to `OCOTP_
 
 ```
 
-The SRK hash generated earlier can be fused as follows (WARNING: this is just
-an example, your hash will differ and should be used in the following commands
-instead):
+The SRK hash generated earlier can be fused as follows (*note*: mind the warning on dummy value):
+
+> :warning: the `aabbccdd..eeffaabb` value is just an an example, your hash will
+> differ and should replace the dummy value in the following commands.
 
 ```
-# write fuse
+# write fuse (*replace dummy value with your own hash*)
 crucible -m IMX6UL -r 1 -b 16 -e little blow SRK_HASH aabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabbccddeeffaabb
 
 # verify fuse
