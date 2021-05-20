@@ -12,7 +12,7 @@ with revision "AB" or greater.
 
 ### Disclaimer
 
-**IMPORTANT**: enabling secure boot functionality on the USB armory SoC, unlike
+> :warning: enabling secure boot functionality on the USB armory SoC, unlike
 similar features on modern PCs, is an **irreversible** action that
 **permanently** fuses verification keys hashes on the device. This means that
 any errors in the process or loss of the signing PKI will result in a
