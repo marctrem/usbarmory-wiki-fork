@@ -231,16 +231,15 @@ crucible -s -m IMX6UL -r 1 -b 2 read SRK_LOCK
 Only if you are confident that you can correctly generate signed bootloader
 images, the SoC can be placed in Closed Security Configuration.
 
-**WARNING**: enabling secure boot functionality on the USB armory SoC, unlike
-similar features on modern PCs, is an **irreversible** action that
-**permanently** fuses verification keys hashes on the device. This means that
-any errors in the process or loss of the signing PKI will result in a
-**bricked** device incapable of executing unsigned code. This is a security
-feature, not a bug.
+> :warning: enabling secure boot functionality on the USB armory SoC, unlike
+> similar features on modern PCs, is an **irreversible** action that
+> **permanently** fuses verification keys hashes on the device. This means that
+> any errors in the process or loss of the signing PKI will result in a
+> **bricked** device incapable of executing unsigned code. This is a security
+> feature, not a bug.
 
-The activation and use of the secure boot functionality is therefore **at your
-own risk**, the following command permanently locks the fused configuration and
-enables secure boot.
+The activation and use of the secure boot functionality is **at your own risk**,
+the following command permanently locks the fused configuration and enables secure boot.
 
 In order to enable secure boot the SoC must be placed in Closed Security
 Configuration, additionally every debugging aid that might allow its bypass or
