@@ -11,9 +11,7 @@
 * [Arch Linux ARM](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mk-ii)
 * [Kali Linux](https://www.kali.org/docs/arm/usb-armory-mkii/)
 * [Genode OS](https://github.com/f-secure-foundry/usbarmory/wiki/Genode-OS)
-* [TamaGo](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory)
-* [GoKey](https://github.com/f-secure-foundry/GoKey)
-* [GoTEE](https://github.com/f-secure-foundry/GoTEE)
+* [TamaGo](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory): [GoKey](https://github.com/f-secure-foundry/GoKey), [GoTEE](https://github.com/f-secure-foundry/GoTEE)
 * [External resources](https://github.com/f-secure-foundry/usbarmory/wiki/External-resources)
 * [Support](https://github.com/f-secure-foundry/usbarmory/wiki#support)
 
