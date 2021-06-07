@@ -43,6 +43,7 @@ usbarmory@f-secure.com.
   * Genode OS: [Mk I](https://github.com/f-secure-foundry/usbarmory/wiki/Genode-OS)
 * Go bare metal unikernels with [TamaGo](https://github.com/f-secure-foundry/tamago)
   * OpenPGP/U2F smartcard: [GoKey](https://github.com/f-secure-foundry/GoKey)
+  * Trusted Execution Environment w/ TrustZone: [GoTEE](https://github.com/f-secure-foundry/GoTEE)
   * USB Mass Storage interfacing: [armory-ums](https://github.com/f-secure-foundry/armory-ums)
   * Secure primary boot loader: [armory-boot](https://github.com/f-secure-foundry/armory-boot)
   * Example application: [tamago-example](https://github.com/f-secure-foundry/tamago-example)
