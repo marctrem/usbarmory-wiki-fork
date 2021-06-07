@@ -39,6 +39,8 @@
 * [GoKey](https://github.com/f-secure-foundry/GoKey)
 * [GoTEE](https://github.com/f-secure-foundry/GoTEE)
 * [armory-ums](https://github.com/f-secure-foundry/armory-ums)
+* [armory-boot](https://github.com/f-secure-foundry/armory-boot)
+* [tamago-example](https://github.com/f-secure-foundry/tamago-example)
 
 ## USB armory Mk I
 
