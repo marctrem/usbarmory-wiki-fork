@@ -41,13 +41,8 @@ usbarmory@f-secure.com.
   * Arch Linux ARM: [Mk II](https://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mk-ii), [Mk I](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
   * Kali Linux: [Mk II](https://www.kali.org/docs/arm/usb-armory-mkii/), [Mk I](https://www.kali.org/docs/arm/usb-armory-mki/)
   * Genode OS: [Mk I](https://github.com/f-secure-foundry/usbarmory/wiki/Genode-OS)
-* Go bare metal unikernels with [TamaGo](https://github.com/f-secure-foundry/tamago)
-  * USB encrypted Drive: [armory-drive](https://github.com/f-secure-foundry/armory-drive)
-  * OpenPGP/U2F smartcard: [GoKey](https://github.com/f-secure-foundry/GoKey)
-  * Trusted Execution Environment w/ TrustZone: [GoTEE](https://github.com/f-secure-foundry/GoTEE)
-  * USB Mass Storage interfacing: [armory-ums](https://github.com/f-secure-foundry/armory-ums)  
-  * Secure primary boot loader: [armory-boot](https://github.com/f-secure-foundry/armory-boot)
-  * Example application: [tamago-example](https://github.com/f-secure-foundry/tamago-example)
+  * [TamaGo](https://github.com/f-secure-foundry/tamago): [Mk II](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory)
+
 * [External resources](https://github.com/f-secure-foundry/usbarmory/wiki/External-resources)
 
 The following sections provide information specific to each USB armory model.
@@ -80,6 +75,14 @@ The following sections provide information specific to each USB armory model.
 * Cryptography co-processor drivers: [DCP](https://github.com/f-secure-foundry/mxs-dcp) (i.MX6ULZ), [CAAM](https://github.com/f-secure-foundry/caam-keyblob) (i.MX6UL)
 * Hardware control tool: [armoryctl](https://github.com/f-secure-foundry/armoryctl)
 * [Errata](https://github.com/f-secure-foundry/usbarmory/wiki/Errata-(Mk-II))
+
+## [TamaGo](https://github.com/f-secure-foundry/tamago) - pure Go bare metal unikernels
+  * USB encrypted Drive: [armory-drive](https://github.com/f-secure-foundry/armory-drive)
+  * OpenPGP/U2F smartcard: [GoKey](https://github.com/f-secure-foundry/GoKey)
+  * Trusted Execution Environment w/ TrustZone: [GoTEE](https://github.com/f-secure-foundry/GoTEE)
+  * USB Mass Storage interfacing: [armory-ums](https://github.com/f-secure-foundry/armory-ums)  
+  * Secure primary boot loader: [armory-boot](https://github.com/f-secure-foundry/armory-boot)
+  * Example application: [tamago-example](https://github.com/f-secure-foundry/tamago-example)
 
 # USB armory Mk I
 
