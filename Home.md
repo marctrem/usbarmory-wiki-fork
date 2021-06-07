@@ -45,6 +45,7 @@ usbarmory@f-secure.com.
   * OpenPGP/U2F smartcard: [GoKey](https://github.com/f-secure-foundry/GoKey)
   * Trusted Execution Environment w/ TrustZone: [GoTEE](https://github.com/f-secure-foundry/GoTEE)
   * USB Mass Storage interfacing: [armory-ums](https://github.com/f-secure-foundry/armory-ums)
+  * USB encrypted Drive: [armory-drive](https://github.com/f-secure-foundry/armory-drive)
   * Secure primary boot loader: [armory-boot](https://github.com/f-secure-foundry/armory-boot)
   * Example application: [tamago-example](https://github.com/f-secure-foundry/tamago-example)
 * [External resources](https://github.com/f-secure-foundry/usbarmory/wiki/External-resources)
