@@ -42,7 +42,6 @@ usbarmory@f-secure.com.
   * Kali Linux: [Mk II](https://www.kali.org/docs/arm/usb-armory-mkii/), [Mk I](https://www.kali.org/docs/arm/usb-armory-mki/)
   * Genode OS: [Mk I](https://github.com/f-secure-foundry/usbarmory/wiki/Genode-OS)
   * [TamaGo](https://github.com/f-secure-foundry/tamago): [Mk II](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory)
-
 * [External resources](https://github.com/f-secure-foundry/usbarmory/wiki/External-resources)
 
 The following sections provide information specific to each USB armory model.
