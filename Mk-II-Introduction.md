@@ -9,7 +9,7 @@ The USB armory Mk II is the successor of the previous [Mk I](https://github.com/
 ## Purchasing
 
 See [Ordering information](https://github.com/f-secure-foundry/usbarmory/wiki/Ordering-information)
-for USB armory Mk II variants, accessorie and purchase options.
+for USB armory Mk II variants, accessories and purchase options.
 
 The USB armory Mk II can be purchased at the following resellers:
   * [Mouser](https://eu.mouser.com/new/f-secure/crowd-supply-usb-armorymkii)
@@ -118,11 +118,12 @@ utility provides support for Secure Boot provisioning and executable signing.
 * The [armoryctl](https://github.com/f-secure-foundry/armoryctl) tool provides user
 space support for communicating with the Mk II internal peripherals.
 
-* The [TamaGo](https://github.com/f-secure-foundry/tamago) framework enables creation of
-pure Go bare metal unikernels, such as:
-  * [GoKey](https://github.com/f-secure-foundry/GoKey), turn the USB armory Mk II in an
-    OpenPGP/U2F smartcard.
-  * [armory-boot](https://github.com/f-secure-foundry/armory-boot), a secure primary boot loader.
+* The [TamaGo](https://github.com/f-secure-foundry/tamago) framework has been used to create
+the following USB armory Mk II applications:
+  * [GoKey](https://github.com/f-secure-foundry/GoKey) - OpenPGP/U2F smartcard.
+  * [GoTEE](https://github.com/f-secure-foundry/GoTEE) - Trusted Execution Environment w/ TrustZone.
+  * [armory-drive](https://github.com/f-secure-foundry/armory-drive) - USB encrypted drive.
+  * [armory-boot](https://github.com/f-secure-foundry/armory-boot) - secure primary boot loader.
 
 ## Accessory mode
 
