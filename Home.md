@@ -76,7 +76,7 @@ The following sections provide information specific to each USB armory model.
 * [Errata](https://github.com/f-secure-foundry/usbarmory/wiki/Errata-(Mk-II))
 
 ## [TamaGo](https://github.com/f-secure-foundry/tamago) - pure Go bare metal unikernels
-  * USB encrypted Drive: [armory-drive](https://github.com/f-secure-foundry/armory-drive)
+  * USB encrypted drive: [armory-drive](https://github.com/f-secure-foundry/armory-drive)
   * OpenPGP/U2F smartcard: [GoKey](https://github.com/f-secure-foundry/GoKey)
   * Trusted Execution Environment w/ TrustZone: [GoTEE](https://github.com/f-secure-foundry/GoTEE)
   * USB Mass Storage interfacing: [armory-ums](https://github.com/f-secure-foundry/armory-ums)  
