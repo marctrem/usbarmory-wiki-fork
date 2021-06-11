@@ -4,7 +4,7 @@ the USB armory concept:
 * Encrypted storage solutions
 * Hardware Security Module (HSM)
 * Enhanced smartcards
-* Electronic vaults (e.g. cryptocurrency wallets)
+* Electronic vaults (e.g. cryptocurrency wallets, e-voting)
 * Key escrow services
 * Authentication, provisioning, licensing tokens
 * USB firewall
