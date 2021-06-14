@@ -94,6 +94,8 @@ allowing OTF DRAM encryption.
 The i.MX6 SoC family features an [ARM® TrustZone®](http://www.arm.com/products/processors/technologies/trustzone/)
 implementation in its CPU core as well as its internal peripherals.
 
+A reference implementation of ARM® TrustZone® on the USB armory Mk II can be found in F-Secure own [GoTEE](https://github.com/f-secure-foundry/GoTEE) framework.
+
 # External secure elements
 
 On γ revisions the [NXP SE050](https://www.nxp.com/products/security-and-authentication/authentication/edgelock-se050-plug-trust-secure-element-family-enhanced-iot-security-with-maximum-flexibility:SE050)
