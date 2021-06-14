@@ -18,7 +18,7 @@
 
 * [Datasheet](https://github.com/f-secure-foundry/usbarmory/wiki/media/usbarmory-mark-two-datasheet-rev2.0.pdf)
 * [Introduction](https://github.com/f-secure-foundry/usbarmory/wiki/Mk-II-Introduction)
-* [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html)
+* Bill of materials: [γ](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html), [β](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two-beta.html)
 * [Security features](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/f-secure-foundry/usbarmory/wiki/Benchmarks-(Mk-II))

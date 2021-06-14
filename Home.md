@@ -59,7 +59,7 @@ The following sections provide information specific to each USB armory model.
   * Secure elements: NXP SE050 (rev. γ), Microchip ATECC608A + NXP A71CH (rev. β)
 * [Datasheet](https://github.com/f-secure-foundry/usbarmory/wiki/media/usbarmory-mark-two-datasheet-rev2.0.pdf)
 * [Introduction](https://github.com/f-secure-foundry/usbarmory/wiki/Mk-II-Introduction)
-* Bill of materials: [rev. β](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html)
+* Bill of materials: [rev. γ](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html), [rev. β](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two-beta.html)
 * [Security features](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/f-secure-foundry/usbarmory/wiki/Benchmarks-(Mk-II))
