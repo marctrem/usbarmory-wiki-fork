@@ -32,7 +32,7 @@ The signal status of the debug authentication interface can be checked through t
 On the i.MX6ULL/i.MX6ULZ SoCs the `DBGAUTHSTATUS` register is memory mapped at
 address `0x02130fb8` and the debugging signals are set as follows:
 
-| Bit | Name | Description                           | assertion condition                                 |
+| Bit | Name | Description                           | Assertion condition                                 |
 |:---:|:----:|---------------------------------------|-----------------------------------------------------|
 |  6  | SNE  | Secure non-invasive debug enabled     | System JTAG controller (SJC) enabled and connected  |
 |  4  | SE   | Secure invasive debug enabled         | System JTAG controller (SJC) enabled and connected  |
