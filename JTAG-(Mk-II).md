@@ -7,10 +7,10 @@ The following sections help identifying the relevant pads.
 
 ![Mk II JTAG schematic](images/armory-mark-two-jtag-sch.png)
 
-USB armory Mk II - rev. β
--------------------------
+| USB armory Mk II - rev. β                                      | USB armory Mk II - rev. γ                                      |
+|:--------------------------------------------------------------:|:--------------------------------------------------------------:|
+|  ![Mk II β JTAG picture](images/armory-mark-two-jtag-beta.png) | ![Mk II γ JTAG picture](images/armory-mark-two-jtag-gamma.png) |
 
-![Mk II JTAG picture](images/armory-mark-two-jtag-board.png)
 
 ARM debugging features
 ----------------------
