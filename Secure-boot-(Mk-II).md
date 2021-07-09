@@ -136,7 +136,7 @@ habtool \
   -t ${HAB_KEYS}/SRK_1_2_3_4_table.bin \
   -x 1 \
   -i armory-boot.imx \
-  -o armory-boot.csf && \
+  -o armory-boot.csf
 ```
 
 The signature is meant to be concatenated to the executable for producing the
