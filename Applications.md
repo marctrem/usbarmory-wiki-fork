@@ -26,6 +26,9 @@ The [INTERLOCK](https://github.com/f-secure-foundry/interlock) application is a
 file encryption front-end developed for, but not limited to, usage with the USB
 armory. A Buildroot environment is also [available](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md).
 
+The [armory-drive](https://github.com/f-secure-foundry/armory-drive) unikernel
+implements encrypted USB Mass Storage interfacing for microSD cards.
+
 ### Qubes Split GPG server
 
 [Qubes Split GPG](https://www.qubes-os.org/doc/split-gpg/) support for isolated

@@ -37,11 +37,7 @@ usbarmory@f-secure.com.
 * Operating Systems
   * [Precompiled images](https://github.com/f-secure-foundry/usbarmory/wiki/Available-images)
   * [Debian image preparation](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image)
-  * Embedded INTERLOCK distribution: [Mk II](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK-mark-two.md), [Mk I](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
-  * Arch Linux ARM: [Mk II](https://archlinuxarm.org/platforms/armv7/freescale/usb-armory-mk-ii), [Mk I](http://archlinuxarm.org/platforms/armv7/freescale/usb-armory)
-  * Kali Linux: [Mk II](https://www.kali.org/docs/arm/usb-armory-mkii/), [Mk I](https://www.kali.org/docs/arm/usb-armory-mki/)
-  * Genode OS: [Mk I](https://github.com/f-secure-foundry/usbarmory/wiki/Genode-OS)
-  * [TamaGo](https://github.com/f-secure-foundry/tamago): [Mk II](https://github.com/f-secure-foundry/tamago/tree/master/board/f-secure/usbarmory)
+  * [TamaGo](https://github.com/f-secure-foundry/tamago)
 * [External resources](https://github.com/f-secure-foundry/usbarmory/wiki/External-resources)
 
 The following sections provide information specific to each USB armory model.

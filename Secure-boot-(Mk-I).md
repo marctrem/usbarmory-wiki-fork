@@ -33,9 +33,8 @@ The following instructions jointly illustrate the following:
 
 The combination of i.MX53 secure boot and U-Boot verified boot features allows
 a fully verified chain of trust, authenticating the executed Linux kernel.
-When signing a kernel that embeds a root file system, such as the
-[Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md),
-the authentication has full (boot, not runtime) coverage, otherwise Linux kernel verification of
+When signing a kernel that embeds a root file system, the authentication has
+full (boot, not runtime) coverage, otherwise Linux kernel verification of
 executed code is not covered in this guide and left out to implementors.
 
 ### Prerequisites
@@ -142,9 +141,7 @@ serial console access.
 * [0003-Disable-CLI.patch](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0003-Disable-CLI.patch)
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
-tree path, if using the
-[Embedded INTERLOCK distribution](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md)
-the path is under buildroot `output/build/linux-<version>` directory.
+tree path.
 
 The following commands are meant to be issued within the U-Boot source
 directory:
