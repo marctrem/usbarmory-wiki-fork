@@ -1,8 +1,7 @@
 In order to boot the USB armory it is possible to either use a pre-compiled
 disk image or [manually prepare your own](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image).
 
-The following table summarizes the list of available pre-compiled Linux
-distributions:
+The following table summarizes the list of available Linux distributions:
 
 | Device | OS                                                                                                                                      | Author                                                    | Link                                                                                                                                       |
 |:-------|-----------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------:|
