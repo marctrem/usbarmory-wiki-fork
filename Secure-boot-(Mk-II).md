@@ -69,24 +69,35 @@ can also be used, see this
 [Makefile](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
 for an alternative method).
 
+The four SRK certification authorities and the CSF/IMG key pairs, signed by the
+first CA in this example, can be created as follows:
+
 ```
 # adjust the HAB_KEYS variables according to your preferred path
 
 habtool \
-  -C ${HAB_KEYS}/SRK_1_key.pem
+  -C ${HAB_KEYS}/SRK_1_key.pem \
   -c ${HAB_KEYS}/SRK_1_crt.pem
 
 habtool \
-  -C ${HAB_KEYS}/SRK_2_key.pem
+  -C ${HAB_KEYS}/SRK_2_key.pem \
   -c ${HAB_KEYS}/SRK_2_crt.pem
 
 habtool \
-  -C ${HAB_KEYS}/SRK_3_key.pem
+  -C ${HAB_KEYS}/SRK_3_key.pem \
   -c ${HAB_KEYS}/SRK_3_crt.pem
 
 habtool \
-  -C ${HAB_KEYS}/SRK_4_key.pem
+  -C ${HAB_KEYS}/SRK_4_key.pem \
   -c ${HAB_KEYS}/SRK_4_crt.pem
+
+habtool \
+  -C ${HAB_KEYS}/SRK_1_key.pem \
+  -c ${HAB_KEYS}/SRK_1_crt.pem \
+  -A $(HAB_KEYS)/CSF_1_key.pem \
+  -a ${HAB_KEYS}/CSF_1_crt.pem \
+  -B $(HAB_KEYS)/IMG_1_key.pem \
+  -b ${HAB_KEYS}/IMG_1_crt.pem \
 ```
 
 The four SRKs must be merged in a table for SHA256 hash calculation, the hash
