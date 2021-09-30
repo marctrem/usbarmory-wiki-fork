@@ -19,7 +19,6 @@ specific images:
 
 | Device | OS                                                                                                                                      | Author                                                    | Link                                                                                                                                       |
 |:-------|-----------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------:|
-| Mk I   | Linux kernel w/ [INTERLOCK buildroot](https://github.com/f-secure-foundry/usbarmory/tree/master/software/buildroot/README-INTERLOCK.md) | [F-Secure Foundry](https://foundry.f-secure.com)          | [INTERLOCK releases](https://github.com/f-secure-foundry/interlock/releases)                                                               |
 | Mk II  | Debian 10 (Buster) w/ [GlobaLeaks](https://github.com/globaleaks/globaleaks-usbarmory-image)                                            | [GlobaLeaks](https://www.globaleaks.org/)                 | [USB armory GlobaLeaks image releases](https://github.com/globaleaks/globaleaks-usbarmory-image/releases)                                  |
 
 The following table summarizes the list of additional operating systems with
