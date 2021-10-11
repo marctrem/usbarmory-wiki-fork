@@ -74,3 +74,17 @@ picocom -b 115200 -eb /dev/ttyUSB2 --imap lfcrlf
 
 The USB armory Mk II is configured as a host by default, to enable device mode see this [example](https://github.com/f-secure-foundry/usbarmory/issues/53#issuecomment-572959387) on how to use it as a second RNDIS (usb1) interface.
 
+### Why I am unable to open the LUKS container on my USB stick?
+
+When opening a LUKS container created on PC chances are that the operation will
+fail:
+
+```
+root@usbarmory:~# cryptsetup open /dev/sda1 usbcrypt --type luks -v
+Enter passphrase for /dev/sda1:
+Command failed with code -3 (out of memory).
+```
+
+Create the LUKS container (`luksFormat`) on armory itself. This way the
+key derivation parameters (e.g. memory, iterations) will be properly set to
+work also on devices with smaller resources than your PC.
