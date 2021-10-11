@@ -64,7 +64,7 @@ When opening a LUKS container previously created on a different system
 it is possible for the operation to fail:
 
 ```
-cryptsetup open /dev/sda1 <name> --type luks \-v
+cryptsetup open /dev/sda1 <name> --type luks -v
 Enter passphrase for /dev/sda1:
 Command failed with code -3 (out of memory).
 ```
