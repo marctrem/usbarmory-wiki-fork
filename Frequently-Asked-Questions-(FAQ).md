@@ -58,6 +58,21 @@ Remove the CONFIG_USB_OTG kernel option on your host.
 
 There is a known issue in modern Linux kernels which breaks cryptsetup aes-xts-plain64 when the SAHARA driver (`sahara` kernel module) is loaded. For this reason it is recommended to blacklist the module when using LUKS on the USB armory.
 
+### Why I am unable to open a LUKS container ?
+
+When opening a LUKS container previously created on a different system
+it is possible for the operation to fail:
+
+```
+cryptsetup open /dev/sda1 <name> --type luks -v
+Enter passphrase for /dev/sda1:
+Command failed with code -3 (out of memory).
+```
+
+To address this the LUKS container (`luksFormat`) must be created on the USB armory
+itself or with key derivation parameters (e.g. memory, iterations) compatible with the
+mounting system resources.
+
 ### No serial console with debug accessory (Mk II)
 
 The connection between the [debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory) and the target is supported only
@@ -73,18 +88,3 @@ picocom -b 115200 -eb /dev/ttyUSB2 --imap lfcrlf
 ### How do I set the USB Type-C receptacle in device mode? (Mk II)
 
 The USB armory Mk II is configured as a host by default, to enable device mode see this [example](https://github.com/f-secure-foundry/usbarmory/issues/53#issuecomment-572959387) on how to use it as a second RNDIS (usb1) interface.
-
-### Why I am unable to open the LUKS container on my USB stick?
-
-When opening a LUKS container created on PC chances are that the operation will
-fail:
-
-```
-root@usbarmory:~# cryptsetup open /dev/sda1 usbcrypt --type luks -v
-Enter passphrase for /dev/sda1:
-Command failed with code -3 (out of memory).
-```
-
-Create the LUKS container (`luksFormat`) on armory itself. This way the
-key derivation parameters (e.g. memory, iterations) will be properly set to
-work also on devices with smaller resources than your PC.
