@@ -12,7 +12,7 @@ Standard orders
 ᵝ [Security features](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)): [HAB](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#high-assurance-boot-habv4), [RNGB](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#random-number-generator-rngb---imx6ulz), [DCP](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#data-co-processor-dcp---imx6ulz), [SNVS](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#secure-non-volatile-storage-snvs), [TZ](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#arm-trustzone), [RPMB](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#emmc-replay-protected-memory-blocks-rpmb), [ATECC608A](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements), [A71CH](https://github.com/f-secure-foundry/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements) • [Errata](https://github.com/f-secure-foundry/usbarmory/wiki/Errata-(Mk-II)#usb-armory-mk-ii-rev-%CE%B2)
 
 Standard parts can be purchased at the following resellers:
-* [Mouser](https://eu.mouser.com/ProductDetail/F-Secure/CS-ARMORY-01?qs=xZ%2FP%252Ba9zWqbwgSJbCcdbvw==)
+* [Mouser](https://eu.mouser.com/new/f-secure/crowd-supply-usb-armorymkii)
 * [Crowd Supply](https://www.crowdsupply.com/f-secure/usb-armory-mk-ii)
 * [Hackerwarehouse](https://hackerwarehouse.com/product/usb-armory-mkii)
 * [HackmoD](http://www.hackmod.de/USB-Armory-Stick-Mark-2)
