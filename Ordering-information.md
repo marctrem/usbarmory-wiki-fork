@@ -17,7 +17,6 @@ Standard parts can be purchased at the following resellers:
 * [Hackerwarehouse](https://hackerwarehouse.com/product/usb-armory-mkii)
 * [HackmoD](http://www.hackmod.de/USB-Armory-Stick-Mark-2)
 * [SparkFun](https://www.sparkfun.com/products/16367)
-* [Antratek](https://www.antratek.com/usb-armory-mk-ii-w-enclosure)
 
 Additionally [F-Secure Foundry](https://foundry.f-secure.com) accepts
 standard and customer orders, in retail or bulk quantities, from companies/OEMs/resellers at usbarmory@f-secure.com.
