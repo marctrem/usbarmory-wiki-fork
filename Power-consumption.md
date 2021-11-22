@@ -20,4 +20,4 @@ The measurements have been performed using an Agilent U1242B multimeter.
 |:-------------------|----------------------:|-------------------------:|--------------------------:|
 | Mk II - 900 MHz    | 130 mA @ 5 V (650 mW) |   170 mA @ 5 V ( 850 mW) |    260 mA @ 5 V (1300 mW) |
 
-^ with frequency scaling and without power management (e.g. CPU suspend)
+^ without frequency scaling or power management (e.g. CPU suspend)
