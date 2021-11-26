@@ -1,3 +1,12 @@
+USB armory Mk II debug accessory
+================================
+
+Errata: incorrect silkscreen labels
+-----------------------------------
+
+The silkscreen labels for `3.3V` and `5V` are inverted on all rev v1 PCBs, see
+this [issue](https://github.com/f-secure-foundry/usbarmory/issues/68).
+
 USB armory Mk II (rev. β)
 =========================
 
