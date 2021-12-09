@@ -349,6 +349,16 @@ to `SRK_REVOKE` bit 2):
 crucible -m IMX6UL -r 1 -b 2 -e big blow OCOTP_SRK_REVOKE 0b100
 ```
 
+### Libraries
+
+The following Go packages are provided to aid programmatic integration:
+
+* The [hab package](https://pkg.go.dev/github.com/f-secure-foundry/crucible/hab) provides support functions for NXP HABv4 Secure Boot provisioning and executable signing.
+
+* The [otp package](https://pkg.go.dev/github.com/f-secure-foundry/crucible/otp) provides support for One-Time-Programmable (OTP) fuses read and write operations.
+
+* The [ocotp package](https://pkg.go.dev/github.com/f-secure-foundry/tamago/soc/imx6/ocotp) implements a driver for the NXP On-Chip OTP Controller (OCOTP_CTRL) to interface with on-chip fuses, including write operation. This package is only meant to be used with `GOOS=tamago GOARCH=arm` as supported by the [TamaGo framework](https://github.com/f-secure-foundry/tamago).
+
 ### External documentation
 
 * [i.MX6 Secure Boot Application Note](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
