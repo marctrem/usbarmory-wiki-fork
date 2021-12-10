@@ -94,9 +94,9 @@ habtool \
 habtool \
   -C ${HAB_KEYS}/SRK_1_key.pem \
   -c ${HAB_KEYS}/SRK_1_crt.pem \
-  -A $(HAB_KEYS)/CSF_1_key.pem \
+  -A ${HAB_KEYS}/CSF_1_key.pem \
   -a ${HAB_KEYS}/CSF_1_crt.pem \
-  -B $(HAB_KEYS)/IMG_1_key.pem \
+  -B ${HAB_KEYS}/IMG_1_key.pem \
   -b ${HAB_KEYS}/IMG_1_crt.pem \
 ```
 
