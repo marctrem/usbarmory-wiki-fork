@@ -98,7 +98,7 @@ The following sections provide information specific to each USB armory model.
 * [Internal Boot ROM](https://github.com/usbarmory/usbarmory/wiki/Internal-Boot-ROM-(Mk-I))
 * [Enclosures](https://github.com/usbarmory/usbarmory/wiki/Enclosures-(Mk-I))
 * [JTAG](https://github.com/usbarmory/usbarmory/wiki/JTAG-(Mk-I))
-* Using the breakout header: [Serial, GPIOs](https://github.com/usbarmory/usbarmory/wiki/GPIOs), [I²C](https://github.com/usbarmory/usbarmory/wiki/I²C), [SPI](https://github.com/f-secure-foundry/usbarmory/wiki/SPI)
+* Using the breakout header: [Serial, GPIOs](https://github.com/usbarmory/usbarmory/wiki/GPIOs), [I²C](https://github.com/usbarmory/usbarmory/wiki/I²C), [SPI](https://github.com/usbarmory/usbarmory/wiki/SPI)
 * Cryptography co-processor driver: [SCCv2](https://github.com/usbarmory/mxc-scc2) (i.MX53)
 * [Errata](https://github.com/usbarmory/usbarmory/wiki/Errata-(Mk-I))
 
