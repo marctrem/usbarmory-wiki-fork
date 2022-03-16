@@ -26,21 +26,21 @@ BY INVERSE PATH AND/OR F-SECURE, CAREFULLY READ THE BELOW TERMS OF USE
 UNDERSTAND THEM AND AGREE TO BE LEGALLY BOUND BY THEM. IF YOU DO NOT AGREE TO
 ALL OF THE TERMS, DO NOT INSTALL OR USE THE USB ARMORY.
 
-* [Terms of Use](https://github.com/f-secure-foundry/usbarmory/wiki/Terms-of-Use)
-* [Compliance information](https://github.com/f-secure-foundry/usbarmory/wiki/Compliance-information)
+* [Terms of Use](https://github.com/usbarmory/usbarmory/wiki/Terms-of-Use)
+* [Compliance information](https://github.com/usbarmory/usbarmory/wiki/Compliance-information)
 
 ## Getting started
 
 The USB armory requires a valid operating system to boot on either the external
 microSD card (Mk I, Mk II) or the internal eMMC (Mk II).
 
-* [Boot modes](https://github.com/f-secure-foundry/usbarmory/wiki/Boot-Modes-(Mk-II)) (Mk II)
+* [Boot modes](https://github.com/usbarmory/usbarmory/wiki/Boot-Modes-(Mk-II)) (Mk II)
 
 ### Pre-imaged microSD card
 
 If you received a pre-imaged microSD card with your USB armory it almost
 certainly includes the default image, please see notes and default credentials
-[here](https://github.com/f-secure-foundry/usbarmory-debian-base_image/releases)
+[here](https://github.com/usbarmory/usbarmory-debian-base_image/releases)
 (specifically the **Connecting** section). If you have issues connecting always
 make sure that:
 
@@ -55,18 +55,18 @@ make sure that:
 
 The following page keeps track of available binary releases:
 
-* [Available images](https://github.com/f-secure-foundry/usbarmory/wiki/Available-images)
+* [Available images](https://github.com/usbarmory/usbarmory/wiki/Available-images)
 
 Alternatively the following instructions can be used to manually prepare and
 install a Linux distribution from a Linux computer:
 
-* [Preparing a bootable image](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image)
+* [Preparing a bootable image](https://github.com/usbarmory/usbarmory/wiki/Preparing-a-bootable-image)
 
 ## Documentation
 
 For additional information check the available pages on the rest of the
-[wiki](https://github.com/f-secure-foundry/usbarmory/wiki), especially the
-[Frequently Asked Questions (FAQ)](https://github.com/f-secure-foundry/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)),
+[wiki](https://github.com/usbarmory/usbarmory/wiki), especially the
+[Frequently Asked Questions (FAQ)](https://github.com/usbarmory/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)),
 or information available on the [main project page](https://www.f-secure.com/en/consulting/foundry/usb-armory).
 
 ## Support

@@ -2,7 +2,7 @@
 
 This page applies to the USB armory Mk I only.
 
-The USB armory Mk II features a USB receptacle which can be natively used for USB host functionality without requiring adapters or re-configuration (see this [FAQ entry](https://github.com/f-secure-foundry/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)#how-do-i-set-the-usb-type-c-receptacle-in-device-mode-mk-ii)).
+The USB armory Mk II features a USB receptacle which can be natively used for USB host functionality without requiring adapters or re-configuration (see this [FAQ entry](https://github.com/usbarmory/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)#how-do-i-set-the-usb-type-c-receptacle-in-device-mode-mk-ii)).
 
 ### Enabling host mode
 
@@ -24,9 +24,9 @@ The role change can be enabled by using a device tree source file (dts) with the
 };
 ```
 
-The official USB armory repository provides an example [here](https://github.com/f-secure-foundry/usbarmory/blob/master/software/kernel_conf/mark-one/imx53-usbarmory-host.dts).
+The official USB armory repository provides an example [here](https://github.com/usbarmory/usbarmory/blob/master/software/kernel_conf/mark-one/imx53-usbarmory-host.dts).
 
-The device tree binary file can then be compiled as shown in the [microSD image preparation instructions](https://github.com/f-secure-foundry/usbarmory/wiki/Preparing-a-bootable-image), taking in account the different dts file.
+The device tree binary file can then be compiled as shown in the [microSD image preparation instructions](https://github.com/usbarmory/usbarmory/wiki/Preparing-a-bootable-image), taking in account the different dts file.
 
 The resulting dtb can be copied to /boot/imx53-usbarmory.dtb on the USB armory when host mode functionality is desired (it is recommended to keep the standard device dtb file around to switch it over when desired).
 

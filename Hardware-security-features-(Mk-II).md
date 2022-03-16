@@ -2,7 +2,7 @@
 
 The following table summarizes the available hardware security features,
 depending on the USB armory Mk II
-[model](https://github.com/f-secure-foundry/usbarmory/wiki/Ordering-information).
+[model](https://github.com/usbarmory/usbarmory/wiki/Ordering-information).
 
 The standard retail version mounts a faster (900 MHz) i.MX6ULZ SoC, compared to
 the i.MX6UL (528 MHz) variant, with the main trade-off of lack of OTF DRAM
@@ -10,7 +10,7 @@ encryption.
 
 The i.MX6UL variant features additional security properties, allowing external RAM
 encryption and a more complete internal cryptographic accelerator, is available
-only for [custom/bulk orders](https://github.com/f-secure-foundry/usbarmory/wiki/Ordering-information#custombulk-orders).
+only for [custom/bulk orders](https://github.com/usbarmory/usbarmory/wiki/Ordering-information#custombulk-orders).
 
 | Name  | Description                          | Models             | Availability |
 |-------|--------------------------------------|--------------------|--------------|
@@ -32,7 +32,7 @@ only for [custom/bulk orders](https://github.com/f-secure-foundry/usbarmory/wiki
 The HAB feature enables on-chip internal Boot ROM authentication of initial
 bootloader (i.e. Secure Boot) with a digital signature, establishing the first
 trust anchor for code authentication. See
-[Secure Boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II)) for
+[Secure Boot](https://github.com/usbarmory/usbarmory/wiki/Secure-boot-(Mk-II)) for
 more information and usage instructions.
 
 ## Random Number Generator (RNGB) - i.MX6ULZ
@@ -77,11 +77,11 @@ the Secure Non-Volatile Storage (SNVS) companion block.
 
 A Linux kernel driver for the DCP (i.MX6ULZ), which takes advantage of the
 OTPMK released by the SNVS, is available at
-[https://github.com/f-secure-foundry/mxs-dcp](https://github.com/f-secure-foundry/mxs-dcp).
+[https://github.com/usbarmory/mxs-dcp](https://github.com/usbarmory/mxs-dcp).
 
 A Linux kernel driver for the CAAM (i.MX6UL), which takes advantage of the
 OTPMK released by the SNVS, is available at
-[https://github.com/f-secure-foundry/caam-keyblob](https://github.com/f-secure-foundry/caam-keyblob).
+[https://github.com/usbarmory/caam-keyblob](https://github.com/usbarmory/caam-keyblob).
 
 ## Bus Encryption Engine (BEE) - i.MX6UL
 
@@ -94,7 +94,7 @@ allowing OTF DRAM encryption.
 The i.MX6 SoC family features an [ARM® TrustZone®](http://www.arm.com/products/processors/technologies/trustzone/)
 implementation in its CPU core as well as its internal peripherals.
 
-A reference implementation of ARM® TrustZone® on the USB armory Mk II can be found in F-Secure own [GoTEE](https://github.com/f-secure-foundry/GoTEE) framework.
+A reference implementation of ARM® TrustZone® on the USB armory Mk II can be found in F-Secure own [GoTEE](https://github.com/usbarmory/GoTEE) framework.
 
 # External secure elements
 

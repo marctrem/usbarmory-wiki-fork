@@ -20,7 +20,7 @@
   * [i.MX53 Secure Boot Application Note](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
 
 * Secure Boot
-  * [habtool](https://github.com/f-secure-foundry/crucible/tree/master/cmd/habtool)
+  * [habtool](https://github.com/usbarmory/crucible/tree/master/cmd/habtool)
   * [Secure Boot using HABv4](http://cache.nxp.com/files/32bit/doc/app_note/AN4581.pdf)
   * [HABv4 RVT Guidelines and Recommendations](https://www.nxp.com/docs/en/application-note/AN12263.pdf)
   * [i.MX Secure and Encrypted Boot using HABv4](https://gitlab.denx.de/u-boot/u-boot/blob/master/doc/imx/habv4/introduction_habv4.txt)
@@ -55,7 +55,7 @@
 
 * Pedro Vilaca authored a USB armory based [USB sandbox](https://github.com/gdbinit/armorysandbox), described in this [article](https://sentinelone.com/blogs/armory-sandbox-building-usb-analyzer-usb-armory/)
 
-* [Georg](https://github.com/tuxlifan) provides a fork for our official [basic Debian image generation](https://github.com/f-secure-foundry/usbarmory-debian-base_image) that allows [basic Devuan image generation](https://github.com/tuxlifan/usbarmory-devuan-base_image).
+* [Georg](https://github.com/tuxlifan) provides a fork for our official [basic Debian image generation](https://github.com/usbarmory/usbarmory-debian-base_image) that allows [basic Devuan image generation](https://github.com/tuxlifan/usbarmory-devuan-base_image).
 
 * [Wincent Balin](https://github.com/wincentbalin) [contributed](https://gist.github.com/wincentbalin/83749d46ea5aadec6c3dcfd3ff672d21) a [mode switcher](https://ofdigitalwater.postach.io/post/mode-switcher-for-usb-armory) script.
 
@@ -73,7 +73,7 @@
 
 * [Yorick Koster](https://twitter.com/yorickkoster) authored [U3 armory](https://github.com/securifybv/u3-armory), a project for emulating a U3 thumb drive with the USB armory to [trigger and exploit Windows AutoRun](https://securify.nl/blog/SFY20170201/autorun_is_dead__long_live_autorun.html).
 
-* [Teddy Reed V](https://github.com/theopolis) authored an excellent [writeup](https://casualhacking.io/blog/2018/2/10/exploring-secured-boot-on-the-sabre-lite-imx6s-v13-sbc-and-nxp-habv4) on the vulnerability covered by our [own advisory](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt) and [exploit PoC](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/usbarmory_csftool#L227).
+* [Teddy Reed V](https://github.com/theopolis) authored an excellent [writeup](https://casualhacking.io/blog/2018/2/10/exploring-secured-boot-on-the-sabre-lite-imx6s-v13-sbc-and-nxp-habv4) on the vulnerability covered by our [own advisory](https://github.com/usbarmory/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt) and [exploit PoC](https://github.com/usbarmory/usbarmory/blob/master/software/secure_boot/usbarmory_csftool#L227).
 
 ### Presentations
 

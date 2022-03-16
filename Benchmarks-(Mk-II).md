@@ -16,7 +16,7 @@ rating of 1.9 DMIPS/MHz.
 The standard version mounts the i.MX6ULZ CPU (P/N MCIMX6Z0DVM09AB) which is
 clocked at 900 MHz.
 
-A [variant](https://github.com/f-secure-foundry/usbarmory/wiki/Ordering-information)
+A [variant](https://github.com/usbarmory/usbarmory/wiki/Ordering-information)
 (custom/bulk orders only) with the i.MX6UL (P/N MCIMX6G3DVM05AB) is clocked at
 528 MHz.
 

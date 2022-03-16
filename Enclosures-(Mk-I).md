@@ -6,7 +6,7 @@ The enclosure can be easily assembled by snapping in three separate body parts, 
 
 Just like the USB armory, the enclosure manufacturing, including its material, is entirely made in Italy.
 
-* [Technical Diagram](https://github.com/f-secure-foundry/usbarmory/blob/master/hardware/mark-one/enclosure_diagram-20150611.pdf)
+* [Technical Diagram](https://github.com/usbarmory/usbarmory/blob/master/hardware/mark-one/enclosure_diagram-20150611.pdf)
 
 * Specifications:
   * Dimensions:

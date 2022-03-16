@@ -7,8 +7,8 @@ The USB armory Mk I supports USB 2.0 connectivity over a single One-The-Go
 
 The following instructions assume that a Linux distribution is running on the
 USB armory, mind that alternatively host communication can also be achieved
-in a similar manner when using [TamaGo](https://github.com/f-secure-foundry/tamago)
-unikernels ([example](https://github.com/f-secure-foundry/tamago-example)).
+in a similar manner when using [TamaGo](https://github.com/usbarmory/tamago)
+unikernels ([example](https://github.com/usbarmory/tamago-example)).
 
 # CDC Ethernet
 
@@ -220,8 +220,8 @@ The ```verify``` and ```debugmode``` flags can also be used as debugging aid to 
 sudo imx_usb -v -d image.imx
 ```
 
-Only for the [USB armory Mk II SDP protocol](https://github.com/f-secure-foundry/usbarmory/wiki/Boot-Modes-(Mk-II))
-there is also our own equivalent [armory-boot-usb loader](https://github.com/f-secure-foundry/armory-boot/tree/master/cmd/armory-boot-usb).
+Only for the [USB armory Mk II SDP protocol](https://github.com/usbarmory/usbarmory/wiki/Boot-Modes-(Mk-II))
+there is also our own equivalent [armory-boot-usb loader](https://github.com/usbarmory/armory-boot/tree/master/cmd/armory-boot-usb).
 
 ```
 sudo armory-boot-usb -i image.imx

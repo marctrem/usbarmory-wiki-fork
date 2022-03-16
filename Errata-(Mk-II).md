@@ -5,7 +5,7 @@ Errata: incorrect silkscreen labels
 -----------------------------------
 
 The silkscreen labels for `3.3V` and `5V` are inverted on all rev v1 PCBs, see
-this [issue](https://github.com/f-secure-foundry/usbarmory/issues/68).
+this [issue](https://github.com/usbarmory/usbarmory/issues/68).
 
 USB armory Mk II (rev. β)
 =========================
@@ -52,7 +52,7 @@ enforce correct direction and drive them by software, bypassing the UART
 controller automatic flow control.
 
 The UART2 is accessible through the USB armory Mk II
-[debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory)
+[debug accessory](https://github.com/usbarmory/usbarmory/tree/master/hardware/mark-two-debug-accessory)
 in UART mode, when accessing it ensure that hardware flow control is disabled
 (default with the Linux FTDI driver and most terminal applications).
 
@@ -81,7 +81,7 @@ flash to manually overwrite the `CUSTOMER[31]` register with the desired
 setting.
 
 Both methods are implemented in the `ble rc_lfck (flash|at)` command of the
-[armoryctl](https://github.com/f-secure-foundry/armoryctl) tool.
+[armoryctl](https://github.com/usbarmory/armoryctl) tool.
 
 Following our bug report, u-blox recommends grounding of the `XL_1` and `XL_2`
 pads in ANNA-B112 System Integration Manual revisions R06 or later.
@@ -110,7 +110,7 @@ kernel: usb 2-2.3: device descriptor read/64, error -110
 
 The issue is worked around by disabling the UART Serial Downloader mode,
 leaving only the USB mode active, by fusing the `UART_SERIAL_DOWNLOAD_DISABLE`
-OTP fuse (example with [crucible](https://github.com/f-secure-foundry/crucible) tool
+OTP fuse (example with [crucible](https://github.com/usbarmory/crucible) tool
 shown):
 
 ```
@@ -203,7 +203,7 @@ https://e2e.ti.com/support/interface/f/138/t/813069
 
 Manual enable:
 `i2cset -y 0 0x31 0x5 0xbb` or
- [armoryctl](https://github.com/f-secure-foundry/armoryctl) `fusb (enable|disable)`
+ [armoryctl](https://github.com/usbarmory/armoryctl) `fusb (enable|disable)`
 
 Errata: instability with specific Linux kernel versions (resolved on <= 4.19, >= 5.3)
 -------------------------------------------------------------------------------------
@@ -239,4 +239,4 @@ if the problem stemmed from a CPU frequency scaling problem.":
 
 The issue has been evaluated as the result of tight DDR calibration values,
 using a different round of DDR calibration resolved the issue:
-  https://github.com/f-secure-foundry/usbarmory/commit/d3f98bbc812c619e6d1d4136b53806169ea2d34e
+  https://github.com/usbarmory/usbarmory/commit/d3f98bbc812c619e6d1d4136b53806169ea2d34e

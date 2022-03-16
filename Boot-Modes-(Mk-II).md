@@ -34,7 +34,7 @@ fails to find valid instructions.
 # Serial Download Protocol (SDP)
 
 The `armory-boot-usb` serial downloader can be found in the
-[armory-boot repository](https://github.com/f-secure-foundry/armory-boot/tree/master/cmd/armory-boot-usb)
+[armory-boot repository](https://github.com/usbarmory/armory-boot/tree/master/cmd/armory-boot-usb)
 and used to directly download and execute code on the SoC over USB.
 
 ```
@@ -56,7 +56,7 @@ either an external microSD card, connected to a host with a built-in or
 externally connected card reader, or the internal eMMC.
 
 The USB armory Mk II itself can be used as a microSD/eMMC reader using
-[armory-ums](https://github.com/f-secure-foundry/armory-ums).
+[armory-ums](https://github.com/usbarmory/armory-ums).
 
 **WARNING**: the following operations will destroy any previous contents on the
 target eMMC/microSD.
@@ -64,8 +64,8 @@ target eMMC/microSD.
 ## Flashing i.MX native images
 
 The `imx` image format represents bootable images that can be loaded directly
-by the SoC boot ROM, examples include bootloaders (e.g. U-Boot, [armory-boot](https://github.com/f-secure-foundry/armory-boot))
-or bare metal unikernels (e.g. [TamaGo](https://github.com/f-secure-foundry/tamago)).
+by the SoC boot ROM, examples include bootloaders (e.g. U-Boot, [armory-boot](https://github.com/usbarmory/armory-boot))
+or bare metal unikernels (e.g. [TamaGo](https://github.com/usbarmory/tamago)).
 
 Linux (verify target from terminal using `dmesg`, e.g. /dev/sdX):
 ```
@@ -80,7 +80,7 @@ sudo dd if=image.imx of=$TARGET_DEV bs=512 seek=2
 ## Flashing raw disk images
 
 Raw disk images are meant to fill the entire boot media, examples include full
-OS images such as the [USB armory Debian base image](https://github.com/f-secure-foundry/usbarmory-debian-base_image).
+OS images such as the [USB armory Debian base image](https://github.com/usbarmory/usbarmory-debian-base_image).
 
 Linux (verify target from terminal using `dmesg`, e.g. /dev/sdX):
 ```

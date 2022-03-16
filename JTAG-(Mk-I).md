@@ -3,7 +3,7 @@ pads plus the ground pin of the pin header. The following picture identifies the
 
 ![Mk I JTAG picture](images/armory-mark-one-jtag-board.png)
 
-The following [schematic (PDF)](https://github.com/f-secure-foundry/usbarmory/raw/master/hardware/mark-one/jtag-breakout.pdf) illustrates connection between the pads and a
+The following [schematic (PDF)](https://github.com/usbarmory/usbarmory/raw/master/hardware/mark-one/jtag-breakout.pdf) illustrates connection between the pads and a
 standard ARM JTAG 20-pin connector.
 
 ![Mk I JTAG schematic](images/armory-mark-one-jtag-sch.png)

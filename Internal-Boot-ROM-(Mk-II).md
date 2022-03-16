@@ -1,6 +1,6 @@
 The internal SoC Boot ROM is permanently set by the processor manufacturer (NXP), for
 verification purposes its initial 92KB can be dumped with a custom
-[imx6ul_bootrom-dump utility](https://github.com/f-secure-foundry/usbarmory/blob/master/software/util/imx6ul_bootrom-dump.c).
+[imx6ul_bootrom-dump utility](https://github.com/usbarmory/usbarmory/blob/master/software/util/imx6ul_bootrom-dump.c).
 
 The last 4KB section is a protected area and therefore not accessible.
 

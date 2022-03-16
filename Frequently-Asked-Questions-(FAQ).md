@@ -10,7 +10,7 @@ The microSD slot is a "Push-Push" kind.
 
 ### Help, I can't connect to my USB armory.
 
-If you received a pre-imaged microSD card with your USB armory it almost certainly includes the default image, please see notes and default credentials [here](https://github.com/f-secure-foundry/usbarmory-debian-base_image/releases) (specifically the **Connecting** section). If you have issues connecting always make sure that:
+If you received a pre-imaged microSD card with your USB armory it almost certainly includes the default image, please see notes and default credentials [here](https://github.com/usbarmory/usbarmory-debian-base_image/releases) (specifically the **Connecting** section). If you have issues connecting always make sure that:
 
 1. the LED is blinking (indicates Linux kernel heartbeat)
 
@@ -24,7 +24,7 @@ If you can ping and SSH the USB armory IP address, but default credentials do no
 
 To solve this issue options are:
 
-  * login with default credentials on the serial port using the [debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory) to delete corrupted keys
+  * login with default credentials on the serial port using the [debug accessory](https://github.com/usbarmory/usbarmory/tree/master/hardware/mark-two-debug-accessory) to delete corrupted keys
   * mount the microSD card on another machine to delete corrupted keys
   * re-image the microSD card
 
@@ -34,7 +34,7 @@ A tutorial on how to do this can be found [here](http://elinux.org/Beagleboard:E
 
 ### Why does 'ps' return no processes and error 'missing btime in /proc/stat'?
 
-This happens with modern versions of procps when date is not correctly set, this is likely to happen on environments where the USB armory is not routed to the Internet via the USB host (see [Host communication](https://github.com/f-secure-foundry/usbarmory/wiki/Host-communication)) and/or when a NTP client is not installed.
+This happens with modern versions of procps when date is not correctly set, this is likely to happen on environments where the USB armory is not routed to the Internet via the USB host (see [Host communication](https://github.com/usbarmory/usbarmory/wiki/Host-communication)) and/or when a NTP client is not installed.
 
 The [fake-hwlock](https://packages.debian.org/wheezy/admin/fake-hwclock) package can be used to store a timestamp in the filesystem at reasonable intervals and restore it at boot, so that time is not reset to the epoch at power loss.
 
@@ -44,7 +44,7 @@ However setting the right time is always advised, see next question for more inf
 
 Like the Raspberry Pi, the USB armory has no battery to hold RTC state. In order to address this a valid time must be set at boot, this can either be done manually using 'date' command or by properly routing the USB armory to the Internet and letting a network time client (such as 'ntpclient' or 'tlsdate') to do its job.
 
-For USB armory-specific application development the recommendation is to implement automatic time/date provisioning from the application client in scenarios where Internet routing is not desired/implemented. As an example the [INTERLOCK](https://github.com/f-secure-foundry/interlock) application for the USB armory sets the time from the host client at each successful login.
+For USB armory-specific application development the recommendation is to implement automatic time/date provisioning from the application client in scenarios where Internet routing is not desired/implemented. As an example the [INTERLOCK](https://github.com/usbarmory/interlock) application for the USB armory sets the time from the host client at each successful login.
 
 ### How do I address locale related errors when installing packages on Debian images?
 
@@ -75,11 +75,11 @@ mounting system resources.
 
 ### No serial console with debug accessory (Mk II)
 
-The connection between the [debug accessory](https://github.com/f-secure-foundry/usbarmory/tree/master/hardware/mark-two-debug-accessory) and the target is supported only
+The connection between the [debug accessory](https://github.com/usbarmory/usbarmory/tree/master/hardware/mark-two-debug-accessory) and the target is supported only
 with the same orientation for both top layers (side with components for the
 accessory, side with LEDs for the USB armory).
 
-When running the [USB armory Debian base image](https://github.com/f-secure-foundry/usbarmory-debian-base_image/releases) the serial console can be accessed, with the debug accessory jumper set to UART position, as follows (example on Linux host with picocom):
+When running the [USB armory Debian base image](https://github.com/usbarmory/usbarmory-debian-base_image/releases) the serial console can be accessed, with the debug accessory jumper set to UART position, as follows (example on Linux host with picocom):
 
 ```
 picocom -b 115200 -eb /dev/ttyUSB2 --imap lfcrlf
@@ -87,4 +87,4 @@ picocom -b 115200 -eb /dev/ttyUSB2 --imap lfcrlf
 
 ### How do I set the USB Type-C receptacle in device mode? (Mk II)
 
-The USB armory Mk II is configured as a host by default, to enable device mode see this [example](https://github.com/f-secure-foundry/usbarmory/issues/53#issuecomment-572959387) on how to use it as a second RNDIS (usb1) interface.
+The USB armory Mk II is configured as a host by default, to enable device mode see this [example](https://github.com/usbarmory/usbarmory/issues/53#issuecomment-572959387) on how to use it as a second RNDIS (usb1) interface.

@@ -12,21 +12,21 @@ the USB armory concept:
 This section is meant to track available software projects, PoCs and procedures oriented
 towards implementing such application ideas and any other interesting USB armory usage.
 
-See also [Host communication](https://github.com/f-secure-foundry/usbarmory/wiki/Host-communication)
+See also [Host communication](https://github.com/usbarmory/usbarmory/wiki/Host-communication)
 for interfacing options.
 
 ### Smartcard
 
-The [GoKey](https://github.com/f-secure-foundry/GoKey) unikernel implements a USB smartcard in pure Go with support for
+The [GoKey](https://github.com/usbarmory/GoKey) unikernel implements a USB smartcard in pure Go with support for
 OpenPGP 3.4 and FIDO U2F.
 
 ### File encryption
 
-The [INTERLOCK](https://github.com/f-secure-foundry/interlock) application is a
+The [INTERLOCK](https://github.com/usbarmory/interlock) application is a
 file encryption front-end developed for, but not limited to, usage with the USB
 armory.
 
-The [armory-drive](https://github.com/f-secure-foundry/armory-drive) unikernel
+The [armory-drive](https://github.com/usbarmory/armory-drive) unikernel
 implements encrypted USB Mass Storage interfacing for microSD cards.
 
 ### Password manager
@@ -44,7 +44,7 @@ Windows hosts.
 Assumptions:
 * host main interface on network 192.168.1.0/24 with default gateway 192.168.1.1
 * USB armory on network 10.0.0.0/24 with IP address 10.0.0.1
-* USB armory masqueraded and routed as described in [Host communication](https://github.com/f-secure-foundry/usbarmory/wiki/Host-communication)
+* USB armory masqueraded and routed as described in [Host communication](https://github.com/usbarmory/usbarmory/wiki/Host-communication)
 
 #### USB armory setup
 

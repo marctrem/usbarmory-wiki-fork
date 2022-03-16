@@ -2,10 +2,10 @@
 
 **IMPORTANT**: this feature is currently deprecated on i.MX53 based hardware,
 see the related
-[security advisory](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
+[security advisory](https://github.com/usbarmory/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
 
 The USB armory Mk II design is recommended for anyone needing
-[Secure boot](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-II))
+[Secure boot](https://github.com/usbarmory/usbarmory/wiki/Secure-boot-(Mk-II))
 capabilities.
 
 ### Disclaimer
@@ -41,7 +41,7 @@ executed code is not covered in this guide and left out to implementors.
 
 This document illustrates the procedure using custom developed open source
 tools, an alternate method, using NXP Code Signing Tool (IMX_CST_TOOL), is
-available [here](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I)).
+available [here](https://github.com/usbarmory/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I)).
 
 A working device tree compiler and make must be installed, on a recent Debian
 and Ubuntu this can be done as follows:
@@ -73,7 +73,7 @@ certificates:
   data (e.g. U-Boot image).
 
 The key material can be created with your own existing CA, an helper
-[Makefile](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
+[Makefile](https://github.com/usbarmory/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
 is available to provide reference example for certificate creation and can be
 used as follows:
 
@@ -85,7 +85,7 @@ make -C ${USBARMORY_GIT}/software/secure_boot/hab-pki -f Makefile-pki KEYS_PATH=
 The four SRKs must be merged in a table for SHA256 hash calculation, the hash
 is going to be eventually fused on the USB armory SoC. The table and hash can
 be generated with the
-[usbarmory_srktool](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/usbarmory_srktool)
+[usbarmory_srktool](https://github.com/usbarmory/usbarmory/blob/master/software/secure_boot/usbarmory_srktool)
 as follows:
 
 ```
@@ -194,7 +194,7 @@ The compilation results in the two following files:
 ### Prepare the CSF file
 
 Download the
-[usbarmory_csftool](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/usbarmory_csftool)
+[usbarmory_csftool](https://github.com/usbarmory/usbarmory/blob/master/software/secure_boot/usbarmory_csftool)
 tool and prepare the Command Sequence File (the example chooses SRK keypair #1):
 
 ```
@@ -250,7 +250,7 @@ for details (Chapter 2 - Fusemap).
 The following commands (=> prompt) are meant to be executed on the USB armory,
 within the u-boot bootloader, using the serial port accessible through the
 breakout header (see [Using external
-GPIOs](https://github.com/f-secure-foundry/usbarmory/wiki/GPIOs) for details).
+GPIOs](https://github.com/usbarmory/usbarmory/wiki/GPIOs) for details).
 
 In order to fuse anything, the VDD_FUSE power supply must be enabled:
 

@@ -48,7 +48,7 @@ As a reminder of the need to dispose of household appliances separately, the
 product is marked with a crossed-out wheeled dustbin.
 
 Units can be collected free of charge by F-Secure for disposal, contact
-[support](https://github.com/f-secure-foundry/usbarmory/wiki#support) to arrange it.
+[support](https://github.com/usbarmory/usbarmory/wiki#support) to arrange it.
 
 ## REACH and RoHS compliance declaration
 

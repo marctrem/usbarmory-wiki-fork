@@ -14,7 +14,7 @@ The measurements have been performed using an Agilent U1242B multimeter.
 
 ¹ with frequency scaling and without power management (e.g. CPU suspend)
 
-## [TamaGo unikernel](https://github.com/f-secure-foundry/tamago)
+## [TamaGo unikernel](https://github.com/usbarmory/tamago)
 
 | Device             |     Idle² (@ 198 MHz) |   Mixed CPU+I/O workload |     High CPU+I/O workload |
 |:-------------------|----------------------:|-------------------------:|--------------------------:|

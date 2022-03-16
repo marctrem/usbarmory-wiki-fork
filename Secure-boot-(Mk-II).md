@@ -5,7 +5,7 @@ address all known security issues, nonetheless the following security
 information is highlighted for anyone that wants to apply these instructions on
 other hardware based on i.MX6UL P/Ns.
 
-To address the [HABv4 security advisory](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt),
+To address the [HABv4 security advisory](https://github.com/usbarmory/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt),
 the secure boot architecture is meant to work on i.MX6UL/i.MX6ULL/i.MX6ULZ
 parts with Silicon Revision 1.2 or greater, implemented on Part Numbers (P/N)
 with revision "AB" or greater.
@@ -31,13 +31,13 @@ The pre-requisites of an effective secure booted environment are the following:
   signed bootloader can ever be executed.
 
 * A bootloader with an embedded public key to ensure authenticated
-  configuration, [armory-boot](https://github.com/f-secure-foundry/armory-boot)
+  configuration, [armory-boot](https://github.com/usbarmory/armory-boot)
   is recommended for the USB armory Mk II and used in this guide.
 
 The combination of i.MX6UL secure boot and armory-boot authentication features
 allow a fully verified chain of trust, to boot a trusted Linux kernel image.
 
-When signing a [TamaGo unikernel](https://github.com/f-secure-foundry/tamago)
+When signing a [TamaGo unikernel](https://github.com/usbarmory/tamago)
 or a Linux kernel which embeds a root file system the authentication achieve full
 boot (not runtime) coverage. The post-boot Linux kernel verification of executed
 code, or encrypted disk unlock, is out of scope of this guide.
@@ -46,7 +46,7 @@ The following instructions apply identically to variants i.MX6ULL and i.MX6ULZ.
 
 ### Prerequisites
 
-* [Go](https://golang.org/) >= 1.16 to install [crucible](https://github.com/f-secure-foundry/crucible)
+* [Go](https://golang.org/) >= 1.16 to install [crucible](https://github.com/usbarmory/crucible)
 * [signify](https://man.openbsd.org/signify) (sometimes packaged as
 `signify-openbsd`) or [minisign](https://jedisct1.github.io/minisign/) to sign bootloader configuration.
 
@@ -63,10 +63,10 @@ certificates:
 * Image signing key (IMG) public/private key pair, used to sign application
   data (e.g. bootloader image).
 
-The [habtool](https://github.com/f-secure-foundry/crucible/tree/master/cmd/habtool)
+The [habtool](https://github.com/usbarmory/crucible/tree/master/cmd/habtool)
 utility provides a reference for certificate creation (existing CAs or OpenSSL
 can also be used, see this
-[Makefile](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
+[Makefile](https://github.com/usbarmory/usbarmory/blob/master/software/secure_boot/hab-pki/Makefile-pki)
 for an alternative method).
 
 The four SRK certification authorities and the CSF/IMG key pairs, signed by the
@@ -102,7 +102,7 @@ habtool \
 
 The four SRKs must be merged in a table for SHA256 hash calculation, the hash
 is going to be eventually fused on the USB armory SoC. The table and hash can
-be generated with [habtool](https://github.com/f-secure-foundry/crucible/tree/master/cmd/habtool)
+be generated with [habtool](https://github.com/usbarmory/crucible/tree/master/cmd/habtool)
 as follows:
 
 ```
@@ -128,7 +128,7 @@ hexdump -C ${HAB_KEYS}/SRK_1_2_3_4_fuse.bin
 
 ### Compiling and installing the bootloader
 
-[armory-boot](https://github.com/f-secure-foundry/armory-boot) is a minimal
+[armory-boot](https://github.com/usbarmory/armory-boot) is a minimal
 primary boot loader which allows starting Linux kernel images with authenticated
 configuration.
 
@@ -166,10 +166,10 @@ image.
 make CROSS_COMPILE=arm-none-eabi- imx_signed
 ```
 
-Please refer to [armory-boot documentation](https://github.com/f-secure-foundry/armory-boot/blob/master/README.md)
+Please refer to [armory-boot documentation](https://github.com/usbarmory/armory-boot/blob/master/README.md)
 for details on the bootloader compilation, installation and configuration.
 
-Specifically the armory-boot [Secure Boot documentation](https://github.com/f-secure-foundry/armory-boot/blob/master/README.md#secure-boot)
+Specifically the armory-boot [Secure Boot documentation](https://github.com/usbarmory/armory-boot/blob/master/README.md#secure-boot)
 illustrates how to maintain the chain of trust with authenticated bootloader
 configuration, ensuring target Linux kernel authentication.
 
@@ -180,7 +180,7 @@ accessed via the On-Chip OTP Controller (`OCOTP_CTRL`). See Table 5-9 of the
 [i.MX6UL Reference Manual](https://www.nxp.com/docs/en/reference-manual/IMX6ULRM.pdf)
 for details.
 
-The [crucible](https://github.com/f-secure-foundry/crucible/tree/master/cmd/crucible)
+The [crucible](https://github.com/usbarmory/crucible/tree/master/cmd/crucible)
 tool provides user space support for reading, and writing, OTP fuses. It is
 used in all following sections to derive register bit map illustrations and
 implement OTP fuses read and write commands.
@@ -311,7 +311,7 @@ with keys corresponding to the fused hashes.
 ### Verifying HAB configuration (i.MX6ULL/i.MX6ULZ)
 
 After rebooting the USB armory, the security state can be verified by checking
-the [mxs-dcp driver](https://github.com/f-secure-foundry/mxs-dcp) log
+the [mxs-dcp driver](https://github.com/usbarmory/mxs-dcp) log
 message which should read:
 
 ```
@@ -319,12 +319,12 @@ mxs_dcp: Trusted State detected
 ```
 
 The `mxs_dcp` kernel module is compiled by default in the USB armory Mk II
-[Debian base image](https://github.com/f-secure-foundry/usbarmory-debian-base_image/releases).
+[Debian base image](https://github.com/usbarmory/usbarmory-debian-base_image/releases).
 
 ### Verifying HAB configuration (i.MX6UL)
 
 After rebooting the USB armory, the security state can be verified by checking
-the [caam-keyblob driver](https://github.com/f-secure-foundry/caam-keyblob) log
+the [caam-keyblob driver](https://github.com/usbarmory/caam-keyblob) log
 message which should read:
 
 ```
@@ -339,7 +339,7 @@ vulnerable (e.g. because of known security issues) signed images from being
 used again on a device.
 
 To do so the `OCOTP_SRK_REVOKE` fuse can be used with the
-[crucible](https://github.com/f-secure-foundry/crucible) tool to set
+[crucible](https://github.com/usbarmory/crucible) tool to set
 `SRK_REVOKE[0:2]` bits, reflecting the index of the revoked key.
 
 Example of revocation for key with index 3 (corresponding
@@ -353,11 +353,11 @@ crucible -m IMX6UL -r 1 -b 2 -e big blow OCOTP_SRK_REVOKE 0b100
 
 The following Go packages are provided to aid programmatic integration:
 
-* The [hab package](https://pkg.go.dev/github.com/f-secure-foundry/crucible/hab) provides support functions for NXP HABv4 Secure Boot provisioning and executable signing.
+* The [hab package](https://pkg.go.dev/github.com/usbarmory/crucible/hab) provides support functions for NXP HABv4 Secure Boot provisioning and executable signing.
 
-* The [otp package](https://pkg.go.dev/github.com/f-secure-foundry/crucible/otp) provides support for One-Time-Programmable (OTP) fuses read and write operations.
+* The [otp package](https://pkg.go.dev/github.com/usbarmory/crucible/otp) provides support for One-Time-Programmable (OTP) fuses read and write operations.
 
-* The [ocotp package](https://pkg.go.dev/github.com/f-secure-foundry/tamago/soc/imx6/ocotp) implements a driver for the NXP On-Chip OTP Controller (OCOTP_CTRL) to interface with on-chip fuses, including write operation. This package is only meant to be used with `GOOS=tamago GOARCH=arm` as supported by the [TamaGo framework](https://github.com/f-secure-foundry/tamago).
+* The [ocotp package](https://pkg.go.dev/github.com/usbarmory/tamago/soc/imx6/ocotp) implements a driver for the NXP On-Chip OTP Controller (OCOTP_CTRL) to interface with on-chip fuses, including write operation. This package is only meant to be used with `GOOS=tamago GOARCH=arm` as supported by the [TamaGo framework](https://github.com/usbarmory/tamago).
 
 ### External documentation
 

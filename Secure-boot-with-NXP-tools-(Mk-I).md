@@ -1,6 +1,6 @@
 ### Security information
 
-**IMPORTANT**: this feature is currently deprecated, see the related [security advisory](https://github.com/f-secure-foundry/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
+**IMPORTANT**: this feature is currently deprecated, see the related [security advisory](https://github.com/usbarmory/usbarmory/blob/master/software/secure_boot/Security_Advisory-Ref_QBVR2017-0001.txt).
 
 ### Disclaimer
 
@@ -38,7 +38,7 @@ This document illustrates the procedure using the Code Signing Tool from NXP
 [download](https://www.nxp.com/webapp/Download?colCode=IMX_CST_TOOL&appType=license&Parent_nodeId=1297866175545717803818&Parent_pageType=product)
 (requires registration). An alternate method, using custom developed open
 source tools, is described
-[here](https://github.com/f-secure-foundry/usbarmory/wiki/Secure-boot-(Mk-I)).
+[here](https://github.com/usbarmory/usbarmory/wiki/Secure-boot-(Mk-I)).
 
 A working device tree compiler must be installed, on a recent Debian and Ubuntu
 this can be done as follows:
@@ -235,7 +235,7 @@ for details (Chapter 2 - Fusemap).
 The following commands (=> prompt) are meant to be executed on the USB armory,
 within the u-boot bootloader, using the serial port accessible through the
 breakout header (see [Using external
-GPIOs](https://github.com/f-secure-foundry/usbarmory/wiki/GPIOs) for details).
+GPIOs](https://github.com/usbarmory/usbarmory/wiki/GPIOs) for details).
 
 In order to fuse anything, the VDD_FUSE power supply must be enabled:
 
