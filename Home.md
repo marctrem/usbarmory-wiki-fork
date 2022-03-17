@@ -53,7 +53,7 @@ The following sections provide information specific to each USB armory model.
   * Secure elements: NXP SE050 (rev. γ), Microchip ATECC608A + NXP A71CH (rev. β)
 * [Datasheet](https://github.com/usbarmory/usbarmory/wiki/media/usbarmory-mark-two-datasheet-rev2.0.pdf)
 * [Introduction](https://github.com/usbarmory/usbarmory/wiki/Mk-II-Introduction)
-* Bill of materials: [rev. γ](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two.html), [rev. β](https://f-secure-foundry.github.io/BOM/usbarmory-mark-two-beta.html)
+* Bill of materials: [rev. γ](https://usbarmory.github.io/BOM/usbarmory-mark-two.html), [rev. β](https://usbarmory.github.io/BOM/usbarmory-mark-two-beta.html)
 * [Security features](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II))
 * [Secure boot](https://github.com/usbarmory/usbarmory/wiki/Secure-boot-(Mk-II))
 * [Benchmarks](https://github.com/usbarmory/usbarmory/wiki/Benchmarks-(Mk-II))
@@ -86,7 +86,7 @@ The following sections provide information specific to each USB armory model.
   * RAM: 512 MB DDR3
   * Storage: external microSD
   * USB 2.0 over Type-A: OTG plug
-* [Bill of materials](https://f-secure-foundry.github.io/BOM/usbarmory-mark-one.html)
+* [Bill of materials](https://usbarmory.github.io/BOM/usbarmory-mark-one.html)
 * [Security features](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-I))
 * [Secure boot](https://github.com/usbarmory/usbarmory/wiki/Secure-boot-(Mk-I))
 * [Secure boot (with NXP tools)](https://github.com/usbarmory/usbarmory/wiki/Secure-boot-with-NXP-tools-(Mk-I))

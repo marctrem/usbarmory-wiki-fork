@@ -1,10 +1,10 @@
 ### Device tree
 
-Download and compile the example Inter-Integrated Circuit (I²C) device tree file [imx53-usbarmory-i2c.dts](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/kernel_conf/mark-one/imx53-usbarmory-i2c.dts).
+Download and compile the example Inter-Integrated Circuit (I²C) device tree file [imx53-usbarmory-i2c.dts](https://raw.githubusercontent.com/usbarmory/usbarmory/master/software/kernel_conf/mark-one/imx53-usbarmory-i2c.dts).
 
 Also ensure that i2c support is enabled in the kernel configuration, otherwise
 you can recompile the kernel with the latest configuration
-[usbarmory_linux-4.14.config](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/kernel_conf/mark-one/usbarmory_linux-4.14.config).
+[usbarmory_linux-4.14.config](https://raw.githubusercontent.com/usbarmory/usbarmory/master/software/kernel_conf/mark-one/usbarmory_linux-4.14.config).
 
 The example device tree enables this I²C configuration on the pin header:
 

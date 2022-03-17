@@ -119,14 +119,14 @@ Apply the following patch which enables i.MX53 High Assurance Boot (HAB)
 support in U-Boot by adding the `hab_status` command, which helps verification
 of secure boot state (optional but highly recommended).
 
-* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0001-Add-HAB-support.patch)
+* [0001-Add-HAB-support.patch](https://raw.githubusercontent.com/usbarmory/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0001-Add-HAB-support.patch)
 
 Apply the following patches to enable Verified Boot support, disable the U-Boot
 command line and external environment variables to further lock down physical
 serial console access.
 
-* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0002-Add-verified-boot-support.patch)
-* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0003-Disable-CLI.patch)
+* [0002-Add-verified-boot-support.patch](https://raw.githubusercontent.com/usbarmory/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0002-Add-verified-boot-support.patch)
+* [0003-Disable-CLI.patch](https://raw.githubusercontent.com/usbarmory/usbarmory/master/software/secure_boot/mark-one/u-boot-2018.01_patches/0003-Disable-CLI.patch)
 
 The U-Boot compilation requires a precompiled zImage Linux kernel image source
 tree path.
@@ -184,7 +184,7 @@ The compilation results in the two following files:
 
 Download the example Command Sequence File:
 
-* [hab4.csf](https://raw.githubusercontent.com/f-secure-foundry/usbarmory/master/software/secure_boot/mark-one/hab4.csf)
+* [hab4.csf](https://raw.githubusercontent.com/usbarmory/usbarmory/master/software/secure_boot/mark-one/hab4.csf)
 
 The file must be modified with the correct 'HAB Blocks' hex triple for the
 u-boot.imx file compiled in the previous step, along with its path.
