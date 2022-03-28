@@ -117,7 +117,7 @@ shown):
 crucible -m IMX6ULZ -r 0 -b 16 -e big blow UART_SERIAL_DOWNLOAD_DISABLE 1
 ```
 
-The OTP fuse is set by F-Secure on all shipped units.
+The OTP fuse is set by WithSecure on all shipped units.
 
 Errata: charger detection issues
 --------------------------------

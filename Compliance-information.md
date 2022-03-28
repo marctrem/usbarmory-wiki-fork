@@ -1,13 +1,13 @@
 # Regulatory information - USB armory Mk II
 
-F-Secure is committed to providing high quality products and services to all
-our customers. F-Secure products are tested and certified according to
+WithSecure is committed to providing high quality products and services to all
+our customers. WithSecure products are tested and certified according to
 applicable laws, regulations, directives and standards per each country or
 region where the products are available for sale. Declarations of Conformity
 are kept on record and available upon request:
 
 Attn: USB armory compliance  
-F-Secure Corporation  
+WithSecure Corporation  
 Tammasaarenkatu 7, P.O. Box 24  
 00181 Helsinki, Finland
 
@@ -47,7 +47,7 @@ significant savings in energy and resources.
 As a reminder of the need to dispose of household appliances separately, the
 product is marked with a crossed-out wheeled dustbin.
 
-Units can be collected free of charge by F-Secure for disposal, contact
+Units can be collected free of charge by WithSecure for disposal, contact
 [support](https://github.com/usbarmory/usbarmory/wiki#support) to arrange it.
 
 ## REACH and RoHS compliance declaration

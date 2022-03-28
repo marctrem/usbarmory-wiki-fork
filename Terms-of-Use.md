@@ -1,4 +1,4 @@
-### F-SECURE® TERMS OF USE (April 2019)
+### WithSECURE™ TERMS OF USE (April 2019)
 
 These Terms cover the USB armory Mark I and Mark II ("USB ARMORY").
 
@@ -45,16 +45,16 @@ AVAILABILITY, PERFORMANCE, NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A
 PARTICULAR PURPOSE.  YOU ASSUME THE ENTIRE RISK AS TO THE RESULTS AND
 PERFORMANCE OF THE USB ARMORY.
 
-**Warranty for hardware**. F-Secure provides a voluntary manufacturer’s limited
+**Warranty for hardware**. WithSecure provides a voluntary manufacturer’s limited
 warranty for hardware (hereinafter “Warranty”). The Warranty is for two (2)
 years in the EU and (1) year for hardware in all other countries or regions
 (hereinafter “Warranty Period”).  The Warranty provides rights that may be
 separate to the rights provided to you by consumer law, including but not
-limited to those relating to non-conforming goods. Hence, the F-Secure warranty
+limited to those relating to non-conforming goods. Hence, the WithSecure warranty
 beneﬁts are in addition to, and not instead of, rights provided by consumer law
 in your jurisdiction.  The Warranty Period begins from the date of original
-purchase of the product from F-Secure or an F-Secure authorized reseller. lf
-there is a defect during the warranty period, F-Secure, at its option and to
+purchase of the product from WithSecure or an WithSecure authorized reseller. lf
+there is a defect during the warranty period, WithSecure, at its option and to
 the extent required by law will (a) repair the product at no charge using new
 parts or parts that are equivalent to new in reliability and performance, or
 (b) exchange the product with a functionally equivalent product that is new or
@@ -64,16 +64,16 @@ or other causes that can be determined not to be defects in materials and
 workmanship including but not limited to if the product has been used or
 maintained in a manner not conforming to the user documentation and Terms of
 Use. The removal, defacing, and/or altering of the original factory serial
-number or modifying or repairing of the F-Secure hardware without authorization
-from F-Secure will void this warranty.  All warranties, conditions and other
+number or modifying or repairing of the WithSecure hardware without authorization
+from WithSecure will void this warranty.  All warranties, conditions and other
 terms not set out in this warranty document are excluded from the warranty,
 except for the rights entitled to you by the laws of your jurisdiction.
-F-Secure does not warrant, represent or undertake that it will be able to
+WithSecure does not warrant, represent or undertake that it will be able to
 repair or replace the hardware under this warranty without risk to and/or loss
-of information and/or data stored on the hardware. ln no event will F-Secure be
-liable for (a) any losses that were not caused by F-Secure’s breach of this
+of information and/or data stored on the hardware. ln no event will WithSecure be
+liable for (a) any losses that were not caused by WithSecure’s breach of this
 warranty (b) any loss or damage that was not, at the time of the purchase of
-the hardware, a reasonably foreseeable consequence of F-Secure breaching this
+the hardware, a reasonably foreseeable consequence of WithSecure breaching this
 warranty or (c) losses relating to any business, loss of proﬁts, loss of data
 or loss of opportunity. The provisions of this warranty shall not apply to (1)
 death or personal injury, (2) fraud or gross negligence, or (3) fraudulent
@@ -85,7 +85,7 @@ exclusions may not apply to you. Note that this warranty gives you speciﬁc
 legal rights, and you may also have other rights, which vary from state to
 state or country to country. For a full understanding of your rights you may
 consult the laws of your state, province or country. To submit a warranty
-claim, please contact F-Secure Customer Care as outlined below. Please be
+claim, please contact WithSecure Customer Care as outlined below. Please be
 prepared to have your proof of purchase for any warranty claims.
 
 **Some jurisdictions do not allow the limitation or exclusion of express or
@@ -116,7 +116,7 @@ USB ARMORY FOR SIX MONTHS IMMEDIATELY PRECEDING SUCH FAILURE.
 not allow the limitation or exclusion of liability for incidental or
 consequential damages so the above limitation or exclusion may not apply to you
 or may apply to you only in part. Nothing contained in these Terms shall
-prejudice the statutory rights of any party dealing as a consumer. F-Secure is
+prejudice the statutory rights of any party dealing as a consumer. WithSecure is
 acting also on behalf of its employees, distributors, licensors, suppliers and
 affiliates to disclaim, exclude and restrict obligations, warranties, and
 liability as provided in these Terms, but in no other respects and for no other
@@ -127,19 +127,19 @@ products purchased by consumers residing in Germany or Austria, the following
 limitations of liabilities shall apply in lieu of sections 1 and 2 above:
 Concerning claims for damages, claims for compensation of expenses and other
 liability claims, whether arising in contract, tort, breach of statutory duty
-or otherwise under these terms the following applies: F-Secure, its licensors,
+or otherwise under these terms the following applies: WithSecure, its licensors,
 its distributors or its suppliers shall be liable without restriction for i)
 damage caused intentionally or through gross negligence, ii) for claims
 according to the German/Austrian Product Liability Act and iii) in the case of
 violating life, body or health. In case of simple negligence, the following
-applies: F-Secure, its licensors, its distributors or its suppliers shall only
+applies: WithSecure, its licensors, its distributors or its suppliers shall only
 be liable insofar as it has breached an essential contractual obligation
 (cardinal contractual obligation). This liability shall be restricted to the
 contractually typical and foreseeable damage in the case of material and
 pecuniary damages.
 
 **Compensation for damages or loss**. You shall indemnify, defend and hold
-harmless F-Secure, its employees, officers, licensors, distributors, suppliers
+harmless WithSecure, its employees, officers, licensors, distributors, suppliers
 (collectively the “Indemnitees”) against (i) any and all costs, charges,
 claims, damages, liabilities incurred and/or proceedings taken against any of
 the Indemnitees due to your illegal conduct and/or violation of rights of third
@@ -189,7 +189,7 @@ fail-safe performance, such as in the operation of nuclear facilities, aircraft
 navigation or communication systems, air traffic control, direct life support
 machines, or weapons systems, in which the failure of the USB ARMORY could lead
 directly to death, personal injury, or severe physical or environmental damage
-("High Risk Activities"). F-Secure and its suppliers specifically disclaim any
+("High Risk Activities"). WithSecure and its suppliers specifically disclaim any
 express or implied warranty of fitness for High Risk Activities.
 
 **Governing Law and Dispute Resolution**. Unless otherwise stated below, these
@@ -206,11 +206,11 @@ Goods. In such cases, the exclusive jurisdiction and venue to adjudicate any
 dispute arising out of these Terms shall be of the federal and state courts
 located in New York. In respect of products purchased by consumers residing
 outside Finland or the United States, these Terms may be governed by the
-mandatory local laws of such jurisdictions. Where F-Secure should elect not to
+mandatory local laws of such jurisdictions. Where WithSecure should elect not to
 insist upon enforcing its rights in line with these Terms, this shall not be
-interpreted as a waiver of F-Secure’s right to enforce the same in the future.
+interpreted as a waiver of WithSecure’s right to enforce the same in the future.
 In the event that you are a consumer residing in the EU, and a conflict
-concerning these Terms cannot be resolved by you and F-Secure or F-Secure’s
+concerning these Terms cannot be resolved by you and WithSecure or WithSecure’s
 respective distributor in amicable negotiations, you may resort to your local
 national dispute resolution body for consumer disputes. You may find the full
 list of competent dispute resolution bodies in your jurisdiction here
@@ -220,6 +220,6 @@ resolving a consumer dispute.
 
 #### CONTACT DETAILS
 
-If you have any questions on these Terms or if you need to contact F-Secure for
-any other reason, please write: F-Secure Corporation, PL24, FI-00181 Helsinki,
-Finland, e-mail: helsinki@f-secure.com or call: +358 9 2520 0700.
+If you have any questions on these Terms or if you need to contact WithSecure for
+any other reason, please write: WithSecure Corporation, PL24, FI-00181 Helsinki,
+Finland, e-mail: helsinki@withsecure.com or call: +358 9 2520 0700.

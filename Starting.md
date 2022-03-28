@@ -17,7 +17,7 @@ loads, mind its temperature while handling it.
 ## Terms of Use
 
 The following Terms of Use apply to USB armory Mk I boards manufactured by
-Inverse Path and/or F-Secure and sold directly or through one of its resellers.
+Inverse Path and/or WithSecure and sold directly or through one of its resellers.
 
 IMPORTANT – BEFORE INSTALLING OR USING THE USB ARMORY MK I BOARDS MANUFACTURED
 BY INVERSE PATH AND/OR F-SECURE, CAREFULLY READ THE BELOW TERMS OF USE
@@ -67,9 +67,9 @@ install a Linux distribution from a Linux computer:
 For additional information check the available pages on the rest of the
 [wiki](https://github.com/usbarmory/usbarmory/wiki), especially the
 [Frequently Asked Questions (FAQ)](https://github.com/usbarmory/usbarmory/wiki/Frequently-Asked-Questions-(FAQ)),
-or information available on the [main project page](https://www.f-secure.com/en/consulting/foundry/usb-armory).
+or information available on the [main project page](https://www.withsecure.com/en/solutions/innovative-security-hardware/usb-armory).
 
 ## Support
 
 If you think anything is missing or require further support please email us at
-usbarmory@f-secure.com.
+usbarmory@withsecure.com.

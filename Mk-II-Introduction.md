@@ -1,4 +1,4 @@
-The USB armory from [F-Secure Foundry](https://foundry.f-secure.com) is an open
+The USB armory from [WithSecure Foundry](https://foundry.withsecure.com) is an open
 source hardware design, implementing a flash drive sized computer.
 
 The USB armory Mk II is the successor of the previous [Mk I](https://github.com/usbarmory/usbarmory/wiki#usb-armory-mk-i) model.
@@ -19,7 +19,7 @@ The USB armory Mk II can be purchased at the following resellers:
   * [SparkFun](https://www.sparkfun.com/products/16367)
 
 Custom/bulk order inquiries can be placed directly by contacting
-usbarmory@f-secure.com.
+usbarmory@withsecure.com.
 
 ## System-on-Chip
 
@@ -91,7 +91,7 @@ protected image).
 
 ## Software
 
-* A wide variety of Linux distributions is [available](https://github.com/usbarmory/usbarmory/wiki/Available-images), the main one supported by F-Secure is a [Debian image](https://github.com/usbarmory/usbarmory-debian-base_image).
+* A wide variety of Linux distributions is [available](https://github.com/usbarmory/usbarmory/wiki/Available-images), the main one supported by WithSecure is a [Debian image](https://github.com/usbarmory/usbarmory-debian-base_image).
 
 * The [TamaGo](https://github.com/usbarmory/tamago) bare metal Go compiler
 includes [imx6 drivers](https://github.com/usbarmory/tamago/tree/master/soc/imx6)

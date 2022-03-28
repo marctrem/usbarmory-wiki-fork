@@ -6,7 +6,7 @@ Standard orders
 | `UA-MKII-ULZ-512M` | γ, β      | [USB armory Mk II](https://github.com/usbarmory/usbarmory/wiki#usb-armory-mk-ii) • i.MX6ULZ 900 MHz • 512 MB RAM • [enclosure](https://github.com/usbarmory/usbarmory/wiki/Enclosures-(Mk-II)) |
 | `UA-MKII-DA`       | 1         | [Debug accessory](https://github.com/usbarmory/usbarmory/tree/master/hardware/mark-two-debug-accessory) for the USB armory Mk II                                                                      |
 
-¹ F-Secure referencing shown. Resellers identifiers may differ, use description and revision information to match.  
+¹ Manufacturer referencing shown. Resellers identifiers may differ, use description and revision information to match.  
 
 ᵞ [Security features](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)): [HAB](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#high-assurance-boot-habv4), [RNGB](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#random-number-generator-rngb---imx6ulz), [DCP](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#data-co-processor-dcp---imx6ulz), [SNVS](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#secure-non-volatile-storage-snvs), [TZ](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#arm-trustzone), [RPMB](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#emmc-replay-protected-memory-blocks-rpmb), [SE050](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements)  
 ᵝ [Security features](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)): [HAB](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#high-assurance-boot-habv4), [RNGB](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#random-number-generator-rngb---imx6ulz), [DCP](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#data-co-processor-dcp---imx6ulz), [SNVS](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#secure-non-volatile-storage-snvs), [TZ](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#arm-trustzone), [RPMB](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#emmc-replay-protected-memory-blocks-rpmb), [ATECC608A](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements), [A71CH](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements) • [Errata](https://github.com/usbarmory/usbarmory/wiki/Errata-(Mk-II)#usb-armory-mk-ii-rev-%CE%B2)
@@ -18,8 +18,8 @@ Standard parts can be purchased at the following resellers:
 * [HackmoD](http://www.hackmod.de/USB-Armory-Stick-Mark-2)
 * [SparkFun](https://www.sparkfun.com/products/16367)
 
-Additionally [F-Secure Foundry](https://foundry.f-secure.com) accepts
-standard and customer orders, in retail or bulk quantities, from companies/OEMs/resellers at usbarmory@f-secure.com.
+Additionally [WithSecure Foundry](https://foundry.withsecure.com) accepts
+standard and customer orders, in retail or bulk quantities, from companies/OEMs/resellers at usbarmory@withsecure.com.
 
 Custom/bulk orders
 ------------------
@@ -34,8 +34,8 @@ Custom/bulk orders
 
 ᵞ [Security features](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)): [HAB](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#high-assurance-boot-habv4), [CAAM](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#cryptographic-accelerator-and-assurance-module-caam---imx6ul) (UL), [RNGB](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#random-number-generator-rngb---imx6ulz) (ULZ), [DCP](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#data-co-processor-dcp---imx6ulz) (ULZ), [SNVS](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#secure-non-volatile-storage-snvs), [TZ](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#arm-trustzone), [RPMB](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#emmc-replay-protected-memory-blocks-rpmb), [ATECC608B](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements), [SE050](https://github.com/usbarmory/usbarmory/wiki/Hardware-security-features-(Mk-II)#external-secure-elements)  
 
-[F-Secure Foundry](https://foundry.f-secure.com) accepts
-standard and custom orders, in retail or bulk quantities, from companies/OEMs/resellers at usbarmory@f-secure.com.
+[WithSecure Foundry](https://foundry.withsecure.com) accepts
+standard and custom orders, in retail or bulk quantities, from companies/OEMs/resellers at usbarmory@withsecure.com.
 
 End-of-life (EOL)
 -----------------

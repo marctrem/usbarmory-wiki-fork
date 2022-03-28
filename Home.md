@@ -2,7 +2,7 @@ Welcome to the USB armory wiki.
 
 ![USB armory Mk II](images/armory-mark-two-enclosure.jpg)
 
-The USB armory from [F-Secure Foundry](https://foundry.f-secure.com) is an open
+The USB armory from [WithSecure Foundry](https://foundry.withsecure.com) is an open
 source hardware design, implementing a flash drive sized computer.
 
 # Purchasing
@@ -18,7 +18,7 @@ The USB armory Mk II can be purchased at the following resellers:
   * [SparkFun](https://www.sparkfun.com/products/16367)
 
 Custom/bulk order inquiries can be placed directly by contacting
-usbarmory@f-secure.com.
+usbarmory@withsecure.com.
 
 # Documentation
 
@@ -116,12 +116,12 @@ A discussion group is available on [Google Groups](https://groups.google.com/d/f
 # Support
 
 If you think anything is missing on this wiki, or require further support,
-please email us at usbarmory@f-secure.com.
+please email us at usbarmory@withsecure.com.
 
 # License
 
 USB armory | https://github.com/usbarmory/usbarmory  
-Copyright (c) F-Secure Corporation
+Copyright (c) WithSecure Corporation
 
 This is an open hardware design licensed under the terms of the CERN Open
 Hardware Licence, see board revision source directories for applicable
@@ -133,7 +133,7 @@ OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE.
 # Terms of Use and Compliance information
 
 The following Terms of Use apply to USB armory boards manufactured by Inverse
-Path and/or F-Secure and sold directly or through one of its resellers.
+Path and/or WithSecure and sold directly or through one of its resellers.
 
 IMPORTANT – BEFORE INSTALLING OR USING THE USB ARMORY BOARDS MANUFACTURED BY
 INVERSE PATH AND/OR F-SECURE, CAREFULLY READ THE BELOW TERMS OF USE (”TERMS”).
