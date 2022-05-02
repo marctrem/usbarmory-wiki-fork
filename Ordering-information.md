@@ -19,7 +19,7 @@ Standard parts can be purchased at the following resellers:
 * [SparkFun](https://www.sparkfun.com/products/16367)
 
 Additionally [WithSecure Foundry](https://foundry.withsecure.com) accepts
-standard and customer orders, in retail or bulk quantities, from companies/OEMs/resellers at usbarmory@withsecure.com.
+standard and custom orders, in retail or bulk quantities, from companies/OEMs/resellers at usbarmory@withsecure.com.
 
 Custom/bulk orders
 ------------------
