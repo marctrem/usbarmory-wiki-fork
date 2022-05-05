@@ -38,7 +38,7 @@ The combination of i.MX6UL secure boot and armory-boot authentication features
 allow a fully verified chain of trust, to boot a trusted Linux kernel image.
 
 When signing a [TamaGo unikernel](https://github.com/usbarmory/tamago)
-or a Linux kernel which embeds a root file system the authentication achieve full
+or a Linux kernel which embeds a root file system, the authentication achieves full
 boot (not runtime) coverage. The post-boot Linux kernel verification of executed
 code, or encrypted disk unlock, is out of scope of this guide.
 
